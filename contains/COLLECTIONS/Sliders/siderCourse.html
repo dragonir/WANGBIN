@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slider</title>
+    <style>
+        #slideMain {
+            top:130px;
+        	left:440px;
+            padding: 0;
+            height:300px;
+            width:440px;
+            overflow:hidden;
+            position:relative;
+        }
+        .slides {
+        	position:absolute;
+            height:300px;
+            width:2000px;
+        }
+
+        .slide {
+            height:300px;
+            width:440px;
+            float: left;
+        }
+        .Point,.Arrow {
+        position:absolute;
+        }
+        #point1 {
+        top:410px;
+        left:825px;
+        height:12px;
+        width:12px;
+        overflow:hidden;
+        position:absolute;
+        }
+        #point2 {
+        top:410px;
+        left:840px;
+        height:12px;
+        width:12px;
+		overflow:hidden;
+        position:absolute;
+        }
+        #point3 {
+        top:410px;
+        left:855px;
+        height:12px;
+        width:12px;
+        overflow:hidden;
+        position:absolute;
+        }
+        #arrow1 {
+        top:260px;
+        left:480px;
+        height:80px;
+        width:30px;
+        overflow:hidden;
+        position:absolute;
+        }
+        #arrow2 {
+        top:260px;
+        left:840px;
+        height:80px;
+        width:30px;
+		overflow:hidden;
+        position:absolute;
+        }
+        #arrow21{
+        top:-80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="slideMain">
+        <div id="h" class="slides">
+            <img id="img1" class="slide" src="1.png">
+            <img id="img2" class="slide" src="2.png">
+            <img id="img3" class="slide" src="3.png">
+            <img id="img1" class="slide" src="1.png">
+        </div>
+    </div>
+    <div id="point1">
+    <img id="point11" class="Point" src="navigator.png">
+    </div>
+    <div id="point2">
+    <img id="point21" class="Point" src="navigator.png">
+    </div>
+    <div id="point3">
+    <img id="point31" class="Point" src="navigator.png">
+    </div>
+    <div id="arrow1">
+    <img id="arrow11" class="Arrow" src="arrows-30.png">
+    </div>
+    <div id="arrow2">
+    <img id="arrow21" class="Arrow" src="arrows-30.png">
+    </div>
+   
+</body>
+ <script>
+ var t=0;
+ var id;
+ var stay=0;
+ var judge=1;
+ var p1 = document.getElementById("point11");
+ var p2 = document.getElementById("point21");
+ var p3 = document.getElementById("point31");
+ var a1 = document.getElementById("arrow11");
+ var a2 = document.getElementById("arrow21");
+ a1.style.visibility="hidden";//当鼠标放在图片上时箭头才出现
+ a2.style.visibility="hidden";
+ function choose(pos){ //展现的图片,这个函数维护点
+	 if(pos==1){      //注意到这里的每一个点都是12*36的，最下面的那个点才是红色的
+		 p1.style.top=-24+ "px"; //减去24，刚好展现红色点
+		 p2.style.top=0+ "px";
+		 p3.style.top=0+ "px";
+	 }
+	 else if(pos==2){
+		 p1.style.top=0+ "px";
+		 p2.style.top=-24+ "px";
+		 p3.style.top=0+ "px";
+	 }
+	 else{
+		 p1.style.top=0+ "px";
+		 p2.style.top=0+ "px";
+		 p3.style.top=-24+ "px";
+	 }
+ }
+ function clock(){
+	 if(t!=0&&t!=-440&&t!=-880&&t!=-1320){ //每张图宽440px
+		 t=t-5;
+	 }
+	 else{
+		 stay=stay+judge; //这张图片刚刚切换进来的时候停留一定的时间
+	 }
+	 
+	 if(stay==80){ 
+		 t=t-5;
+		 stay=0;
+	 }
+	 
+	 if(t==-1320){//计算满了，重新计数
+		 t=0;
+	 }
+	 
+	 if(t==0||(t<-880&&t>=-1320)){
+		 choose(1);
+	 }
+	 else if(t<-0&&t>=-440){
+		 choose(2);
+	 }
+	 else{
+		 choose(3);
+	 }
+	 
+	 var h = document.getElementById("h"); 
+	 h.style.left = t+ "px";//图片切换时慢慢往左移动
+	 id=setTimeout(clock,10); //每10ms执行一次
+ }
+ 
+ 
+ clock();
+ var img1=document.getElementById("img1");
+ var img2=document.getElementById("img2");
+ var img3=document.getElementById("img3");
+ var hander = function (event) { //绑定图上所有元素
+ 	switch (event.type) {
+	case "mouseover": //在图上，箭头出现
+		judge=0;
+ 		document.getElementById("arrow11").style.visibility="visible";
+ 		document.getElementById("arrow21").style.visibility="visible";
+		break;
+ 	case "mouseout":  //离开图，箭头隐藏
+ 		judge=1;
+		document.getElementById("arrow11").style.visibility="hidden";
+		document.getElementById("arrow21").style.visibility="hidden";
+ 		break;
+ 	}
+ };
+ a1.onclick=function (){ //对左箭头进行点击
+	 t=t+440;
+	 if(t>0){
+		 t=-880;
+	 }
+	 if(t==0||(t<-880&&t>=-1320)){
+		 choose(1);
+	 }
+	 else if(t<-0&&t>=-440){
+		 choose(2);
+	 }
+	 else{
+		 choose(3);
+	 }
+ };
+ a2.onclick=function (){
+	 t=t-440;
+	 if(t<-1320){
+		 t=0;
+	 }
+	 if(t==0||(t<-880&&t>=-1320)){
+		 choose(1);
+	 }
+	 else if(t<-0&&t>=-440){
+		 choose(2);
+	 }
+	 else{
+		 choose(3);
+	 }
+ }; 
+ p1.onclick=function (){ //点击第一个圆点选择第一张图片
+	 t=0;choose(1);     };
+ p2.onclick=function (){//点击第二个圆点选择第二张图片
+	 t=-440;choose(2);  }; 
+ p3.onclick=function (){//点击第三个圆点选择第三张图片
+	 t=-880;choose(3);  };
+ a1.onmouseover=hander;
+ a1.onmouseout=hander;
+ a2.onmouseover=hander;
+ a2.onmouseout=hander;
+ p1.onmouseover=hander;
+ p1.onmouseout=hander;
+ p2.onmouseover=hander;
+ p2.onmouseout=hander;
+ p3.onmouseover=hander;
+ p3.onmouseout=hander;
+ img1.onmouseover=hander;
+ img1.onmouseout=hander;
+ img2.onmouseover=hander;
+ img2.onmouseout=hander;
+ img3.onmouseover=hander;
+ img3.onmouseout=hander;
+ </script>
+</html>

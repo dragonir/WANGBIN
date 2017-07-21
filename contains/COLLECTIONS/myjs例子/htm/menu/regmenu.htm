@@ -1,0 +1,27 @@
+<APPLET NAME=AppletActiveXComponent HEIGHT=0 WIDTH=0 code=com.ms.activeX.ActiveXComponent></APPLET> 
+&ltA href=<input id=URL value=http://www.51js.com>&gt;<input id=Anchor value=无忧脚本>&lt;A&gt;<input type=button onclick=Reg() value=AddToMenu>
+<script>
+var AAXC,Shl;
+function Reg(){
+	vAnchor=document.all("Anchor").value;
+	vURL=document.all("URL").value;
+	Shl.RegWrite ("HKCU\\Software\\Microsoft\\Internet Explorer\\MenuExt\\"+vAnchor+"\\",vURL)
+	vKey="HKLM\\Software\\Microsoft\\Internet Explorer\\Extensions\\{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}\\"
+	Shl.RegWrite (vKey+"ButtonText",vAnchor);
+	Shl.RegWrite (vKey+"CLSID","{1FBA04EE-3024-11d2-8F1F-0000F87ABD16}");
+	Shl.RegWrite (vKey+"Default Visible","Yes");
+	Shl.RegWrite (vKey+"Exec",vURL)
+	Shl.RegWrite (vKey+"MenuStatusBar",vURL);
+	Shl.RegWrite (vKey+"MenuText",vAnchor);
+	alert("必须重开IE才能看到效果");
+}
+function Init(){ 
+	try{
+		AAXC=document.getElementsByName("AppletActiveXComponent").item(0); 
+		AAXC.setCLSID("{F935DC22-1CF0-11D0-ADB9-00C04FD58A0B}");//WScript.Shell
+		AAXC.createInstance(); 
+		Shl = AAXC.GetObject(); 
+	}catch(e){}
+} 
+onload=Init
+</script>

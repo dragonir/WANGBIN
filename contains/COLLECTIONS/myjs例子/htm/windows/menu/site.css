@@ -1,0 +1,26 @@
+<style type="text/css">
+A:active {	TEXT-DECORATION: none}
+A:visited {	TEXT-DECORATION: none}
+A:hover {	COLOR: #FF0000;TEXT-DECORATION: none}
+A:link {	TEXT-DECORATION: none}
+body {  FONT-FAMILY: "宋体"; font-size: 9pt; COLOR: 000000; ; text-decoration: none}
+tr {  FONT-FAMILY: "宋体"; font-size: 9pt; }
+td { FONT-FAMILY: "宋体"; FONT-SIZE: 9pt; FONT-WEIGHT: normal}
+form    {FONT-FAMILY: "宋体"; FONT-SIZE: 9pt}
+.black {  color: #000000; font-size: 9pt; }
+.white {  color: #ffffff; font-size: 9pt; }
+.red {  color: #ff0000; font-size: 9pt; }
+.green {  color: #009900; font-size: 9pt; }
+.blue {  color: #0000FF; font-size: 9pt; }
+.bg1{  font-size: 9pt; ; color: #FFFFFF}
+.gray {  color: #666666; font-size: 9pt; }
+.row {line-height: 15pt}
+.bottom {	BACKGROUND-COLOR: #CCCCCC; BORDER-BOTTOM: #665b8e 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #665b8e 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #000000; FONT-FAMILY: "宋体"; HEIGHT: 18px; font-size: 9pt}
+.editbox1 {	BACKGROUND-COLOR: #DBDBDB; COLOR: #000000; FONT-FAMILY: 宋体; HEIGHT: 18px; font-size: 9pt}
+.editbox2 {	COLOR: #000000; CURSOR: text; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px; background-color: #DBDBDB; FONT-FAMILY: 宋体}
+.size {  font-size: 9px; font-family: "Verdana", "Arial", "Helvetica", "sans-serif"}
+A.yellow:active {	TEXT-DECORATION: none; color: #FFFFFF}
+A.yellow:visited {	TEXT-DECORATION: none; color: #FFFFFF}
+A.yellow:link {	COLOR:ffffff;TEXT-DECORATION: none}
+A.yellow:hover {COLOR: #FFff33; TEXT-DECORATION: none}
+</style>

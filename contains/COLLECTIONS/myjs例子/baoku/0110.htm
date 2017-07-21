@@ -1,0 +1,264 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0032)http://www.ie-zone.com/index.php -->
+<HTML>
+<!-- #BeginTemplate "/Templates/Js.dwt" --> 
+<HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>模拟鼠标移动效果</TITLE>
+<!-- #EndEditable --> 
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<LINK  href="../../fav.ico" rel="shortcut icon">
+<STYLE type=text/css>BODY {
+	MARGIN: 25px 25px 25px
+}
+#all TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+INPUT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+SELECT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+P {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+
+#all A:active {
+	COLOR: #7d070c
+}
+#all A:visited {
+	COLOR: #7d070c
+}
+
+#all A:hover {
+	COLOR: #336699
+}
+#all A:link {
+	COLOR: #7d070c
+}
+</STYLE>
+<SCRIPT language=JavaScript>
+<!--
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+var obj=MM_findObj(ob); if (obj) { 
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</SCRIPT>
+<META content="MSHTML 5.50.4134.600" name=GENERATOR>
+</HEAD>
+<BODY id=all text=#000000 bgColor=#336699>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_1.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_2.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../../images/space.gif" width=11 height="1"></TD>
+    <TD width="100%"> 
+      <table width="100%" border="0" cellpadding="8">
+        <tr> 
+          <td align="center"> 
+            <script language="JavaScript">
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</script>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#f7f7f7"><!-- #BeginEditable "example" -->
+            <script language="JavaScript1.2">
+
+/*
+Roaming Cursor script (By Kurt at kurt.grigg@virgin.net)
+Modified and permission granted to Dynamic Drive to feature script in archive
+For full source, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+//specify path to cursor image
+var cursorpath="img/cursor.gif"
+
+if (document.layers)
+{document.write("<LAYER NAME='PoInTeRs' LEFT=10 TOP=10><img src='"+cursorpath+"' width=17 height=22></LAYER>")}
+else if (document.all){document.write("<div id='pOiNtErS' style='position:absolute;top:10px;left:10px;width:17px;height:22px;z-index:50'><img src='"+cursorpath+"' width=17 height=22></div>")}
+
+count=-1;                                                     
+move=1;
+
+function Curve(){
+abc=new Array(0,1,1,1,2,3,4,0,6,-1,-1,-1,-2,-3,-4,0,-6)
+for (i=0; i < abc.length; i++)
+{var C=Math.round(Math.random()*[i])}
+howbend=abc[C];
+setTimeout('Curve()',1900);
+return howbend;
+}
+ypos=10;
+xpos=10;
+
+degree = 60;
+function MoveRandom(){
+PathBend=degree+=howbend;//ok!
+y = 4*Math.sin(PathBend*Math.PI/180);
+x = 6*Math.cos(PathBend*Math.PI/180);
+if (document.layers){
+ypos+=y;
+xpos+=x;
+document.PoInTeRs.top=ypos+window.pageYOffset;
+document.PoInTeRs.left=xpos+window.pageXOffset;
+}
+else if (document.all){
+ypos+=y;
+xpos+=x;
+document.all.pOiNtErS.style.top=ypos+document.body.scrollTop;
+document.all.pOiNtErS.style.left=xpos+document.body.scrollLeft;
+}
+T=setTimeout('MoveRandom()',50);
+}
+function edges(){
+if (document.layers){
+if (document.PoInTeRs.left >= window.innerWidth-40+window.pageXOffset)degree=Math.round(Math.random()*45+157.5);
+if (document.PoInTeRs.top >= window.innerHeight-30+window.pageYOffset)degree=Math.round(Math.random()*45-112.5);
+if (document.PoInTeRs.top <= 2+window.pageYOffset) degree = Math.round(Math.random()*45+67.5);//OK!
+if (document.PoInTeRs.left <= 2+window.pageXOffset) degree = Math.round(Math.random()*45-22.5);//OK!
+}
+else if (document.all)
+{
+if (document.all.pOiNtErS.style.pixelLeft >= document.body.offsetWidth-45+document.body.scrollLeft)degree=Math.round(Math.random()*45+157.5);
+if (document.all.pOiNtErS.style.pixelTop >= document.body.offsetHeight-35+document.body.scrollTop)degree=Math.round(Math.random()*45-112.5);
+if (document.all.pOiNtErS.style.pixelTop <= 2+document.body.scrollTop) degree = Math.round(Math.random()*45+67.5);//OK!
+if (document.all.pOiNtErS.style.pixelLeft <= 2+document.body.scrollLeft) degree = Math.round(Math.random()*45-22.5);//OK!
+}
+setTimeout('edges()',100);
+}
+function starteffect(){
+Curve();
+MoveRandom();// onUnload="opener.gO()"
+edges();
+}
+
+if (document.all||document.layers)
+window.onload=starteffect
+</script>
+            <!-- #EndEditable --></td>
+        </tr>
+        <tr> 
+          <td><!-- #BeginEditable "code" -->1.将下面的代码复制到 &lt;body&gt; 或者 &lt;head&gt; 
+            内 
+            <input type="button" name="Button" value="复制到我的剪贴板" onClick=JM_cc('js_1')>
+            <br>
+            <form name="form1" method="post" action="">
+              <textarea name="js_1" wrap="VIRTUAL" cols="80" rows="10">&lt;SCRIPT language=&quot;JavaScript1.2&quot;&gt;
+
+/*
+Roaming Cursor script (By Kurt at kurt.grigg@virgin.net)
+Modified and permission granted to Dynamic Drive to feature script in archive
+For full source, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+
+//specify path to cursor image
+var cursorpath=&quot;cursor.gif&quot;
+
+if (document.layers)
+{document.write(&quot;&lt;LAYER NAME='PoInTeRs' LEFT=10 TOP=10&gt;&lt;img src='&quot;+cursorpath+&quot;' width=17 height=22&gt;&lt;/LAYER&gt;&quot;)}
+else if (document.all){document.write(&quot;&lt;div id='pOiNtErS' style='position:absolute;top:10px;left:10px;width:17px;height:22px;z-index:50'&gt;&lt;img src='&quot;+cursorpath+&quot;' width=17 height=22&gt;&lt;/div&gt;&quot;)}
+
+count=-1;                                                     
+move=1;
+
+function Curve(){
+abc=new Array(0,1,1,1,2,3,4,0,6,-1,-1,-1,-2,-3,-4,0,-6)
+for (i=0; i &lt; abc.length; i++)
+{var C=Math.round(Math.random()*[i])}
+howbend=abc[C];
+setTimeout('Curve()',1900);
+return howbend;
+}
+ypos=10;
+xpos=10;
+
+degree = 60;
+function MoveRandom(){
+PathBend=degree+=howbend;//ok!
+y = 4*Math.sin(PathBend*Math.PI/180);
+x = 6*Math.cos(PathBend*Math.PI/180);
+if (document.layers){
+ypos+=y;
+xpos+=x;
+document.PoInTeRs.top=ypos+window.pageYOffset;
+document.PoInTeRs.left=xpos+window.pageXOffset;
+}
+else if (document.all){
+ypos+=y;
+xpos+=x;
+document.all.pOiNtErS.style.top=ypos+document.body.scrollTop;
+document.all.pOiNtErS.style.left=xpos+document.body.scrollLeft;
+}
+T=setTimeout('MoveRandom()',50);
+}
+function edges(){
+if (document.layers){
+if (document.PoInTeRs.left &gt;= window.innerWidth-40+window.pageXOffset)degree=Math.round(Math.random()*45+157.5);
+if (document.PoInTeRs.top &gt;= window.innerHeight-30+window.pageYOffset)degree=Math.round(Math.random()*45-112.5);
+if (document.PoInTeRs.top &lt;= 2+window.pageYOffset) degree = Math.round(Math.random()*45+67.5);//OK!
+if (document.PoInTeRs.left &lt;= 2+window.pageXOffset) degree = Math.round(Math.random()*45-22.5);//OK!
+}
+else if (document.all)
+{
+if (document.all.pOiNtErS.style.pixelLeft &gt;= document.body.offsetWidth-45+document.body.scrollLeft)degree=Math.round(Math.random()*45+157.5);
+if (document.all.pOiNtErS.style.pixelTop &gt;= document.body.offsetHeight-35+document.body.scrollTop)degree=Math.round(Math.random()*45-112.5);
+if (document.all.pOiNtErS.style.pixelTop &lt;= 2+document.body.scrollTop) degree = Math.round(Math.random()*45+67.5);//OK!
+if (document.all.pOiNtErS.style.pixelLeft &lt;= 2+document.body.scrollLeft) degree = Math.round(Math.random()*45-22.5);//OK!
+}
+setTimeout('edges()',100);
+}
+function starteffect(){
+Curve();
+MoveRandom();// onUnload=&quot;opener.gO()&quot;
+edges();
+}
+
+if (document.all||document.layers)
+window.onload=starteffect
+&lt;/script&gt;</textarea>
+            </form>
+            <br>
+            2.使用的图片<br>
+            <img src="img/cursor.gif" width="17" height="22"> <img src="img/cursor2.gif" width="17" height="22"> 
+            <img src="img/cursor3.gif" width="17" height="22"> <img src="img/cursor4.gif" width="17" height="22"><!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </TD>
+    <TD><IMG src="../../images/space.gif"    width=11 height="1"></TD>
+  </TR>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_3.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_4.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

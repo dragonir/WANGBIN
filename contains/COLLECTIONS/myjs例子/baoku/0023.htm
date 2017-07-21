@@ -1,0 +1,270 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0032)http://www.ie-zone.com/index.php -->
+<HTML><!-- #BeginTemplate "/Templates/JsExample.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>页面效果之四</TITLE>
+<!-- #EndEditable -->
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK  href="../fav.ico" rel="shortcut icon">
+<STYLE type=text/css>BODY {
+	MARGIN: 25px 25px 25px
+}
+#all TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+INPUT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+SELECT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+P {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+
+#all A:active {
+	COLOR: #7d070c
+}
+#all A:visited {
+	COLOR: #7d070c
+}
+
+#all A:hover {
+	COLOR: #336699
+}
+#all A:link {
+	COLOR: #7d070c
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+ob.select();js=ob.createTextRange();js.execCommand("Copy");
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY id=all text=#000000 bgColor=#336699>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_1.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_2.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+<!-- #BeginEditable "Example%20and%20Sources" --> 
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/space.gif" width=11 height="1"></TD>
+    <TD width="100%"> 
+      <table width="100%" border="0" cellpadding="8">
+        <tr> 
+          <td align="center"><!-- #BeginLibraryItem "/Library/js_title.lbi" --><script language="JavaScript">
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</script><!-- #EndLibraryItem --></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#f7f7f7"> 
+            <div id="sDiv0"></div>
+            <style>
+<!--
+.intro{
+position:absolute;
+left:0;
+top:0;
+layer-background-color:yellow;
+background-color:#336699;
+border:0.1px solid #336699
+}
+-->
+</style>
+            <div id="i1" class="intro"></div>
+            <div id="i2" class="intro"></div>
+            <script language="JavaScript1.2">
+
+/*
+Top-Down Curtain Script- 
+By Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more free DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+var speed=20
+var temp=new Array()
+var temp2=new Array()
+if (document.layers){
+for (i=1;i<=2;i++){
+temp[i]=eval("document.i"+i+".clip")
+temp2[i]=eval("document.i"+i)
+temp[i].width=window.innerWidth
+temp[i].height=window.innerHeight/2
+temp2[i].top=(i-1)*temp[i].height
+}
+}
+else if (document.all){
+var clipbottom=document.body.offsetHeight/2,cliptop=0
+for (i=1;i<=2;i++){
+temp[i]=eval("document.all.i"+i+".style")
+temp[i].width=document.body.clientWidth
+temp[i].height=document.body.offsetHeight/2
+temp[i].top=(i-1)*parseInt(temp[i].height)
+}
+}
+
+function openit(){
+window.scrollTo(0,0)
+if (document.layers){
+temp[1].bottom-=speed
+temp[2].top+=speed
+if (temp[1].bottom<=0)
+clearInterval(stopit)
+}
+else if (document.all){
+clipbottom-=speed
+temp[1].clip="rect(0 auto+"+clipbottom+" 0)"
+cliptop+=speed
+temp[2].clip="rect("+cliptop+" auto auto)"
+if (clipbottom<=0)
+clearInterval(stopit)
+}
+}
+function gogo(){
+stopit=setInterval("openit()",100)
+}
+gogo()
+
+</script>
+            <div id="i1" class="intro"></div>
+            <div id="i2" class="intro"></div>
+            <div id="i1" class="intro"></div>
+            <div id="i1" class="intro"></div>
+            <div id="i2" class="intro"></div>
+            <div id="p1" class="intro"></div>
+            <div id="p2" class="intro"></div>
+            <div id="p3" class="intro"></div>
+            <div id="p4" class="intro"></div>
+            <div id="p5" class="intro"></div>
+            <div id="p6" class="intro"></div>
+            <div id="p7" class="intro"></div>
+            <div id="p8" class="intro"></div>
+            <div id="p9" class="intro"></div>
+            <div id="p10" class="intro"></div>
+            <div id="p11" class="intro"></div>
+            <div id="p12" class="intro"></div>
+            <div id="p13" class="intro"></div>
+            <div id="p14" class="intro"></div>
+            <div id="p15" class="intro"></div>
+            <div id="p16" class="intro"></div>
+            <div id="p17" class="intro"></div>
+            <div id="p18" class="intro"></div>
+            <div id="p19" class="intro"></div>
+            <div id="p20" class="intro"></div>
+            <div id="p21" class="intro"></div>
+            <div id="p22" class="intro"></div>
+            <div id="p23" class="intro"></div>
+            <div id="p24" class="intro"></div>
+            <div id="p25" class="intro"></div>
+            提示:看到效果了吗？没有？刷新一下页面看看.</td>
+        </tr>
+        <tr> 
+          <td>1.将下面的代码复制到 &lt;head&gt; 内 
+            <input type="button" name="Button" value="复制到我的剪贴板" onClick=JM_cc(js_1)>
+            <br>
+            <textarea name="js_1" wrap="VIRTUAL" cols="80" rows="10"><style>
+<!--
+.intro{
+position:absolute;
+left:0;
+top:0;
+layer-background-color:yellow;
+background-color:#336699;
+border:0.1px solid #336699
+}
+-->
+</style></textarea>
+            <br>
+            <br>
+            2.将下面的代码复制到 &lt;body&gt; 内 
+            <input type="button" name="Button2" value="复制到我的剪贴板" onClick=JM_cc(js_2)>
+            <br>
+            <textarea name="js_2" wrap="VIRTUAL" cols="80" rows="10"><div id="i1" class="intro"></div><div id="i2" class="intro"></div>
+<script language="JavaScript1.2">
+
+/*
+Top-Down Curtain Script- 
+By Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more free DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+var speed=20
+var temp=new Array()
+var temp2=new Array()
+if (document.layers){
+for (i=1;i<=2;i++){
+temp[i]=eval("document.i"+i+".clip")
+temp2[i]=eval("document.i"+i)
+temp[i].width=window.innerWidth
+temp[i].height=window.innerHeight/2
+temp2[i].top=(i-1)*temp[i].height
+}
+}
+else if (document.all){
+var clipbottom=document.body.offsetHeight/2,cliptop=0
+for (i=1;i<=2;i++){
+temp[i]=eval("document.all.i"+i+".style")
+temp[i].width=document.body.clientWidth
+temp[i].height=document.body.offsetHeight/2
+temp[i].top=(i-1)*parseInt(temp[i].height)
+}
+}
+
+function openit(){
+window.scrollTo(0,0)
+if (document.layers){
+temp[1].bottom-=speed
+temp[2].top+=speed
+if (temp[1].bottom<=0)
+clearInterval(stopit)
+}
+else if (document.all){
+clipbottom-=speed
+temp[1].clip="rect(0 auto+"+clipbottom+" 0)"
+cliptop+=speed
+temp[2].clip="rect("+cliptop+" auto auto)"
+if (clipbottom<=0)
+clearInterval(stopit)
+}
+}
+function gogo(){
+stopit=setInterval("openit()",100)
+}
+gogo()
+
+</script></textarea>
+          </td>
+        </tr>
+      </table>
+    </TD>
+    <TD><IMG src="../images/space.gif"    width=11 height="1"></TD>
+  </TR>
+</TABLE>
+<!-- #EndEditable -->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_3.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_4.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE></BODY><!-- #EndTemplate --></HTML>

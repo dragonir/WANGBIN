@@ -1,0 +1,306 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0032)http://www.ie-zone.com/index.php -->
+<HTML><!-- #BeginTemplate "/Templates/JsExample.dwt" --><HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>向上飘的白云</TITLE>
+<!-- #EndEditable -->
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK  href="../fav.ico" rel="shortcut icon">
+<STYLE type=text/css>BODY {
+	MARGIN: 25px 25px 25px
+}
+#all TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+INPUT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+SELECT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+P {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+
+#all A:active {
+	COLOR: #7d070c
+}
+#all A:visited {
+	COLOR: #7d070c
+}
+
+#all A:hover {
+	COLOR: #336699
+}
+#all A:link {
+	COLOR: #7d070c
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+ob.select();js=ob.createTextRange();js.execCommand("Copy");
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.50.4134.600" name=GENERATOR></HEAD>
+<BODY id=all text=#000000 bgColor=#336699>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_1.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_2.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+<!-- #BeginEditable "Example%20and%20Sources" --> 
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/space.gif" width=11 height="1"></TD>
+    <TD width="100%">
+      <table width="100%" border="0" cellpadding="8">
+        <tr>
+          <td align="center"><!-- #BeginLibraryItem "/Library/js_title.lbi" --><script language="JavaScript">
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</script><!-- #EndLibraryItem --></td>
+        </tr>
+        <tr>
+          <td bgcolor="#f7f7f7"> 
+            <script language="JavaScript1.2">
+<!-- Begin
+
+/*
+Bubble Script by Rachel R (broadwaygal13@hotmail.com)
+Based on code by Altan d.o.o. (snow@altan.hr,  http://www.altan.hr/snow/index.html)
+For full source code and installation instructions to this script, visit http://dynamicdrive.com
+*/
+
+var no = 20; // image number or falling rate
+var speed = 1; // the lower the number the faster the image moves
+var snow = new Array();
+snow[0] = "img/bubble.gif"
+snow[1] = "img/bubble.gif"
+snow[2] = "img/bubble.gif"
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var dx, xp, yp;    // coordinate and position variables
+var am, stx, sty;  // amplitude and step variables
+var i, doc_width = 800, doc_height = 1800;
+
+if (ns4up) {
+        doc_width = self.innerWidth;
+        doc_height = self.innerHeight;
+} else if (ie4up) {
+        doc_width = document.body.clientWidth;
+        doc_height = document.body.clientHeight;
+}
+
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+j = 0;
+
+for (i = 0; i < no; ++ i) {
+        dx[i] = 0;                        // set coordinate variables
+        xp[i] = Math.random()*(doc_width-50);  // set position variables
+        yp[i] = Math.random()*doc_height;
+        am[i] = Math.random()*20;         // set amplitude variables
+        stx[i] = 0.02 + Math.random()/10; // set step variables
+        sty[i] = 0.7 + Math.random();     // set step variables
+        if (ns4up) {                      // set layers
+                if (i == 0) {
+                        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=-+ snow[j] + "\" border=\"0\"></layer>");
+                } else {
+                        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=-+ snow[j] + "\" border=\"0\"></layer>");
+                }        } else if (ie4up) {                if (i == 0) 
+{
+                        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"VISIBILITY: visible; TOP: 15px; LEFT: 15px; width:1;\"><img src=- + snow[j] + "\" border=\"0\"></div>");
+                } else {
+                        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"VISIBILITY: visible; TOP: 15px; LEFT: 15px; width:1;\"><img src=- + snow[j] + "\" border=\"0\"></div>");
+                }
+        }
+        if (j == (snow.length-1)) { j = 0; } else { j += 1; }
+}
+
+function snowNS() {  // Netscape main animation function
+        for (i = 0; i < no; ++ i) {  // iterate for every dot
+                yp[i] -= sty[i];                if (yp[i] < -50) {
+                        xp[i] = Math.random()*(doc_width-am[i]-30);
+                        yp[i] = doc_height;
+                        stx[i] = 0.02 + Math.random()/10;
+                        sty[i] = 0.7 + Math.random();
+                        doc_width = self.innerWidth;
+                        doc_height = self.innerHeight;                }
+                dx[i] += stx[i];
+                document.layers["dot"+i].top = yp[i];
+                document.layers["dot"+i].left = xp[i] + 
+am[i]*Math.sin(dx[i]);
+        }
+        setTimeout("snowNS()", speed);
+}
+
+function snowIE() {  // IE main animation function
+        for (i = 0; i < no; ++ i) {  // iterate for every dot
+                yp[i] -= sty[i];
+                if (yp[i] < -50) {
+                        xp[i] = Math.random()*(doc_width-am[i]-30);
+                        yp[i] = doc_height;
+                        stx[i] = 0.02 + Math.random()/10;
+                        sty[i] = 0.7 + Math.random();
+                        doc_width = document.body.clientWidth;
+                        doc_height = document.body.clientHeight;
+                }
+                dx[i] += stx[i];
+                document.all["dot"+i].style.pixelTop = yp[i];
+                document.all["dot"+i].style.pixelLeft = xp[i] + 
+am[i]*Math.sin(dx[i]);
+        }
+        setTimeout("snowIE()", speed);
+}
+
+if (ns4up) {
+        snowNS();
+} else if (ie4up) {
+        snowIE();
+}
+// End -->
+</script>
+            提示：看见漫天飞舞的白云吗？</td>
+        </tr>
+        <tr>
+          <td>1.将下面的代码复制到 &lt;body&gt; 内 
+            <input type="button" name="Button" value="复制到我的剪贴板" onClick=JM_cc(js_1)>
+            <br>
+            <textarea name="js_1" wrap="VIRTUAL" cols="80" rows="10"><script language="JavaScript1.2">
+<!-- Begin
+
+/*
+Bubble Script by Rachel R (broadwaygal13@hotmail.com)
+Based on code by Altan d.o.o. (snow@altan.hr,  http://www.altan.hr/snow/index.html)
+For full source code and installation instructions to this script, visit http://dynamicdrive.com
+*/
+
+var no = 20; // image number or falling rate
+var speed = 1; // the lower the number the faster the image moves
+var snow = new Array();
+snow[0] = "img/bubble.gif"
+snow[1] = "img/bubble.gif"
+snow[2] = "img/bubble.gif"
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var dx, xp, yp;    // coordinate and position variables
+var am, stx, sty;  // amplitude and step variables
+var i, doc_width = 800, doc_height = 1800;
+
+if (ns4up) {
+        doc_width = self.innerWidth;
+        doc_height = self.innerHeight;
+} else if (ie4up) {
+        doc_width = document.body.clientWidth;
+        doc_height = document.body.clientHeight;
+}
+
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+j = 0;
+
+for (i = 0; i < no; ++ i) {
+        dx[i] = 0;                        // set coordinate variables
+        xp[i] = Math.random()*(doc_width-50);  // set position variables
+        yp[i] = Math.random()*doc_height;
+        am[i] = Math.random()*20;         // set amplitude variables
+        stx[i] = 0.02 + Math.random()/10; // set step variables
+        sty[i] = 0.7 + Math.random();     // set step variables
+        if (ns4up) {                      // set layers
+                if (i == 0) {
+                        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=-+ snow[j] + "\" border=\"0\"></layer>");
+                } else {
+                        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src=-+ snow[j] + "\" border=\"0\"></layer>");
+                }        } else if (ie4up) {                if (i == 0) 
+{
+                        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"VISIBILITY: visible; TOP: 15px; LEFT: 15px; width:1;\"><img src=- + snow[j] + "\" border=\"0\"></div>");
+                } else {
+                        document.write("<div id=\"dot"+ i +"\" style=\"POSITION: absolute; Z-INDEX: "+ i +"VISIBILITY: visible; TOP: 15px; LEFT: 15px; width:1;\"><img src=- + snow[j] + "\" border=\"0\"></div>");
+                }
+        }
+        if (j == (snow.length-1)) { j = 0; } else { j += 1; }
+}
+
+function snowNS() {  // Netscape main animation function
+        for (i = 0; i < no; ++ i) {  // iterate for every dot
+                yp[i] -= sty[i];                if (yp[i] < -50) {
+                        xp[i] = Math.random()*(doc_width-am[i]-30);
+                        yp[i] = doc_height;
+                        stx[i] = 0.02 + Math.random()/10;
+                        sty[i] = 0.7 + Math.random();
+                        doc_width = self.innerWidth;
+                        doc_height = self.innerHeight;                }
+                dx[i] += stx[i];
+                document.layers["dot"+i].top = yp[i];
+                document.layers["dot"+i].left = xp[i] + 
+am[i]*Math.sin(dx[i]);
+        }
+        setTimeout("snowNS()", speed);
+}
+
+function snowIE() {  // IE main animation function
+        for (i = 0; i < no; ++ i) {  // iterate for every dot
+                yp[i] -= sty[i];
+                if (yp[i] < -50) {
+                        xp[i] = Math.random()*(doc_width-am[i]-30);
+                        yp[i] = doc_height;
+                        stx[i] = 0.02 + Math.random()/10;
+                        sty[i] = 0.7 + Math.random();
+                        doc_width = document.body.clientWidth;
+                        doc_height = document.body.clientHeight;
+                }
+                dx[i] += stx[i];
+                document.all["dot"+i].style.pixelTop = yp[i];
+                document.all["dot"+i].style.pixelLeft = xp[i] + 
+am[i]*Math.sin(dx[i]);
+        }
+        setTimeout("snowIE()", speed);
+}
+
+if (ns4up) {
+        snowNS();
+} else if (ie4up) {
+        snowIE();
+}
+// End -->
+</script></textarea>
+            <br>
+            <br>
+            2.复制下面这张图片 <br>
+            <img src="img/bubble.gif" width="32" height="32"></td>
+        </tr>
+      </table>
+    </TD>
+    <TD><IMG src="../images/space.gif"    width=11 height="1"></TD>
+  </TR>
+</TABLE>
+<!-- #EndEditable -->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_3.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_4.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE></BODY><!-- #EndTemplate --></HTML>

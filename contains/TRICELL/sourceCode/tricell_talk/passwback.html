@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TRICELL - 找回密码</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="./assets/jquery/jquery-1.3.3.min.js"></script>
+	<script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="./assets/styles/mybootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/reset.css">
+	<style type="text/css">
+		h4,h5{text-align: center;}
+		h4{
+			width: 200px;
+			margin: 50px auto;
+		 }
+		 h5{ 
+			margin-top: 20px;
+		 }
+		 #div2{
+		 	margin-top: 200px;
+		 }
+	</style>
+</head>
+<body>
+<!-- row1 -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 row" id="row1">
+	<nav class="navbar-default" id="navBar">
+		<div for="logo" id="logo" class="">
+			<a href="home.html"><img src="./assets/images/myLogo.png" id="myLogo"></a>
+		</div>
+		<div for="nav" id="navigator">
+			<ul>
+				<li class=""><a href="index.html" style="color: white;">导航</a></li>
+				<li class=""><a href="home.html" style="color: white;"><b>主页</b></a></li>
+				<li class=""><a href="services.html" style="color: white;">业务</a></li>
+				<li class=""><a href="blog.html" style="color: white;">论坛</a></li>
+				<li class=""><a href="profileShow.html" style="color: white;">个人</a></li>
+				<li class=""><a href="about.html" style="color: white;">关于</a></li>
+				<li class=""><a href="login.html" style="color: silver;">登录/注册</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+<div class="row">
+	<div class="col-lg-1" id="toTop">
+		<a href="#" target="_top">T<br>O<br>P</a>
+	</div>
+</div>
+
+<div id="div2">
+	<h4><a href="#" id="how">忘记密码怎么办？</a></h4>
+	<h5 class="dn" id="tip1">dragonir@sina.cn</h5>
+	<h5 class="dn" id="tip2">请向管理员请求找回密码</h5>
+</div>
+
+<script type="text/javascript" src="./assets/scripts/util.js"></script>
+<script type="text/javascript">
+	var how = Util.getElement('#how'),
+		tip1 = Util.getElement('#tip1'),
+		tip2 = Util.getElement('#tip2');
+	Util.addEvent(how,'click',function(e){ 
+		Util.removeClass(tip1,'dn');
+		setTimeout(function(){ 
+			Util.removeClass(tip2,'dn');
+		},2000);
+	})
+</script>
+</body>
+</html>

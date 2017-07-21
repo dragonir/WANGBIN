@@ -1,0 +1,392 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>常用js例子</title>
+<style>
+<!--
+body, p, div{font:menu;line-height: 150%}
+xmp { font-family: Tahoma,Verdana,宋体; font-size: 12px; line-height: 150% }
+-->
+</style>
+</head>
+
+<body>
+
+<p>&lt;SCRIPT language=javascript&gt;<br>
+function folder(){<br>
+alert('本站域名:http://w386.126.com')<br>
+window.external.AddFavorite('http://www.hongen.com', '洪恩在线');<br>
+window.location=&quot;view-source:&quot;+window.location.href;<br>
+open('http://windows','','')<br>
+<br>
+function viewcode()<br>
+{window.location=&quot;view-source:&quot;+window.location.href;}<br>
+<br>
+function D_Finish()<br>
+{document.all('T_Load_Window').style.display='none';}<br>
+<br>
+function noright(e)<br>
+{if(navigator.appName=='Microsoft Internet Explorer'&amp;&amp;(event.button==2||event.button==3)){warning=<br>
+&quot;我喜欢鸽子邮票&quot;<br>
+var agree=confirm(warning);<br>
+if(agree!=&quot;0&quot;)<br>
+{open(&quot;http://www.cinews.net/book/jimao/index.html&quot;,&quot;留言&quot;,&quot;toolbar=0,scrollbar0=yes,resizable=1&quot;);<br>
+}<br>
+return false;<br>
+}return true;<br>
+}<br>
+document.onmousedown=noright;<br>
+window.parent.external.AddFavorite(window.top.location.href,window.top.document.title);<br>
+<br>
+<br>
+dw = new Function(&quot;x&quot;, &quot;document.write(x)&quot;); <br>
+}<br>
+&lt;/SCRIPT&gt;<br>
+function IncludeCSS()<br>
+{<br>
+var cssFile;<br>
+if (window.screen.colorDepth &lt;= 8) {<br>
+cssFile = &quot;mediabar256.css&quot;;<br>
+}<br>
+else {<br>
+cssFile = &quot;mediabar.css&quot;;<br>
+}<br>
+document.write(&quot;&lt;link rel='stylesheet' type='text/css' href='&quot; + 
+cssFile + &quot;'&gt;&quot;);<br>
+function clipValues(obj,which) {<br>
+if (ns4) {<br>
+if (which==&quot;t&quot;) return obj.clip.top<br>
+if (which==&quot;r&quot;) return obj.clip.right<br>
+if (which==&quot;b&quot;) return obj.clip.bottom<br>
+if (which==&quot;l&quot;) return obj.clip.left<br>
+}<br>
+}<br>
+<br>
+&lt;img src=&quot;xp/lw.gif&quot; width=&quot;0&quot; height=&quot;0&quot;&gt;<br>
+<br>
+&lt;SCRIPT LANGUAGE=&quot;JScript&quot;&gt;<br>
+function cancelLink() {<br>
+if (window.event.srcElement.tagName == &quot;A&quot; &amp;&amp; 
+window.event.shiftKey) <br>
+window.event.returnValue = false;<br>
+}<br>
+&lt;/SCRIPT&gt;<br>
+&lt;BODY onclick=&quot;cancelLink()&quot;&gt;<br>
+&lt;/style&gt;<br>
+&lt;script language=&quot;JavaScript1.2&quot;&gt; <br>
+&lt;!-- <br>
+function flashit(){ <br>
+if (!document.all) <br>
+return <br>
+if (myexample.style.borderColor==&quot;red&quot;) <br>
+myexample.style.borderColor=&quot;blue&quot; <br>
+else <br>
+myexample.style.borderColor=&quot;red&quot; <br>
+} <br>
+setInterval(&quot;flashit()&quot;, 500) <br>
+//--&gt; <br>
+&lt;/script&gt; <br>
+&lt;SCRIPT LANGUAGE=&quot;JScript&quot;&gt;<br>
+function cancelLink() {<br>
+if (window.event.srcElement.tagName == &quot;A&quot; &amp;&amp; 
+window.event.shiftKey) <br>
+window.event.returnValue = false;<br>
+}<br>
+&lt;/SCRIPT&gt;<br>
+&lt;object id=&quot;HHC&quot; type=&quot;application/x-oleobject&quot; classid=&quot;clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11&quot;&gt;&lt;/object&gt;&lt;script&gt;HHC.TextPopup(&quot;哈哈,大家好,我是张三疯!&quot;,&quot;&quot;,50,5,128255,346751);&lt;/script&gt;<br>
+&lt;SCRIPT&gt;<br>
+function showadv()<br>
+{<br>
+adv.style.display=(document.all.advshow.checked?'':'none');<br>
+}<br>
+&lt;/SCRIPT&gt;<br>
+&lt;INPUT id=advcheck name=advshow onclick=showadv() type=checkbox <br>
+value=1&gt; &lt;FONT color=#000066&gt;显示/隐藏执行窗口&lt;/FONT&gt;&lt;/TD&gt;<br>
+<br>
+&lt;script language='javascript'&gt;<br>
+function ppup1(){<br>
+y=window.showModalDialog(&quot;窗口居中1.htm&quot;,&quot;Dialog Arguments 
+Value&quot;,&quot;dialogHeight: 250px; dialogWidth: 300px; dialogTop: 150px; 
+dialog Left: 30px; center: no; help: no;status:no;title:no&quot;);<br>
+}<br>
+&lt;/script&gt;<br>
+<br>
+function high(which2){<br>
+theobject=which2<br>
+highlighting=setInterval(&quot;highlightit(theobject)&quot;,50)<br>
+}<br>
+function low(which2){<br>
+clearInterval(highlighting)<br>
+which2.filters.alpha.opacity=50<br>
+}<br>
+<br>
+function highlightit(cur2){<br>
+if (cur2.filters.alpha.opacity&lt;100)<br>
+cur2.filters.alpha.opacity+=5<br>
+else if (window.highlighting)<br>
+clearInterval(highlighting)<br>
+}<br>
+//--&gt;<br>
+&lt;/script&gt;<br>
+<br>
+&lt;script&gt;<br>
+//容错脚本<br>
+onerror=null<br>
+&lt;/script&gt;<br>
+<br>
+function errortrap(msg,url,line)<br>
+{<br>
+if (msg!='未指明的错误.')<br>
+{<br>
+alert(msg+'\n页面:'+url+'\n在第'+line+'行');<br>
+return true;<br>
+}<br>
+}<br>
+onerror=errortrap;<br>
+<br>
+&lt;Script Language=&quot;JavaScript&quot;&gt;<br>
+document.write(document.referrer)<br>
+&lt;/SCRIPT&gt;<br>
+<br>
+<br>
+<br>
+9、数学方程式 &lt;math&gt;&lt;/math&gt;<br>
+例一、<br>
+&lt;math&gt;<br>
+H(s)=&amp;int;&lt;sub&gt;0&lt;/sub&gt;&lt;sup&gt;&amp;infin;<br>
+&lt;/sup&gt;e&lt;sup&gt;st&lt;/sup&gt;h(t)dt<br>
+&lt;/math&gt;<br>
+例二、<br>
+&lt;math&gt;<br>
+C&lt;box&gt;dV&lt;sub&gt;out&lt;/sub&gt;<br>
+&lt;over&gt;dt&lt;/box&gt;=I&lt;sub&gt;b&lt;/sub&gt;<br>
+&amp;tanh;(&lt;box&gt;&amp;kappa;(V&lt;sub&gt;in<br>
+&lt;/sub&gt;-V&lt;sub&gt;out&lt;/sub&gt;)&lt;over&gt;2&lt;/box&gt;<br>
+&lt;/math&gt; CdVoutdt=Ib &amp;tanh;(&amp;kappa;(Vin-Vout)2 <br>
+例三、<br>
+&lt;math&gt;<br>
+(&lt;array align=&quot;C&quot;&gt;&lt;item&gt;<br>
+&amp;ldet;&lt;array align=&quot;cc&quot;&gt;<br>
+&lt;item&gt;x&lt;sub&gt;11&lt;/sub&gt;<br>
+&lt;item&gt;x&lt;sub&gt;12&lt;/sub&gt;<br>
+&lt;item&gt;x&lt;sub&gt;21&lt;/sub&gt;<br>
+&lt;item&gt;x&lt;sub&gt;22&lt;/sub&gt;<br>
+&lt;array&gt;&lt;rd&gt;&amp;rdet;<br>
+&lt;item&gt;y&lt;item&gt;z<br>
+&lt;/array&gt;)&lt;/math&gt;<br>
+<br>
+<br>
+&lt;script language=javascript&gt;<br>
+var PUisIE_NAV4 = false;<br>
+if (parseFloat(navigator.appVersion) &gt;= 4) {<br>
+PUisIE_NAV4 = true;<br>
+}<br>
+if (PUisIE_NAV4) {<br>
+self.blur();<br>
+var centerItY=(screen.height-300)/2 - 50;<br>
+var centerItX=(screen.width-720)/2;<br>
+self.moveTo(centerItX,centerItY);<br>
+}<br>
+<br>
+<br>
+&lt;script language=javascript&gt;<br>
+var t=3.1415;<br>
+alert( &quot;int(&quot;+t+&quot;) = &quot;+int(t) );<br>
+alert( &quot;parseInt(&quot;+t+&quot;) = &quot;+parseInt(t) );<br>
+alert( &quot;Math.floor(&quot;+t+&quot;) = &quot; +Math.floor(t) );<br>
+alert( &quot;Math.round(&quot;+t+&quot;) = &quot;+Math.round(t) );<br>
+alert( &quot;Math.ceil(&quot;+t+&quot;) = &quot; +Math.ceil(t) );<br>
+function int(num){return num-num%1}<br>
+&lt;/script&gt;</p>
+
+
+<hr>
+<xmp>
+<SCRIPT language=javascript>
+function folder(){
+alert('本站域名:http://w386.126.com')
+window.external.AddFavorite('http://www.hongen.com', '洪恩在线');
+window.location="view-source:"+window.location.href;
+open('http://windows','','')
+
+function viewcode()
+{window.location="view-source:"+window.location.href;}
+
+function D_Finish()
+{document.all('T_Load_Window').style.display='none';}
+
+function noright(e)
+{if(navigator.appName=='Microsoft Internet Explorer'&&(event.button==2||event.button==3)){warning=
+"我喜欢鸽子邮票"
+var agree=confirm(warning);
+if(agree!="0")
+{open("http://www.cinews.net/book/jimao/index.html","留言","toolbar=0,scrollbar0=yes,resizable=1");
+}
+return false;
+}return true;
+}
+document.onmousedown=noright;
+window.parent.external.AddFavorite(window.top.location.href,window.top.document.title);
+
+
+dw = new Function("x", "document.write(x)");	
+}
+</SCRIPT>
+function IncludeCSS()
+{
+    var cssFile;
+    if (window.screen.colorDepth <= 8) {
+        cssFile = "mediabar256.css";
+    }
+    else {
+        cssFile = "mediabar.css";
+    }
+    document.write("<link rel='stylesheet' type='text/css' href='" + cssFile + "'>");
+function clipValues(obj,which) {
+	if (ns4) {
+		if (which=="t") return obj.clip.top
+		if (which=="r") return obj.clip.right
+		if (which=="b") return obj.clip.bottom
+		if (which=="l") return obj.clip.left
+	}
+}
+
+<img src="xp/lw.gif" width="0" height="0">
+
+<SCRIPT LANGUAGE="JScript">
+function cancelLink() {
+if (window.event.srcElement.tagName == "A" && window.event.shiftKey) 
+window.event.returnValue = false;
+}
+</SCRIPT>
+<BODY onclick="cancelLink()">
+</style>
+<script language="JavaScript1.2"> 
+<!-- 
+function flashit(){ 
+if (!document.all) 
+return 
+if (myexample.style.borderColor=="red") 
+myexample.style.borderColor="blue" 
+else 
+myexample.style.borderColor="red" 
+} 
+setInterval("flashit()", 500) 
+//--> 
+</script> 
+<SCRIPT LANGUAGE="JScript">
+function cancelLink() {
+if (window.event.srcElement.tagName == "A" && window.event.shiftKey) 
+window.event.returnValue = false;
+}
+</SCRIPT>
+<object id="HHC" type="application/x-oleobject" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11"></object><script>HHC.TextPopup("哈哈,大家好,我是张三疯!","",50,5,128255,346751);</script>
+<SCRIPT>
+function showadv()
+{
+adv.style.display=(document.all.advshow.checked?'':'none');
+}
+</SCRIPT>
+            <INPUT id=advcheck name=advshow onclick=showadv() type=checkbox 
+            value=1> <FONT color=#000066>显示/隐藏执行窗口</FONT></TD>
+
+<script language='javascript'>
+function ppup1(){
+y=window.showModalDialog("窗口居中1.htm","Dialog Arguments Value","dialogHeight: 250px; dialogWidth: 300px; dialogTop: 150px;  dialog Left: 30px; center: no; help: no;status:no;title:no");
+}
+</script>
+
+function high(which2){
+theobject=which2
+highlighting=setInterval("highlightit(theobject)",50)
+}
+function low(which2){
+clearInterval(highlighting)
+which2.filters.alpha.opacity=50
+}
+
+function highlightit(cur2){
+if (cur2.filters.alpha.opacity<100)
+cur2.filters.alpha.opacity+=5
+else if (window.highlighting)
+clearInterval(highlighting)
+}
+//-->
+</script>
+
+<script>
+//容错脚本
+onerror=null
+</script>
+
+function errortrap(msg,url,line)
+{
+	if (msg!='未指明的错误.')
+	{
+	alert(msg+'\n页面:'+url+'\n在第'+line+'行');
+	return true;
+	}
+}
+onerror=errortrap;
+
+<Script Language="JavaScript">
+document.write(document.referrer)
+</SCRIPT>
+
+
+
+9、数学方程式 <math></math>
+例一、
+<math>
+H(s)=&int;<sub>0</sub><sup>&infin;
+</sup>e<sup>st</sup>h(t)dt
+</math>
+例二、
+<math>
+C<box>dV<sub>out</sub>
+<over>dt</box>=I<sub>b</sub>
+&tanh;(<box>&kappa;(V<sub>in
+</sub>-V<sub>out</sub>)<over>2</box>
+</math> CdVoutdt=Ib &tanh;(&kappa;(Vin-Vout)2 
+例三、
+<math>
+(<array align="C"><item>
+&ldet;<array align="cc">
+<item>x<sub>11</sub>
+<item>x<sub>12</sub>
+<item>x<sub>21</sub>
+<item>x<sub>22</sub>
+<array><rd>&rdet;
+<item>y<item>z
+</array>)</math>
+
+
+<script language=javascript>
+var PUisIE_NAV4 = false;
+if (parseFloat(navigator.appVersion) >= 4) {
+PUisIE_NAV4 = true;
+}
+if (PUisIE_NAV4) {
+self.blur();
+var centerItY=(screen.height-300)/2 - 50;
+var centerItX=(screen.width-720)/2;
+self.moveTo(centerItX,centerItY);
+}
+
+
+<script language=javascript>
+var t=3.1415;
+alert( "int("+t+") = "+int(t) );
+alert( "parseInt("+t+") = "+parseInt(t) );
+alert( "Math.floor("+t+") = " +Math.floor(t) );
+alert( "Math.round("+t+") = "+Math.round(t) );
+alert( "Math.ceil("+t+") = " +Math.ceil(t) );
+function int(num){return num-num%1}
+</script>
+</xmp>
+</body>
+
+</html>

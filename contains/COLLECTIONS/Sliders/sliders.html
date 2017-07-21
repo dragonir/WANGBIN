@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+			/* position: relative; */
+		}
+		#slideContainer{
+			border: 2px solid red;
+			width: 80%;
+			height: 400px;
+			margin: auto;
+			margin-top: 10px;
+			overflow: hidden;
+			position: relative;
+		}
+		#slides{
+			height: 100%;
+			width: 100%;
+			border:  2px solid yellow;
+			position: absolute;
+		}
+		#slideContainer .slideItem{
+			width: 100%;
+			height: 100%;
+			float: left;
+		}
+		.navigator, .arrow{
+			position: absolute;
+			clear: both;
+			z-index: 999;
+		}
+		#nav1{
+			border: 2px solid red;
+			left: 45%;
+			top: 350px;
+		}
+		#nav2{
+			border: 2px solid red;
+			left: 50%;
+			top: 350px;
+		}
+		#nav3{
+			border: 2px solid red;
+			left: 55%;
+			top: 350px;
+		}
+		#arrow1{
+			/* border: 2px solid red; */
+			left: 10%;
+			top: 100px;
+			/* visibility: hidden; */
+		}
+		#arrow2{
+			/* border: 2px solid red; */
+			right: 10%;
+			top: 100px;
+			/* visibility: hidden; */
+		}
+	</style>
+</head>
+<body onload="band()">
+<div id="slideContainer">
+	<div id="slides">
+		<img src="images\img1.jpg" id="slide1" class="slideItem">
+		<img src="images\img2.jpg" id="slide2" class="slideItem">
+		<img src="images\img3.jpg" id="slide3" class="slideItem">
+		<img src="images\img1.jpg" id="slide1" class="slideItem">
+	</div>
+</div>
+
+<div id="nav1" class="navigator">
+	<img src="images\navigator.png" id="navImg1">
+</div>
+<div id="nav2" class="navigator">
+	<img src="images\navigator.png" id="navImg2">
+</div>
+<div id="nav3" class="navigator">
+	<img src="images\navigator.png" id="navImg3">
+</div>
+<div id="arrow1" class="arrow">
+	<img src="images\arrows-30.png" id="arrowImg1">
+</div>
+<div id="arrow2" class="arrow">
+	<img src="images\arrows-30.png" id="arrowImg2">
+</div>
+<script type="text/javascript">
+	var t = 0;
+	var id;
+	var stay = 0;
+	var judge = 1;
+	var nav1 = document.getElementById("nav1");
+	var nav2 = document.getElementById("nav2");
+	var nav3 = document.getElementById("nav3");
+	var arrow1 = document.getElementById("arrow1");
+	var arrow2 = document.getElementById("arrow2");
+
+	function band(event){		//绑定图上所有元素
+		switch(event.type){
+			case "mouseover": //此时arrow出现
+				judge = 0;
+				arrow1.style.visibility = "visible";
+				arrow2.style.visibility = "visible";
+				break;
+			case "mouseout": //此时arrow隐藏
+				judge = 1;
+				arrow1.style.visibility = "hidden";
+				arrow2.style.visibility = "hidden";
+				break;
+		}
+	}
+
+</script>
+</body>
+</html>

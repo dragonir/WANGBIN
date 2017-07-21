@@ -1,0 +1,105 @@
+<html>
+
+<head>
+<title>友情连接导航脚本</title>
+<style type="text/css">
+<!--
+td           { font-style: normal; font-variant: normal; font-weight: normal; font-size: 9pt; 
+               font-family: 宋体; text-decoration: none }
+a            { font-style: normal; font-variant: normal; font-weight: normal; font-size: 9pt; 
+               font-family: 宋体; text-decoration: none }
+body         { font-style: normal; font-variant: normal; font-weight: normal; font-size: 9pt; 
+               font-family: 宋体; text-decoration: none; margin-top: 0px }
+-->
+</style>
+<meta name="description" content="一个不错的可用于友情连接或者站点栏目介绍的脚本。">
+<meta name="keywords" content="导航菜单 站点介绍 menu navigation 友情连接">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+</head>
+
+<body bgcolor="#0496DC">
+
+<script language="JavaScript">
+<!--
+function go_to_station(){
+	if (document.stationform.stationselect.options[0].selected){
+		window.location.href = "http://java2000.126.com";}
+              else if (document.stationform.stationselect.options[1].selected)		
+ 	{	window.location.href = "http://zjjg.yeah.net/";}	
+	else if (document.stationform.stationselect.options[2].selected)		
+	{	window.location.href = "http://mcg.yeah.net/";}
+	else if (document.stationform.stationselect.options[3].selected)		
+	{	window.location.href = "http://tonyest.yeah.net/";}	
+	else if (document.stationform.stationselect.options[4].selected)		
+	{	window.location.href = "http://cp33.yeah.net/";}
+              else if (document.stationform.stationselect.options[5].selected)		
+	{	window.location.href = "http://ftp.maoming.gd.cn/e/yanghai";}		
+             else if (document.stationform.stationselect.options[6].selected)		
+	{	window.location.href = "http://jgq.yeah.net/";}		
+             else if (document.stationform.stationselect.options[7].selected)		
+	{	window.location.href = "http://nns.yeah.net/";}	
+             return true;	
+	}
+//This is were you load the Discription and the Author
+function textValue(){	
+	if (document.stationform.stationselect.options[0].selected){
+		document.stationform.disc.value = "Java脚本下载资源站"
+		document.stationform.author.value = "【最酷的Java脚本资源站】";}
+              else if (document.stationform.stationselect.options[1].selected)		
+	{	document.stationform.disc.value = "学习windows的好地方..."
+		document.stationform.author.value = "【无忧视窗】";}	
+	else if (document.stationform.stationselect.options[2].selected)		
+	{	document.stationform.disc.value = "培训教学"
+		document.stationform.author.value = "【微软认证专家园地】";}
+	else if (document.stationform.stationselect.options[3].selected)		
+	{	document.stationform.disc.value = "电脑网络"
+		document.stationform.author.value = "【梧桐世界】";}	
+	else if (document.stationform.stationselect.options[4].selected)		
+	{	document.stationform.disc.value = "图形图象制作"
+		document.stationform.author.value = "【菜盆的'无中生有'】";}
+              else if (document.stationform.stationselect.options[5].selected)		
+	{	document.stationform.disc.value = "美术吉它"
+		document.stationform.author.value = "【杨海“倾心小筑”】";}	
+	else if (document.stationform.stationselect.options[6].selected)		
+	{	document.stationform.disc.value = "电脑网络"
+		document.stationform.author.value = "【江光强主页】";}
+              else if (document.stationform.stationselect.options[7].selected)		
+	{	document.stationform.disc.value = "游戏,编程"
+		document.stationform.author.value = "【未名创作室】";}	
+	return true;	
+	}
+
+//-->
+</script>
+<div align="center">
+  　
+</div>
+<div align="center">
+  <center><font color="#FFFFFF">不错的友情连接脚本</font></center>
+</div>
+<center>
+<form name="stationform">
+  <table>
+    <tr>
+      <td><select name="stationselect" onchange="textValue()" multiple size="8" class="yk9">
+          <option>Java2000</option>
+          <option>军事与泥巴</option>
+          <option>微软认证专家园地</option>
+          <option>梧桐世界</option>
+          <option>菜盆的&quot;无中生有&quot;</option>
+          <option>杨海“倾心小筑”</option>
+          <option>江光强主页</option>
+          <option>未名创作室</option>
+        </select>
+      <td>站点名称<br>
+        <textarea rows="1" cols="40" name="author" class="yk9"></textarea><br>
+        站点主题<br>
+        <textarea rows="3" cols="40" name="disc" wrap="physical" class="yk9"></textarea>
+    </tr>
+  </table>
+  &nbsp;<input type="button" name="stationbutton" value="参观参观" onclick="go_to_station()" class="yk9">
+</form>
+</center>
+
+</body>

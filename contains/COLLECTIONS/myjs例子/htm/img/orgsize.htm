@@ -1,0 +1,17 @@
+点击图片上获得信息：<br>
+<img src="img.gif" width=200 height=80 
+  onclick=alert('图片原始宽度为：'+GetImageWidth(this)+'\n图片原始高度为:'+GetImageHeight(this))>
+<script>
+var OriginImage=new Image();
+function GetImageWidth(oImage)
+{
+  if(OriginImage.src!=oImage.src)OriginImage.src=oImage.src;
+  return OriginImage.width;
+}
+function GetImageHeight(oImage)
+{
+  if(OriginImage.src!=oImage.src)OriginImage.src=oImage.src;
+  return OriginImage.height;
+}
+</script>
+ 

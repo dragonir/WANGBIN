@@ -1,0 +1,39 @@
+<attach event="onmousedown" onevent="down()"/>
+<attach event="onmouseup" onevent="up()"/>
+<attach event="onmousemove" onevent="move()"/>
+<script language="Javascript">
+var dragx0;
+var dragy0;
+var dragdx0;
+var dragdy0;
+var dragz;
+var dragenable=false;
+
+function down(){
+dragenable=true;
+dragz=element.style.zIndex;
+
+dragdx0=event.clientX+window.document.body.scrollLeft;
+dragdy0=event.clientY+window.document.body.scrollTop;
+dragx0=element.offsetLeft;
+dragy0=element.offsetTop;
+
+element.setCapture();
+event.cancelBubble=true;
+element.style.zIndex=1000;
+}
+
+function up(){
+dragenable=false;
+element.releaseCapture();
+element.style.zIndex=dragz;
+}
+
+function move(){
+if (dragenable==true) {
+	element.style.pixelLeft=dragx0+(event.clientX-dragdx0)+window.document.body.scrollLeft;
+	element.style.pixelTop=dragy0+(event.clientY-dragdy0)+window.document.body.scrollTop;
+	}
+}
+</script>
+ 

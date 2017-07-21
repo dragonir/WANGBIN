@@ -1,0 +1,181 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0032)http://www.ie-zone.com/index.php -->
+<HTML>
+<HEAD>
+<TITLE>模仿Flash效果</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<LINK  href="fav.ico" rel="shortcut icon">
+
+<SCRIPT language=JavaScript>
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+ob.select();js=ob.createTextRange();js.execCommand("Copy");
+}
+//-->
+</SCRIPT>
+<META content="MSHTML 5.50.4134.600" name=GENERATOR>
+</HEAD>
+<BODY id=all  bgColor=#336699>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_1.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_2.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/space.gif" width=11 height="1"></TD>
+    <TD width="100%"> 
+      <table width="100%" border="0" cellpadding="8">
+        <tr> 
+          <td align="center"> 
+            <script language="JavaScript">
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</script>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#f7f7f7"> 
+            <script>
+var x,y
+var timer
+var i_fontsize=0
+var step=0
+var thisx,thisy
+
+function handlerMM(e){
+	x = (document.layers) ? e.pageX : event.clientX
+	y = (document.layers) ? e.pageY : event.clientY
+}
+
+function ringup() {
+	if (document.all) {
+		thisx = x
+		thisy = y
+		ringup2()
+	}
+}
+
+function ringup2() {
+	if (i_fontsize<=1530) {	
+		document.all.ring.style.fontSize=i_fontsize
+		document.all.ring.style.color="rgb(255,"+Math.floor(i_fontsize/6)+","+Math.floor(i_fontsize/6)+")"
+    	document.all.ring.style.posLeft=thisx-(Math.floor(i_fontsize/3))
+		document.all.ring.style.posTop=thisy-(Math.floor(i_fontsize/1.4))	
+		step+=4
+		i_fontsize+=step
+		timer=setTimeout("ringup(2)",50)
+	}
+	else {
+		clearTimeout(timer)
+		i_fontsize=0
+		step=0
+		document.all.ring.style.posTop=-10000
+	}
+}
+
+document.onmousemove = handlerMM;
+
+</script>
+            <style>.ringstyle {
+	FONT-SIZE: 5pt; VISIBILITY: visible; COLOR: #ff0000; FONT-FAMILY: Verdana; POSITION: absolute; TOP: -50px
+}
+.explain {
+	FONT-SIZE: 10pt; LEFT: 140px; WIDTH: 480px; COLOR: #000000; FONT-FAMILY: Times; POSITION: absolute; TOP: 80px; TEXT-ALIGN: center
+}
+A {
+	COLOR: #000000; FONT-FAMILY: Times; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #000000
+}
+</style>
+            <div class=ringstyle id=ring>o</div>
+            <div class=explain id=redirection> 
+              <p><a onMouseOver=ringup() target=_blank  href="#">中国人民解放军</a></p>
+            </div>
+            提示:试试把鼠标放到连接上看看.</td>
+        </tr>
+        <tr> 
+          <td>1.将下面的代码复制到&lt;body&gt;内 <br>
+            &lt;script&gt;<br>
+            var x,y<br>
+            var timer<br>
+            var i_fontsize=0<br>
+            var step=0<br>
+            var thisx,thisy 
+            <p>function handlerMM(e){<br>
+              x = (document.layers) ? e.pageX : event.clientX<br>
+              y = (document.layers) ? e.pageY : event.clientY<br>
+              }</p>
+            <p>function ringup() {<br>
+              if (document.all) {<br>
+              thisx = x<br>
+              thisy = y<br>
+              ringup2()<br>
+              }<br>
+              }</p>
+            <p>function ringup2() {<br>
+              if (i_fontsize&lt;=1530) { <br>
+              document.all.ring.style.fontSize=i_fontsize<br>
+              document.all.ring.style.color=&quot;rgb(255,&quot;+Math.floor(i_fontsize/6)+&quot;,&quot;+Math.floor(i_fontsize/6)+&quot;)&quot;<br>
+              document.all.ring.style.posLeft=thisx-(Math.floor(i_fontsize/3))<br>
+              document.all.ring.style.posTop=thisy-(Math.floor(i_fontsize/1.4))	
+              <br>
+              step+=4<br>
+              i_fontsize+=step<br>
+              timer=setTimeout(&quot;ringup(2)&quot;,50)<br>
+              }<br>
+              else {<br>
+              clearTimeout(timer)<br>
+              i_fontsize=0<br>
+              step=0<br>
+              document.all.ring.style.posTop=-10000<br>
+              }<br>
+              }</p>
+            <p>document.onmousemove = handlerMM;</p>
+            <p>&lt;/script&gt;<br>
+              &lt;style&gt;.ringstyle {<br>
+              FONT-SIZE: 5pt; VISIBILITY: visible; COLOR: #ff0000; FONT-FAMILY: 
+              Verdana; POSITION: absolute; TOP: -50px<br>
+              }<br>
+              .explain {<br>
+              FONT-SIZE: 10pt; LEFT: 40px; WIDTH: 480px; COLOR: #000000; FONT-FAMILY: 
+              Times; POSITION: absolute; TOP: 80px; TEXT-ALIGN: center<br>
+              }<br>
+              A {<br>
+              COLOR: #000000; FONT-FAMILY: Times; TEXT-DECORATION: underline<br>
+              }<br>
+              A:visited {<br>
+              COLOR: #000000<br>
+              }<br>
+              &lt;/style&gt;<br>
+              &lt;div class=ringstyle id=ring&gt;o&lt;/div&gt;<br>
+              &lt;div class=explain id=redirection&gt; <br>
+              &lt;p&gt;&lt;a onMouseOver=ringup() target=_blank <br>
+              href=&quot;#&quot;&gt;中国人民解放军&lt;/a&gt;&lt;/p&gt;<br>
+              &lt;/div&gt;</p>
+            <br>
+            <br>
+            2.请按Script内的指示按你的需要修改，我已把重点部分翻译了。还有不明白的地方请到论坛发表。</td>
+        </tr>
+      </table>
+    </TD>
+    <TD><IMG src="../images/space.gif"    width=11 height="1"></TD>
+  </TR>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_3.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_4.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRICELL - 导航</title>
+    <script type="text/javascript" src="tricell_talk/assets/jquery/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="tricell_talk/assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="tricell_talk/assets/styles/animate.css">
+    <link rel="stylesheet" type="text/css" href="tricell_talk/assets/styles/mybootstrap.css">
+    <link rel="stylesheet" type="text/css" href="tricell_talk/assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="tricell_talk/assets/styles/font-awesome.min.css"> 
+    <link rel="stylesheet" type="text/css" href="tricell_talk/assets/styles/index.css">  
+</head>
+
+<body>
+<div id="bg-pattern"></div>
+<div id="bg-pattern-style1"></div>
+<div id="bg-lighter"></div>
+<video autoplay="" loop="" id="bgvid">
+    <source src="tricell_talk/assets/media/video-1.webm" type="video/webm">
+</video>
+    <!-- PRELOADER -->
+      <div id="prelaoder" style="display: none;">
+        <div class="spinner" style="display: none;"><div class="spinner-inner"></div></div>
+      </div>
+      <!-- /PRELOADER -->
+    
+<!-- home -->
+<section id="home" style="display: table;">
+    <div class="content-block animated fadeInDown" style="display: table-cell;">
+            <div class="col-lg-3">
+              	<img class="img-responsive" src="tricell_talk/assets/images/myLogo4.png" alt="Umbrella Corporation">
+             	<img class="img-responsive" src="tricell_talk/assets/images/myLogo2.png" alt="Umbrella Corporation">
+              	<hr class="logo">
+              	<p>Coming<br>Soon</p>
+            </div>
+   
+               
+            <div class="slogan">
+           		TRICELL Corporation
+            </div>
+            
+            <div class="col-lg-9">
+              	<div id="slider" style="position: relative;">
+              	<div class="slide cycle-slide cycle-sentinel" style="position: static; top: 0px; left: 0px; z-index: 100; opacity: 1; display: block; visibility: hidden;"> 
+              		<h1 style="visibility: hidden;">
+              			<span style="visibility: hidden;">Our Business Is Life Itself.</span>
+              		</h1> 
+              	</div>
+              	<div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 95; opacity: 0; display: block; visibility: hidden;"> <h1><span>Our Business Is Life Itself.</span></h1> </div>
+              	<div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 100; visibility: hidden; opacity: 0; display: block;"> <h1><span></span></h1> </div>
+              	<div class="slide cycle-slide cycle-slide-active" style="position: absolute; top: 0px; left: 0px; z-index: 99; visibility: visible; opacity: 1; display: block;"> <h1><span>我们的业务就是生命本身。</span></h1> 
+              	</div>
+              	<div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 97; visibility: hidden; opacity: 0; display: block;"> <h1><span></span></h1> </div>
+              	<div class="slide cycle-slide" style="position: absolute; top: 0px; left: 0px; z-index: 96; visibility: hidden; opacity: 0; display: block;"> <h1><span></span></h1> 
+              	</div>
+              </div>
+              
+              <!-- <h1>EVOLVED. ENGAGED.</h1> -->
+              <hr class="large">
+              <h4 id="open-overlay">Subscribe To Find Out When We Launch.</h4>
+              <div id="links">
+                  <ul>
+              		    <li><span>导航</span></li>
+                  		<li><a href="tricell_talk/home.html" class="btn">主页</a></li>
+                  		<li><a href="tricell_talk/services.html" class="btn">业务</a></li>
+                  		<li><a href="tricell_talk/about.html" class="btn">关于</a></li>
+                  		<li><a href="tricell_talk/login.html" class="btn">注册与登录</a></li>
+                  		<li><a class="btn">其他</a>
+                          <ul id="innerList">
+                      				<li><a href="#" class="btn">商店</a></li>
+                      				<li><a href="#" class="btn">关于</a></li>
+                      				<li><a href="#" class="btn">作者</a></li>
+                      				<li><a href="#" class="btn">联系</a></li>
+                  		    </ul>
+              		    </li>
+              	  </ul>
+              </div>
+              
+            </div>
+    </div>        
+</section>
+
+
+<!-- FOOTER -->
+<div id="footer" class="hidden-xs" style="display: block;">
+    <p><a href="home.html" target="_blank">TRICELL CORPORATION</a> © 2017</p>
+    <a href="home.html#" data-toggle="modal" data-target="#privacy"><p>Privacy Policy</p></a>
+    <div class="modal fade" id="privacy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">To Our Customers:</h4>
+                  </div>
+                  <div class="modal-body">
+                    Your privacy is important to us, and maintaining your trust and confidence is one of our highest priorities. 
+                    We respect your right to keep your personal information confidential and understand your desire to avoid unwanted
+                    solicitations. We hope that by taking a few minutes to read our privacy policy, you will have a better understanding
+                    of what we do with the information you provide us and how we keep it private and secure. To read more about our privacy
+                    policy please click <a href="http://umbrellacorporation.jp/privacy.html" target="_blank"> here</a>.
+                  </div>
+                </div>
+              </div>
+    </div>
+</div>
+ 
+
+<!-- OVERLAY -->
+<div id="overlay" style="display: none;">
+    <section id="overlay-about" class="overlay-content animated fadeOutDownBig" style="display: none;">
+    <div class="container">
+    <button type="button" id="close-overlay">Close</button>
+    <div class="row">
+                    <h1>Subscribe</h1>
+                </div>
+                
+                <div class="row">
+                  <div class="col-lg-12">
+                    <p>
+                     Please fill in your email address and we'll let you know when we launch!
+                      
+                    </p>
+                  </div>
+                </div>
+                
+                <form id="subscribeform" name="subscribeform" method="post" action="http://newsletter.umbrellacorporation.jp/?p=subscribe&amp;id=1">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="input-group input-group-lg">
+                          <input type="text" name="email" class="email form-control" placeholder="your@umbrella.email">
+                          <div class="input-group-btn">
+                          <input type="hidden" name="subscribe" value="yes">
+                       <input type="hidden" name="htmlemail" value="1">
+               			<input type="hidden" name="list[1]" value="signup">
+                          <button type="submit" class="btn btn-primary">Subscribe</button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                
+                <div class="status-message"></div>
+                <div class="row">
+                  <p class="copyright">2017 © <a href="home.html" target="_blank">TRICELL CORPORATION</a>. All rights reserved. Powered by <b>WANGBIN</b></p>
+                </div>       
+             </div>
+        </section>
+      </div>
+    <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 649px; width: 745px; z-index: -999999; position: fixed;">
+    <img src="assets\images\1.jpg" style="position: absolute; margin: 0px; padding: 0px; border: none; width: 1038.4px; height: 649px; max-height: none; max-width: none; z-index: -999999; left: -146.7px; top: 0px;">
+    </div>
+  </body>
+</html>

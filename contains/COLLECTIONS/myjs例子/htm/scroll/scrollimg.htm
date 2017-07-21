@@ -1,0 +1,272 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://www.1studio.net/html/example/0009/0009.htm -->
+<HTML><HEAD><TITLE>滚动的图片</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type><LINK 
+href="scrollimg/site.css" rel=stylesheet type=text/css>
+<SCRIPT language=JavaScript>
+<!--
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+var obj=MM_findObj(ob); if (obj) { 
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff id=all leftMargin=0 topMargin=0>
+<TABLE align=center border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR bgColor=#7285cf>
+    <TD height=18 width=10>&nbsp;</TD>
+    <TD bgColor=#7285cf class=white height=18 width=590>滚动的图片</TD></TR>
+  <TR bgColor=#e7e7e7>
+    <TD width=10>&nbsp;</TD>
+    <TD bgColor=#e7e7e7 height=20 
+      width=590>不用flash也能做出比跑马灯连贯的滚动信息，看上去很流畅，这就是它的本色。</TD></TR>
+  <TR bgColor=#f2f2f2>
+    <TD bgColor=#f2f2f2 width=10>&nbsp;</TD>
+    <TD align=middle bgColor=#f2f2f2 width=590><IFRAME frameBorder=no 
+      height=100 marginHeight=0 marginWidth=0 name=mq scrolling=no 
+      src="scrollimg/mq.htm" width="100%"></IFRAME><IFRAME frameBorder=no 
+      height=0 marginHeight=0 marginWidth=0 name=mq scrolling=no 
+      src="scrollimg/mqhx.htm" width=0></IFRAME></TD></TR></TBODY></TABLE><BR>
+<TABLE align=center border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR bgColor=#7285cf>
+    <TD height=18 width=8>&nbsp;</TD>
+    <TD bgColor=#7285cf class=white colSpan=3 height=18>制作方法</TD></TR>
+  <TR bgColor=#e7e7e7>
+    <TD height=18 width=8>&nbsp;</TD>
+    <TD height=18 width=35><IMG height=21 src="scrollimg/number1.gif" 
+      width=21> </TD>
+    <TD height=18 width=369>将下面的插入针代码复制到&lt;body&gt;~&lt;/body&gt;里</TD>
+    <TD height=18 width=188><INPUT class=bottom name=Button onclick="JM_cc('js_1')" type=button value=复制到我的剪贴板> 
+    </TD></TR>
+  <TR bgColor=#7285cf>
+    <TD bgColor=#f2f2f2 height=18 width=8>&nbsp;</TD>
+    <TD align=middle bgColor=#f2f2f2 colSpan=3 height=18><TEXTAREA class=editbox2 cols=80 name=js_1 rows=6 wrap=VIRTUAL>&lt;iframe frameborder=no height=100 marginheight=0 marginwidth=0 name=mq scrolling=no src="mq.htm" width="100%"&gt;&lt;/iframe&gt;
+
+&lt;iframe frameborder=no height=0 marginheight=0 marginwidth=0 name=mq scrolling=no src="mqhx.htm" width=0&gt;&lt;/iframe&gt;</TEXTAREA> 
+    </TD></TR>
+  <TR bgColor=#e7e7e7>
+    <TD height=18 width=8>&nbsp;</TD>
+    <TD height=18><IMG height=21 src="scrollimg/number2.gif" width=21></TD>
+    <TD bgColor=#e7e7e7 height=18 width=369>将<A class=red 
+      href="scrollimg/mq.htm"><U><B>mq.htm</B></U></A> 文件放在同级目录下，文件内容如下</TD>
+    <TD height=18 width=188><INPUT class=bottom name=Button2 onclick="JM_cc('js_2')" type=button value=复制到我的剪贴板> 
+    </TD></TR>
+  <TR bgColor=#7285cf>
+    <TD bgColor=#f2f2f2 height=18 width=8>&nbsp;</TD>
+    <TD align=middle bgColor=#f2f2f2 colSpan=3 height=18><TEXTAREA class=editbox2 cols=80 name=js_2 rows=10 wrap=VIRTUAL>&lt;TABLE border=0 cellPadding=0 cellSpacing=0 align="center"&gt;
+  &lt;TBODY&gt; 
+  &lt;TR&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="1.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="2.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="3.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="4.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="5.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="6.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="7.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="8.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="9.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); 
+      src="10.jpg" width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="1.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="2.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="3.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="4.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="5.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="6.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="7.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="8.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); src="9.jpg" 
+      width=150&gt;&lt;/TD&gt;
+    &lt;TD width=150&gt;&lt;IMG height=100 
+      onmouseout=javascript:parent.frames[1].startscroll(); 
+      onmouseover=javascript:parent.frames[1].stopscroll(); 
+      src="10.jpg" width=150&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;</TEXTAREA> 
+    </TD></TR>
+  <TR bgColor=#e7e7e7>
+    <TD height=18 width=8>&nbsp;</TD>
+    <TD bgColor=#e7e7e7 height=18><IMG height=21 src="scrollimg/number3.gif" 
+      width=21></TD>
+    <TD height=18 width=369>将<A class=red 
+      href="scrollimg/mqhx.htm"><U><B>mqhx.htm</B></U></A> 文件放在同级目录下，文件内容如下</TD>
+    <TD height=18 width=188><INPUT class=bottom name=Button2 onclick="JM_cc('js_3')" type=button value=复制到我的剪贴板> 
+    </TD></TR>
+  <TR bgColor=#7285cf>
+    <TD bgColor=#f2f2f2 height=18 width=8>&nbsp;</TD>
+    <TD align=middle bgColor=#f2f2f2 colSpan=3 height=18><TEXTAREA class=editbox2 cols=80 name=js_3 rows=10 wrap=VIRTUAL>&lt;SCRIPT language=JavaScript&gt;
+&lt;!--//
+	var x = 0;
+	var y = 0;
+	var limdex = 1500;
+	var dest = 0;
+	var distance = 0;
+	var step = 0;
+	var destination = 0;
+	var on = true;
+
+function scrollit(destination) {
+	step = 2;
+	dest = destination;
+	if (x&lt;dest &amp; x &lt; limdex){
+		while (x&lt;dest) {
+			step += (step / 7);
+			x += step;
+			parent.frames[0].scroll(x,0);
+		}  
+                        // top.main.scroll(dest,0);
+		if(dest &lt;=limdex) { parent.frames[0].scroll(dest,0); }
+		x = dest;
+	}
+	if (x &gt; dest)  {
+		while (x&gt;dest) {
+			step += (step / 7);
+			if(x &gt;= (0+step)) { x -= step; parent.frames[0].scroll(x,0); }
+			else break;
+		}
+		if(dest &gt;= 0) { parent.frames[0].scroll(dest,0); }
+		x = dest;
+	}
+	if (x&lt;1) { parent.frames[0].scroll(1,0); x=1 }
+	if (x&gt;limdex) { parent.frames[0].scroll(limdex,0); x=limdex }
+	x = dest;
+}
+
+function scrollnow() {
+                if (on){
+                if (x &lt; limdex &amp; x &gt;= 0 ) {              
+                                parent.frames[0].scroll(x,0);
+                            
+                        x = x + 1;
+                        
+                        setTimeout('scrollnow()', 8);
+        
+                }
+                else if (x &lt; 0) {
+                
+                        x = limdex;
+                        scrollnow();
+                }
+            else {
+                
+                x=0;
+                scrollnow();
+                }
+                }
+
+}
+
+
+
+// *********************************
+// 去掉原来的stopscroll()
+function stopscroll() {
+        if (on){
+        on = false;
+        }
+        else {
+        on = true;
+        scrollnow();
+        }
+        
+}
+function startscroll() { on = true; scrollnow(); }
+function stop_start() { 
+	if (on){ on = false;}else { on = true;scrollnow();}
+}
+
+scrollnow();
+
+//***********************************
+
+//--&gt;
+
+&lt;/SCRIPT&gt;</TEXTAREA> </TD></TR>
+  <TR bgColor=#7285cf>
+    <TD bgColor=#e7e7e7 height=18 width=8>&nbsp;</TD>
+    <TD bgColor=#e7e7e7 colSpan=3 height=18>至此你就可以完成这个实例了，快去试试吧！ 
+</TD></TR></TBODY></TABLE>
+<TABLE align=center border=0 cellPadding=0 cellSpacing=0 width=600>
+  <TBODY>
+  <TR bgColor=#7285cf>
+    <TD height=18 width=10>&nbsp;</TD>
+    <TD bgColor=#7285cf class=white height=18 width=590>相关信息</TD></TR>
+  <TR bgColor=#e7e7e7>
+    <TD width=10>&nbsp;</TD>
+    <TD bgColor=#e7e7e7 height=18 width=590>收集者：<A class=black 
+      href="mailto:1studio@sina.com">一豪</A></TD></TR>
+  <TR bgColor=#f2f2f2>
+    <TD bgColor=#f2f2f2 width=10>&nbsp;</TD>
+    <TD height=18 width=590>时　间：2001年10月11日</TD></TR>
+  <SCRIPT language=JavaScript src="scrollimg/html.js"></SCRIPT>
+  </TBODY></TABLE></BODY></HTML>

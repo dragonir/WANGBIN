@@ -1,0 +1,11 @@
+<HTML>
+<HEAD><TITLE>Report mouse moves</TITLE>
+<SCRIPT LANGUAGE="JScript">
+function reportMove() {
+    window.status = "X=" + window.event.x + " Y=" + window.event.y;
+}
+</SCRIPT>
+<BODY onmousemove="reportMove()">
+<H1>Welcome!</H1>
+</BODY>
+</HTML>

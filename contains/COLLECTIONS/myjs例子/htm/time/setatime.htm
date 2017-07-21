@@ -1,0 +1,126 @@
+<!-- This script has been in the http://www.javascripts.com Javascript Public Library! -->
+<!-- Note that though this material may have been in a public depository, certain author copyright restrictions may apply. -->
+<script language="JavaScript">
+
+<!-- Hide the script from old browsers --
+
+
+
+// Michael P. Scholtis (mpscho@planetx.bloomu.edu)
+
+// All rights reserved.  March 15, 1996
+
+// You may use this JavaScript example as you see fit, as long as the
+
+// information within this comment above is included in your script.
+
+
+
+var up,down;
+
+var min1,sec1;
+
+var cmin1,csec1,cmin2,csec2;
+
+function Minutes(data) {
+
+        for(var i=0;i<data.length;i++) if(data.substring(i,i+1)==":") break;
+
+        return(data.substring(0,i)); }
+
+function Seconds(data) {
+
+        for(var i=0;i<data.length;i++) if(data.substring(i,i+1)==":") break;
+
+        return(data.substring(i+1,data.length)); }
+
+function Display(min,sec) {
+
+        var disp;
+
+        if(min<=9) disp=" 0";
+
+        else disp=" ";
+
+        disp+=min+":";
+
+        if(sec<=9) disp+="0"+sec;
+
+        else disp+=sec;
+
+        return(disp); }
+
+function Up() {
+
+        cmin1=0;
+
+        csec1=0;
+
+        min1=0+Minutes(document.sw.beg1.value);
+
+        sec1=0+Seconds(document.sw.beg1.value);
+
+        UpRepeat(); }
+
+function UpRepeat() {
+
+        csec1++;
+
+        if(csec1==60) { csec1=0; cmin1++; }
+
+        document.sw.disp1.value=Display(cmin1,csec1);
+
+        if((cmin1==min1)&&(csec1==sec1)) alert("Timer-CountUp Stopped");
+
+        else up=setTimeout("UpRepeat()",1000); }
+
+function Down() {
+
+        cmin2=1*Minutes(document.sw.beg2.value);
+
+        csec2=0+Seconds(document.sw.beg2.value);
+
+        DownRepeat(); }
+
+function DownRepeat() {
+
+        csec2--;
+
+        if(csec2==-1) { csec2=59; cmin2--; }
+
+        document.sw.disp2.value=Display(cmin2,csec2);
+
+        if((cmin2==0)&&(csec2==0)) alert("Timer-CountDown Stopped");
+
+        else down=setTimeout("DownRepeat()",1000); }
+
+
+
+// --End Hiding Here -->
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="#fffff">
+
+<form name="sw">
+
+
+<table border="3" width="100%">
+
+<tr><th colspan="2">Timer-CountUp</th></tr>
+
+<tr align="center"><td>Stop at<br><input type="text" name="beg1" size="7" value="0:10"></td>
+
+                   <td><input type="button" value="Start" onclick="Up()"></td></tr>
+
+<tr align="center"><td colspan="2"><input type="text" name="disp1" size="9"></td></tr>
+
+</table>
+
+
+
+
+</form>
+<!-- Simba says Roar. -->
+

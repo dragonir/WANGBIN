@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<style type="text/css">
+<!--
+.mitem1 { font-size:12px; height: 24px; width: 140px; background-color: #999999; border-style: outset; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.mitem2 { font-size:12px;height: 24px; width: 140px; background-color: #CCCCCC; border-style: outset; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px }
+-->
+</style>
+</HEAD>
+<script>
+var sColor;
+var sColorCom;
+function showContextMenu(){
+	with(Mcontext) {
+	style.pixelLeft=event.x;
+	style.pixelTop=event.y;
+	style.visibility="visible";
+	}
+	Mcontext.setCapture();
+}
+
+function Mselect(){
+	var oe=event.srcElement;
+	switch (oe.id ){
+	case "Mitem1" :
+		sColorCom="ForeColor";
+		showColorPick();
+		return;
+	case "Mitem2" :
+		sColorCom="BackColor";
+		showColorPick();
+		return;
+	break;
+	}
+	Mcontext.releaseCapture();
+	Mcontext.style.visibility="hidden";
+}
+
+function itemOver(){
+var oe=event.srcElement;
+	if (Mcontext.contains(oe)) oe.className="mitem2";
+}
+function itemOut(){
+var oe=event.srcElement;
+	if (Mcontext.contains(oe)) oe.className="mitem1";
+}
+
+function showColorPick(){
+ColorTable.style.pixelLeft=Mcontext.style.pixelLeft+140;
+ColorTable.style.pixelTop=Mcontext.style.pixelTop;
+ColorTable.style.visibility="visible";
+ColorTable.setCapture();
+}
+
+function getSelColor(){
+sColor=event.srcElement.bgColor;
+ColorTable.style.visibility="hidden";
+ColorTable.releaseCapture();
+Mcontext.style.visibility="hidden";
+document.all.editBox.focus();
+oEditSelection=document.selection.createRange();
+oEditSelection.select();
+oEditSelection.execCommand(sColorCom, false, sColor);
+}
+
+</script>
+<BODY oncontextmenu="return false">
+<div id=Mcontext style="position:absolute;width:120;height:200;border:1px solid #000000;visibility:hidden;background-color:#999999" onclick="Mselect()" onmouseover="itemOver()" onmouseout="itemOut()">
+  <div id="Mitem1" class="mitem1">Change ForeColor</div>
+  <div id="Mitem2" class="mitem1">Change BackColor</div>
+  <div id="Mitem3"  class="mitem1"></div>
+  <div id="Mitem4" class="mitem1"></div>
+  <div id="Mitem5" class="mitem1"></div>
+  <div id="Mitem6"  class="mitem1"></div>
+  <div id="Mitem7" class="mitem1"></div>
+  <div id="Mitem8" class="mitem1"></div>
+</div>
+
+<DIV id="ColorTable" style="position:absolute;visibility:hidden" onclick="getSelColor()"> 
+  <TABLE cellspacing="1" bgcolor="BLACK" width="456" style="font-size:8px">
+    <TR> 
+      <TD colspan="36" align="CENTER"><FONT face="Verdana,Arial" size="1" color="WHITE">The 
+        Safety Palette</FONT></TD>
+    </TR>
+    <TR> 
+      <TD bgcolor="#000000">&nbsp;</TD>
+      <TD bgcolor="#000033">&nbsp;</TD>
+      <TD bgcolor="#000066">&nbsp;</TD>
+      <TD bgcolor="#000099">&nbsp;</TD>
+      <TD bgcolor="#0000CC">&nbsp;</TD>
+      <TD bgcolor="#0000FF">&nbsp;</TD>
+      <TD bgcolor="#003300">&nbsp;</TD>
+      <TD bgcolor="#003333">&nbsp;</TD>
+      <TD bgcolor="#003366">&nbsp;</TD>
+      <TD bgcolor="#003399">&nbsp;</TD>
+      <TD bgcolor="#0033CC">&nbsp;</TD>
+      <TD bgcolor="#0033FF">&nbsp;</TD>
+      <TD bgcolor="#006600">&nbsp;</TD>
+      <TD bgcolor="#006633">&nbsp;</TD>
+      <TD bgcolor="#006666">&nbsp;</TD>
+      <TD bgcolor="#006699">&nbsp;</TD>
+      <TD bgcolor="#0066CC">&nbsp;</TD>
+      <TD bgcolor="#0066FF">&nbsp;</TD>
+      <TD bgcolor="#009900">&nbsp;</TD>
+      <TD bgcolor="#009933">&nbsp;</TD>
+      <TD bgcolor="#009966">&nbsp;</TD>
+      <TD bgcolor="#009999">&nbsp;</TD>
+      <TD bgcolor="#0099CC">&nbsp;</TD>
+      <TD bgcolor="#0099FF">&nbsp;</TD>
+      <TD bgcolor="#00CC00">&nbsp;</TD>
+      <TD bgcolor="#00CC33">&nbsp;</TD>
+      <TD bgcolor="#00CC66">&nbsp;</TD>
+      <TD bgcolor="#00CC99">&nbsp;</TD>
+      <TD bgcolor="#00CCCC">&nbsp;</TD>
+      <TD bgcolor="#00CCFF">&nbsp;</TD>
+      <TD bgcolor="#00FF00">&nbsp;</TD>
+      <TD bgcolor="#00FF33">&nbsp;</TD>
+      <TD bgcolor="#00FF66">&nbsp;</TD>
+      <TD bgcolor="#00FF99">&nbsp;</TD>
+      <TD bgcolor="#00FFCC">&nbsp;</TD>
+      <TD bgcolor="#00FFFF">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TD bgcolor="#330000">&nbsp;</TD>
+      <TD bgcolor="#330033">&nbsp;</TD>
+      <TD bgcolor="#330066">&nbsp;</TD>
+      <TD bgcolor="#330099">&nbsp;</TD>
+      <TD bgcolor="#3300CC">&nbsp;</TD>
+      <TD bgcolor="#3300FF">&nbsp;</TD>
+      <TD bgcolor="#333300">&nbsp;</TD>
+      <TD bgcolor="#333333">&nbsp;</TD>
+      <TD bgcolor="#333366">&nbsp;</TD>
+      <TD bgcolor="#333399">&nbsp;</TD>
+      <TD bgcolor="#3333CC">&nbsp;</TD>
+      <TD bgcolor="#3333FF">&nbsp;</TD>
+      <TD bgcolor="#336600">&nbsp;</TD>
+      <TD bgcolor="#336633">&nbsp;</TD>
+      <TD bgcolor="#336666">&nbsp;</TD>
+      <TD bgcolor="#336699">&nbsp;</TD>
+      <TD bgcolor="#3366CC">&nbsp;</TD>
+      <TD bgcolor="#3366FF">&nbsp;</TD>
+      <TD bgcolor="#339900">&nbsp;</TD>
+      <TD bgcolor="#339933">&nbsp;</TD>
+      <TD bgcolor="#339966">&nbsp;</TD>
+      <TD bgcolor="#339999">&nbsp;</TD>
+      <TD bgcolor="#3399CC">&nbsp;</TD>
+      <TD bgcolor="#3399FF">&nbsp;</TD>
+      <TD bgcolor="#33CC00">&nbsp;</TD>
+      <TD bgcolor="#33CC33">&nbsp;</TD>
+      <TD bgcolor="#33CC66">&nbsp;</TD>
+      <TD bgcolor="#33CC99">&nbsp;</TD>
+      <TD bgcolor="#33CCCC">&nbsp;</TD>
+      <TD bgcolor="#33CCFF">&nbsp;</TD>
+      <TD bgcolor="#33FF00">&nbsp;</TD>
+      <TD bgcolor="#33FF33">&nbsp;</TD>
+      <TD bgcolor="#33FF66">&nbsp;</TD>
+      <TD bgcolor="#33FF99">&nbsp;</TD>
+      <TD bgcolor="#33FFCC">&nbsp;</TD>
+      <TD bgcolor="#33FFFF">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TD bgcolor="#660000">&nbsp;</TD>
+      <TD bgcolor="#660033">&nbsp;</TD>
+      <TD bgcolor="#660066">&nbsp;</TD>
+      <TD bgcolor="#660099">&nbsp;</TD>
+      <TD bgcolor="#6600CC">&nbsp;</TD>
+      <TD bgcolor="#6600FF">&nbsp;</TD>
+      <TD bgcolor="#663300">&nbsp;</TD>
+      <TD bgcolor="#663333">&nbsp;</TD>
+      <TD bgcolor="#663366">&nbsp;</TD>
+      <TD bgcolor="#663399">&nbsp;</TD>
+      <TD bgcolor="#6633CC">&nbsp;</TD>
+      <TD bgcolor="#6633FF">&nbsp;</TD>
+      <TD bgcolor="#666600">&nbsp;</TD>
+      <TD bgcolor="#666633">&nbsp;</TD>
+      <TD bgcolor="#666666">&nbsp;</TD>
+      <TD bgcolor="#666699">&nbsp;</TD>
+      <TD bgcolor="#6666CC">&nbsp;</TD>
+      <TD bgcolor="#6666FF">&nbsp;</TD>
+      <TD bgcolor="#669900">&nbsp;</TD>
+      <TD bgcolor="#669933">&nbsp;</TD>
+      <TD bgcolor="#669966">&nbsp;</TD>
+      <TD bgcolor="#669999">&nbsp;</TD>
+      <TD bgcolor="#6699CC">&nbsp;</TD>
+      <TD bgcolor="#6699FF">&nbsp;</TD>
+      <TD bgcolor="#66CC00">&nbsp;</TD>
+      <TD bgcolor="#66CC33">&nbsp;</TD>
+      <TD bgcolor="#66CC66">&nbsp;</TD>
+      <TD bgcolor="#66CC99">&nbsp;</TD>
+      <TD bgcolor="#66CCCC">&nbsp;</TD>
+      <TD bgcolor="#66CCFF">&nbsp;</TD>
+      <TD bgcolor="#66FF00">&nbsp;</TD>
+      <TD bgcolor="#66FF33">&nbsp;</TD>
+      <TD bgcolor="#66FF66">&nbsp;</TD>
+      <TD bgcolor="#66FF99">&nbsp;</TD>
+      <TD bgcolor="#66FFCC">&nbsp;</TD>
+      <TD bgcolor="#66FFFF">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TD bgcolor="#990000">&nbsp;</TD>
+      <TD bgcolor="#990033">&nbsp;</TD>
+      <TD bgcolor="#990066">&nbsp;</TD>
+      <TD bgcolor="#990099">&nbsp;</TD>
+      <TD bgcolor="#9900CC">&nbsp;</TD>
+      <TD bgcolor="#9900FF">&nbsp;</TD>
+      <TD bgcolor="#993300">&nbsp;</TD>
+      <TD bgcolor="#993333">&nbsp;</TD>
+      <TD bgcolor="#993366">&nbsp;</TD>
+      <TD bgcolor="#993399">&nbsp;</TD>
+      <TD bgcolor="#9933CC">&nbsp;</TD>
+      <TD bgcolor="#9933FF">&nbsp;</TD>
+      <TD bgcolor="#996600">&nbsp;</TD>
+      <TD bgcolor="#996633">&nbsp;</TD>
+      <TD bgcolor="#996666">&nbsp;</TD>
+      <TD bgcolor="#996699">&nbsp;</TD>
+      <TD bgcolor="#9966CC">&nbsp;</TD>
+      <TD bgcolor="#9966FF">&nbsp;</TD>
+      <TD bgcolor="#999900">&nbsp;</TD>
+      <TD bgcolor="#999933">&nbsp;</TD>
+      <TD bgcolor="#999966">&nbsp;</TD>
+      <TD bgcolor="#999999">&nbsp;</TD>
+      <TD bgcolor="#9999CC">&nbsp;</TD>
+      <TD bgcolor="#9999FF">&nbsp;</TD>
+      <TD bgcolor="#99CC00">&nbsp;</TD>
+      <TD bgcolor="#99CC33">&nbsp;</TD>
+      <TD bgcolor="#99CC66">&nbsp;</TD>
+      <TD bgcolor="#99CC99">&nbsp;</TD>
+      <TD bgcolor="#99CCCC">&nbsp;</TD>
+      <TD bgcolor="#99CCFF">&nbsp;</TD>
+      <TD bgcolor="#99FF00">&nbsp;</TD>
+      <TD bgcolor="#99FF33">&nbsp;</TD>
+      <TD bgcolor="#99FF66">&nbsp;</TD>
+      <TD bgcolor="#99FF99">&nbsp;</TD>
+      <TD bgcolor="#99FFCC">&nbsp;</TD>
+      <TD bgcolor="#99FFFF">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TD bgcolor="#CC0000">&nbsp;</TD>
+      <TD bgcolor="#CC0033">&nbsp;</TD>
+      <TD bgcolor="#CC0066">&nbsp;</TD>
+      <TD bgcolor="#CC0099">&nbsp;</TD>
+      <TD bgcolor="#CC00CC">&nbsp;</TD>
+      <TD bgcolor="#CC00FF">&nbsp;</TD>
+      <TD bgcolor="#CC3300">&nbsp;</TD>
+      <TD bgcolor="#CC3333">&nbsp;</TD>
+      <TD bgcolor="#CC3366">&nbsp;</TD>
+      <TD bgcolor="#CC3399">&nbsp;</TD>
+      <TD bgcolor="#CC33CC">&nbsp;</TD>
+      <TD bgcolor="#CC33FF">&nbsp;</TD>
+      <TD bgcolor="#CC6600">&nbsp;</TD>
+      <TD bgcolor="#CC6633">&nbsp;</TD>
+      <TD bgcolor="#CC6666">&nbsp;</TD>
+      <TD bgcolor="#CC6699">&nbsp;</TD>
+      <TD bgcolor="#CC66CC">&nbsp;</TD>
+      <TD bgcolor="#CC66FF">&nbsp;</TD>
+      <TD bgcolor="#CC9900">&nbsp;</TD>
+      <TD bgcolor="#CC9933">&nbsp;</TD>
+      <TD bgcolor="#CC9966">&nbsp;</TD>
+      <TD bgcolor="#CC9999">&nbsp;</TD>
+      <TD bgcolor="#CC99CC">&nbsp;</TD>
+      <TD bgcolor="#CC99FF">&nbsp;</TD>
+      <TD bgcolor="#CCCC00">&nbsp;</TD>
+      <TD bgcolor="#CCCC33">&nbsp;</TD>
+      <TD bgcolor="#CCCC66">&nbsp;</TD>
+      <TD bgcolor="#CCCC99">&nbsp;</TD>
+      <TD bgcolor="#CCCCCC">&nbsp;</TD>
+      <TD bgcolor="#CCCCFF">&nbsp;</TD>
+      <TD bgcolor="#CCFF00">&nbsp;</TD>
+      <TD bgcolor="#CCFF33">&nbsp;</TD>
+      <TD bgcolor="#CCFF66">&nbsp;</TD>
+      <TD bgcolor="#CCFF99">&nbsp;</TD>
+      <TD bgcolor="#CCFFCC">&nbsp;</TD>
+      <TD bgcolor="#CCFFFF">&nbsp;</TD>
+    </TR>
+    <TR> 
+      <TD bgcolor="#FF0000">&nbsp;</TD>
+      <TD bgcolor="#FF0033">&nbsp;</TD>
+      <TD bgcolor="#FF0066">&nbsp;</TD>
+      <TD bgcolor="#FF0099">&nbsp;</TD>
+      <TD bgcolor="#FF00CC">&nbsp;</TD>
+      <TD bgcolor="#FF00FF">&nbsp;</TD>
+      <TD bgcolor="#FF3300">&nbsp;</TD>
+      <TD bgcolor="#FF3333">&nbsp;</TD>
+      <TD bgcolor="#FF3366">&nbsp;</TD>
+      <TD bgcolor="#FF3399">&nbsp;</TD>
+      <TD bgcolor="#FF33CC">&nbsp;</TD>
+      <TD bgcolor="#FF33FF">&nbsp;</TD>
+      <TD bgcolor="#FF6600">&nbsp;</TD>
+      <TD bgcolor="#FF6633">&nbsp;</TD>
+      <TD bgcolor="#FF6666">&nbsp;</TD>
+      <TD bgcolor="#FF6699">&nbsp;</TD>
+      <TD bgcolor="#FF66CC">&nbsp;</TD>
+      <TD bgcolor="#FF66FF">&nbsp;</TD>
+      <TD bgcolor="#FF9900">&nbsp;</TD>
+      <TD bgcolor="#FF9933">&nbsp;</TD>
+      <TD bgcolor="#FF9966">&nbsp;</TD>
+      <TD bgcolor="#FF9999">&nbsp;</TD>
+      <TD bgcolor="#FF99CC">&nbsp;</TD>
+      <TD bgcolor="#FF99FF">&nbsp;</TD>
+      <TD bgcolor="#FFCC00">&nbsp;</TD>
+      <TD bgcolor="#FFCC33">&nbsp;</TD>
+      <TD bgcolor="#FFCC66">&nbsp;</TD>
+      <TD bgcolor="#FFCC99">&nbsp;</TD>
+      <TD bgcolor="#FFCCCC">&nbsp;</TD>
+      <TD bgcolor="#FFCCFF">&nbsp;</TD>
+      <TD bgcolor="#FFFF00">&nbsp;</TD>
+      <TD bgcolor="#FFFF33">&nbsp;</TD>
+      <TD bgcolor="#FFFF66">&nbsp;</TD>
+      <TD bgcolor="#FFFF99">&nbsp;</TD>
+      <TD bgcolor="#FFFFCC">&nbsp;</TD>
+      <TD bgcolor="#FFFFFF">&nbsp;</TD>
+    </TR>
+  </TABLE>
+</div>
+
+<div  contentEditable id="editBox" style="width:100%;height:200;border:1px solid #000000"  oncontextmenu="showContextMenu();return false">hello!!!!!!!!</div>
+</BODY>
+</HTML>

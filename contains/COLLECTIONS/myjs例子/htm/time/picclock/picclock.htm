@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+<TITLE>Demos</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<SCRIPT language=Javascript>
+function start(){
+
+timer = new Array(10);
+timer[1]= new Image(15, 19);
+timer[1].src = "pics/1.gif";
+timer[2] = new Image(15, 19);
+timer[2].src = "pics/2.gif";
+timer[3] = new Image(15, 19);
+timer[3].src = "pics/3.gif";
+timer[4] = new Image(15, 19);
+timer[4].src = "pics/4.gif";
+timer[5] = new Image(15, 19);
+timer[5].src = "pics/5.gif";
+timer[6] = new Image(15, 19);
+timer[6].src = "pics/6.gif";
+timer[7] = new Image(15, 19);
+timer[7].src = "pics/7.gif";
+timer[8] = new Image(15, 19);
+timer[8].src = "pics/8.gif";
+timer[9] = new Image(15, 19);
+timer[9].src = "pics/9.gif";
+timer[0] = new Image(15, 19);
+timer[0].src = "pics/0.gif";
+maj();
+ // launch the update
+}
+function change(nom, index)
+{
+	image = eval("timer[" + index + "].src");
+	if (document [nom].src != image)
+	{
+		document [nom].src = image
+	}
+}
+function maj()
+{
+	hour = new Date();
+	h = hour.getHours();
+	m = hour.getMinutes();
+	s = hour.getSeconds();
+	h1 = Math.floor(h / 10);
+	h2 = h % 10;
+	m1 = Math.floor(m / 10);
+	m2 = m % 10;
+	s1 = Math.floor(s / 10);
+	s2 = s % 10;
+	change("hour1", h1);
+	change("hour2", h2);
+	change("minute1", m1);
+	change("minute2", m2);
+	change("second1", s1);
+	change("second2", s2);
+	setTimeout("maj()" ,1000)
+}
+</SCRIPT>
+
+</HEAD>
+<BODY bgColor=#ffffff onload=start()>
+
+      <P align=center>
+<IMG height=19 name=hour1 src="pics/0.gif"  width=15>
+<IMG height=19 name=hour2 src="pics/1.gif"  width=15>
+<IMG height=19 src="pics/sep.gif" width=15>
+<IMG height=19 name=minute1 src="pics/2.gif" width=15>
+<IMG height=19 name=minute2 src="pics/3.gif" width=15>
+<IMG height=19 src="pics/sep.gif" width=15>
+<IMG height=19 name=second1 src="pics/4.gif" width=15>
+<IMG height=19  name=second2 src="pics/5.gif" width=15></P>
+<div align="center"> 
+  <p><a href="pics/dtime.zip">下载所有文件 </a></p>
+  <table width="75%" border="0">
+    <tr>
+      <td><font face="Times New Roman, Times, serif">&lt;HTML&gt;<br>
+        &lt;HEAD&gt;<br>
+        &lt;TITLE&gt;Demos&lt;/TITLE&gt;<br>
+        &lt;META content=&quot;text/html; charset=gb2312&quot; http-equiv=Content-Type&gt;<br>
+        &lt;SCRIPT language=Javascript&gt;<br>
+        function start(){ </font>
+        <p><font face="Times New Roman, Times, serif">timer = new Array(10);<br>
+          timer[1]= new Image(15, 19);<br>
+          timer[1].src = &quot;pics/1.gif&quot;;<br>
+          timer[2] = new Image(15, 19);<br>
+          timer[2].src = &quot;pics/2.gif&quot;;<br>
+          timer[3] = new Image(15, 19);<br>
+          timer[3].src = &quot;pics/3.gif&quot;;<br>
+          timer[4] = new Image(15, 19);<br>
+          timer[4].src = &quot;pics/4.gif&quot;;<br>
+          timer[5] = new Image(15, 19);<br>
+          timer[5].src = &quot;pics/5.gif&quot;;<br>
+          timer[6] = new Image(15, 19);<br>
+          timer[6].src = &quot;pics/6.gif&quot;;<br>
+          timer[7] = new Image(15, 19);<br>
+          timer[7].src = &quot;pics/7.gif&quot;;<br>
+          timer[8] = new Image(15, 19);<br>
+          timer[8].src = &quot;pics/8.gif&quot;;<br>
+          timer[9] = new Image(15, 19);<br>
+          timer[9].src = &quot;pics/9.gif&quot;;<br>
+          timer[0] = new Image(15, 19);<br>
+          timer[0].src = &quot;pics/0.gif&quot;;<br>
+          maj();<br>
+          <br>
+          }<br>
+          function change(nom, index)<br>
+          {<br>
+          image = eval(&quot;timer[&quot; + index + &quot;].src&quot;);<br>
+          if (document [nom].src != image)<br>
+          {<br>
+          document [nom].src = image<br>
+          }<br>
+          }<br>
+          function maj()<br>
+          {<br>
+          hour = new Date();<br>
+          h = hour.getHours();<br>
+          m = hour.getMinutes();<br>
+          s = hour.getSeconds();<br>
+          h1 = Math.floor(h / 10);<br>
+          h2 = h % 10;<br>
+          m1 = Math.floor(m / 10);<br>
+          m2 = m % 10;<br>
+          s1 = Math.floor(s / 10);<br>
+          s2 = s % 10;<br>
+          change(&quot;hour1&quot;, h1);<br>
+          change(&quot;hour2&quot;, h2);<br>
+          change(&quot;minute1&quot;, m1);<br>
+          change(&quot;minute2&quot;, m2);<br>
+          change(&quot;second1&quot;, s1);<br>
+          change(&quot;second2&quot;, s2);<br>
+          setTimeout(&quot;maj()&quot; ,1000)<br>
+          }<br>
+          &lt;/SCRIPT&gt;</font></p>
+        <p><font face="Times New Roman, Times, serif">&lt;/HEAD&gt;<br>
+          &lt;BODY bgColor=#ffffff <font color="#FF0000">onload=start()</font>&gt;</font></p>
+        <p> <font face="Times New Roman, Times, serif">&lt;P align=center&gt;<br>
+          &lt;IMG height=19 name=hour1 src=&quot;pics/0.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 name=hour2 src=&quot;pics/1.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 src=&quot;pics/sep.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 name=minute1 src=&quot;pics/2.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 name=minute2 src=&quot;pics/3.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 src=&quot;pics/sep.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 name=second1 src=&quot;pics/4.gif&quot; width=15&gt;<br>
+          &lt;IMG height=19 name=second2 src=&quot;pics/5.gif&quot; width=15&gt;&lt;/P&gt; 
+          <br>
+          &lt;/BODY&gt;&lt;/HTML&gt;</font></p>
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp; </p>
+</div>
+</BODY></HTML>

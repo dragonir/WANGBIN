@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>局部滚动</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<STYLE>.30pt1 {
+	COLOR: #ff66cc; FONT-FAMILY: 方正魏碑繁体; FONT-SIZE: 20pt
+}
+.30pt2 {
+	COLOR: #de3076; FONT-FAMILY: 创艺繁琥珀; FONT-SIZE: 30pt
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+var msg = "This page requires version 4 or later of\n Netscape Navigator or Internet Explorer"
+var dyn = (document.layers || document.all) ? true : alert(msg);
+var nav = (document.layers) ? true : false;
+var iex = (document.all) ? true : false;
+var lft = 10; 
+var pos = 10;   
+var stp = 10;    
+var spd = 150;   
+var upr = -390;  
+var lwr = 30;   
+var tim;         
+function scroll_up() //窗口向上滚动
+{
+if(pos > upr) pos -= stp;
+do_scroll(pos);  
+tim = setTimeout("scroll_up()", spd);
+}
+
+function scroll_dn() ////窗口向上滚动
+{
+if(pos < lwr) pos += stp;
+do_scroll(pos);
+tim = setTimeout("scroll_dn()", spd);
+}
+
+function do_scroll(pos) {
+if(iex) document.all.divTxt.style.top = pos;
+if(nav) document.divTxt.top = pos;
+}
+
+function no_scroll() {
+clearTimeout(tim);
+}
+
+var divTop_content="";
+//对层进行相对定位
+if(iex) document.write('<DIV ID="divTop" STYLE="position:absolute; top:0; left:'+lft+'; width:300; height:30; background-color:#bde6fd; z-index:3">'+divTop_content+'</DIV>');
+if(nav) document.write('<LAYER ID="divTop" position="absolute" top="0" left="'+lft+'" width="300" height="30" bgcolor="#bde6fd" z-index="3">'+divTop_content+'</LAYER>');
+
+var divBtm_content =('<HR><TABLE BORDER="0" WIDTH="100%"><TR><TD ALIGN="left"><A HREF="#" ONMOUSEOVER="scroll_up()" ONMOUSEOUT="no_scroll()">上 移</A></TD><TD ALIGN="right"><A HREF="#" ONMOUSEOVER="scroll_dn()" ONMOUSEOUT="no_scroll()">下 移</A></TD></TR></TABLE>');
+
+if(iex) document.write('<DIV ID="divBtm" STYLE="position:absolute; top:350; left:'+lft+'; width:300; height:800; background-color:white; z-index:2">'+divBtm_content+'</DIV>');
+if(nav) document.write('<LAYER ID="divBtm" position="absolute" top="350" left="'+lft+'" width="300" height="800" bgcolor="white" z-index="2">'+divBtm_content+'</LAYER>');
+
+var divTxt_content = ('<font class=30pt1>&nbsp;&nbsp;&nbsp;&nbsp;鼠标移到"上移"和"下移"字样上,黄色区域便上下移动,方便阅读。<br>'
++'<p align=center>猴子</p>'
++'&nbsp;&nbsp;&nbsp;&nbsp;一天有一个妇女带著她的小孩去坐火车，一个老太太经过她座位旁时，'
++'看着她的小孩，忍不住摇摇头轻声说句：唉！怎么有这么丑的小孩呀！<br>'
++'&nbsp;&nbsp;&nbsp;&nbsp;妇人听了后忍不住哭了起来。不知情的列车服务小姐看到这位妇女哭'
++'得如此伤心，便想安慰安慰她，于是她对那位妇女说：您不要太难过了,'
++'先喝一杯水休息一下吧！哦，对了, 这里还有一个香蕉，就给你的猴子吃吧！<br><br><br>'
++'</font>');  
+if(iex) document.write('<DIV ID="divTxt" STYLE="position:absolute; top:30; left:'+lft+'; width:300; font-family:verdana; font-size:10pt; background-color:#fdf7ce; z-index:1">'+divTxt_content+'</DIV>');
+if(nav) document.write('<LAYER ID="divTxt" position="absolute" top="30" left="'+lft+'" width="300" font-family="verdana" font-size="10pt" bgcolor="#fdf7ce" z-index="1">'+divTxt_content+'</LAYER>');
+ -->
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY>
+<DIV style="LEFT: 320px; POSITION: absolute; TOP: 0px">
+<P><FONT class=30pt2><BR><BR><BR><BR>这是页面局部的上下滚动</FONT> </P></DIV></BODY></HTML>

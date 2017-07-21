@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0040)http://www.jinyun.net/ooso/lr/qq/txt.htm -->
+<HTML><HEAD><TITLE>txt文件欺骗及防范方法</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK 
+href="style.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript> 
+function click() {
+if (event.button==2) {
+	if(document.all.auto.status==true){document.all.auto.status=false;alert("自动滚屏已经停止了！")}
+	scroller();
+	}
+}
+document.onmousedown=click
+
+var position = 0; 
+function scroller() {
+if (document.all.auto.status==true){ 
+	position++; 
+	scroll(0,position); 
+	clearTimeout(timer); 
+	var timer = setTimeout("scroller()",5); 
+	timer;
+	}
+else{
+	clearTimeout(timer);
+	}
+} 
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+function MM_callJS(jsStr) { //v2.0
+  return eval(jsStr)
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.2462.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<DIV align=center></DIV>
+<TABLE width="92%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT onclick="MM_callJS('scroller() ; ')" type=checkbox 
+      value=on name=auto> 自动滚屏(右键暂停)</DIV></TD></TR>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 borderColorDark=#ffffff cellPadding=5 width="100%" 
+      align=center borderColorLight=#000000 border=1>
+        <TBODY>
+        <TR>
+          <TD width="100%" bgColor=#007ebb><FONT 
+            color=#ffffff><B>标题：txt文件欺骗及防范方法</B></FONT></TD></TR>
+        <TR>
+          <TD width="100%" bgColor=#f1c927>
+            <P>　　在众多媒体的宣传报道下，今天的我们都知道了不能轻易打开电子邮件里的可执行文件类的附件，但是显然那些破坏活动的制造者们也看了那些警告防范的文章，他们开始玩一些新的把戏，让您以为那些附件只不过是没有危险的文本文件或是图像文件等就是其手段之一。由于目前大多数人使用的是windows系列操作系统，windows的默认设置是隐藏已知文件扩展名的，而当你去点击那个看上去很友善的文件，那些破坏性的东西就跳出来了。您可能说这我早就知道了，那么下面讲述的.txt文件的新欺骗方法及原理您知道吗？<BR><BR>　　假如您收到的邮件附件中有一个看起来是这样的文件：QQ靓号放送.txt，您是不是认为它肯定是纯文本文件？我要告诉您，不一定！它的实际文件名可以是QQ靓号放送.txt.{3050F4D8-98B5-11CF-BB82-00AA00BDCE0B}。{3050F4D8-98B5-11CF-BB82-00AA00BDCE0B}在注册表里是HTML文件关联的意思。但是存成文件名的时候它并不会显现出来，您看到的就是个.txt文件，这个文件实际上等同于QQ靓号放送.txt.html。那么直接打开这个文件为什么有危险呢？请看如果这个文件的内容如下：<BR><BR>　　您可能以为它会调用记事本来运行，可是如果您双击它，结果它却调用了HTML来运行，并且自动在后台开始格式化d盘，同时显示“Windows 
+            is configuring the system。Plase do not interrupt this 
+            process。”这样一个对话框来欺骗您。您看随意打开附件中的.txt的危险够大了吧？<BR><BR>　　欺骗实现原理：当您双击这个伪装起来的.txt时候，由于真正文件扩展名是.{3050F4D8-98B5-11CF-BB82-00AA00BDCE0B}，也就是.html文件，于是就会以html文件的形式运行，这是它能运行起来的先决条件。<BR><BR>　　文件内容中的第2和第3行是它能够产生破坏作用的关键所在。其中第3行是破坏行动的执行者，在其中可以加载带有破坏性质的命令。那么第2行又是干什么的呢？您可能已经注意到了第2行里的“WSCript”，对！就是它导演了全幕，它是实际行动总指挥。<BR><BR>　　WScript全称Windows 
+            Scripting Host，它是Win98新加进的功能, 
+            是一种批次语言/自动执行工具——它所对应的程序“WScript.exe”是一个脚本语言解释器，位于c:\WINDOWS下，正是它使得脚本可以被执行，就象执行批处理一样。在Windows 
+            Scripting 
+            Host脚本环境里，预定义了一些对象，通过它自带的几个内置对象，可以实现获取环境变量、创建快捷方式、加载程序、读写注册表等功能。<BR><BR>　　下面我们通过一个小例子来说明Windows 
+            Scripting 
+            Host功能是如何的强大，使用又是怎样的简单，被有心人利用后的威胁有多大。例如有内容如下的*.vbs文件：<BR><BR>　　Set 
+            so=CreateObject("Scripting.FileSystemObject") 
+            <BR>　　so.GetFile(c:\windows\winipcfg.exe).Copy("e:\winipcfg.exe") 
+            <BR><BR>　　就是这么两行就可以拷贝文件到指定地点。第一行是创建一个文件系统对象，第二行前面是打开这个脚本文件，c:\windows\winipcfg.exe指明是这个程序本身，是一个完整的路径文件名。GetFile函数获得这个文件，Copy函数将这个文件复制到e盘根目录下。这也是大多数利用VBscript编写的病毒的一个特点。从这里可以看出，禁止了FileSystemObject这个对象就可以很有效的控制这种病毒的传播。用regsvr32 
+            scrrun.dll 
+            /u这条命令就可以禁止文件系统对象。<BR><BR>　　欺骗识别及防范方法：这种带有欺骗性质的.txt文件显示出来的并不是文本文件的图标，它显示的是未定义文件类型的标志，这是区分它与正常.txt文件的最好方法。识别的另一个办法是在“按WEB页方式”查看时在“我的电脑”左面会显示出其文件名全称，此时可以看到它不是真正的txt文件。问题是很多初学者经验不够，老手也可能因为没留意而打开它，在这里再次提醒您，注意您收到的邮件中附件的文件名，不仅要看显示出来的扩展名，还要注意其实际显示的图标是什么。对于附件中别人发来的看起来是.txt的文件，可以将它下载后用鼠标右键选择“用记事本打开”，这样看会很安全。<BR><BR>　　好了，现在您知道.txt文件也不能轻易打开了吧？您知道了？OK，我写这篇文章的目的达到了！<BR><BR>转自：Internet 
+            <BR><BR><BR></P></TD></TR>
+        <TR>
+          <TD width="100%" bgColor=#007ebb>
+            <DIV align=right><FONT color=#ffffff>文章发布于2001-7-24 12:28:33 
+            </FONT></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+<DIV align=center><SPAN style="FONT-SIZE: 9pt; FONT-FAMILY: 宋体"><FONT 
+color=#808080><INPUT onclick=javascript:window.close() type=button align=right value=关闭 name=B1> 
+</FONT></SPAN></DIV>
+<P align=center><FONT color=#000000>Design By 浪人 Copyright&copy;2001-2002&nbsp;<A 
+href="http://www.manyi100.com/">临安青年网</A>&nbsp;版权所有 </FONT><FONT 
+color=#ffffff></FONT></P></BODY></HTML>

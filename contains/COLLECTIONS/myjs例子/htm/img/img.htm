@@ -1,0 +1,89 @@
+<html>
+<SCRIPT>
+var Mouse_Obj="none";
+var pX
+var pY
+document.onmousemove=D_NewMouseMove;
+document.onmouseup=D_NewMouseUp;
+function m(c_Obj)
+{ Mouse_Obj=c_Obj;
+pX=parseInt(document.all(Mouse_Obj).style.left)-event.x;
+pY=parseInt(document.all(Mouse_Obj).style.top)-event.y; }
+function D_NewMouseMove()
+{if(Mouse_Obj!="none")
+{document.all(Mouse_Obj).style.left=pX+event.x;
+document.all(Mouse_Obj).style.top=pY+event.y;
+event.returnValue=false;}}
+function D_NewMouseUp()
+{Mouse_Obj="none";}
+function myimg()
+{var o=event.srcElement;
+sPop=null;
+	if(o.alt!=null && o.alt!=""){o.img=o.alt;o.alt="";o.title=""};
+	if(o.img!=sPop) {
+			sPop=o.img;
+			t=o.name;
+			title.innerHTML="<span style='font-family:宋体;color:yellow'>"+t+"</span>"+"51windows.com";
+			img.innerHTML="<p align='center'><img id=ss src="+sPop+" border=0 ></p>";
+			Show(up);}
+}
+function back()
+{Hide(up);}
+document.onclick=myimg;
+</SCRIPT>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+<!--
+table,TD,DIV,button,p{font-family:Tahoma;cursor:default;font-size:9pt}
+body{font-family:Tahoma;background-color: #637994; font-size:9pt}
+.yellow{ background-color: #E19D00; color: #FFFF00; border-left: 2 solid #FFE3A4; 
+   border-right: 2 solid #8A6100; border-top: 2 solid #FFE3A4; 
+   border-bottom: 2 solid #8A6100 }
+.ydown{ background-color: #E19D00; color: #FFFF00; border-left: 1 solid #8A6100; 
+   border-right: 1 solid #FFE3A4; border-top: 1 solid #8A6100; 
+   border-bottom: 1 solid  #FFE3A4}
+.blue  { background-color: #3A6EA5; color: #FFFFFF; border-left: 2 solid #A6C1DF; 
+   border-right: 2 solid #002200; border-top: 2 solid #A6C1DF; 
+   border-bottom: 2 solid #002200 }
+-->
+</style>
+<title>css立体层</title>
+</head>
+
+<body bgcolor="#ADBAC9">
+
+<div  id=up class=yellow style="VISIBILITY:hidden ; position: absolute; top: 60; left: 200; width: 360; height: 250; filter: revealTrans(transition=12, 'duration=0.1) blendTrans(duration=0.1)">
+<div id=title onmousedown=m("up") style="background-color:#30608F;padding:2px;text-indent:5;color:#FFFFFF;cursor:move">51windows.com</div>
+<img id=close  onclick=Hide(up)  style="position: absolute; right: 2; top: 2" border="0" src="closexp.gif" width="15" height="15">
+<div  id=img class=ydown style=" position: absolute; top: 32; left: 8; width: 340; height: 180;"></div>
+<div  id=button style=" position: absolute; top: 220; left: 120; width: 340; height: 20;"><button name="button" class=yellow onclick=Hide(up); >confirm</button><span style="visibility: hidden">--</span><button name="button" class=yellow onclick=Hide(up); >Cancel</button></div>
+</div>
+
+<h1 img="http://nhjz.51.net/indexd.gif" name="大家好，这是我的第一张照片。。">First photo</h1>
+<h1 img="img.gif" name="这是第二张">First photo</h1>
+
+　     
+<SCRIPT language=JavaScript1.2>
+<!--
+function Show(divid) {
+divid.filters.revealTrans.apply();
+divid.style.visibility = "visible";
+divid.filters.revealTrans.play();
+}
+function Hide(divid) {
+divid.filters.revealTrans.apply();
+divid.style.visibility = "hidden";
+divid.filters.revealTrans.play();
+}
+function hhide(divid) {
+divid.style.visibility = "hidden";
+}     
+//-->
+</script>
+<p>     
+<a href="#" onMouseOver=Show(up) >欢迎光临无忧视窗</a>
+
+</p>  
+<p>　  
+</p>  

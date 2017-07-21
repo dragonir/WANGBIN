@@ -1,0 +1,330 @@
+ 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0032)http://www.ie-zone.com/index.php -->
+<HTML>
+<!-- #BeginTemplate "/Templates/Js.dwt" --> 
+<HEAD>
+<!-- #BeginEditable "doctitle" --> 
+<TITLE>色彩调节器</TITLE>
+<!-- #EndEditable --> 
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<LINK  href="../../fav.ico" rel="shortcut icon">
+<STYLE type=text/css>BODY {
+	MARGIN: 25px 25px 25px
+}
+#all TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+INPUT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+SELECT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+P {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+TEXTAREA {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"
+}
+
+#all A:active {
+	COLOR: #7d070c
+}
+#all A:visited {
+	COLOR: #7d070c
+}
+
+#all A:hover {
+	COLOR: #336699
+}
+#all A:link {
+	COLOR: #7d070c
+}
+</STYLE>
+<SCRIPT language=JavaScript>
+<!--
+
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+var obj=MM_findObj(ob); if (obj) { 
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</SCRIPT>
+<META content="MSHTML 5.50.4134.600" name=GENERATOR>
+</HEAD>
+<BODY id=all text=#000000 bgColor=#336699>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_1.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_2.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../../images/space.gif" width=11 height="1"></TD>
+    <TD width="100%"> 
+      <table width="100%" border="0" cellpadding="8">
+        <tr> 
+          <td align="center"> 
+            <script language="JavaScript">
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</script>
+          </td>
+        </tr>
+        <tr> 
+          <td bgcolor="#f7f7f7"><!-- #BeginEditable "example" --> 
+            <p>
+              <style>.drag {
+	CURSOR: hand; POSITION: relative
+}
+</style>
+              <script language=JavaScript1.2>
+// Slider script by Ronald H. Jankowsky (http://rj-edv-beratung.de), parts of code (draglayer, movelayer) by DynamicDrive.com
+// This script is free for use, please leave this notice intact
+var sPosition;
+var showPerc=100;
+document.onmousedown=dragLayer
+document.onmouseup=new Function("dragMe=false")
+
+var Color= new Array();
+Color[0] = "00";
+Color[1] = "11";
+Color[2] = "22";
+Color[3] = "33";
+Color[4] = "44";
+Color[5] = "55";
+Color[6] = "66";
+Color[7] = "77";
+Color[8] = "88";
+Color[9] = "99";
+Color[10] = "AA";
+Color[11] = "BB";
+Color[12] = "CC";
+Color[13] = "DD";
+Color[14] = "EE";
+Color[15] = "FF";
+
+// Demofunction to change bg-color by moving slider
+var rVal,gVal,bVal, cCol
+function chgBg() {
+	cCol = document.bgColor; rVal=cCol.substr(1,2); gVal=cCol.substr(3,2); bVal=cCol.substr(5,2);
+	ind = Math.round(showPerc/16); if (ind < 0) ind = 0; if (ind > 15) ind=15;
+// If more sliders are used, each of them has to be handled separately
+	if (kObj.id =="knobImg") document.bgColor="#"+Color[ind]+gVal+bVal;
+	if (kObj.id =="knobImg1")  document.bgColor="#"+rVal+Color[ind]+bVal;
+	if (kObj.id =="knobImg2")  document.bgColor="#"+rVal+gVal+Color[ind];
+}
+
+// Drag and move engine (original code by DynamicDrive.com), don't change unless explicitely indicated
+var dragMe=false, kObj, yPos,direction
+function moveLayer() {
+if (event.button==1 && dragMe) {
+	oldY = kObj.style.pixelTop; kObj.style.pixelTop=temp2+event.clientY-yPos; 
+// Limit movement of knob to stay inside layer
+	if (kObj.style.pixelTop > oldY) direction="dn"; else direction="up";
+	if (kObj.style.pixelTop < 2 && direction=="up") {kObj.style.pixelTop=2; direction="dn";}
+	if (kObj.style.pixelTop > 102 && direction=="dn") {kObj.style.pixelTop=102; direction="up";}
+// Set working variable 'showPerc' depending on 100 or 250 scaling
+	sPosition=kObj.style.pixelTop; showPerc = (perCent[0].checked) ? sPosition-2 : (sPosition-2)/2*5; 
+// The following line should be replaced by the function-call with the actual task to perform
+	chgBg(); 
+	return false; }
+}
+function dragLayer() {
+if (!document.all) return;
+if (event.srcElement.className=="drag")	{dragMe=true; kObj=event.srcElement; temp2=kObj.style.pixelTop; yPos=event.clientY; document.onmousemove=moveLayer; }
+}
+</script>
+              提示:这是一个颜色的调节器，现在本例子只简单的改变了背景的颜色，你完全可以将这使用方法应用到如聊天室的字体颜色等程序上，可以让你的应用增添色彩.</p>
+            <div id=outerLyr 
+style="Z-INDEX: 1; LEFT: 233px; WIDTH: 23px; POSITION: absolute; TOP: 111px; HEIGHT: 120px; BACKGROUND-COLOR: #000000"><img  class=drag id=knobImg  style="Z-INDEX: 3; LEFT: 2px; WIDTH: 20px; TOP: 100px; HEIGHT: 17px"  src="img/knob.jpeg"> 
+              <div id=innerLyr 
+style="Z-INDEX: 2; LEFT: 2px; WIDTH: 20px; POSITION: absolute; TOP: 2px; HEIGHT: 117px; BACKGROUND-COLOR: #777777"> 
+                <div id=barLyr 
+style="Z-INDEX: 1; LEFT: 9px; WIDTH: 2px; POSITION: absolute; TOP: 5px; HEIGHT: 110px; BACKGROUND-COLOR: #000000"></div>
+              </div>
+            </div>
+            <div id=outerLyr1 
+style="Z-INDEX: 1; LEFT: 268px; WIDTH: 23px; POSITION: absolute; TOP: 111px; HEIGHT: 120px; BACKGROUND-COLOR: #000000"><img  class=drag id=knobImg1  style="Z-INDEX: 3; LEFT: 2px; WIDTH: 20px; TOP: 100px; HEIGHT: 17px"  src="img/knob.jpeg"> 
+              <div id=innerLyr1 
+style="Z-INDEX: 2; LEFT: 2px; WIDTH: 20px; POSITION: absolute; TOP: 2px; HEIGHT: 117px; BACKGROUND-COLOR: #777777"> 
+                <div id=barLyr1 
+style="Z-INDEX: 1; LEFT: 9px; WIDTH: 2px; POSITION: absolute; TOP: 5px; HEIGHT: 110px; BACKGROUND-COLOR: #000000"></div>
+              </div>
+            </div>
+            <div id=outerLyr2 
+style="Z-INDEX: 1; LEFT: 300px; WIDTH: 23px; POSITION: absolute; TOP: 111px; HEIGHT: 120px; BACKGROUND-COLOR: #000000"><img  class=drag id=knobImg2  style="Z-INDEX: 3; LEFT: 2px; WIDTH: 20px; TOP: 100px; HEIGHT: 17px"  src="img/knob.jpeg"> 
+              <div id=innerLyr2 
+style="Z-INDEX: 2; LEFT: 2px; WIDTH: 20px; POSITION: absolute; TOP: 2px; HEIGHT: 117px; BACKGROUND-COLOR: #777777"> 
+                <div id=barLyr2 
+style="Z-INDEX: 1; LEFT: 9px; WIDTH: 2px; POSITION: absolute; TOP: 5px; HEIGHT: 110px; BACKGROUND-COLOR: #000000"></div>
+              </div>
+              <!-- This would be a way to configure if slider range is 0-100 or 0-255 -->
+            </div>
+            <p>
+              <input  type=radio value=false name=perCent>
+              Prozent 
+              <input type=radio CHECKED value=true  name=perCent>
+              255 </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <!-- #EndEditable --></td>
+        </tr>
+        <tr> 
+          <td><!-- #BeginEditable "code" -->1.将下面的代码复制到 &lt;body&gt;内 
+            <input type="button" name="Button" value="复制到我的剪贴板" onClick=JM_cc('js_1')>
+            <br>
+            <form name="form1" method="post" action="">
+              <textarea name="js_1" wrap="VIRTUAL" cols="80" rows="10">&lt;style&gt;.drag {
+CURSOR: hand; POSITION: relative
+}
+&lt;/style&gt;
+&lt;script language=JavaScript1.2&gt;
+// Slider script by Ronald H. Jankowsky (http://rj-edv-beratung.de), parts of 
+code (draglayer, movelayer) by DynamicDrive.com
+// This script is free for use, please leave this notice intact
+var sPosition;
+var showPerc=100;
+document.onmousedown=dragLayer
+document.onmouseup=new Function(&quot;dragMe=false&quot;)
+var Color= new Array();
+  Color[0] = &quot;00&quot;;
+  Color[1] = &quot;11&quot;;
+  Color[2] = &quot;22&quot;;
+  Color[3] = &quot;33&quot;;
+  Color[4] = &quot;44&quot;;
+  Color[5] = &quot;55&quot;;
+  Color[6] = &quot;66&quot;;
+  Color[7] = &quot;77&quot;;
+  Color[8] = &quot;88&quot;;
+  Color[9] = &quot;99&quot;;
+  Color[10] = &quot;AA&quot;;
+  Color[11] = &quot;BB&quot;;
+  Color[12] = &quot;CC&quot;;
+  Color[13] = &quot;DD&quot;;
+  Color[14] = &quot;EE&quot;;
+  Color[15] = &quot;FF&quot;;
+// Demofunction to change bg-color by moving slider
+  var rVal,gVal,bVal, cCol
+  function chgBg() {
+  cCol = document.bgColor; rVal=cCol.substr(1,2); gVal=cCol.substr(3,2); bVal=cCol.substr(5,2);
+  ind = Math.round(showPerc/16); if (ind &lt; 0) ind = 0; if (ind &gt; 15) ind=15;
+  // If more sliders are used, each of them has to be handled separately
+  if (kObj.id ==&quot;knobImg&quot;) document.bgColor=&quot;#&quot;+Color[ind]+gVal+bVal;
+  if (kObj.id ==&quot;knobImg1&quot;) document.bgColor=&quot;#&quot;+rVal+Color[ind]+bVal;
+  if (kObj.id ==&quot;knobImg2&quot;) document.bgColor=&quot;#&quot;+rVal+gVal+Color[ind];
+  }
+// Drag and move engine (original code by DynamicDrive.com), don't change unless 
+  explicitely indicated
+  var dragMe=false, kObj, yPos,direction
+  function moveLayer() {
+  if (event.button==1 &amp;&amp; dragMe) {
+  oldY = kObj.style.pixelTop; kObj.style.pixelTop=temp2+event.clientY-yPos; 
+  // Limit movement of knob to stay inside layer
+  if (kObj.style.pixelTop &gt; oldY) direction=&quot;dn&quot;; else direction=&quot;up&quot;;
+  if (kObj.style.pixelTop &lt; 2 &amp;&amp; direction==&quot;up&quot;) {kObj.style.pixelTop=2; 
+  direction=&quot;dn&quot;;}
+  if (kObj.style.pixelTop &gt; 102 &amp;&amp; direction==&quot;dn&quot;) {kObj.style.pixelTop=102; 
+  direction=&quot;up&quot;;}
+  // Set working variable 'showPerc' depending on 100 or 250 scaling
+  sPosition=kObj.style.pixelTop; showPerc = (perCent[0].checked) ? sPosition-2 
+  : (sPosition-2)/2*5; 
+  // The following line should be replaced by the function-call with the actual 
+  task to perform
+  chgBg(); 
+  return false; }
+  }
+  function dragLayer() {
+  if (!document.all) return;
+  if (event.srcElement.className==&quot;drag&quot;) {dragMe=true; kObj=event.srcElement; 
+  temp2=kObj.style.pixelTop; yPos=event.clientY; document.onmousemove=moveLayer; 
+  }
+  }
+  &lt;/script&gt;
+  提示:这是一个颜色的调节器，现在本例子只简单的改变了背景的颜色，你完全可以将这使用方法应用到如聊天室的字体颜色等程序上，可以让你的应用增添色彩.&lt;/p&gt;
+  &lt;div id=outerLyr 
+  style=&quot;Z-INDEX: 1; LEFT: 233px; WIDTH: 23px; POSITION: absolute; TOP: 111px; 
+  HEIGHT: 120px; BACKGROUND-COLOR: #000000&quot;&gt;&lt;img 
+  class=drag id=knobImg 
+  style=&quot;Z-INDEX: 3; LEFT: 2px; WIDTH: 20px; TOP: 100px; HEIGHT: 17px&quot; 
+  
+  src=&quot;../tempimgs/js/knob.jpeg&quot;&gt; 
+  &lt;div id=innerLyr 
+  style=&quot;Z-INDEX: 2; LEFT: 2px; WIDTH: 20px; POSITION: absolute; TOP: 2px; 
+  HEIGHT: 117px; BACKGROUND-COLOR: #777777&quot;&gt; 
+  &lt;div id=barLyr 
+  style=&quot;Z-INDEX: 1; LEFT: 9px; WIDTH: 2px; POSITION: absolute; TOP: 5px; 
+  HEIGHT: 110px; BACKGROUND-COLOR: #000000&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=outerLyr1 
+  style=&quot;Z-INDEX: 1; LEFT: 268px; WIDTH: 23px; POSITION: absolute; TOP: 111px; 
+  HEIGHT: 120px; BACKGROUND-COLOR: #000000&quot;&gt;&lt;img 
+  class=drag id=knobImg1 
+  style=&quot;Z-INDEX: 3; LEFT: 2px; WIDTH: 20px; TOP: 100px; HEIGHT: 17px&quot; 
+  
+  src=&quot;../tempimgs/js/knob.jpeg&quot;&gt; 
+  &lt;div id=innerLyr1 
+  style=&quot;Z-INDEX: 2; LEFT: 2px; WIDTH: 20px; POSITION: absolute; TOP: 2px; 
+  HEIGHT: 117px; BACKGROUND-COLOR: #777777&quot;&gt; 
+  &lt;div id=barLyr1 
+  style=&quot;Z-INDEX: 1; LEFT: 9px; WIDTH: 2px; POSITION: absolute; TOP: 5px; 
+  HEIGHT: 110px; BACKGROUND-COLOR: #000000&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id=outerLyr2 
+  style=&quot;Z-INDEX: 1; LEFT: 300px; WIDTH: 23px; POSITION: absolute; TOP: 111px; 
+  HEIGHT: 120px; BACKGROUND-COLOR: #000000&quot;&gt;&lt;img 
+  class=drag id=knobImg2 
+  style=&quot;Z-INDEX: 3; LEFT: 2px; WIDTH: 20px; TOP: 100px; HEIGHT: 17px&quot; 
+  
+  src=&quot;../tempimgs/js/knob.jpeg&quot;&gt; 
+  &lt;div id=innerLyr2 
+  style=&quot;Z-INDEX: 2; LEFT: 2px; WIDTH: 20px; POSITION: absolute; TOP: 2px; 
+  HEIGHT: 117px; BACKGROUND-COLOR: #777777&quot;&gt; 
+  &lt;div id=barLyr2 
+  style=&quot;Z-INDEX: 1; LEFT: 9px; WIDTH: 2px; POSITION: absolute; TOP: 5px; 
+  HEIGHT: 110px; BACKGROUND-COLOR: #000000&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- This would be a way to configure if slider range is 0-100 or 0-255 --&gt;
+  &lt;/div&gt;
+  &lt;p&gt;
+  &lt;input 
+  type=radio value=false name=perCent&gt;
+  Prozent 
+  &lt;input type=radio CHECKED value=true 
+  name=perCent&gt;
+  255</textarea>
+            </form>
+            <!-- #EndEditable --></td>
+        </tr>
+      </table>
+    </TD>
+    <TD><IMG src="../../images/space.gif"    width=11 height="1"></TD>
+  </TR>
+</TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TR bgColor=#ffffff> 
+    <TD><IMG src="../images/sq_3.gif" width=11 height="14"></TD>
+    <TD width="100%"></TD>
+    <TD><IMG src="../images/sq_4.gif"    width=11 height="14"></TD>
+  </TR>
+</TABLE>
+</BODY>
+<!-- #EndTemplate -->
+</HTML>

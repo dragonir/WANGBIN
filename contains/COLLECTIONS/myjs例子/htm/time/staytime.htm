@@ -1,0 +1,27 @@
+<!-- This script has been in the http://www.javascripts.com Javascript Public Library! -->
+<!-- Note that though this material may have been in a public depository, certain author copyright restrictions may apply. -->
+<!--this page has been written by Tony Felik-->
+<html>
+<head>
+<script language="javascript">
+<!--
+var clock=new Date();					//when the visitor enter to the site the clock start working    
+var startTime=clock.getTime();
+function showTime()						//when the visitor out from the site start calculate the time 
+												    //he was in the site
+{
+var leaveTime=new Date();
+var totalTime=((leaveTime.getTime()-startTime)/1000); //total time in seconds
+var hTimerLast=Math.floor(totalTime/3600);      //check hours
+var mTimerLast=Math.floor((totalTime%3600)/60); //check minutes
+var sTimerLast=Math.floor(totalTime%60);        //check seconds 
+alert("You had been at the site for: "+hTimerLast+" Hours "+mTimerLast+" Minutes "+sTimerLast+
+" Seconds .");
+}
+//-->
+</script>
+</head>
+<body onunload="showTime()">
+</body>
+</html>
+<!-- Simba says Roar. -->

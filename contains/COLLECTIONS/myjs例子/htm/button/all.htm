@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<style>
+<!--
+body, p, div,button,input{font:menu;line-height: 150%}
+xmp { font-family: Tahoma,Verdana,宋体; font-size: 12px; line-height: 150% }
+-->
+</style>
+<title>java</title>
+
+</head>
+
+<body bgcolor="#f0f0e0" topmargin="5" leftmargin="0">
+<p align="center"></p>
+<p align="center">　选用鼠标选定一段文本，再点击下面的按钮，即可指定选定的文本为你输入的连接。<br>
+<input type=button value=创建新连接 onclick="document.execCommand('CreateLink','true','true')"> 
+ </p><p align="center">　
+<input type=button value=打印 onclick="document.execCommand('print','true','true')"> 
+ </p><p align="center">　
+<input type=button value=另存为htm onclick="document.execCommand('saveas','true','海娃在线.htm')"></p>
+<p align="center">　
+<input type=button value=另存为txt onclick="document.execCommand('saveas','true','海娃在线.txt')"></p>
+<p >　<input type="BUTTON" value="查看源代码" onClick= 'window.location = "view-source:" + window.location.href' name="BUTTON"><br>
+
+<BUTTON onclick="window.external.ShowBrowserUI('LanguageDialog',null)">Show Language Dialog</BUTTON><br>
+<BUTTON onclick="window.external.ShowBrowserUI('OrganizeFavorites',null)">Show Organize Favorites</BUTTON><br>
+<SCRIPT>
+function show(content,title){
+execScript('msgbox "'+content+'",4096+32+3,"'+title+'"','vbscript')
+}
+</SCRIPT>
+<input type=button value=点击这里 onclick=show("你在他乡还要好？","自定义");><br>
+<script language="JavaScript">
+
+function mailsome1(){
+who=prompt("Enter recipient's email address: ","dili@mail.cctv.com");
+what=prompt("Enter the subject: ","CCTV -- 国家地理");
+if (confirm("感谢您对央视国际网站的支持 ！请确认发信！" )==true){
+parent.location.href='mailto:'+who+'?subject='+what+'';
+   }
+}
+</script>
+<p align="center"><INPUT onclick=mailsome1() type=button value="E-Mail CCTV -- 国家地理!"> 
+</p>
+
+<script>
+function Related(){
+userURL=document.location.href;
+DocURL=document.location.href;
+
+BeginURL=userURL.indexOf("#",1) + 1;
+CurrentURL=userURL.substring(BeginURL,DocURL.length);
+
+//Build the query
+RelatedServiceURL="http://related.msn.com/related.asp?url=";
+
+//Perform simple check for Intranet URLs
+//this is where the http or https will be, as found by searching for :// but skip res:
+protocolIndex=userURL.indexOf("://",4);
+serverIndex=userURL.indexOf("/",protocolIndex + 3);
+urlresult=userURL.substring(0,serverIndex);
+if (protocolIndex - BeginURL > 7)
+urlresult=""
+
+//Check if Intranet URL - then open search bar
+
+if (urlresult.indexOf(".",0) < 1) userURL="Intranet URL";
+finalURL = RelatedServiceURL + escape(userURL);
+window.open(finalURL, "_search");
+
+}</script>
+<INPUT onclick="Related();event.returnValue=false" type=button value="Search"> <br>
+<object id=saOC CLASSID='clsid:B45FF030-4447-11D2-85DE-00C04FA35C89' HEIGHT=0 width=0></object>
+<INPUT onclick="saOC.NavigateToDefaultSearch();event.returnValue=false" type=button value="Search1"> 
+
+
+</body>  
+  
+</html>  

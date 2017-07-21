@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>现在时间为</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2920.0" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<SCRIPT language=JavaScript> 
+var clocktext, timeday; 
+var pagetitle = document.title; 
+function scroll() { 
+today = new Date(); 
+sec = today.getSeconds(); 
+hr = today.getHours(); 
+min = today.getMinutes(); 
+if (hr < 12) { timeday = " AM"; } 
+else { timeday = " PM"; } 
+if (hr > 12) hr = hr - 12; 
+if (hr <= 9) hr = "0" + hr; 
+if (min <= 9) min = "0" + min; 
+if (sec <= 9) sec = "0" + sec; 
+var clocktext = ":" + hr + ":" + min + ":" + sec + timeday; 
+clocktimer = setTimeout("scroll()", 1000); 
+document.title = pagetitle + clocktext; 
+} 
+if (document.all) scroll(); 
+</SCRIPT>
+</HEAD>
+<BODY></BODY></HTML>

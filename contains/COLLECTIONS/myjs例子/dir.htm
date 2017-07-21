@@ -1,0 +1,599 @@
+<html>
+<script language=javascript>
+function cwin()
+{if(parent.testframeset.cols!='200,*')
+{parent.testframeset.cols='200,*';
+}
+else{parent.testframeset.cols='-10,*';
+}}
+function closenavi() {
+w-=10;
+if (w>-10) {window.parent.testframeset.cols = ''+w+',*';repeat=setTimeout("closenavi()",100);}
+else {clearTimeout(repeat);w=200;}
+}
+</script>
+<head>
+<title>dir</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+<!--
+body, p, div {font:menu;line-height: 150%}
+.s{ font-family: 宋体; font-size: 12px; line-height: 150% }
+-->
+</style>
+<link rel="stylesheet" href="images/test.css" type="text/css">
+<script Language="javascript" src="images/js.js"></script>
+<base target="main">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" onselectstart="return false;" scroll=no onkeydown="if(event.keyCode=='39') cwin();">
+<table id=control width="100%" border="0" cellspacing="0" cellpadding="0" class="borderon">
+<tr>
+<td height="20" style="padding-top:3px"><nobr>&nbsp;个人脚本收藏</nobr></td>
+<td width="20" align="center" valign="top"><img src="images/icon-expandall.gif" width="16" height="15" class="button" onclick="expandall(this)" vspace="2" alt="全部展开"></td>
+<td width="20" align="center" valign="top"><img src="images/icon-close.gif" width="16" height="15" class="button" onClick="cwin()" vspace="2" alt="关闭左栏"></td>
+</tr>
+</table>
+
+<div id="navi" style="position:relative; width:100%; height:expression(body.offsetHeight-control.offsetHeight-2); z-index:1; left: 0px; top: 0px; overflow: auto">
+<table width="180" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" width="12"><img src="images/spacer.gif" width="12" height="12"></td>
+<td valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top">&nbsp;</td>
+<td valign="top">
+<div id="main1" class="menu" onClick="expandIt('1'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("小游戏")</script>
+</table>
+</div>
+<div id="page1" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/game/wz/default.htm","_blank","五子棋(js)");
+list("htm/game/wzq/game.htm","_blank","五子棋(applet)");
+list("htm/game/winmine.htm","_blank","扫雷");
+list("htm/p03.htm","_blank","超级马力");
+list("htm/game/fk.htm","_blank","俄罗期方块");
+list("htm/game/pingball.htm","_blank","乒乓球");
+list("htm/game/game.htm","main","推箱子");
+list("htm/game/cat.exe","","小猫");
+list("baoku/0115.htm","","模拟抽奖");
+</script>
+</table>
+</div>
+
+<div id="main2" class="menu" onClick="expandIt('2'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("Applet")</script>
+</table>
+</div>
+<div id="page2" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/applet/fire/yanhua.htm","","礼花");
+list("htm/applet/app.htm","","人体模特");
+list("htm/applet/clock/clock2.htm","","java时钟");
+list("htm/applet/menu/dissolvemenu.htm","","applet菜单");
+list("htm/applet/txt/txt.htm","","魔鬼文字");
+</script>
+</table>
+</div>
+<div id="main3" class="menu" onClick="expandIt('3'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("链接类")</script>
+</table>
+</div>
+<div id="page3" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("baoku/mlink.htm","","顺序链接");
+list("baoku/0123.htm","","随机连接");
+list("htm/link/link.htm","","链接注释");
+list("baoku/0011.htm","","滚动链接注释");
+list("htm/link/link_1.htm","_blank","左右键一样");
+list("htm/link/link_2.htm","_blank","禁止Shift");
+list("htm/link/nlink.htm","","导航栏");
+list("htm/link/clink.htm","","链接确认");
+list("htm/link/qlink.htm","","强调连接");
+list("htm/link/slink.htm","","连接说明脚本");
+list("htm/link/ylink.htm","_blank","友情连接脚本");
+list("htm/link/aboutlink.htm","","About:连接");
+list("htm/link/loclink.htm","","本地连接");
+list("baoku/0132.htm","","闪烁的连接");
+list("baoku/0129.htm","","连接提示框显示");
+list("baoku/0130.htm","","连接提示框显示Ⅱ");
+list("baoku/0003.htm","","链接确认警告");
+list("baoku/0121.htm","","酷的导航条");
+list("baoku/0020.htm","","导航条之六");
+</script>
+</table>
+</div>
+<div id="main4" class="menu" onClick="expandIt('4'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("色彩类")</script>
+</table>
+</div>
+<div id="page4" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/color/tcolor.htm","","调色板1");
+list("htm/color/allcolor.htm","","颜色代码");
+list("htm/color/Colori.htm","","调色板2");
+list("htm/color/zcolor.htm","","渐变");
+list("htm/color/selcolor.htm","","颜色板");
+list("htm/color/color_table.htm","","表格调色板");
+list("htm/color/colorapply.htm","","应用色彩学");
+list("baoku/0117.htm","","渐变色条");
+list("baoku/0133.htm","","色彩调节器");
+</script>
+</table>
+</div>
+<div id="main5" class="menu" onClick="expandIt('5'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("样式表")</script>
+</table>
+</div>
+<div id="page5" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/css/couplet.htm","","HTML对联");
+list("htm/css/cssflag.htm","","HTML旗帜");
+list("htm/css/cssico.htm","","HTMl图标");
+list("htm/css/cssbutton.htm","","CSS立体层");
+list("htm/css/filecss.htm","","调用CSS文件");
+list("htm/css/font11.htm","","闪动的文字");
+list("htm/css/iitoura.htm","","不错的文字效果");
+list("htm/css/fontSize.htm","","改变字体大小");
+list("htm/css/char3.htm","","着重号");
+list("htm/css/cssab.htm","","属性列表");
+list("htm/css/font1.htm","","字体效果1");
+list("htm/css/char.htm","","字体效果2");
+list("htm/css/cool.htm","","不同颜色交替");
+list("htm/css/ccss.htm","","改变样式");
+list("htm/css/colortxt.htm","","变色文字");
+list("baoku/0046.htm","","荧光灯效果");
+list("baoku/0047.htm","","变色文本");
+list("baoku/0048.htm","","字体变化效果(大小)");
+list("baoku/0135.htm","","闪闪烁烁的按钮");
+list("baoku/0137.htm","","彩虹文字");
+list("baoku/0128.htm","","带颜色变化的连接按钮");
+list("baoku/0058.htm","","荧光文字Ⅱ");
+list("baoku/0059.htm","","掉下的文字");
+list("baoku/0060.htm","","闪烁效果字幕");
+list("baoku/0061.htm","","文字转换效果");
+list("baoku/0098.htm","","效果之二");
+list("baoku/0097.htm","","环绕转动的字体");
+list("baoku/0051.htm","","波浪文字");
+list("baoku/0052.htm","","飞舞文字");
+list("baoku/0054.htm","","掉下的文字Ⅱ");
+list("baoku/0055.htm","","渐隐渐现字体效果");
+list("baoku/0056.htm","","动态文字之一");
+list("baoku/0019.htm","","检测系统颜色字体");
+</script>
+</table>
+</div>
+<div id="main6" class="menu" onClick="expandIt('6'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("表格类")</script>
+</table>
+</div>
+<div id="page6" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/table/canmovetable.htm","","会动的表格");
+list("htm/table/cooltable.htm","","极酷的表格");
+list("htm/table/addtd.htm","","加一个表格");
+list("htm/table/tableabc.htm","","几类表格");
+list("htm/table/inserttd.htm","","插入表格");
+list("htm/table/inserttext.htm","","动态插入文本");
+list("htm/table/dragtd.htm","","拖动单元格");
+list("baoku/0136.htm","","变色表格单元");
+list("baoku/0096.htm","","变色的表格框");
+</script>
+</table>
+</div>
+<div id="main7" class="menu" onClick="expandIt('7'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("数学类")</script>
+</table>
+</div>
+<div id="page7" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/math/pcacl.htm","","装机价格计算器");
+list("htm/math/area.htm","","面积计算器");
+list("htm/math/ho.htm","","进制转化");
+list("htm/math/.htm","","......");
+</script>
+</table>
+</div>
+<div id="main8" class="menu" onClick="expandIt('8'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("窗口类")</script>
+</table>
+</div>
+<div id="page8" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/windows/desktop.htm","","桌面(win2000)");
+list("htm/windows/colorframe.htm","","iframe颜色");
+list("htm/windows/dhtml.htm","_blank","层窗口");
+list("htm/windows/wincool.htm","_blank","转圈的窗口");
+list("htm/windows/explorer.htm","","资源管理器");
+list("htm/windows/resizediv.htm","","改变层的大小");
+list("htm/windows/activedesk.htm","","active桌面");
+list("htm/windows/movewindow.htm","","移动的窗口");
+list("htm/windows/tipwindow.htm","","tip对话框");
+list("htm/windows/downwindow.htm","_blank","从天而降的浏览器");
+list("htm/windows/centerwindow.htm","_blank","居中的窗口");
+list("htm/windows/fanwindow.htm","","搞笑的窗口");
+list("htm/windows/swindow.htm","","窗口分块显示");
+list("htm/windows/threedface.htm","","Threedface");
+list("htm/windows/mmove.htm","_blank","左右上下");
+list("htm/windows/maxmin.htm","_blank","最大化与最小化");
+list("htm/windows/openyourwin.htm","","打开你的窗口来");
+list("htm/windows/dragwindow.htm","_blank","拖动窗口");
+list("htm/windows/autoclose.htm","_blank","自动关闭");
+list("baoku/0021.htm","","页面效果六");
+list("baoku/0022.htm","","页面效果五");
+list("baoku/0023.htm","","页面效果四");
+list("baoku/0024.htm","","页面效果三(从中)");
+list("baoku/0025.htm","","页面效果二(四周)");
+list("baoku/0026.htm","","页面效果一(一块块)");
+list("baoku/0027.htm","","按钮打开全屏窗口");
+list("baoku/0028.htm","","全屏打开页面");
+list("baoku/0029.htm","","自动滚屏");
+list("baoku/0030.htm","","动画显示打开新窗口");
+list("baoku/0031.htm","_blank","震动的窗口");
+list("baoku/0124.htm","","SplashWindow应用");
+list("baoku/0125.htm","","页面效果生成器");
+list("baoku/chwin/0150.htm","","ChWindowsv");
+list("baoku/0146.htm","","ChWindows应用指南");
+list("baoku/0145.htm","","IE5.5的新窗口.");
+list("baoku/0088.htm","","自动跳出框架");
+list("baoku/zoom/0154.htm","","放大镜效果IE5.5");
+</script>
+</table>
+</div>
+<div id="main9" class="menu" onClick="expandIt('9'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("菜单类")</script>
+</table>
+</div>
+<div id="page9" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/menu/menu/menu.htm","","多数菜单");
+list("htm/menu/dir1.htm","","简单的目录");
+list("htm/menu/coold.htm","","酷菜单一");
+list("htm/menu/menu1.htm","","下拉菜单1");
+list("htm/menu/buttonmenu.htm","","下拉菜单2");
+list("htm/menu/content.htm","","多数菜单");
+list("htm/menu/leftmenu.htm","","右键菜单");
+list("htm/menu/mleft.htm","","右键菜单2");
+list("htm/menu/movemenu.htm","","移动的菜单");
+list("htm/menu/show.htm","","菜单之一");
+list("htm/menu/sidemenu.htm","","导航栏");
+list("htm/menu/qqhtm.htm","","QQ菜单生成器");
+list("htm/menu/qq/qqmenu.htm","","QQ菜单");
+list("htm/menu/menu2.htm","","菜单之二");
+list("htm/menu/fivemenu.htm","","五角形");
+list("htm/menu/dmenu.htm","","下拉菜单2");
+list("htm/menu/mlmenu.htm","","多级右键菜单");
+list("htm/menu/twomenu.htm","","同时打开两个菜单");
+list("htm/menu/cmenu.htm","","效果之一");
+list("htm/menu/coolmenu.htm","","很酷的导航栏");
+list("htm/menu/CoolMenus3.htm","","多功能菜单");
+list("htm/menu/coolleftmenu.htm","","菜单");
+list("htm/menu/regmenu.htm","","加入IE右键项目");
+list("baoku/0008.htm","","滑动导航条一(左)");
+list("baoku/0009.htm","","滑动导航条二(键)");
+list("baoku/0010.htm","","滑动导航条三(格)");
+list("baoku/0033.htm","","导航条之七");
+list("baoku/0034.htm","","导航条之八");
+list("baoku/0035.htm","","树型菜单");
+list("baoku/0036.htm","","双选择关联菜单");
+list("baoku/0037.htm","","三级关联菜单");
+list("baoku/0038.htm","","带子菜单的导航条");
+list("baoku/0141.htm","","右键菜单-IE5.5+");
+list("baoku/0148.htm","","滑动导航条");
+list("baoku/0151.htm","","多项目选择脚本");
+list("baoku/0155.htm","","模范IE的收藏夹");
+list("baoku/0134.htm","","模仿微软按钮的连接");
+list("baoku/0118.htm","","右键菜单");
+list("baoku/0114.htm","","Cool的右键菜单");
+list("baoku/0152.htm","","带有图片的下拉选择");
+</script>
+</table>
+</div>
+<div id="main10" class="menu" onClick="expandIt('10'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("滚动条")</script>
+</table>
+</div>
+<div id="page10" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/scroll/dblscroll.htm","","双击滚屏");
+list("htm/scroll/dragpage.htm","","拖动页面");
+list("htm/scroll/autoscroll.htm","_blank","自动滚屏1");
+list("htm/scroll/autoscroll1.htm","","自动滚屏2");
+list("htm/scroll/ascroll.htm","","局部滚动");
+list("htm/scroll/scrollimg.htm","","滚动的图片");
+list("htm/scroll/ontop.htm","","滚动条在上面");
+list("baoku/0147.htm","","滚动条颜色生成器IE5.5+");
+list("baoku/0153.htm","","滚动条颜色生成器IE5.5+");
+list("baoku/0087.htm","","横向移动显示图片");
+list("baoku/0062.htm","","从外部读入内容");
+list("baoku/0015.htm","","滑动导航条四(条)");
+list("baoku/0016.htm","","滑动导航条五(两端)");
+list("baoku/0017.htm","","自动滚动页面");
+list("baoku/0057.htm","","不错的字幕滚动例子");
+list("baoku/0126.htm","","Marquee效果生成器");
+list("baoku/0053.htm","","简单的轮显效果");
+</script>
+</table>
+</div>
+<div id="main11" class="menu" onClick="expandIt('11'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("图片类")</script>
+</table>
+</div>
+<div id="page11" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/img/drawc.htm","","画圆饼");
+list("htm/img/netpet/netpet.htm","","一个游泳的鱼");
+list("htm/img/imgleft.htm","","禁止对图片用右键");
+list("htm/img/shakeimage.htm","","震动的图片");
+list("htm/img/orgsize.htm","","图片原始大小");
+list("htm/img/flag.htm","","旗帜效果");
+list("htm/img/leida.htm","","雷达效果");
+list("htm/img/img.htm","","浏览图片");
+list("htm/img/newimg.htm","","弹出窗口与图片相同");
+list("htm/img/comeimg.htm","","图片过来");
+list("htm/img//acd/acdsee.htm","","ACDsee游览器");
+list("htm/img/imgsize.htm","","图片大小");
+list("htm/img/color.htm","","淡入淡出效果");
+list("htm/img/picalpha.htm","","犹抱琵琶半遮面");
+list("htm/img/livebg.htm","","改变图像背景");
+list("baoku/0004.htm","","图形淡出淡隐");
+list("baoku/0005.htm","","跟随页面移动的图片");
+list("baoku/0006.htm","","动态图形转换");
+list("baoku/0007.htm","","随机广告图片");
+list("baoku/0065.htm","","飘浮的图片");
+list("baoku/0070.htm","","图片浏览");
+list("baoku/0072.htm","","图片从右飞向左");
+list("baoku/0076.htm","","从左飞向右的图片");
+list("baoku/0077.htm","","上下滚动显示图片");
+list("baoku/0078.htm","","左右滚动显示图片");
+list("baoku/0084.htm","","图片轮显效果");
+list("baoku/0081.htm","","水中的倒影");
+list("baoku/0082.htm","","灯照效果");
+list("baoku/0138.htm","","图片效果生成器");
+list("baoku/0100.htm","","飞舞的图片IE5.5");
+list("baoku/0018.htm","","向上飘的白云");
+list("baoku/0083.htm","","震动的图片");
+list("baoku/0086.htm","","滚动的小球");
+list("baoku/0104.htm","","新技术测试--有美女");
+list("baoku/0095.htm","","背景效果:渐变");
+list("baoku/0073.htm","","渐渐显示图片");
+</script>
+</table>
+</div>
+<div id="main12" class="menu" onClick="expandIt('12'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("日期类")</script>
+</table>
+</div>
+<div id="page12" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/time/date1.htm","","日历一");
+list("htm/time/date2.htm","","日历二");
+list("htm/time/date3.htm","","日历三");
+list("htm/time/cndate.htm","","农历日历");
+list("htm/time/ymdw.htm","","年月日周");
+list("htm/time/lastm.htm","","最后更新时间");
+list("htm/time/titletime.htm","_blank","标题时间");
+list("htm/time/titledate.htm","_blank","标题日期");
+list("htm/time/goodclock.htm","","很不错的时钟");
+list("htm/time/picclock/picclock.htm","","图片时钟");
+list("htm/time/ltime.htm","","倒计时");
+list("htm/time/dates.htm","","下拉时间.");
+list("htm/time/20minite.htm","","倒计时20分钟");
+list("htm/time/setatime.htm","","定时");
+list("htm/time/backtime.htm","","背景时钟");
+list("htm/time/statustime.htm","","状态栏数字钟");
+list("htm/time/staytime.htm","_blank","驻留时间");
+list("htm/time/buttontime.htm","","按钮时间");
+list("htm/time/month1.htm","","月份图片");
+list("baoku/0045.htm","","带背景与时间停顿");
+list("baoku/0069.htm","","**年**月**日");
+list("baoku/0064.htm","","COOL数字钟");
+list("baoku/0131.htm","","显示日历");
+list("baoku/0075.htm","","文本时间显示");
+list("baoku/0079.htm","","标题栏显示时间");
+list("baoku/0080.htm","","停留时间警告");
+list("baoku/0085.htm","","时间倒数");
+</script>
+</table>
+</div>
+<div id="main13" class="menu" onClick="expandIt('13'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("鼠标类")</script>
+</table>
+</div>
+<div id="page13" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/mouse/nocon.htm","","真正的右键屏蔽");
+list("htm/mouse/mouselogo.htm","","围绕鼠标的文字");
+list("htm/mouse/shi.htm","","十字线");
+list("htm/mouse/mouse1.htm","","鼠标跟随字幕");
+list("htm/mouse/mouse2.htm","","录制鼠标");
+list("htm/mouse/mouse3.htm","","拖动图像");
+list("htm/mouse/mouse4.htm","","模仿flash效果");
+list("htm/mouse/mouse5.htm","_blank","拖动层");
+list("htm/mouse/mouse6.htm","","坐标");
+list("htm/mouse/mouse7.htm","","鼠标效果");
+list("htm/mouse/showalt1.htm","","注释效果1");
+list("htm/mouse/show3.htm","","注释效果2");
+list("htm/mouse/rightopen.htm","","右键打开窗口");
+list("htm/mouse/rightcode.htm","","右键打开源文件");
+list("baoku/0012.htm","","右键启动收藏夹");
+list("baoku/0013.htm","","禁止点击鼠标右键");
+list("baoku/0014.htm","","禁止对图片使用右键");
+list("baoku/0099.htm","","模拟系统鼠标效果");
+list("baoku/0101.htm","","跟随鼠标的星星");
+list("baoku/0102.htm","","跟随鼠标的图形");
+list("baoku/0103.htm","","飞鼠标跟随之一");
+list("baoku/0108.htm","","鼠标跟随文字二");
+list("baoku/0110.htm","","模拟鼠标移动效果");
+list("baoku/0111.htm","","鼠标跟随之三");
+list("baoku/0112.htm","","鼠标跟随之二");
+list("baoku/0105.htm","","跟随鼠标的文字一");
+list("baoku/0106.htm","","鼠标跟随之四(十字)");
+list("baoku/0107.htm","","事件追加函数IE5.5");
+list("baoku/0071.htm","","跟随鼠标的双眼");
+list("baoku/0149.htm","","很Cool鼠标跟随");
+list("baoku/0092.htm","","模仿Flash效果");
+list("baoku/0093.htm","","模仿Flash效果二");
+list("baoku/0050.htm","","鼠标跟随字幕");
+list("baoku/0039.htm","","花炮效果");
+list("baoku/0040.htm","","花炮效果Ⅱ");
+list("baoku/0041.htm","","飘荡的枯叶");
+</script>
+</table>
+</div>
+<div id="main14" class="menu" onClick="expandIt('14'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("键盘类")</script>
+</table>
+</div>
+<div id="page14" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/key/showkey.htm","","ASCII代码");
+list("baoku/0090.htm","","给页面定义热键");
+list("baoku/0063.htm","","打字效果");
+list("htm/key/Ctrl+Enter.htm","","Ctrl+Enter提交");
+list("htm/key/typer.htm","","打字机");
+list("htm/key/testspeed.htm","","打字速度测试");
+list("htm/key/keya.htm","","键盘字母");
+</script>
+</table>
+</div>
+<div id="main15" class="menu" onClick="expandIt('15'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("按钮类")</script>
+</table>
+</div>
+<div id="page15" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("baoku/0001.htm","","前进后退按钮");
+list("baoku/0089.htm","","查看源代码");
+list("baoku/0094.htm","","只提交一次");
+list("htm/button/td1.htm","","效果1");
+list("htm/button/all.htm","","各种功能按钮");
+</script>
+</table>
+</div>
+<div id="main16" class="menu" onClick="expandIt('16'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("状态栏")</script>
+</table>
+</div>
+<div id="page16" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("baoku/0066.htm","","状态栏文字从右到左");
+list("baoku/0067.htm","","状态栏文字从右弹出");
+list("baoku/0068.htm","","闪烁状态栏");
+list("baoku/0074.htm","","状态栏数字钟");
+</script>
+</table>
+</div>
+<div id="main17" class="menu" onClick="expandIt('17'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("属性类")</script>
+</table>
+</div>
+<div id="page17" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("baoku/0002.htm","","离开启动收藏夹");
+
+list("baoku/0032.htm","","记录浏览次数");
+list("baoku/0042.htm","","记录来宾姓名");
+list("baoku/0043.htm","","检测屏幕分辨率");
+list("baoku/0044.htm","","系统信息检测");
+list("baoku/0049.htm","","文本在窗口顶端");
+list("baoku/0109.htm","","复制到的剪贴板");
+list("baoku/0113.htm","","每日提示");
+list("baoku/0116.htm","","查找页面关键字");
+list("baoku/0119.htm","","ASCII字形生成器");
+list("baoku/0120.htm","","HTML的tooltips");
+list("baoku/0122.htm","","HTML在线编辑器");
+list("baoku/0127.htm","","带背景图片的按钮");
+list("baoku/0139.htm","","数据重排1.0");
+list("baoku/0140.htm","","InernetAmp播放器");
+list("baoku/0142.htm","","对象属性显示器");
+list("baoku/0143.htm","","加密页面代码生成器");
+list("baoku/0144.htm","","密码登录生成器");
+list("htm/sys/leavealt.htm","","离开提示");
+list("htm/sys/stxt.htm","","搜索文本");
+list("htm/sys/searchsource.htm","","利用源文件搜索");
+list("htm/sys/sysinfo.htm","","系统信息");
+list("htm/sys/sys_language.htm","","系统语言检测");
+list("htm/sys/finish.htm","","下载完成");
+list("htm/sys/password.htm","","密码");
+list("htm/sys/saveas.htm","","另存为");
+list("htm/sys/help1.htm","","帮助效果");
+list("htm/sys/online.htm","","是否上网");
+list("htm/sys/systest.htm","","信息检测");
+list("htm/sys/mplayer.htm","","音乐播放");
+list("htm/sys/clickcopy.htm","","点击复制");
+list("htm/sys/txtpass.htm","","解密效果");
+list("htm/sys/w_11.htm","","Web对话框");
+list("htm/sys/view.htm","","调试源文件");
+list("htm/sys/indexof.htm","","IndexOf");
+list("htm/sys/comefrom.htm","","访问来源");
+</script>
+</table>
+</div>
+<div id="main18" class="menu" onClick="expandIt('18'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("loading")</script>
+</table>
+</div>
+<div id="page18" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/loading/load1.htm","","效果之一");
+list("htm/loading/load2.htm","","效果之二");
+list("htm/loading/load3.htm","","效果之三");
+list("htm/loading/load4.htm","","效果之四");
+list("baoku/0091.htm","","模拟进度条");
+</script>
+</table>
+</div>
+<div id="main19" class="menu" onClick="expandIt('19'); return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("资料夹")</script>
+</table>
+</div>
+<div id="page19" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("htm/data/js.htm","","属性列表");
+list("htm/data/function.htm","","常用js例子");
+list("htm/data/keycode.htm","","KeyCode常数用法");
+list("htm/data/FileSystemObject.htm","","文件系统对象");
+</script>
+</table>
+</div>
+<div id="main20" class="menu" onClick="expandIt('20');return false"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>t("控　制")</script>
+</table>
+</div>
+<div id="page20" class="child" style="padding-left:15px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<script>
+list("main.htm","","首页");
+list("htm/","_blank","我要加入");
+</script>
+</table>
+</div>
+<script Language="javascript">
+ac = document.all.tags("script");
+ac1 = document.all.tags("A");
+alert("共"+(ac.length-3)/2+"类\n"+(ac1.length-1)+"个例子");
+</script>
+</body>
+</html>

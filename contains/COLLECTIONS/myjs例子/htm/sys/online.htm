@@ -1,0 +1,26 @@
+<HTML xmlns:CAP>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=gb2312">
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="Mableu">
+<style>
+@media all {CAP\\:clientCaps {behavior:url(#default#clientcaps)}}
+</style>
+<script for=window event=onload>
+if (oClientCaps.connectionType=="online")
+{ 
+ sType.innerText="Internet欢迎您！";
+}
+else
+{
+ sType.innerText="怎么没有上网？";
+}
+</script>
+</HEAD>
+
+<BODY>
+<CAP:clientCaps id="oClientCaps" />
+<div id=sType></div>
+</BODY>
+</HTML>

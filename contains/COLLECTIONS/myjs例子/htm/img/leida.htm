@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0047)http://www.gz-tb.net/3838/js/image/image017.htm -->
+<HTML><HEAD><TITLE>一个很酷的雷达效果</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<META content=FrontPage.Editor.Document name=ProgId>
+<STYLE>A:link {
+	COLOR: #99ffcc; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #99ffcc; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #99ffcc
+}
+.esp {
+	BORDER-RIGHT: #bdb2ad 1pt solid; BORDER-TOP: #bdb2ad 1pt solid; FONT-SIZE: 9pt; FILTER: alpha(opacity=50); BORDER-LEFT: #bdb2ad 1pt solid; COLOR: black; BORDER-BOTTOM: #bdb2ad 1pt solid; BACKGROUND-COLOR: #99ffcc
+}
+TD {
+	FONT-SIZE: 9pt; FONT-FAMILY: arial; LETTER-SPACING: 0.05em
+}
+</STYLE>
+
+<SCRIPT>
+
+   <!--
+
+       var Light_X=20
+
+       var Light_Y=20
+
+       var Light_Z=40
+
+       var xInc=10;
+
+       var yInc=10;
+
+       
+
+       var r=125;
+
+       var deg=0;
+
+       var deg1;
+
+       
+
+       var rad;
+
+       
+
+     
+
+       var conversion=(2*3.1415926)/360
+
+       
+
+    function movefilt()
+
+    {
+
+      Light_X=r+r*Math.cos(deg*conversion);
+
+      Light_Y=r+r*Math.sin(deg*conversion);
+
+      deg+=10;
+
+      if(deg==360)
+
+         deg=0;
+
+      Body1.filters[0].moveLight(0,Light_X,Light_Y,Light_Z,1);
+
+      
+
+     
+
+         mytimeout=setTimeout('movefilt()',100);
+
+      }
+
+      
+
+      
+
+     
+
+      
+
+
+
+       function go(){
+
+          Body1.filters.light.addCone(125,125,0,Light_X,Light_Y,0,255,0,150,20);
+
+          Body1.filters.light.addAmbient(0,255,0,30)
+
+             var x=0;
+
+             movefilt();
+
+          
+
+       }
+
+     
+
+ </SCRIPT>
+</HEAD>
+<BODY text=#99ffcc bgColor=#000000 onload=go()>
+<CENTER></CENTER>
+<DIV align=left>{二人世界}<BR></DIV>
+<DIV align=center><B><FONT color=#0099cc size=4>脚本特效展示</FONT></B><BR><BR></DIV>
+<CENTER>
+<TABLE borderColor=#0099cc cellSpacing=0 borderColorDark=#0099cc cellPadding=15 
+width=450 borderColorLight=#0099cc border=1>
+  <TBODY>
+  <TR>
+    <TD height=56>
+      <DIV align=center><FONT color=#ffffff>注意：要改&lt;body&gt; &lt;body 
+      onload="go()" bgcolor="#000000"text="#99FFCC"&gt; </FONT><IMG id=Body1 
+      style="FILTER: light(); WIDTH: 250px; HEIGHT: 250px" height=250 src="haiwa.gif" 
+      width=250></DIV></TD></TR></TBODY></TABLE><B><FONT color=#ffffff 
+size=4><BR></FONT></B><FONT color=#ffffff>以下代码加入&lt;head&gt;区域</FONT><BR><TEXTAREA name=textfield rows=10 cols=55>&lt;style&gt;
+
+A:link {
+
+	COLOR:#99FFCC; TEXT-DECORATION: none
+
+}
+
+A:active {
+
+	TEXT-DECORATION: none
+
+}
+
+A:visited {
+
+	COLOR: #99FFCC; TEXT-DECORATION: none
+
+}
+
+A:hover {
+
+	COLOR: #99FFCC}
+
+.esp {
+
+	font-size:9pt;color:black;BORDER-RIGHT: #bdb2ad 1pt solid; BORDER-TOP: #bdb2ad 1pt solid; FILTER: alpha(opacity=50); BORDER-LEFT: #bdb2ad 1pt solid; BORDER-BOTTOM: #bdb2ad 1pt solid; BACKGROUND-COLOR: #99FFCC}
+
+td{font-size:9pt;font-family:arial;LETTER-SPACING: 0.05em}&lt;/style&gt;
+
+&lt;script&gt;
+
+   &lt;!--
+
+       var Light_X=20
+
+       var Light_Y=20
+
+       var Light_Z=40
+
+       var xInc=10;
+
+       var yInc=10;
+
+       
+
+       var r=125;
+
+       var deg=0;
+
+       var deg1;
+
+       
+
+       var rad;
+
+       
+
+     
+
+       var conversion=(2*3.1415926)/360
+
+       
+
+    function movefilt()
+
+    {
+
+      Light_X=r+r*Math.cos(deg*conversion);
+
+      Light_Y=r+r*Math.sin(deg*conversion);
+
+      deg+=10;
+
+      if(deg==360)
+
+         deg=0;
+
+      Body1.filters[0].moveLight(0,Light_X,Light_Y,Light_Z,1);
+
+      
+
+     
+
+         mytimeout=setTimeout('movefilt()',100);
+
+      }
+
+      
+
+      
+
+     
+
+      
+
+
+
+       function go(){
+
+          Body1.filters.light.addCone(125,125,0,Light_X,Light_Y,0,255,0,150,20);
+
+          Body1.filters.light.addAmbient(0,255,0,30)
+
+             var x=0;
+
+             movefilt();
+
+          
+
+       }
+
+     
+
+ &lt;/script&gt;</TEXTAREA> <BR><FONT 
+color=#ffffff><BR>以下代码加入&lt;body&gt;区域</FONT><BR><FONT color=#ffffff><TEXTAREA name=textarea rows=12 cols=55>&lt;img src="haiwa.gif" id="Body1" style="height:250;width:250;filter:light()" width="250" height="250"&gt; </TEXTAREA> 
+<BR><BR>可能某段代码会由于COPY时的不小心以至不能正常显示，如发现此情况，请改用查看代码，谢谢！（<A 
+href="mailto:chikin_annie@263.net"><FONT 
+color=#ffffff><U>记住跟我说呀</U></FONT></A>）</FONT><BR><BR><INPUT onmouseover="this.style.color='#ddeeff'" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid; BACKGROUND-COLOR: #99ccff" onclick='window.location = "view-source:" + window.location.href' onmouseout="this.style.color='#000000'" type=button value=查看代码 name=BUTTON> 
+<INPUT onmouseover="this.style.color='#D9E2F7'" style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid; BACKGROUND-COLOR: #ff9900" onclick=closeclk() onmouseout="this.style.color='#000000'" type=button value=关闭窗口 name=close> 
+<BR></CENTER></BODY></HTML>

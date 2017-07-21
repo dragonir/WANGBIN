@@ -1,0 +1,383 @@
+bady{
+	padding: 0;
+	margin: 0;
+}
+#pinfoRow2{
+	width: 100%;
+	height: 55px;
+	margin: auto;
+	margin-top: 50px;
+	// border:2px solid red;
+	background-color: #2f2f2f;
+}
+
+
+/*profileShow*/
+#pinfoRow3{
+	padding: 0;
+	mergin: 0;
+	height: 1500px;
+	width: 100%;
+	margin:auto;
+	display: flex;
+}
+#proContainer1{
+	width: 20%;
+	height: 100%;
+	background-color: #7f7f7f;
+	color: white;
+	opacity: 0.8;
+	box-shadow: 2px 0px 10px black;
+}
+#selfileAppend h4{
+	text-align: center;
+	line-height: 2.5em;
+}
+#selfile{
+	margin-top: 55px;
+	text-align: center;
+}
+#selfile h4{
+	// border: 1px solid black;
+	display: inline-block;;
+	width: 90%;
+	color: #000000;
+}
+#selfile h4 input{
+	border-color: 1px solid white;
+}
+#selfile h4 input:hover, #selfile h4 input:focus{
+	border-color: 2px solid #03c03c;
+}
+#selfile img{
+	margin: auto;
+	margin-top: 10px;
+	width: 150px;
+	border-radius: 100px;
+	border: 5px solid white;
+}
+#selfile img:hover{
+	border:7px solid #03c03c;
+}
+#proContainer2{
+	width: 75%;
+	height: 100%;
+}
+#selfInfo{
+	width: 90%;
+	margin: auto;
+	margin-top: 5px;
+	background-color: white;
+}
+#info1{
+	height: 120px;
+	margin-top: 10px;
+	border-left: 2px solid #f5f5f5;
+	border-right: 2px solid #f5f5f5;
+	background-color: silver;
+	color: #2f2f2f;
+	// border:1px solid red;
+}
+#info1 h2{
+	color: white;
+	background-color: #03c03c;
+	height: 55px;
+	padding: 10px;
+	opacity: 0.8;
+	box-shadow: 2px 2px 10px black;
+	text-shadow: 1px 1px 1px black;
+}
+#info2{
+	// border:2px solid blue;
+	border-left: 2px solid #f5f5f5;
+	border-right: 2px solid #f5f5f5;
+}
+#info2 p label{
+	border: 1px solid silver;
+	width: 12%;
+	line-height: 2em;
+	text-align: right;
+	font-size: 1.2em;
+	background-color: #03c03c;
+	// border-radius: 5px;
+	box-shadow: 2px 2px 2px silver;
+	// opacity: 0.7;
+	color: white;
+	text-shadow: 0px 1px 1px black;
+	padding-right: 5px;
+
+}
+#info2 p  span{
+	display: inline-block;
+	width:80%;
+	// border: 1px solid gray;
+	margin-left: 30px;
+	font-size: 1.2em;
+	line-height: 2em;
+}
+
+#info2 input, #info2 select{
+	//clear: both;
+	width: 180px;
+	height: 100%;
+	// border: 2px solid #ffff00;
+	margin:0;
+	padding: 0;
+}
+#info2 input:focus, #info2 select:focus{
+	border: 3px solid #03c03c;
+}
+#info3{
+	// border: 1px solid red;
+	height: 50px;
+	padding-bottom: 20px;
+	border-left: 2px solid #f5f5f5;
+	border-right: 2px solid #f5f5f5;
+}
+#info3 a{
+	float: right;
+}
+.btn{
+	width: 120px;
+	height: 30px;
+	color: white;
+	background-color: #03c03c;
+	// border: 2px solid silver;
+	border-radius: 5px;
+	text-shadow: 1px 1px 1px black;
+	box-shadow: 1px 1px 2px silver;
+	margin: 10px;
+	float: right;
+}
+.btn:hover{
+	background-color: green;
+}
+
+
+
+#content { 
+	position: relative;
+	width: 800px;
+	margin:20px auto;
+}
+
+#content-left { 
+	position: relative;
+	width: 200px;
+	height: 500px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	text-align: center;
+	font-size: 14px;
+	float: left;
+}
+#content-right-changeUser input[type="submit"],
+#content-right-changeInfo input[type="submit"],
+#content-left .changeInfo,
+#content-left .changeUser{ 
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+	float: left;
+	padding: 8px;
+	
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: 10px;
+	background: #03c03c;
+	font-weight: bold;
+	color: #fff;
+}
+
+#content-right-threads,
+#content-right-changeInfo,
+#content-right-changeUser { 
+	position: relative;
+	float: left;
+	margin-left:  20px;
+	padding: 10px;
+	width: 500px;
+	height: 500px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+#content-right-threads > h4,
+#content-right-changeInfo > h4,
+#content-right-changeUser > h4 { 
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+#content-right-threads ul{ 
+	position: relative;
+	margin: 20px;
+}
+#content-right-threads li{ 
+	margin-top: 10px;
+	padding: 5px;
+	border-bottom: 1px dotted #ccc;
+}
+#content-right-threads li span{ 
+	display: inline-block;
+	width: 300px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#content-right-threads .delete{ 
+	display: inline-block;
+	width: 30px;
+	height: 16px;
+	float: right;
+	margin-right: 20px;
+	margin-top: -25px;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 3px;
+	margin-left: 100px;
+	background: #F7883E;
+	font-weight: bold;
+	font-size: 12px;
+	color: #fff;
+}
+#content-right-threads .delete:hover{ 
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+#content-right-changeUser form,
+#content-right-changeInfo form { 
+	margin: 20px;
+	padding: 20px;
+}
+
+#content-right-changeUser p,
+#content-right-changeInfo p{ 
+	font-size: 14px;
+}
+#content-right-changeUser p:last-child,
+#content-right-changeInfo p:last-child{ 
+	text-align: center;
+}
+#content-right-changeUser input,
+#content-right-changeInfo input{ 
+	width: 200px;
+	height: 20px;
+}
+#content-right-changeUser input[type="radio"],
+#content-right-changeInfo input[type="radio"]{ 
+	width: 50px;
+	height: 15px;
+}
+#content-right-changeUser input[type="submit"],
+#content-right-changeInfo input[type="submit"]{ 
+	border: none;
+	width: 210px;
+	height: 40px;
+	margin-left: 60px;
+	padding: 10px;
+	font-size: 14px;
+}
+#content-right-changeUser #submit_changeUser_2{ 
+	background-color: #F7883E;
+}
+#tip { 
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 150px;
+	overflow: hidden;
+	background: #ddf;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	color: #ff5400;
+	font-size: 12px;
+	text-align: center;
+	z-index: 10;
+}
+#tip p{ 
+	margin: 0px;
+}
+
+
+/*info_thread*/
+.paperclip{ 
+	position: absolute;
+	top: -25px;
+	left: -25px;
+
+}
+#thread-content{ 
+	position: relative;
+	margin: 20px auto;
+	padding: 20px 30px;
+	padding-bottom: 50px;
+	border-top: 4px solid #03c03c;
+	background: #fff;
+}
+#thread-content h1{ 
+	border-bottom: 1px dotted #ccc;
+	font-size: 26px;
+	text-align: center;
+}
+#thread-content h1 a:hover{ 
+	text-decoration: none;
+}
+#thread-content h1:before{ 
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	border-radius: 50%;
+	background-color: #03c03c;
+}
+#title p,
+.remark p{ 
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.remark p{ 
+	text-align: right;
+}
+#title .username, .remark .username{ 
+	color: #03c03c;
+	font-weight: bold;
+	cursor: pointer;
+}
+#title .time, .remark .time{ 
+	font-size: 12px;
+	color: #999;
+}
+#thread-content .title-desc, .remark-content{ 
+	margin-top: 15px;
+	padding: 30px;
+	min-height: 200px;
+	border-top: 1px solid #ccc;
+}
+#thread-content .title-desc{ 
+	border-bottom: 1px solid #ccc;
+	border-top: none;
+}
+.remarks-title{ 
+	font-weight: bold;
+}
+.remark{ 
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#remarkIt{ 
+	margin-top: 10px;
+}
+.remarkIt-content{ 
+	min-height: 200px;
+	border: 1px solid #03c03c;
+	border-radius: 5px;
+}
+#remarkIt-tip{ 
+	margin-left: 200px;
+	font-size: 12px;
+	color: #ff5400;
+}

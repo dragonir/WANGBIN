@@ -1,0 +1,802 @@
+<html>
+<head>
+<title>下拉菜单的制作</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" type="text/css" href="site.css">
+<script language=JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function navbarOver(src,clrOver,clrOverBorder) { if (!src.contains(event.fromElement)){ src.style.cursor = 'hand'; src.bgColor = clrOver; src.borderColor = clrOverBorder; src.children.tags('a')[0].style.color='#FFFF33'; }}
+
+function navbarOut(src,clrIn,clrInBorder) { if (!src.contains(event.toElement)) { src.style.cursor = 'default'; src.bgColor = clrIn; src.borderColor = clrInBorder; src.children.tags('a')[0].style.color='#FFFFFF';}}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#3C79C6">
+  <tr> 
+    <td  height="23" >
+      <table width="100%" border="1" cellspacing="2" cellpadding="0" bordercolor="#3C79C6">
+        <tr>
+          <td bordercolor="#CCCCCC" height="20" width="80" bgcolor="#3064A3"> 
+            <div id="Layer1" style="position:absolute; width:103px; height:80px; z-index:1; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer1','','show')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')"> 
+              <table width="100" border="0" cellspacing="0" cellpadding="0" class=bg1>
+                <tr> 
+                  <td height="20">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td valign="top"> 
+                    <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="100" bgcolor=#3C79C6 border=1>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1">
+                          <a href="xtdl_01.htm" class="white">[01] 系统登录</a></td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a href="xtdl_02.htm" class="white">[02] 主窗口</a></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <a onMouseOver="MM_showHideLayers('Layer1','','show')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" class="white">　系统登录</a></td>
+          <td bordercolor="#CCCCCC" width="80" bgcolor="#3064A3"> 
+            <div id="Layer2" style="position:absolute; height:80px; z-index:1; width: 141px; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','show','Layer7','','hide','Layer13','','hide','Layer15','','hide')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" > 
+              <table width="100" border="0" cellspacing="0" cellpadding="0" class=bg1>
+          <tr>
+                  <td height="20">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+                    <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="122" bgcolor=#3C79C6 border=1>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  onMouseOver="MM_showHideLayers('Layer3','','show')" onMouseOut="MM_showHideLayers('Layer3','','hide')">[01] 
+                          系统定义　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer3" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer2','','show','Layer3','','show')" onMouseOut="MM_showHideLayers('Layer2','','hide','Layer3','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="xtgl_xtdy_01.htm" class="white">[01] 
+                                        部门定义</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_02.htm" class="white">[02] 
+                                        币种定义</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_03.htm" class="white">[03] 
+                                        付款方式定义</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_04.htm" class="white">[04] 
+                                        收银机定义</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_05.htm" class="white">[05] 
+                                        人员定义</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_06.htm" class="white">[06] 
+                                        收银员权限管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_07.htm" class="white">[07] 
+                                        修改密码</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_xtdy_08.htm" class="white">[08] 
+                                        调拨单位管理</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer4','','show')" onMouseOut="MM_showHideLayers('Layer4','','hide')">[02] 
+                          供应商管理　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer4" style="position:absolute; width:149px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer2','','show','Layer4','','show')" onMouseOut="MM_showHideLayers('Layer2','','hide','Layer4','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="xtgl_gysgl_01.htm" class="white">[01] 
+                                        供应商登记</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer5','','show')" onMouseOut="MM_showHideLayers('Layer5','','hide')">[03] 
+                          商品管理　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer5" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer2','','show','Layer5','','show')" onMouseOut="MM_showHideLayers('Layer2','','hide','Layer5','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="xtgl_spgl_01.htm" class="white">[01] 
+                                        商品分类管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_02.htm" class="white">[02] 
+                                        新商品登记</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_03.htm" class="white">[03] 
+                                        商品资料修改</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_04.htm" class="white">[04] 
+                                        拆分商品管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_05.htm" class="white">[05] 
+                                        打包商品管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_06.htm" class="white">[06] 
+                                        异常商品监控</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_07.htm" class="white">[07] 
+                                        商品查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_spgl_08.htm" class="white">[08] 
+                                        打印标价签</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer6','','show')" onMouseOut="MM_showHideLayers('Layer6','','hide')">[04] 
+                          数据处理　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer6" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer2','','show','Layer6','','show')" onMouseOut="MM_showHideLayers('Layer2','','hide','Layer6','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="xtgl_sjcl_01.htm" class="white">[01] 
+                                        数据备份</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_sjcl_02.htm" class="white">[02] 
+                                        日终登记</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="xtgl_sjcl_03.htm" class="white">[03] 
+                                        日终处理</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+            </td>
+          </tr>
+        </table>
+        
+      </div><a onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','show','Layer7','','hide','Layer13','','hide','Layer15','','hide')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" class="white">　系统管理</a></td>
+          <td bordercolor="#CCCCCC" width="80" bgcolor="#3064A3"> 
+            <div id="Layer7" style="position:absolute; height:80px; z-index:1; width: 141px; visibility: hidden" onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','show','Layer13','','hide','Layer15','','hide')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" > 
+              <table width="100" border="0" cellspacing="0" cellpadding="0" class=bg1>
+          <tr>
+                  <td height="20">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+                    <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="122" bgcolor=#3C79C6 border=1>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  onMouseOver="MM_showHideLayers('Layer8','','show')" onMouseOut="MM_showHideLayers('Layer8','','hide')">[01] 
+                          合同管理　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer8" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer7','','show','Layer8','','show')" onMouseOut="MM_showHideLayers('Layer7','','hide','Layer8','','hide')"> 
+                            <table width="149" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="139"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="138" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="ywgl_htgl_01.htm" class="white">[01] 
+                                        合同扣款项目定义</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_htgl_02.htm" class="white">[02] 
+                                        经销合同管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_htgl_03.htm" class="white">[03] 
+                                        代销合同管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_htgl_04.htm" class="white">[04] 
+                                        专柜合同管理</a></td>
+                                    </tr>
+ 
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer9','','show')" onMouseOut="MM_showHideLayers('Layer9','','hide')">[02] 
+                          订货管理　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer9" style="position:absolute; width:149px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer7','','show','Layer9','','show')" onMouseOut="MM_showHideLayers('Layer7','','hide','Layer9','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="ywgl_dhgl_01.htm" class="white">[01] 
+                                        订单管理</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="ywgl_dhgl_02.htm" class="white">[02] 
+                                        催货管理</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer10','','show')" onMouseOut="MM_showHideLayers('Layer10','','hide')">[03] 
+                          出入库管理　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer10" style="position:absolute; width:137px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer7','','show','Layer10','','show')" onMouseOut="MM_showHideLayers('Layer7','','hide','Layer10','','hide')"> 
+                            <table width="131" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="121"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="115" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="ywgl_crkgl_01.htm" class="white">[01] 
+                                        入库管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_crkgl_02.htm" class="white">[02] 
+                                        退货出库管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_crkgl_03.htm" class="white">[03] 
+                                        商品异动管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_crkgl_04.htm" class="white">[04] 
+                                        调拨出库管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_crkgl_05.htm" class="white">[05] 
+                                        批发管理</a></td>
+                                    </tr>
+ 
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer11','','show')" onMouseOut="MM_showHideLayers('Layer11','','hide')">[04] 
+                          物价管理　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer11" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer7','','show','Layer11','','show')" onMouseOut="MM_showHideLayers('Layer7','','hide','Layer11','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="ywgl_wjgl_01.htm" class="white">[01] 
+                                        售价变价管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_wjgl_02.htm" class="white">[02] 
+                                        进价变价管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_wjgl_03.htm" class="white">[03] 
+                                        促销调价管理</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_pdjsy.htm" class="white">[05] 
+                          盘点及损溢</a></td>
+                      </tr>
+                      <tr>
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer12','','show')" onMouseOut="MM_showHideLayers('Layer12','','hide')">[06] 
+                          查询操作　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer12" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer7','','show','Layer12','','show')" onMouseOut="MM_showHideLayers('Layer7','','hide','Layer12','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="ywgl_cxcz_01.htm" class="white">[01] 
+                                        单据查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_cxcz_02.htm" class="white">[02] 
+                                        商品查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="ywgl_cxcz_03.htm" class="white">[03] 
+                                        供应商查询</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+            </td>
+          </tr>
+        </table>
+        
+      </div><a onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','show','Layer13','','hide','Layer15','','hide')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" class="white">　业务管理</a></td>
+          <td bordercolor="#CCCCCC" width="80" bgcolor="#3064A3"> 
+            <div id="Layer13" style="position:absolute; width:113px; height:65px; z-index:1; visibility: hidden" onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','show','Layer15','','hide')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')"> 
+              <table width="110" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td height="20">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td valign="top"> 
+                    <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="110" bgcolor=#3C79C6 border=1>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"> 
+                          <a  onMouseOver="MM_showHideLayers('Layer14','','show')" onMouseOut="MM_showHideLayers('Layer14','','hide')">[01] 
+                          结算管理　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer14" style="position:absolute; width:149px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer13','','show','Layer14','','show')" onMouseOut="MM_showHideLayers('Layer13','','hide','Layer14','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="jsgl_jsgl_01.htm" class="white">[01] 
+                                        经销结算</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="jsgl_jsgl_02.htm" class="white">[02] 
+                                        代销结算</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="jsgl_jsgl_03.htm" class="white">[03] 
+                                        专柜结算</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div><a onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','show','Layer15','','hide')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" class="white">　结算管理</a></td>
+          <td bordercolor="#CCCCCC" width="80" bgcolor="#3064A3"> 
+            <div id="Layer15" style="position:absolute; height:80px; z-index:1; width: 141px; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','show')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" > 
+              <table width="100" border="0" cellspacing="0" cellpadding="0" class=bg1>
+                <tr> 
+                  <td height="20">&nbsp;</td>
+                </tr>
+                <tr> 
+                  <td> 
+                    <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="122" bgcolor=#3C79C6 border=1>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  onMouseOver="MM_showHideLayers('Layer16','','show')" onMouseOut="MM_showHideLayers('Layer16','','hide')">[01] 
+                          实时数据　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer16" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer15','','show','Layer16','','show')" onMouseOut="MM_showHideLayers('Layer15','','hide','Layer16','','hide')"> 
+                            <table width="149" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="139"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="138" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_sssj_01.htm" class="white">[01] 
+                                        销售流水查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_sssj_02.htm" class="white">[02] 
+                                        商品实时库存查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_sssj_03.htm" class="white">[03] 
+                                        实时分类销售</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_sssj_04.htm" class="white">[04] 
+                                        实时销售查询</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_sssj_05.htm" class="white">[05] 
+                                        收银台实时销售</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer17','','show')" onMouseOut="MM_showHideLayers('Layer17','','hide')">[02] 
+                          销售数据　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer17" style="position:absolute; width:149px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer15','','show','Layer17','','show')" onMouseOut="MM_showHideLayers('Layer15','','hide','Layer17','','hide')"> 
+                            <table width="149" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="139"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="138" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_01.htm" class="white">[01] 
+                                        商品销售数据</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_02.htm" class="white">[02] 
+                                        商品分类销售数据</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_03.htm" class="white">[03] 
+                                        收银缴款管理</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_04.htm" class="white">[04] 
+                                        收银台销售数据</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_05.htm" class="white">[05] 
+                                        收银员销售数据</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_06.htm" class="white">[06] 
+                                        供应商销售数据</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_xssj_07.htm" class="white">[07] 
+                                        专柜商品销售查询</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer18','','show')" onMouseOut="MM_showHideLayers('Layer18','','hide')">[03] 
+                          报表查询　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer18" style="position:absolute; width:201px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer15','','show','Layer18','','show')" onMouseOut="MM_showHideLayers('Layer15','','hide','Layer18','','hide')"> 
+                            <table width="199" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="189"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="184" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_bbcx_01.htm" class="white">[01] 
+                                        进货报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx__02.htm" class="white">[02] 
+                                        返厂报表查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_03.htm" class="white">[03] 
+                                        退货报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_04.htm" class="white">[04] 
+                                        无变更商品报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_05.htm" class="white">[05] 
+                                        异动报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_06.htm" class="white">[06] 
+                                        调拨报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_07.htm" class="white">[07] 
+                                        库存报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_08.htm" class="white">[08] 
+                                        促销报表</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_bbcx_09.htm" class="white">[09] 
+                                        商品分类分供应商库存报表</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer19','','show')" onMouseOut="MM_showHideLayers('Layer19','','hide')">[04] 
+                          进销存数据　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer19" style="position:absolute; width:166px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer15','','show','Layer19','','show')" onMouseOut="MM_showHideLayers('Layer15','','hide','Layer19','','hide')"> 
+                            <table width="154" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="140"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="141" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_jxcsj_01.htm" class="white">[01] 
+                                        供应商进销存数据</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_jxcsj_02.htm" class="white">[02] 
+                                        供应商库存查询</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_jxcsj_03.htm" class="white">[03] 
+                                        商品进销存数据</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_jxcsj_04.htm" class="white">[04] 
+                                        商品库存查询</a></td>
+                                    </tr>
+                                    <tr>
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_jxcsj_05.htm" class="white">[05] 
+                                        负库存监控</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer20','','show')" onMouseOut="MM_showHideLayers('Layer20','','hide')">[05] 
+                          图表分析　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer20" style="position:absolute; width:155px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer15','','show','Layer20','','show')" onMouseOut="MM_showHideLayers('Layer15','','hide','Layer20','','hide')"> 
+                            <table width="152" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="142"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="139" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_tbfx_01.htm" class="white">[01] 
+                                        分类销售图形分析</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div></td>
+                      </tr>
+                      <tr> 
+                        <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  onMouseOver="MM_showHideLayers('Layer21','','show')" onMouseOut="MM_showHideLayers('Layer21','','hide')">[06] 
+                          其它　　　　<img src="arrow02.gif" width="4" height="7" border="0"></a><div id="Layer21" style="position:absolute; width:149px; height:75px; z-index:2; visibility: hidden"  onMouseOver="MM_showHideLayers('Layer15','','show','Layer21','','show')" onMouseOut="MM_showHideLayers('Layer15','','hide','Layer21','','hide')"> 
+                            <table width="144" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td width="10">&nbsp;</td>
+                                <td width="134"> 
+                                  <table bordercolor=#000000 cellspacing=2 cellpadding=1 
+                  width="130" bgcolor=#3C79C6 border=1>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" bordercolor=#3C79C6   height=20 bgcolor="#3C79C6" valign="bottom" class="bg1"><a  href="sjcx_qt_01.htm" class="white">[01] 
+                                        设置报表</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_qt_02.htm" class="white">[02] 
+                                        打印</a></td>
+                                    </tr>
+                                    <tr> 
+                                      <td onMouseOver="navbarOver(this,'#6395D1','#000000');" onMouseOut="navbarOut(this,'#3C79C6','#3C79C6');" 
+                      bordercolor=#3C79C6 bgcolor=#3C79C6 
+                        height=20 class="bg1"><a  href="sjcx_qt_03.htm" class="white">[03] 
+                                        选择供应商</a></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <a onMouseOver="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','show')" onMouseOut="MM_showHideLayers('Layer1','','hide','Layer2','','hide','Layer7','','hide','Layer13','','hide','Layer15','','hide')" class="white">　数据查询</a></td>
+                      <td align="right" bordercolor="#3C79C6">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr> 
+    <td bgcolor="ffffff" height="1"></td>
+  </tr>
+  <tr> 
+    <td >&nbsp;</td>
+  </tr>
+</table>
+
+</body>
+</html>

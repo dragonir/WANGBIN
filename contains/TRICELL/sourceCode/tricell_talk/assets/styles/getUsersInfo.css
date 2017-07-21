@@ -1,0 +1,44 @@
+
+#showUserInfoTip{ 
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	z-index: 10;
+	// border: 2px solid yellow;
+}
+#showUserInfoTip .content{ 
+	padding-top: 0;
+	padding-bottom: 5px;
+	width: 100px;
+	height: 102px;
+	border: 1px solid #bbb;
+	text-align: center;
+	font-size: 10px;
+	background-color: #edfbae;
+	border-radius: 5px;
+	overflow: hidden;
+}
+#showUserInfoTip img{ 
+	border-radius: 50%;
+}
+#showUserInfoTip p{ 
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 12px;
+}
+#showUserInfoTip .wrap1{ 
+	position: absolute;
+	left: 35.1%;
+	bottom: -28%;
+	border-top: 20px solid #edfbae;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+}
+#showUserInfoTip .wrap2{ 
+	position: absolute;
+	left: 35%;
+	bottom: -38%;
+	border-top: 30px solid #03c03c;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+}

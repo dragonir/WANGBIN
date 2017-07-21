@@ -1,0 +1,28 @@
+<html>
+<script language="JavaScript">
+var x=640;
+var y=480;
+var xx=(window.screen.width-x)/2;
+var yy=(window.screen.height-y)/2;
+function winsize(){
+window.resizeTo(x,y);
+window.moveTo(xx,yy);
+setTimeout("winsize()",50)}</script>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>能不能移动我?</title>
+<style>
+<!--
+body, table, p, td, div { font-family: Verdana; font-size: 10pt; color: #000000 }
+select{ font-family: Verdana; font-size: 9pt; color: red }
+-->
+</style>
+</head>
+
+<body onload=winsize() ;onresize=winsize()>
+
+</body>
+
+</html>

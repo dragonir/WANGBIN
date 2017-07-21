@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>解密效果</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<STYLE>.box {
+	BORDER-BOTTOM: #d1d1a4 1px solid; BORDER-LEFT: #d1d1a4 1px solid; BORDER-RIGHT: #d1d1a4 1px solid; BORDER-TOP: #d1d1a4 1px solid; COLOR: red; FONT-SIZE: 20px
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+var data = "0123456789";
+var done = 1;
+function textboxin(text) {
+decrypt(text, 2, 1);
+}
+
+function textboxout() {
+self.text.value = '';
+done = 1;
+}
+
+function decrypt(text, max, delay) //max=2 delay=1
+{
+if (done) {
+done = 0;
+decrypt_helper(text, max, delay,  0, max);
+   }
+}
+function decrypt_helper(text, runs_left, delay, charvar, max)  //处理解密效果
+{
+if (!done) {
+runs_left = runs_left - 1; //
+var box_text = text.substring(0, charvar);
+for (var current_char = charvar; current_char < text.length; current_char++) {
+box_text += data.charAt(Math.round(Math.random()*data.length));   //利用math对象的随机函数产生"密码"数字串
+}
+window.text.value = box_text;
+//显示超链接的说明内容
+var rerun = "decrypt_helper('" + text + "'," + runs_left + "," + delay + "," + charvar + "," + max + ");"
+var new_char = charvar + 1;
+var next_char = "decrypt_helper('" + text + "'," + max + "," + delay + "," + new_char + "," + max + ");"
+if(runs_left > 0) 
+ {
+  setTimeout(rerun, delay);
+ }
+else {
+if (charvar < text.length) {
+setTimeout(next_char, Math.round(delay*(charvar+3)/(charvar+1)));  //设置"密码"和超链接说明内容的转换时间
+}
+else {
+done = 1;
+         }
+      }
+   }
+}
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY>
+<CENTER><BR><BR><A 
+href="file:///E:/My%20Intranet/5050/202.108.34.56/netking/dk4/22-JavaScript时尚编程百例/实例27/password_word.htm#" 
+onmouseout=textboxout(); 
+onmouseover="textboxin('欢迎你的到来。在这里你会看到许多的JavaScript特效。是不是像破解了密码?');return true;">JavaScript 
+特效百例。</A><BR><BR><INPUT class=box name=text size=80><BR><BR><IMG border=0 
+src="解密效果.files/007.gif"><BR><BR>
+<P><FONT color=#0099cc face=楷体 
+size=15>鼠标移到超链接上，<BR>对链接的说明内容像解密<BR>一样,由一连串的数字慢慢转变为字符.</FONT> </CENTER>
+<P></P></BODY></HTML>

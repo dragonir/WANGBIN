@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<title>My Js Collection!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="images/test.css" type="text/css">
+<script>
+function tick() {
+var hours, minutes, seconds, ap;
+var intHours, intMinutes, intSeconds;
+var today;
+today = new Date();
+intHours = today.getHours();
+intMinutes = today.getMinutes();
+intSeconds = today.getSeconds();
+if (intHours == 0) {
+hours = "12:";
+ap = "Midnight";
+} else if (intHours < 12) { 
+hours = intHours+":";
+ap = "A.M.";
+} else if (intHours == 12) {
+hours = "12:";
+ap = "Noon";
+} else {
+hours = intHours + ":";
+ap = "P.M.";
+}
+if (intMinutes < 10) {
+minutes = "0"+intMinutes+":";
+} else {
+minutes = intMinutes+":";
+}
+if (intSeconds < 10) {
+seconds = "0"+intSeconds+" ";
+} else {
+seconds = intSeconds+" ";
+} 
+timeString = hours+minutes+seconds+ap;
+Clock.innerHTML = timeString;
+window.setTimeout("tick();", 1000);
+}
+window.onload = tick;
+</script>
+<script Language="javascript">
+function t(){
+alert(document.tilte);}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" onselectstart="return false;" scroll=no>
+<table id=control width="100%" border="0" cellspacing="0" cellpadding="0" class="borderon">
+<tr>
+<td height="20"><img src="images/icon-default.gif" width="16" height="15" class="button" onclick="javascript:window.parent.testframeset.cols = '200,*';" vspace="2" hspace="1" alt="恢复左栏默认宽度"></td>
+</tr>
+</table>
+<table id=control width="100%" style="height:expression(document.body.offsetHeight-25)" border="0" cellspacing="0" cellpadding="6" class="borderon">
+<tr>
+<td align="center" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+<tr>
+<td align="center" onclick="javascript:window.parent.testframeset.cols = '200,*';" style="cursor:help" title="Click to Start!"><font face="Wingdings" style="font-size:100pt;color=#336699">&yuml;</font>
+<br><span style="font:menu">My Js Collection!</span></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="right" valign="bottom" height="50">
+<table border="0" cellspacing="0" cellpadding="2">
+<tr>
+<td align="right"><img src="images/haiwa.gif"></td>
+</tr>
+<tr>
+<td align="center" class="borderoff"><span style="font:menu">&nbsp;Collection by <b style="color:#336699">Haiwa</b>&nbsp;|<span id="Clock"></span>&nbsp;</span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

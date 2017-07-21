@@ -1,0 +1,83 @@
+<HTML><HEAD><TITLE>新年快乐！</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#ff0000 leftMargin=0 onload=doWave(0) topMargin=0>
+<TABLE border=0 cellPadding=0 style="FONT-SIZE: 9pt" width="100%">
+  <TBODY>
+  <TR>
+    <TD align=middle style="COLOR: rgb(255,255,0)" width="100%">
+      <SCRIPT language=JavaScript>
+
+function nextSize(i,incMethod,textLength)
+{
+if (incMethod == 1) return (32*Math.abs( Math.sin(i/(textLength/3.14))) );
+if (incMethod == 2) return (255*Math.abs( Math.cos(i/(textLength/3.14))));
+}
+
+function sizeCycle(text,method,dis)
+{
+	output = "";
+	for (i = 0; i < text.length; i++)
+	{
+		size = parseInt(nextSize(i +dis,method,text.length));
+		output += "<font style='font-size: "+ size +"pt'>" +text.substring(i,i+1)+ "</font>";
+	}
+	theDiv.innerHTML = output;
+}
+
+function doWave(n) 
+{   
+	theText = "======新春快乐======";
+	sizeCycle(theText,1,n);
+	if (n > theText.length) {n=0}
+	setTimeout("doWave(" + (n+1) + ")", 50);
+}
+</SCRIPT>
+
+      <DIV align=center id=theDiv></DIV></TD></TR>
+  <TR>
+    <TD align=middle width="100%">
+      <SCRIPT language=JavaScript><!--
+today=new Date();
+jran=today.getTime();
+
+function rnd() {
+
+    ia=9301;
+    ic=49297;
+    im=233280;
+
+    jran = (jran*ia+ic) % im;
+    return jran/(im*1.0);
+};
+
+function rand(number) {
+
+    return Math.ceil(rnd()*number);
+};
+
+document.write("<CENTER>");
+for(i=1;i<=1;i++) {
+    myNum=(rand(10)); //改成你要随机显示的图片数；
+if(myNum == 1) document.write("<img src='images/1.gif'>"); 
+if(myNum == 2) document.write("<img src='images/2.gif'>"); //图片路径，可用http://
+if(myNum == 3) document.write("<img src='images/3.gif'>"); 
+if(myNum == 4) document.write("<img src='images/4.gif'>"); 
+if(myNum == 5) document.write("<img src='images/4.gif'>"); 
+if(myNum == 6) document.write("<img src='images/3.gif'>"); 
+if(myNum == 7) document.write("<img src='images/2.gif'>"); 
+if(myNum == 8) document.write("<img src='images/1.gif'>"); 
+if(myNum == 9) document.write("<img src='images/3.gif'>"); 
+if(myNum == 10) document.write("<img src='images/2.gif'>"); 
+    else {
+document.write();
+}
+
+};
+
+document.write("</CENTER>");
+// --></SCRIPT>
+    </TD></TR>
+  <TR>
+    <TD align=middle width="100%">小伟工作室 and 禾口工作室 
+贺</TD></TR></TBODY></TABLE></BODY></HTML>

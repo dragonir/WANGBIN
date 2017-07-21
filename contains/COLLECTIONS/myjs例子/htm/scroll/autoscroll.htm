@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0033)file://G:\js\scroll\自动滚屏1.htm -->
+<!-- saved from url=(0035)http://www.51js.com/js/12032328.htm --><!-- saved from url=(0032)http://www.ie-zone.com/index.php --><HTML><HEAD><TITLE>自动滚屏</TITLE><!-- #BeginTemplate "/Templates/JsExample.dwt" --><!-- #BeginEditable "doctitle" --><!-- #EndEditable -->
+<META content="text/html; charset=gb2312" http-equiv=Content-Type><LINK 
+href="../fav.ico" rel="shortcut icon">
+<STYLE type=text/css>BODY {
+	MARGIN: 25px
+}
+#all TD {
+	FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"; FONT-SIZE: 12px; LINE-HEIGHT: 15px
+}
+INPUT {
+	FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"; FONT-SIZE: 12px; LINE-HEIGHT: 15px
+}
+SELECT {
+	FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"; FONT-SIZE: 12px; LINE-HEIGHT: 15px
+}
+P {
+	FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"; FONT-SIZE: 12px; LINE-HEIGHT: 15px
+}
+TEXTAREA {
+	FONT-FAMILY: "Verdana", "Arial","新宋体", "宋体"; FONT-SIZE: 12px; LINE-HEIGHT: 15px
+}
+#all A:active {
+	COLOR: #7d070c
+}
+#all A:visited {
+	COLOR: #7d070c
+}
+#all A:hover {
+	COLOR: #336699
+}
+#all A:link {
+	COLOR: #7d070c
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+ob.select();js=ob.createTextRange();js.execCommand("Copy");
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY bgColor=#336699 id=all text=#000000>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR bgColor=#ffffff>
+    <TD><IMG height=14 src="autoscroll.files/sq_1.gif" width=11></TD>
+    <TD width="100%"></TD>
+    <TD><IMG height=14 src="autoscroll.files/sq_2.gif" 
+width=11></TD></TR></TBODY></TABLE><!-- #BeginEditable "Example%20and%20Sources" -->
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR bgColor=#ffffff>
+    <TD><IMG height=1 src="autoscroll.files/space.gif" width=11></TD>
+    <TD width="100%">
+      <TABLE border=0 cellPadding=8 width="100%">
+        <TBODY>
+        <TR>
+          <TD align=middle><!-- #BeginLibraryItem "/Library/js_title.lbi" -->
+            <SCRIPT language=JavaScript>
+document.write("<font color=#7d070c style=\"font-size: 14px\">"+document.title+"</font>");
+</SCRIPT>
+<!-- #EndLibraryItem --></TD></TR>
+        <TR>
+          <TD bgColor=#f7f7f7>提示： 点一下向下滚屏按钮，屏幕会自动向下滚动，到页面底端，再按一下向上滚屏，就又上来了。
+            <SCRIPT language=JavaScript>
+<!-- Begin
+function scrollit() {
+for (I=1; I<=750; I++){
+parent.scroll(1,I)
+   }
+}
+
+function scrollit1() {
+for (I=750; I>1; I=I-1){
+parent.scroll(1,I)
+   }
+}
+// End -->
+</SCRIPT>
+             <INPUT name=button onclick=scrollit() type=button value=向下滚屏> 
+</TD></TR>
+        <TR>
+          <TD height=450 vAlign=top>1.将下面的代码复制到 &lt;body&gt; 或者 &lt;head&gt; 内 
+<INPUT name=Button onclick=JM_cc(js_1) type=button value=复制到我的剪贴板> 
+            <BR><TEXTAREA cols=80 name=js_1 rows=10 wrap=VIRTUAL>&lt;script language="JavaScript"&gt;
+&lt;!-- Begin
+function scrollit() {
+for (I=1; I&lt;=750; I++){
+parent.scroll(1,I)
+   }
+}
+
+function scrollit1() {
+for (I=750; I&gt;1; I=I-1){
+parent.scroll(1,I)
+   }
+}
+// End --&gt;
+&lt;/script&gt;</TEXTAREA> <BR><BR>2.加上滚动按钮代码:<BR>&lt;input 
+            type=button value="向下滚屏" onClick="<FONT 
+            color=#990000>scrollit()</FONT>" name="button"&gt; <BR>&lt;input 
+            type=button value="向上滚屏" onClick="<FONT 
+            color=#990000>scrollit1()</FONT>" name="button"&gt; 
+      </TD></TR></TBODY></TABLE>
+      <DIV align=center><BR><INPUT name=button2 onclick=scrollit1() type=button value=向上滚屏> 
+      </DIV></TD>
+    <TD><IMG height=1 src="autoscroll.files/space.gif" 
+width=11></TD></TR></TBODY></TABLE><!-- #EndEditable -->
+<TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+  <TBODY>
+  <TR bgColor=#ffffff>
+    <TD><IMG height=14 src="autoscroll.files/sq_3.gif" width=11></TD>
+    <TD width="100%"></TD>
+    <TD><IMG height=14 src="autoscroll.files/sq_4.gif" 
+width=11></TD></TR></TBODY></TABLE><!-- #EndTemplate --><BR><BR><BR><BR><BR></BODY></HTML>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://www.1studio.net/html/example/0009/mqhx.htm -->
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<SCRIPT language=JavaScript>
+<!--//
+	var x = 0;
+	var y = 0;
+	var limdex = 1500;
+	var dest = 0;
+	var distance = 0;
+	var step = 0;
+	var destination = 0;
+	var on = true;
+
+function scrollit(destination) {
+	step = 2;
+	dest = destination;
+	if (x<dest & x < limdex){
+		while (x<dest) {
+			step += (step / 7);
+			x += step;
+			parent.frames[0].scroll(x,0);
+		}  
+                        // top.main.scroll(dest,0);
+		if(dest <=limdex) { parent.frames[0].scroll(dest,0); }
+		x = dest;
+	}
+	if (x > dest)  {
+		while (x>dest) {
+			step += (step / 7);
+			if(x >= (0+step)) { x -= step; parent.frames[0].scroll(x,0); }
+			else break;
+		}
+		if(dest >= 0) { parent.frames[0].scroll(dest,0); }
+		x = dest;
+	}
+	if (x<1) { parent.frames[0].scroll(1,0); x=1 }
+	if (x>limdex) { parent.frames[0].scroll(limdex,0); x=limdex }
+	x = dest;
+}
+
+function scrollnow() {
+                if (on){
+                if (x < limdex & x >= 0 ) {              
+                                parent.frames[0].scroll(x,0);
+                            
+                        x = x + 1;
+                        
+                        setTimeout('scrollnow()', 8);
+        
+                }
+                else if (x < 0) {
+                
+                        x = limdex;
+                        scrollnow();
+                }
+            else {
+                
+                x=0;
+                scrollnow();
+                }
+                }
+
+}
+
+
+
+// *********************************
+// 去掉原来的stopscroll()
+function stopscroll() {
+        if (on){
+        on = false;
+        }
+        else {
+        on = true;
+        scrollnow();
+        }
+        
+}
+function startscroll() { on = true; scrollnow(); }
+function stop_start() { 
+	if (on){ on = false;}else { on = true;scrollnow();}
+}
+
+scrollnow();
+
+//***********************************
+
+//-->
+
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY></BODY></HTML>

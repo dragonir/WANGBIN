@@ -1,0 +1,28 @@
+<SCRIPT>
+var old_y=0;  //记录鼠标按下时的Ｙ轴位置
+var yn=0;  //用于记录鼠标状态
+function moveit()
+{
+if(yn==1 &&  event.button==1)  //如果鼠标左键按下就移动页面
+document.body.scrollTop=(old_y-event.clientY); //移动页面
+}
+function downit()
+{old_y=event.clientY+document.body.scrollTop; //记住鼠标按下时的Ｙ轴位置
+yn=1; //用于记住鼠标已按下
+}
+
+function upit()
+{yn=0;}  //记住鼠标已放开
+
+document.onmouseup=upit; //鼠标放开时执行upit()函数
+document.onmousedown=downit; //鼠标按下时执行downit()函数
+document.onmousemove =moveit; //鼠标移动时执行moveit()函数
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+var i=0;
+for(i=0;i<100;i++){
+document.write("<span style='cursor:hand;font:menu'>"+i+"－－－－－－－－－－－－－－－－－－－－－－－－－－－－</span><br>");
+}
+
+</SCRIPT>

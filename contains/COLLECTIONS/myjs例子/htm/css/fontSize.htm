@@ -1,0 +1,9 @@
+<select id='fontslt' onchange='NYSfont()'><option>选择阅读字体
+<script language=javascript>for (i=9;i<200;i++)
+{document.write("<option value="+i+">"+i+"pt字体\n");}
+function NYSfont()
+{if((fontslt.selectedIndex!=-1)&&(fontslt.selectedIndex!=0)){readcontent.style.fontSize=fontslt.options[fontslt.selectedIndex].value;}}</script></select>
+&nbsp;
+<p>
+<textarea id='readcontent' rows="15" cols="100">这里的字体应该随选择变化</textarea>
+</p>

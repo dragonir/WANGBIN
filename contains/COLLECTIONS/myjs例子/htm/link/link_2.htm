@@ -1,0 +1,64 @@
+<html>
+<script>
+function p(){
+document.pad.text.select();
+document.execCommand("copy")}
+function link(){ 
+o=event.srcElement
+while(o.tagName != "A")
+{if(!o.parentElement) return
+o=o.parentElement}
+event.returnValue = false
+if (checkboxNever.checked == true){
+open(o.href,'','')}
+else{location=o.href}}
+document.onclick=link;
+</script>
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>控制窗口打开的目标</title>
+<style>
+<!--
+a, td, body{font-family: Verdana; font-size: 10pt }
+input, button,textarea { font-family: Verdana; font-size: 10pt; border: 1 solid #000000 }
+ d {font-family: Verdana; font-size: 9pt }
+
+-->
+</style>
+</head>
+
+<body> 
+ 
+<p align="center"><a href="http://">看看效果</a></p>
+
+<p align="center"><a href="http://" target="_blank">看看效果</a></p>
+
+
+<p align="center"><input type="checkbox" title="不下载这些组件。" id="checkboxNever" accessKey="V" value="ON">在新窗口打开链接(<u>v</u>)</p>
+
+
+<p align="left">在body中加入<font color="#FF0000">&lt;input 
+type=&quot;checkbox&quot; id=&quot;checkboxNever&quot; accessKey=&quot;V&quot; 
+value=&quot;ON&quot;&gt;在新窗口打开链接(&lt;u&gt;v&lt;/u&gt;)</font></p>
+
+
+<p align="center"><input type="button" value="复制到我的剪贴板" onclick=p()><FORM name=pad><textarea rows="11" name="S1" cols="91" id=text><script>
+function link(){ 
+o=event.srcElement
+while(o.tagName != "A")
+{if(!o.parentElement) return
+o=o.parentElement}
+event.returnValue = false
+if (checkboxNever.checked == true){
+open(o.href,'','')}
+else{location=o.href}}
+document.onclick=link;
+</script></textarea></FORM>
+
+<p align="center"><span style="cursor:hand" onclick=open('http://www.51windows.com','','')>无忧视窗:http://www.51windows.com</p>  
+</body>
+
+</html>

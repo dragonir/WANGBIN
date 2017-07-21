@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+	<Script language="JavaScript">
+		var someText = "HELLO WORLD! MY NAME IS WANGBIN";	// the text
+		var aChar;
+		var aSentence;
+		var i=0;					// a counter
+		var colors = new Array("FF0000","FFFC00","03C03C","00FFFF","00FF00","FFFFFF"); // the colors
+		var aColor;					// the chosen color
+		function loadText(){
+			// randomly choose color
+			aColor = colors[Math.floor(Math.random()*colors.length)];
+
+			aChar = someText.charAt(i);
+			if (i == 0)
+				aSentence = aChar;
+			else
+				aSentence += aChar;	
+
+			// 50 iterations max.
+			if (i < 50)	i++;
+			
+			// For IE
+			if (document.all)
+			{
+				textDiv.innerHTML= "<font color='#"+aColor+"' face='Tahoma' size='5'><i>"+aSentence+"</i></font>";
+				setTimeout("loadText()",100);
+			}
+				
+			// For Netscape Navigator 4
+			else if (document.layers) 
+			{
+				document.textDiv.document.write("<font color='#"+aColor+"' face='Tahoma' 								size='5'><i>"+aSentence+"</i></font>");
+				document.textDiv.document.close();
+				setTimeout("loadText()",100);
+			}
+				
+			// For other
+			else if (document.getElementById){
+				document.getElementById("textDiv").innerHTML = "<font color='#"+aColor+"' 			face='Fantasy'size='20'><i>"+aSentence+"</i></font>";
+				setTimeout("loadText()",100);
+			}
+		}
+	</SCRIPT>
+</HEAD>
+<body bgcolor="#2f2f2f" text="#ffffff" onLoad="loadText()">
+<div id="textDiv"></div>
+</body>
+</HTML>

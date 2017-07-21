@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://darkvn.top263.net/myscript/movemenu/movemenu2.htm -->
+<HTML><HEAD><TITLE>moveMenu</TITLE>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<STYLE type=text/css>.alpha {
+	FILTER: Alpha(Opacity=80)
+}
+.td1 {
+	FONT-SIZE: 12px
+}
+.td2 {
+	BACKGROUND-COLOR: #ccffff; CURSOR: hand; FONT-SIZE: 12px
+}
+.maskl {
+	OVERFLOW: hidden
+}
+.cardtitle {
+	BORDER-BOTTOM: black 0px solid; BORDER-LEFT: black 0px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; CURSOR: default; FONT-SIZE: 12px; TEXT-INDENT: 4pt
+}
+.cardbottom {
+	BACKGROUND-COLOR: #99ccff; BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-TOP: black 0px solid; FILTER: Alpha(Opacity=90)
+}
+</STYLE>
+
+<SCRIPT language=Jscript>
+//Copyright (C) 2001 DarkVn. /Mail:darkvn@blueidea.com
+//建议使用IE5.0以上应用本代码.
+//****************************************************
+//用数组来存储多个timeOut标识.
+tBack=new Array(5);
+tOut=new Array(5);
+//激活当前选项卡.
+function menuOut(whichMenu){
+var curMenu=eval("menu"+whichMenu);
+	curMenu.runtimeStyle.zIndex=6;
+	clearTimeout(tBack[whichMenu]);
+	moveOut(whichMenu);
+}
+//恢复初始状态.
+function menuBack(whichMenu){
+var curMenu=eval("menu"+whichMenu);
+	curMenu.runtimeStyle.zIndex=curMenu.style.zIndex;
+	clearTimeout(tOut[whichMenu]);
+	moveBack(whichMenu);
+}
+//移动当前选项卡
+function moveOut(curNum){
+var	curMenu=eval("menu"+curNum);
+	if(curMenu.style.posLeft>0) {
+		curMenu.style.posLeft-=2;
+		tOut[curNum]=setTimeout("moveOut('"+curNum+"')",1);
+		}
+}
+//移回选项卡.
+function moveBack(curNum){
+var	curMenu=eval("menu"+curNum);
+	if(curMenu.style.posLeft<30) {
+		curMenu.style.posLeft+=2;
+		tBack[curNum]=setTimeout("moveBack('"+curNum+"')",1);
+		}
+
+}
+//鼠标移过时改变表格单元式样。
+function swapClass(){
+var o=event.srcElement;
+	if(o.className=="td1") o.className="td2"
+		else if(o.className=="td2") o.className="td1";
+}
+document.onmouseover=swapClass;
+document.onmouseout=swapClass;
+</SCRIPT>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff leftMargin=0 text=#000000 topMargin=0 marginheight="0" 
+marginwidth="0">
+<DIV class=maskl id=menuPos 
+style="HEIGHT: 216px; LEFT: 115px; POSITION: absolute; TOP: 59px; WIDTH: 132px; Z-INDEX: 1">
+<DIV id=menu1 onmouseout=menuBack(1) onmouseover=menuOut(1) 
+style="HEIGHT: 20px; LEFT: 30px; POSITION: absolute; TOP: 0px; WIDTH: 130px; Z-INDEX: 1">
+<DIV class=cardbottom id=Layer1 
+style="HEIGHT: 115px; LEFT: 0px; POSITION: absolute; TOP: 17px; WIDTH: 100px; Z-INDEX: 1">
+<TABLE align=center border=0 height="100%" width=75>
+  <TBODY>
+  <TR>
+    <TD class=td1>选项一</TD></TR>
+  <TR>
+    <TD class=td1>选项二</TD></TR>
+  <TR>
+    <TD class=td1>选项三</TD></TR>
+  <TR>
+    <TD class=td1>选项四</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100>
+  <TBODY>
+  <TR>
+    <TD height=18 width=14><IMG height=18 src="moveMenu.files/stang.gif" 
+      width=14></TD>
+    <TD bgColor=#99ccff class=cardtitle height=14 
+width=86>选项卡一</TD></TR></TBODY></TABLE></DIV>
+<DIV id=menu2 onmouseout=menuBack(2) onmouseover=menuOut(2) 
+style="HEIGHT: 20px; LEFT: 30px; POSITION: absolute; TOP: 20px; WIDTH: 130px; Z-INDEX: 1">
+<DIV class=cardbottom id=Layer2 
+style="HEIGHT: 115px; LEFT: 0px; POSITION: absolute; TOP: 17px; WIDTH: 100px; Z-INDEX: 1">
+<TABLE align=center border=0 height="100%" width=75>
+  <TBODY>
+  <TR>
+    <TD class=td1>选项一</TD></TR>
+  <TR>
+    <TD class=td1>选项二</TD></TR>
+  <TR>
+    <TD class=td1>选项三</TD></TR>
+  <TR>
+    <TD class=td1>选项四</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100>
+  <TBODY>
+  <TR>
+    <TD height=18 width=14><IMG height=18 src="moveMenu.files/stang.gif" 
+      width=14></TD>
+    <TD bgColor=#99ccff class=cardtitle height=14 
+width=86>选项卡二</TD></TR></TBODY></TABLE></DIV>
+<DIV id=menu3 onmouseout=menuBack(3) onmouseover=menuOut(3) 
+style="HEIGHT: 20px; LEFT: 30px; POSITION: absolute; TOP: 40px; WIDTH: 130px; Z-INDEX: 1">
+<DIV class=cardbottom id=Layer3 
+style="HEIGHT: 115px; LEFT: 0px; POSITION: absolute; TOP: 17px; WIDTH: 100px; Z-INDEX: 1">
+<TABLE align=center border=0 height="100%" width=75>
+  <TBODY>
+  <TR>
+    <TD class=td1>选项一</TD></TR>
+  <TR>
+    <TD class=td1>选项二</TD></TR>
+  <TR>
+    <TD class=td1>选项三</TD></TR>
+  <TR>
+    <TD class=td1>选项四</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100>
+  <TBODY>
+  <TR>
+    <TD height=18 width=14><IMG height=18 src="moveMenu.files/stang.gif" 
+      width=14></TD>
+    <TD bgColor=#99ccff class=cardtitle height=14 
+width=86>选项卡三</TD></TR></TBODY></TABLE></DIV>
+<DIV id=menu4 onmouseout=menuBack(4) onmouseover=menuOut(4) 
+style="HEIGHT: 20px; LEFT: 30px; POSITION: absolute; TOP: 60px; WIDTH: 130px; Z-INDEX: 1">
+<DIV class=cardbottom id=Layer4 
+style="HEIGHT: 115px; LEFT: 0px; POSITION: absolute; TOP: 17px; WIDTH: 100px; Z-INDEX: 1">
+<TABLE align=center border=0 height="100%" width=75>
+  <TBODY>
+  <TR>
+    <TD class=td1>选项一</TD></TR>
+  <TR>
+    <TD class=td1>选项二</TD></TR>
+  <TR>
+    <TD class=td1>选项三</TD></TR>
+  <TR>
+    <TD class=td1>选项四</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100>
+  <TBODY>
+  <TR>
+    <TD height=18 width=14><IMG height=18 src="moveMenu.files/stang.gif" 
+      width=14></TD>
+    <TD bgColor=#99ccff class=cardtitle height=14 
+width=86>选项卡四</TD></TR></TBODY></TABLE></DIV>
+<DIV id=menu5 onmouseout=menuBack(5) onmouseover=menuOut(5) 
+style="HEIGHT: 134px; LEFT: 30px; POSITION: absolute; TOP: 80px; WIDTH: 130px; Z-INDEX: 1">
+<DIV class=cardbottom id=Layer5 
+style="HEIGHT: 115px; LEFT: 0px; POSITION: absolute; TOP: 17px; WIDTH: 100px; Z-INDEX: 1">
+<TABLE align=center border=0 height="100%" width=75>
+  <TBODY>
+  <TR>
+    <TD class=td1>选项一</TD></TR>
+  <TR>
+    <TD class=td1>选项二</TD></TR>
+  <TR>
+    <TD class=td1>选项三</TD></TR>
+  <TR>
+    <TD class=td1>选项四</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE></DIV>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=100>
+  <TBODY>
+  <TR>
+    <TD height=18 width=14><IMG height=18 src="moveMenu.files/stang.gif" 
+      width=14></TD>
+    <TD bgColor=#99ccff class=cardtitle height=14 
+width=86>选项卡五</TD></TR></TBODY></TABLE></DIV></DIV>(C)BlueIdea. DarkVn 2001.11 
+<HR>
+</BODY></HTML>

@@ -1,0 +1,84 @@
+STYLE typetextcss A:active {
+	TEXT-DECORATION: none
+}
+A:visited {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+A:link {
+	TEXT-DECORATION: none
+}
+BODY {
+	COLOR: #000000; FONT-FAMILY: "MS Shell Dlg", "Tahoma", "sans-serif"; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+TR {
+	FONT-FAMILY: MS Shell Dlg, Tahoma,sans-serif; FONT-SIZE: 9pt
+}
+TD {
+	FONT-FAMILY: MS Shell Dlg,Tahoma, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: normal
+}
+FORM {
+	FONT-FAMILY: MS Shell Dlg,tahoma,宋体; FONT-SIZE: 9pt
+}
+.black {
+	COLOR: #000000; FONT-SIZE: 9pt
+}
+.white {
+	COLOR: #ffffff; FONT-SIZE: 9pt
+}
+.red {
+	COLOR: #ff0000; FONT-SIZE: 9pt
+}
+.green {
+	COLOR: #009900; FONT-SIZE: 9pt
+}
+.c990000 {
+	COLOR: #990000; FONT-SIZE: 9pt
+}
+.cFF9900 {
+	COLOR: #ff9900; FONT-SIZE: 9pt
+}
+.c333399 {
+	COLOR: #333399; FONT-SIZE: 9pt
+}
+.blue {
+	COLOR: #0000ff; FONT-SIZE: 9pt
+}
+.blue1 {
+	COLOR: #3300cc; FONT-SIZE: 9pt
+}
+.gray {
+	COLOR: #666666; FONT-SIZE: 9pt
+}
+.row {
+	LINE-HEIGHT: 15pt
+}
+.bottom {
+	BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM: #665b8e 1px solid; BORDER-LEFT: #ffffff 1px solid; BORDER-RIGHT: #665b8e 1px solid; BORDER-TOP: #ffffff 1px solid; COLOR: #000000; FONT-FAMILY: "宋体"; FONT-SIZE: 9pt; HEIGHT: 18px
+}
+.editbox1 {
+	BACKGROUND-COLOR: #dbdbdb; COLOR: #000000; FONT-FAMILY: 宋体; FONT-SIZE: 9pt; HEIGHT: 18px
+}
+.editbox3 {
+	BACKGROUND-COLOR: #ffffff; COLOR: #000000; FONT-FAMILY: 宋体; FONT-SIZE: 9pt; HEIGHT: 18px
+}
+.editbox2 {
+	BACKGROUND-COLOR: #dbdbdb; COLOR: #000000; CURSOR: text; FONT-FAMILY: 宋体; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.size {
+	FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"; FONT-SIZE: 9px
+}
+A.yellow:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.yellow:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.yellow:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.yellow:hover {
+	COLOR: #ffff33; TEXT-DECORATION: none
+}

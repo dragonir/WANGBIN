@@ -1,0 +1,16 @@
+html,body,header,h1,h2,h3,h4,h5,h6,div,form,a,span,table,tr,th,td,ul,li,ol,dl,dt,dd{margin: 0;padding: 0;}
+body{min-width: 800px;}
+header,nav{display: block;}
+ul,li{list-style: none;}
+
+.visible {visibility: visible;}
+.hidden {visibility: hidden;}
+.dn{display: none;}
+
+a:link{text-decoration: none;color: #03c03c;}
+a:visited{text-decoration: none;color: #03c03c;}
+a:hover{text-decoration: underline;color: #03c03c;}
+a:active{text-decoration: none;color: #03c03c;}
+
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}

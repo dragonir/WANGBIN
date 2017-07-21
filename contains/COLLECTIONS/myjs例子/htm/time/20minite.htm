@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+<TITLE>Timer</TITLE>
+</HEAD>
+<Script Language="JavaScript">
+<!-- Hiding
+
+/*	Script By Lefteris Haritou
+	http://www.geocities.com/~lef
+	Please Keep The Credit Above
+	No Copyrights but be fair
+*/
+
+function display(){
+rtime=etime-ctime;
+if (rtime>60)
+m=parseInt(rtime/60);
+else{
+m=0;
+}
+s=parseInt(rtime-m*60);
+if(s<10)
+s="0"+s
+window.status="Time Remaining :  "+m+":"+s
+window.setTimeout("checktime()",1000)
+}
+
+function settimes(){
+alert("You have 20 minutes time !")
+var time= new Date();
+hours= time.getHours();
+mins= time.getMinutes();
+secs= time.getSeconds();
+etime=hours*3600+mins*60+secs;
+etime+=1200;  //You can change the value of 1200 according to how much time you wish to set the timer. Where 1200 is time in secs (1200 = 20 mins * 60 secs/min). Max time is 60 mins (3600secs)
+checktime();
+}
+
+function checktime(){
+var time= new Date();
+hours= time.getHours();
+mins= time.getMinutes();
+secs= time.getSeconds();
+ctime=hours*3600+mins*60+secs
+if(ctime>=etime){
+expired();
+}
+else
+display();
+}
+
+function expired(){
+alert("Time expired");
+location.href="Main.html";  //Put here the next page
+}
+
+// Done hiding -->
+</Script>
+<BODY onLoad="settimes()">
+<Center><H2>Look in the status bar. In 20 mins you will be forced to change page</H2>
+</Center>
+</BODY>
+</HTML>

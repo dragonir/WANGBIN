@@ -1,0 +1,31 @@
+/*about*/
+body{
+	background-size: 100%;
+	background-image: url('../images/Tricell.jpg');
+}
+#aboutRow2{
+	height: 600px;
+	background-image: url('dot.png');
+	margin: 0;
+	padding: 0;
+}
+#authorInfo{
+	width: 60%;
+	margin: auto;
+	margin-top: 280px;
+	text-align: center;
+	box-shadow: 10px 10px 100px black;
+	background-color: #03c03c;
+	color: #ffffff;
+	text-shadow:2px 2px 5px black;
+	opacity: 0.8;
+	font-family: "正楷";
+}
+#authorInfo article{
+	width: 20%;
+	margin: auto;
+	text-align: right;
+}
+#authorInfo p{
+	font-size: 1.2em;
+}

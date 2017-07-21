@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://darkvn.top263.net/myscript/boxgame/game.htm -->
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<SCRIPT>
+var smapdata = new Array( 
+"11111111111111111111",
+"10000000000000000001",
+"10010000000000000001",
+"10010020000000000001",
+"10010000000000000301",
+"10010111110000003001",
+"10000001000000000301",
+"10000001000010000001",
+"10000001000000000001",
+"10000001000000111001",
+"10000000000000000001",
+"10000000011110000001",
+"10020200000000000001",
+"10000000000000000001",
+"11111111111111111111"
+)//原始地图信息，便于编辑地图。
+
+var mapData =new Array(15);
+var spriteX=0;
+    spriteY=0;
+var winbox=0;
+
+function readMap(){ //重建地图信息便于程序使用。
+  for(var i=0;i<15;i++){
+    mapData[i]=new Array(20);
+    for(var j=0;j<20;j++){
+      mapData[i][j]=smapdata[i].substr(j,1);
+    }
+  }
+}
+
+function CreateMap(){ //用dom来创建地图。
+var x=30;
+var y=30;
+var cbox=0;
+for (var i=0;i<15;i++){
+for (var j=0;j<20;j++){
+var oe=document.createElement("div");
+    oe.id="box"+i+"_"+j; //设定id规则以便后面程序访问。
+    oe.className="map"+mapData[i][j];
+    oe.style.pixelLeft=x;
+    oe.style.pixelTop=y;
+    gameArea.appendChild(oe);
+    x+=19;
+}
+y+=19;
+x=30;
+}
+}
+
+function mLeft(){
+  if(spriteX-1>0) {
+	if(mapData[spriteY][spriteX-1]=="1" ) return;
+	if(mapData[spriteY][spriteX-1]=="2" ) {
+		if(mapData[spriteY][spriteX-2]=="0" || mapData[spriteY][spriteX-2]=="3"){
+		if(mapData[spriteY][spriteX-2]=="3"){
+				mapData[spriteY][spriteX-2]="1";//若推到了目的地，则改箱子的属性为障碍物，从而固定箱子位置。
+				winbox++;
+				if(winbox==3) win();//若三个箱子都到达目的地则赢。
+				}
+			else mapData[spriteY][spriteX-2]="2";
+		mapData[spriteY][spriteX-1]="0";
+		eval("box"+spriteY+"_"+(spriteX-1)).style.backgroundColor='#333333';
+		eval("box"+spriteY+"_"+(spriteX-2)).style.backgroundColor='#3333FF';
+		spriteX--;
+		sprite.style.pixelLeft-=19;       
+		}
+	}else{
+	spriteX--;
+	sprite.style.pixelLeft-=19;       
+	}
+  }
+}
+
+function mRight(){
+  if(spriteX+1<20){
+	if(mapData[spriteY][spriteX+1]=="1") return;
+	if(mapData[spriteY][spriteX+1]=="2"){
+  		if(mapData[spriteY][spriteX+2]=="0" || mapData[spriteY][spriteX+2]=="3"){
+		if(mapData[spriteY][spriteX+2]=="3") {
+				mapData[spriteY][spriteX+2]="1";
+				winbox++;
+				if(winbox==3) win();
+				}
+			else mapData[spriteY][spriteX+2]="2";
+		mapData[spriteY][spriteX+1]="0";
+		eval("box"+spriteY+"_"+(spriteX+1)).style.backgroundColor='#333333';
+		eval("box"+spriteY+"_"+(spriteX+2)).style.backgroundColor='#3333FF';
+		spriteX++;
+		sprite.style.pixelLeft+=19;       
+		}
+	}else{
+	spriteX++;
+	sprite.style.pixelLeft+=19;       
+	}
+  }
+}
+
+function mUp(){
+  if(spriteY-1>0) {
+	if(mapData[spriteY-1][spriteX]=="1") return;
+	if(mapData[spriteY-1][spriteX]=="2") {
+		if(mapData[spriteY-2][spriteX]=="0" || mapData[spriteY-2][spriteX]=="3") {
+		if(mapData[spriteY-2][spriteX]=="3") {
+				mapData[spriteY-2][spriteX]="1"; 
+				winbox++;
+				if(winbox==3) win();
+				}
+			else mapData[spriteY-2][spriteX]="2";
+		mapData[spriteY-1][spriteX]="0";
+		eval("box"+(spriteY-1)+"_"+spriteX).style.backgroundColor='#333333';
+		eval("box"+(spriteY-2)+"_"+spriteX).style.backgroundColor='#3333FF';
+		spriteY--;
+		sprite.style.pixelTop-=19;
+		}
+	}else{
+	spriteY--;
+	sprite.style.pixelTop-=19;       
+	}
+  }
+}
+
+function mDown(){
+  if(spriteY+1<20){ 
+	if(mapData[spriteY+1][spriteX]=="1") return;
+	if(mapData[spriteY+1][spriteX]=="2") {
+		if(mapData[spriteY+2][spriteX]=="0" || mapData[spriteY+2][spriteX]=="3") {
+		if(mapData[spriteY+2][spriteX]=="3") {
+				mapData[spriteY+2][spriteX]="1"
+				winbox++;
+				if(winbox==3) win();
+				}
+			else mapData[spriteY+2][spriteX]="2";
+		mapData[spriteY+1][spriteX]="0";
+		eval("box"+(spriteY+1)+"_"+spriteX).style.backgroundColor='#333333';
+		eval("box"+(spriteY+2)+"_"+spriteX).style.backgroundColor='#3333FF';
+		spriteY++;
+		sprite.style.pixelTop+=19;       
+		}
+	}else{
+	spriteY++;
+	sprite.style.pixelTop+=19;       
+	}
+  }
+}
+
+function win(){
+alert("you win!!!!!!!!!!!!!");
+}
+
+function fnKeydown(){
+var key=event.keyCode;
+switch(key){
+case 37:
+  mLeft();
+  break;
+case 39:
+  mRight();
+  break;
+case 38:
+  mUp();
+  break;
+case 40:
+  mDown();
+  break;
+}
+return false;
+}
+
+function init(){
+readMap();
+CreateMap();
+sprite.style.pixelLeft=49;
+sprite.style.pixelTop=49;
+spriteX=1;
+spriteY=1;
+}
+
+document.onkeydown=fnKeydown;
+</SCRIPT>
+
+<STYLE type=text/css>.map0 {
+	BACKGROUND-COLOR: #333333; BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; HEIGHT: 20px; POSITION: absolute; WIDTH: 20px
+}
+.map1 {
+	BACKGROUND-COLOR: #999999; BORDER-BOTTOM: #ffffff 2px outset; BORDER-LEFT: #ffffff 2px outset; BORDER-RIGHT: #ffffff 2px outset; BORDER-TOP: #ffffff 2px outset; HEIGHT: 20px; POSITION: absolute; WIDTH: 20px
+}
+.map2 {
+	BACKGROUND-COLOR: #3333ff; BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; HEIGHT: 20px; POSITION: absolute; WIDTH: 20px
+}
+.map3 {
+	BACKGROUND-COLOR: #006600; BORDER-BOTTOM: #999999 0px solid; BORDER-LEFT: #999999 0px solid; BORDER-RIGHT: #999999 0px solid; BORDER-TOP: #999999 0px solid; HEIGHT: 20px; POSITION: absolute; WIDTH: 20px
+}
+.box {
+	BACKGROUND-COLOR: #0000cc; BORDER-BOTTOM: #ffffff 1px outset; BORDER-LEFT: #ffffff 1px outset; BORDER-RIGHT: #ffffff 1px outset; BORDER-TOP: #ffffff 1px outset; HEIGHT: 20px; POSITION: absolute; WIDTH: 20px
+}
+</STYLE>
+
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY bgColor=#333333 onload=init()>
+<DIV id=gameArea></DIV>
+<DIV id=sprite style="POSITION: absolute"><IMG height=20 
+src="solomon.gif" width=20></DIV></BODY></HTML>

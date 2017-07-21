@@ -1,0 +1,363 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+/*Row 2*/
+#blogRow2{
+	margin: 0;
+	padding: 0;
+	margin-top: 50px;
+	height: 110px;
+	width: 100%;
+	// border: 2px solid green;
+	position: relative;
+}
+#blogBanner{
+	// border:2px solid blue;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background-color: white;
+	overflow: hidden;
+}
+#blogBanner img{
+	width: 100%;
+	opacity: 0.7;
+}
+#bannerTitle{
+	// width: 80%;
+	margin: auto;
+	// border:2px solid red;
+	position: absolute;
+	z-index: 999;
+	top: 25%;
+	// left: 50px;
+	left: 10%;
+	font-size: 3em;
+	font-weight: bold;
+	text-shadow: 1px 1px 10px black;
+
+}
+
+#blogHeader{
+	margin-top: 100px;
+	width: 100%;
+	height: 60px;
+	margin: auto;
+			/* border: 2px solid red; */
+	background-color: #2f2f2f;
+}
+
+/*Row 3*/
+#blogRow3{
+	margin: 0px;
+	padding: 0px;
+	height: 350px;
+	// border:2px solid red;
+}
+#group-list{ 
+	border-right: 2px solid silver;
+	border-left: 2px solid silver;
+	border-bottom: 2px solid silver;
+	position: relative;
+	margin: auto;
+	width: 80%;
+	height: 100%;
+	background-color: #ffffff;
+	font: 14px/1.5em arial,STHeiti,'Microsoft YaHei',\5b8b\4f53;
+}
+#group-list p{ 
+	margin-top:0;
+	margin-bottom: 0;
+}
+#group-list > p.title{ 
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+#group-global { 
+	position: relative;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+}
+#group-global .group-content { 
+	position: absolute;
+	margin: 80px 70px;
+	padding: 10px;
+	width: 200px;
+	height: 150px;
+	color: #000;
+	text-align: center;
+}
+#group-ect { 
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 550px;
+	height: 100%;
+	overflow: hidden;
+	// border: 2px solid red;
+}
+#group-ect .group-ect-wrap { 
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#group-ect .group-content { 
+	float: left;
+	position: relative;
+	margin: 2px 20px;
+	padding: 10px;
+	width: 200px;
+	height: 150px;
+	color: #000;
+	text-align: center;
+}
+.group-content .t-time{ 
+	font-size: 13px;
+	color: #03c03c;
+}
+.group-content .t-time:before { 
+	content: "";
+	display: inline-block;
+	margin-right: 3px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background-color: #03c03c;
+}
+#group-ect .group-content:hover{ 
+	background-color: #f5f5f5;
+}
+#group-ect .tag,
+#group-global .tag{ 
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: -30px;
+	width: 80px;
+	height: 30px;
+	padding: 5px;
+	background-color: #03c03c;
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+	opacity: 0.8;
+}
+#group-ect-btn { 
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+}
+#group-ect-btn > span { 
+	display: inline-block;
+	margin-left: 5px;
+	width: 15px;
+	height: 15px;
+	background-color: #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+}
+#group-ect-btn .btn-active { 
+	background-color: #03c03c;
+}
+#group-global .hover{ 
+	border-right: 270px solid #EDEDED;
+}
+#group-ect .hover{ 
+	background-color:  #EDEDED;
+}
+
+
+/*Row 4*/
+#blogRow4{
+	margin: 0;
+	padding: 0;
+	height: 450px;
+}
+#threadList{
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	border-top: 3px dashed silver;
+	border-left: 2px solid silver;
+	border-right: 2px solid silver;
+	background-color: #ffffff;
+}
+#threadList p{
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 10px;
+	margin-top: 20px;
+}
+#threadList ul{ 
+	width: 100%;
+	margin: auto;
+	margin-top: 20px;
+	margin: 0;
+	padding: 0;
+	// border: 2px solid red;
+}
+#threadList li{ 
+	padding: 0;
+	margin: 0;
+	position: relative;
+	width: 90%;
+	height: 55px;
+	margin: auto;
+	overflow: hidden;
+	border:1px solid silver;
+}
+#threadList li:first-child{ 
+	border: 1px solid #ccc;
+	// border-radius: 10px;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	background-color: #03c03c;
+	color: white;
+	box-shadow: 1px 1px 5px black;
+	opacity: 0.9;
+}
+#threadList li span{ 
+	display: inline-block;
+	width: 24%;
+	height: 48%;
+	// border: 1px solid purple;
+}
+#threadList li>span.title{ 
+	font-weight: bold;
+	width: 24%;
+	height: 100%;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+#threadList li:first-child span{ 
+	line-height: 3em;
+	height: 100%;
+	text-shadow: 2px 2px 1px black;
+}
+#threadList .childList span{
+	width: 23%;
+	border:1px solid silver;
+}
+#threadList span.thread-user-time{ 
+	position: absolute;
+	margin-left: 25%;
+	margin-top: 25px;
+}
+#threadList span.remark-user-time{ 
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 25px;
+}
+#threadList span.remark-nums-wrap{ 
+	position: absolute;
+	margin-left: 25%;
+	font-size: 14px;
+}
+#threadList span.thread-user-wrap{ 
+	position: absolute;
+	margin-left: 10px;
+	font-size: 14px;
+}
+#threadList span.remark-user-wrap{ 
+	position: absolute;
+	margin-left: 50%;
+	font-size: 14px;
+}
+
+/*Row5*/
+#blogRow5{
+	clear: both;
+	margin: 0;
+	padding: 0;
+	height: 100px;
+	background-color: #2f2f2f;
+}
+#footerContainer{
+	width: 92%;
+	margin: auto;
+	height: 80px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+#footerImg{
+	width: 20%;
+	float: left;
+}
+#blogRow5 img{
+	height: 70px;
+}
+#footer{
+	width: 70%;
+	float: right;
+	height: 100%;
+	text-align: center;
+	font-size: 1em;
+	color: white;
+}
+#footer p{
+	margin-right: 50%;
+	margin-top: 50px;
+}
+
+/*header*/
+
+.header-tip{
+	margin-top: -20px; 
+	margin-left: 35%;
+}
+#header{ 
+	// position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2f2f2f;
+	// border: 2px solid red;
+	opacity: 0.5;
+}
+
+#header > h1 > a{ 
+	// color: red;
+	font: 30px/1.5em arial,STHeiti,'Microsoft YaHei',\5b8b\4f53;
+	// font-size: 4em;
+}
+
+#header > h1 > a:hover{ 
+	text-decoration: none;
+}
+
+#header > h5 > a{ 
+	color: #03c03c;
+}
+#self { 
+	position: absolute;
+	top: 0;
+	right: 0;
+	// padding: 5px;
+	width: 100px;
+	height: 100%;
+	text-align: center;
+	overflow: hidden;
+	background-color: #03c03c;
+}
+#self img { 
+	border-radius: 50%;
+}
+#self p { 
+	margin-top: -3px;
+}
+#self p > a{ 
+	color: #03c03c;
+	// border: 2px solid red;
+}

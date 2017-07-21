@@ -1,0 +1,24 @@
+<script>
+var img=null;
+function s()
+{
+if(img)img.removeNode(true);
+img=document.createElement("img");
+img.style.position="absolute";
+img.style.visibility="hidden";
+img.attachEvent("onreadystatechange",orsc);
+img.attachEvent("onerror",oe);
+document.body.insertAdjacentElement("beforeend",img);
+img.src=inp.value;
+}
+function oe()
+{
+alert("cant load img");
+}
+function orsc()
+{
+if(img.readyState!="complete")return false;
+alert("高:"+img.offsetHeight+"\n宽:"+img.offsetWidth);
+}
+</script>
+<input type="file" Name="file" id="inp" value="默认值"><br><input onclick="s()" type="button" value="点我一下给出要上传图片的大小及长、宽" name="button">

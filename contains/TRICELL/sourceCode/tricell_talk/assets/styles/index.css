@@ -1,0 +1,75 @@
+body{
+	background-image: url('dot.png');
+}
+#bgvid{
+	z-index: -111;
+	// border:2px solid red;
+	// height: 50%;
+}
+#links{
+	padding: 0;
+	margin:0;
+	// border: 2px solid red;
+	height: 200px;
+	margin-top: 15px;
+}
+#links ul{
+	list-style: none;
+}
+#links ul li{
+	float: left;
+	margin-right: 20px;
+	font-size: 1.2em;
+}
+#links ul a{
+	text-transform: none;
+	color: #ffffff;
+	// font-size: 1.1em;
+	text-shadow: 1px 1px 1px black;
+}
+#links .btn{
+	//border: 1px solid silver;
+	background-color: #03c03c;
+	width: 120px;
+	opacity: 0.8;
+}
+#links .btn:hover{
+	background-color: green;
+	box-shadow: 1px 1px 10px white;
+	opacity: 0.6;
+}
+#links span{
+	color: white;
+}
+	
+#links ul li ul{
+	// border: 2px solid red;
+	height: 200px;
+	list-style: decimal;
+	padding: 0;
+	display: none;
+	margin-top: 10px;
+}
+#innerList li{
+	clear: both;
+	display: block;
+	margin-top: 5px;
+}
+
+#links ul li:hover a{
+	background-color: green;
+	box-shadow: 2px 2px 10px white;
+}
+
+#links ul li:hover ul{
+	display: block;
+}
+
+
+#links ul li:nth-of-type(5):hover ul{
+	display: block;
+}
+#links span:hover #innerList{
+	// background-color: orange;
+	display: block;
+}

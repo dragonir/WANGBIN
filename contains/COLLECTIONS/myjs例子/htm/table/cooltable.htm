@@ -1,0 +1,33 @@
+<script>
+l=Array(0,1,2,3,4,5,6,7,8,9,'a','b','b','c','d','e','f');
+function f(y)
+{
+	for(i=5;i<117;i++)
+	{
+		c=(i+y)%30;
+		if(c>15)
+			c=30-c;
+		eval("document.all[i].bgColor='00"+l[c]+l[c]+"00'");
+	}
+	y++;
+	setTimeout('f('+y+')','1');
+}
+
+function p(x)
+{
+	document.write("<td> </td>");
+	x++;
+	if((x%10==1)&&(x%100!=1))
+		document.write("</tr><tr>");
+	if(x<101)
+		p(x);
+	else
+	{
+		document.write("</tr>");
+		f(1);
+	}
+}
+
+document.write("<body bgcolor=0><table width=300 height=300 border=0 cellpadding=0 cellspacing=0><tr>");
+p(1);
+</script>
