@@ -1,1 +1,0 @@
-wjview /p game
