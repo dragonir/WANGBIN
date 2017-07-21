@@ -1,0 +1,49 @@
+<dialog>
+<meta charset="utf-8">
+	<form>
+		评论：<input type="text" id=""/><br> <input type="submit" id="btnaddcomment">
+	</form>
+</dialog>
+<section>
+	<h2>评论</h2>
+	<article>
+		<header>
+			<h3>tom</h3>
+			<p>
+				<time datetime="2016-7-5 21:00">2016年7月5日</time>
+			</p>
+		</header>
+		<p>该活动非常专业</p>
+	</article>
+	<article>
+		<header>
+			<h3>rose</h3>
+			<p>
+				<time datetime="2016-7-5 22:30">2016年7月5日</time>
+			</p>
+		</header>
+		<p>从比赛中学到很多东西</p>
+	</article>
+</section>
+
+<div>
+	<button id="btnshow">添加评论（非模态窗口</button>
+	<button id="btnshowmodal">添加评论(模态窗口)</button>
+	<button id="btnClose">关闭窗口</button>
+</div>
+<script>
+	document.querySelector('#btnshow').onclick = function(){
+		document.querySelector('dialog').show();
+	};
+	document.querySelector('#btnshowmodal').onclick = function(){
+		document.querySelector('dialog').showModal();
+	};
+	document.querySelector('#btnClose').onclick = function(){
+		document.querySelector('dialog').close();
+	};
+	document.querySelector('btnaddcomment').onclick = function(){
+		document.querySelector('dialog').close();
+	};
+</script>
+
+

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>各种表格</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<h1>各种表格</h1>
+	<p>每个表格由table标签开始</p>
+	<p>每个表格行由 tr 标签开始</p>
+	<p>每个表格数据由 td 标签开始</p>
+
+	<h3>一列</h3>
+	<table border="1">
+		<tr>
+			<td>100</td>
+		</tr>
+	</table>
+
+	<h3>一行三列</h3>
+	<table border="1">
+		<tr>
+			<td>100</td>
+			<td>200</td>
+			<td>300</td>
+		</tr>
+	</table>
+
+	<h3>两行三列</h3>
+	<table border="1">
+		<tr>
+			<td>100</td>
+			<td>110</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>200</td>
+			<td>210</td>
+			<td>220</td>
+		</tr>
+	</table>
+<br>
+<hr>
+<br>
+	<h3>带有普通的边框</h3>
+	<table border="1">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<h3>带有粗边框</h3>
+	<table border="8">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<h3>带有很粗的边框</h3>
+	<table border="15">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<h3>没有边框的表格</h3>
+	<table>
+		<tr>
+			<td>100</td>
+			<td>110</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>200</td>
+			<td>210</td>
+			<td>220</td>
+		</tr>
+	</table>
+
+	<h3>这个表格也没有边框</h3>
+	<table border="0">
+		<tr>
+			<td>100</td>
+			<td>110</td>
+			<td>120</td>
+		</tr>
+		<tr>
+			<td>200</td>
+			<td>210</td>
+			<td>220</td>
+		</tr>
+	</table>
+<br>
+<hr>
+<br>
+	<h2>如何显示表格标题</h2>
+	<h3>表头：</h3>
+	<table border="1">
+		<tr>
+			<td>姓名</td>
+			<td>电话</td>
+			<td>住址</td>
+		</tr>
+		<tr>
+			<td>Bill Gates</td>
+			<td>123456789</td>
+			<td>NEW YORK CITY</td>
+		</tr>
+	</table>
+
+	<h3>垂直的表头：</h3>
+	<table border="1">
+		<tr>
+			<td>姓名</td>
+			<td>Bill Gates</td>
+		</tr>
+		<tr>
+			<td>电话</td>
+			<td>123456789</td>
+		</tr>
+		<tr>
+			<td>住址</td>
+			<td>NEW YORK CITY</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+	<br>
+	<h3>处理没有内容的单元格，使用<i>< td>< /td></i>:</h3>
+	<table border="1">
+		<tr>
+			<td>姓名</td>
+			<td>电话</td>
+			<td>住址</td>
+		</tr>
+		<tr>
+			<td>Bill Gates</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+	<h3>在不同元素内显示表格</h3>
+	<table border="1">
+		<tr>
+			<td>
+				<p>这是一个段落</p>
+				<p>这是另一个段落</p>
+			</td>
+			<td>
+				这个单元包含一个表格：
+				<table border="1">
+					<tr>
+						<td>A</td>
+						<td>B</td>
+					</tr>
+					<tr>
+						<td>C</td>
+						<td>D</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				这个单元包含一个列表：
+				<ul>
+					<li>苹果</li>
+					<li>香蕉</li>
+					<li>芒果</li>
+					<li>菠萝</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+
+	<h3>使用单元格填充来创建单元格内容与其边框之间的空白</h3>
+	<h4>没有 cellpadding</h4>
+	<table border="1">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<h4>带有 cellpadding</h4>
+	<table border="1" cellpadding="10">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+	<h3>使用单元格间距增加单元格之间的距离</h3>
+	<h4>没有 cellspacing</h4>
+	<table border="1">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<h4>带有 cellspacing</h4>
+	<table border="1" cellspacing="10">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+	<h3>如何向表格添加背景</h3>
+	<h4>背景颜色：</h4>
+	<table border="1" bgcolor="green">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<h4>背景图片:</h4>
+	<table border="1" background="image\background.jpg">
+		<tr>
+			<td>First</td>
+			<td>Row</td>
+		</tr>
+		<tr>
+			<td>Second</td>
+			<td>Row</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	<br>
+	<h3>如何使用frame属性来控制围绕表格的边框</h3>
+	<p><b>注释：</b>frame属性无法在Internet Explore中正确显示</p>
+	<p>Table with frame="box"</p>
+	<table frame="box">
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+
+	<p>Table with frame="above"</p>
+	<table frame="above">
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+
+	<p>Table with frame="below"</p>
+	<table frame="below">
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+
+	<p>Table with frame="hsides"</p>
+	<table frame="hsides">
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+
+	<p>Table with frame="vsides"</p>
+	<table frame="vsides">
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+</body>
+</html>

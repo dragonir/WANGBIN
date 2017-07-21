@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MENU</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2>各种类型的menu示例</h2>
+	<p>带有两个菜单按钮（file和edit）的工具栏，每个按钮都包含带有一系列选项的下拉列表</p>
+	<menu type="toolbar">
+		<li>
+			<menu label="File">
+				<button type="button" onclick="file_new()">新建...</button>
+				<button type="button" onclick="file_open()">打开...</button>
+				<button type="button" onclick="file_save()">保存...</button>
+			</menu>
+		</li>
+		<li>
+			<menu label="Edit">
+			<button type="button" onclick="edit_cut()">剪切</button>
+			<button type="button" onclick="edit_copy()">复制</button>
+			<button type="button" onclick="edit_paste">粘贴</button>
+			</menu>
+		</li>
+</body>
+</html>

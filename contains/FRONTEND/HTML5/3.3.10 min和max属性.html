@@ -1,0 +1,11 @@
+<!--
+	min和max属性用于指定表单域的输入值范围；
+	这两个属性只能应用于类型为numbe，range，date，datetime，datetimelocal，month，time，week的表单域。
+	下面代码约定考试日期不能早于2015年1月1日，分数在0到100之间。
+-->
+
+<meta charset="utf-8">
+<form>
+	考试日期:<input type="date" min="2015-01-01"><br><br>
+	分数：<input type="number" min="0" max="100">
+</form>

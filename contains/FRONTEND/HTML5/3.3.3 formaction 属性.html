@@ -1,0 +1,9 @@
+<!--formaction属性一般用于submit按钮，作用是指向一个URL地址。当提交form时，浏览器会改地址请求消息处理。formaction属性会覆盖form和action的属性。通过该属性，form中的submit按钮可以具有不同的动作。其语法格式如下： -->
+
+<meta charset="utf-8">
+<form action="F:\OPEN\HTML5\HTML\3.3.3 formaction 属性\info.jsp" method="post">
+	<p>姓名：<input type="text" name="txtname"/></p>
+	<p>密码：<input type="password" name="txtpwd"/></p>
+	<input type="submit" value="提交方式1"/>
+	<input type="submit" value="提交方式2" formaction="F:\OPEN\HTML5\HTML\3.3.3 formaction 属性\infoWelcome.jsp"/>
+</form>

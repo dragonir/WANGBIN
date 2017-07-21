@@ -1,0 +1,36 @@
+<!-- canvas中绘制文字可以使用fillText方法和strokeText方法，这两种方法分别用于以填充方式和轮廓方式绘制文字。
+fillText语法如下：
+fillText（text ， x， y， [maxWidth]）
+其中， text表示要绘制的文字，x、y表示起始坐标，[maxWidth]表示最大宽度，是可选参数。
+
+以填充方式绘制渐变效果文字如下所示 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>绘制文字</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="300" height="150" style="border:1px soild #d3d3d3"></canvas>
+	<script>
+
+		var c = document.getElementById("myCanvas");
+		var cxt = c.getContext("2d");
+		var gradient = cxt.createLinearGradient(0, 0, c.width, 0);
+		//var gradient = cxt.createLinearGradient(0,0,170,0);
+		gradient.addColorStop(0, "magenta");
+		gradient.addColorStop(0.5, "blue");
+		gradient.addColorStop(1, "red");
+		
+		/*cxt.fillStyle = gradient;
+		cxt.font = "30px Verdana";
+		cxt.fillText("有志者事竟成"， 15， 75);*/
+
+		//以轮廓方式绘制文字
+		cxt.strokeStyle = gradient;
+		cxt.font = "30px Verdana";
+		cxt.strokeText("有志者事竟成"，15， 75)；
+	</script>
+</body>
+</html>

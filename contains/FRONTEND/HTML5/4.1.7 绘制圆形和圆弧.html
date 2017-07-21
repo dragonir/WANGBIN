@@ -1,0 +1,36 @@
+<!--绘制圆形或圆弧用到了arc（x，y，r，sAngle，eAngle， [counterclockwise]）方法，其中x，y是圆心坐标，r是半径；sAngle，eAngle分别是起始角和结束角（以弧度计）；参数[counterclockwise]可选，代表是顺时针还是逆时针绘图，false为顺时针，true为逆时针 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>绘制圆形和圆弧</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="500" height="500" style="border:1px soild #d3d3d3"></canvas>
+	<script>
+		var c = document.getElementById("myCanvas")
+		var cxt = c.getContext("2d");
+		
+		//绘制一个圆
+		cxt.beginPath();   	//设置一条路径的起始点或重置当前路径
+		cxt.arc(70, 70, 50, 0, 2*Math.PI);
+		cxt.stroke();   	//创建回到起始点的路径
+		cxt.closePath();
+
+		//绘制一个半圆
+		cxt.beginPath();
+		cxt.arc(200, 70, 50, 0, 1*Math.PI);
+		cxt.stroke();
+		cxt.closePath();
+
+		//绘制四分之一的圆弧
+		cxt.beginPath();
+		cxt.arc(70, 200, 50, 0,0.5*Math.PI);
+		cxt.stroke();
+		cxt.closePath();
+	</script>
+</body>
+</html>
+
+<!-- 2*Math.PI代表绘制的是整个圆；如果要绘制一个半圆，可以改为1*Math.PI; 如果要绘制四分之一的圆弧，可以改为0.5*Math.PI -->

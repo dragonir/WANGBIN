@@ -1,0 +1,9 @@
+<!-- formmethod属性用于指定表单的提交方式，该属性可以用于submit和image类型的表单域。当表单域formmethod与表单method属性冲突时，以表单域formmethod属性为标准。示例代码如下： -->
+
+<meta charset="utf-8">
+<form action="F:\OPEN\HTML5\HTML\3.3.5 formmethod属性\infoget.jsp" method="get">
+	<p>	姓名：<input type="text" name="txtname"/></p>
+	<p> 密码：<input type="password" name="txtpwd"/></p>
+	<input type="submit" value="提交"/>
+	<input type="submit" formmethod="post" formaction="F:\OPEN\HTML5\HTML\3.3.5 formmethod属性\infopost.jsp" value="以post方式提交">
+</form>

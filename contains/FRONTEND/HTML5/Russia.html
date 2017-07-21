@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>俄罗斯方块</title>
+	<style type="text/css">
+		#map{border: 3px soild green; background-image:url(tetris_grid.gif);float:left;margin-right: 20px;}
+		#preview{float:left;}
+		#previewArea{border: 2px soild green; width:140px; height:168px;padding-left:28px;}
+		#map td{width: 28px;height: 28px;}
+		#previewTable{margin-top: 56px;}
+		#score,#rank{font-size: 20px; color:Red;font-weight: bold;}
+	</style>
+	<script type="text/javascript">
+		function Tetris(){}
+		Tetris.prototype = {
+			BlogsSetting:[//方块设置
+				[
+					[1,1,1,1]
+					[0,0,0,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				],
+				[
+					[1,1,1,0]
+					[1,0,0,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				],
+				[
+					[1,1,1,0]
+					[0,0,1,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				],
+				[
+					[1,1,1,0]
+					[0,0,1,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				],
+				[
+					[1,1,0,0]
+					[0,1,1,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				],
+				[
+					[0,1,1,0]
+					[1,1,0,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				],
+				[
+					[1,1,0,0]
+					[1,1,0,0]
+					[0,0,0,0]
+					[0,0,0,0]
+				]
+			],
+			GamaMap:[],				//游戏地图，对应table中的td值
+			BlokWidth:28, 			//方块集的高度
+			HorizontalNum:10,		//水平td数量
+			VerticalNum:18,			//垂直td数量
+			BlockSize:4,			//设置方块占用位置：4*4
+			BlockWidth:0,			//获取当前方块的非0的最大宽度
+			BlockHeight:0,			//获取当前方块的非0的最大高度
+			CurrentIndex:0,			//当前随机获得的索引
+			NextCurrentIndex:0,     //获取下一个方块的索引
+			BlokCurrent:[],			//当前方块
+			InitPosition:{},		//当前方块运动的x，y
+			IsPlay:false,			//是否开始游戏
+			IsOver:false,			//是否结束游戏
+			IsOverIndex:0,			//设置游戏结束的索引还有空行
+			Score:0,				
+			ScoreIndex:0,
+			ColorEnum:[[0,0],[-28,0],[-56,0],[-84,0],[-112,0],[-140,0],[-168,0],[0,0]], //颜色枚举，对应BlogsSetting
+			CreatMap:function(){
+				//加载地图，设置其高度，宽度，根据HorizontalNum, VerticalNum的数量决定
+				var map = document.getElementById("map");
+				var w = this.BlokWidth*this.HorizontalNum;
+				var h = this.BlokWidth*this.VerticalNum;
+				map.style.width = w+"px";
+				map.style.height = h+"px"
+
+				//加载地图对应的数组，初始化为0，当被占据时为1；
+				for(var i=0; i<this.VerticalNum; i++){
+					this.GamaMap.push([]);
+					for(var j=0; j<this.HorizontalNum; j++){
+						this.GamaMap[i][j]=0;
+					}
+				}
+
+				//创建table td填充div根据HorizontalNum，VerticalNum的数量决定，创建HorizontalNum*VerticalNum的表格区域
+				var table = document.createElement("table");
+				table.id = area;
+				var tbody = document.createElement("tbody");
+				table.cellPadding = 0;
+				table.cellSpacing = 0;
+				table.appendChild(tbody);
+				for(var i=0; i<this.VerticalNum; i++){
+					var tr = document.createElement("tr");
+					for(var j=0; j<this.HorizontalNum; j++){
+						var td = document.createElement("td");
+						td.appendChild(td);
+					}
+					tbody.appendChild(tr);
+				}
+				map.appendChild(table);
+				this.CreatePreViewMap();
+				this.CreateNextBlock();
+			},
+
+			//加载一个4*4的表格到预览区域
+			CreatePreViewMap:function(){
+				var preview = document.getElementById("previewArea");
+				var table = document.createElement("table");
+				table.id = previewTable;
+				var tbody = document.createElement("tbody");
+				table.cellPadding = 0;
+				table.cellSpacing = 0;
+				table.appendChild(tbody);
+				for(var i=0; i<this.BlockSize; i++){
+					var tr = document.createElement("tr");
+					for(var j=0; j<this.BlockSize; j++){
+						var td = document.createElement("td");
+						tr.appendChild(td);
+					}
+					tbody.appendChild(tr);
+				}
+				preview.appendChild(table);
+			},
+
+			//加载到预览区域
+			LoadPreview:function(index){
+				var previewTable = document.getElementById("previewTable");
+				for(var i=0; i<this.BlogsSetting[index].length; i++){
+					for(var j=0; j<this.BlogsSetting[index].length; j++){
+						previewTable.rows[i].cells[j].style.backgroundImage = "";
+						if(this.BlogsSetting[index][i][j]==1){
+							previewTable.rows[i].cells[j].style.backgroundImage = "url(tetris.gif）";
+							previewTable.rows[i].cells[j].style.backgroundPosition = this.ColorEnum[index][0]+"px"+""+this.ColorEnum[index][1]+"px";
+						}
+					}
+				}
+			},
+
+			//设置背景地图中央方块的背景图片
+			SettingBlock:function(){
+				var tb = this.getTable();
+				for(var i=0; i<=this.BlockHeight; i++){
+					for(var j=0; j<=this.BlockWidth; j++){
+						if(this.BlokCurrent[i][j]==1){
+							td.rows[this.InitPosition.y+i].cells[this.InitPosition.x+j].styel.backgroundImage = "url(tetris.gif)";
+							td.rows[this,InitPosition.y+i].cells[this.InitPosition.x+j].style.backgroundPosition = this.ColorEnum[this.CurrentIndex][0]+"px"+""+this.ColorEnum[this.CurrentIndex][1]+"px";
+						}
+					}
+				}
+			},
+
+			//根据传过来的x，y，检验方块是否能左右下移动
+			CanMove:function(x,y){
+				if(y+this.BlockHeight>=this.VerticalNum)		//判断是否有到最底部，如果最底部的话停止向下移动
+					returen fale;
+				for(var i =this.BlockHeight; i>=0; i--){ 
+				//检验方块的最高坐标相对应的地图坐标是否都等于1，弱国有等于1，说明地图放不下该方块
+					for(var j=0; j<=this.BlockWidth; j++){
+						if(this.GamaMap[y+i][x+j]==1&&this.BlokCurrent[i][j]==1){
+							//判断方块下一步轨迹是否是1，并且判断下一步方块的轨迹在地图中是否为1
+							return false;
+						}
+					}
+				}
+				return true;
+			},
+
+			//当this.InitPosition.y>=0 也就是显示在地图的时候，每次左右下移动时清除方块，使得重新绘制方块
+			ClearOldBlock:function(){}
+
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

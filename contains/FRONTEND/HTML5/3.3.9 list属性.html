@@ -1,0 +1,14 @@
+<!--
+	list属性用于指定表单域的下拉列表选项，其值等于datalist元素的id属性值。
+	下面的代码定义了一个书籍列表，当单击教材名称输入框右侧的下拉按钮时，显示书籍列表。
+-->
+
+<meta charset="utf-8">
+<form>
+	教材名称：<input list="books">
+	<datalist id="books">
+		<option value="Java SE 程序设计"></option>
+		<option value="Java EE 程序设计"></option>
+		<option value="ASP.NET 程序设计"></option>
+	</datalist>
+</form>

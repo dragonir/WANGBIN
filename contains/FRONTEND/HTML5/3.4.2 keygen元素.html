@@ -1,0 +1,11 @@
+<!--
+	keygen元素提供了一种新的基于浏览器的安全认证模式，当表单提交时会生成两个密钥，一个是私钥，一个是公钥，其中私钥存储在客户端，公钥与表单一起发送到服务器端，服务器端可以根据该公钥对客户端进行验证。
+	下面是keygen元素的一个示例：
+-->
+
+<meta charset="utf-8">
+<form action="F:\OPEN\HTML5\HTML\infoget.jsp">
+	请输入密码：<input type="password" name="txtpwd"/><br>
+	请选择加密强度：<keygen name="key"><br>
+	<input type="submit" value="SUBMIT">
+</form>

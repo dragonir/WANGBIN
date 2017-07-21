@@ -1,0 +1,16 @@
+<!--
+	datalist元素用于辅助表单中文本框的输入，它定义一个列表选项，文本框的list属性设置为datalist的id值，文本框会有自动完成的特性。当用户在文本框输入值时，datalist元素的内容以列表的形式显示在文本框的底部。
+	下面是简单示例：
+-->
+
+<meta charset="utf-8">
+<form>
+	教材名称：<input list="books">
+	<datalist id="books">
+		<option value="Java SE 程序设计"></option>
+		<option value="Java EE 程序设计"></option>
+		<option value="ASP.NET 程序设计"></option>
+	</datalist>
+</form>
+
+<!-- 在文本框中输入字母 J后，就会显示 J开头的选项 -->

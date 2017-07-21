@@ -1,0 +1,8 @@
+<!--表单的entype属性规定表单数据在发送到服务器之前应该如何编码。在HTML5中，对于submit和image类型的表单域，如果以post方式提交请求，可以使用formentype属性重新制定表单域的编码方式。下面的实例中，表单域entype属性默认值是“application/x-www-form-urlencode”,“二进制”按钮的编码方式重新被定义为“multiparty/form-data”。-->
+<meta charset="utf-8">
+<form action="F:\OPEN\HTML5\HTML\3.3.4 formentype属性\infoentype.jsp" method="post">
+	<p>	姓名：<input type="text" name="txtname"/></p>
+	<p> 密码：<input type="password" name="txtpwd"/></p>
+	<input type="submit" value="字符编码"/>
+	<input type="submit" value="二进制" formenctype="multipart/form-data"/>
+</form>

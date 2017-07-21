@@ -1,0 +1,57 @@
+<!--
+	audio通过属性的设置可以控制音频播放的行为：
+	表6-2 audio元素的属性
+	————————————————————————————————————————————————————————
+	属性			值			描述
+	autoplay		autoplay	音频就绪后马上播放
+	controls		controls	向用户显示控件，比如播放按钮
+	loop			loop		音频播放结束后重新播放
+	preload			preload		音频在页面加载并预备播放。如果使用“autoplay”，则忽略该属性
+	src 			url			要播放音频的url
+	————————————————————————————————————————————————————————
+
+	表6-3 audio元素的方法
+	————————————————————————————————————————————————————————
+	方法						描述
+	addTextTrack()				向音频添加新的文本轨道
+	canPlayType()				检测浏览器是否能播放指定的音频类型
+	load()						重新加载音频元素
+	play()						开始播放音频
+	pause()						暂停当前播放的音频
+	————————————————————————————————————————————————————————
+
+	表6-4 audio元素的常用事件
+	————————————————————————————————————————————————————————
+	事件						描述
+	canplay 					当前浏览器可以播放音频时
+	pause 						当音频已暂停时
+	play 						当音频已开始或不再暂停时
+	playing						当音频在因缓冲而暂停或停止后就就绪时
+	progress 					当浏览器正在下载音频时
+	volumechange				当音量已更改时
+	timeupdate					当前的播放位置已更改时
+	————————————————————————————————————————————————————————
+
+	-->
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>audio</title>
+	</head>
+	<body>
+		<br>
+		<audio src="E:\MUSIC\Diplo - revolution.mp3" controls="controls" autoplay="autoplay">
+			您的浏览器不支持audio标签
+		</audio>
+	</body>
+	</html>
+
+<!--
+	另外，audio元素可以设置多个source元素。source元素可以连接不同的音频文件，浏览器将使用第一个可识别的格式
+
+	<audio controls>
+	<source src=".../a.mp3" type="audio/mpeg"></audio>
+	<source src=".../b.mp3" type="audio/ogg"></audio>
+-->

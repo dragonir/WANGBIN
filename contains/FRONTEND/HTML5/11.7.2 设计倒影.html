@@ -1,0 +1,30 @@
+<!--
+	CSS3新增了CSS Reflection模块，可以设计和实现倒影效果。
+	webkit引擎定义了-webkit-box-reflect 属性，语法如下：
+	-webkit-box-reflect：<direction>|<offset>|<mask-box-image>
+	<direction>:定义反射方向，取值包括above，below，left，right
+	<offset>：定义反射偏移的距离。如果省略参数值，则默认为0
+	<mask-box-image>：定义遮罩图像，该图像将覆盖倒影区域。如果省略，则为默认无遮罩效果
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>设计倒影</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		img{
+			width:910px;
+			height:512px;
+			border:1px solid #9CC;
+
+			/*定义倒影*/
+			-webkit-box-reflect:blow 5px;
+			-webkit-gradient(linear, left top, left bottom, from(transparent),color-stop(0.2,transparent),to(white));
+		}
+	</style>
+</head>
+<body>
+	<img src="F:\OPEN\HTML5\HTML\image\WM.jpg">
+</body>
+</html>

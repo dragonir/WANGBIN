@@ -1,0 +1,43 @@
+<!--
+	CSS3定义了border-radius属性，用于设计圆形边框，基本语法如下：
+	border-radius:none|<length>|<length>|
+
+	参数说明:
+	none:默认值，表示元素没有圆角
+	length：长度值，不可为负数
+
+	border-radius属性派生的4个子属性：
+	border-top-right-readius:定义右上圆角
+	border-top-left-radius:
+	border-bottom-right-radius:
+	border-bottom-left-radius
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>圆形边框</title>
+	<style type="text/css">
+		div{
+			width: 500px;
+			height: 100px;
+			border: 15px solid #C96;
+			border-radius: 30px;
+		}
+	</style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
+
+
+
+<!--
+
+上述代码中，border-radius：30px只设置了一个值，相当于下面的代码：
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+-->

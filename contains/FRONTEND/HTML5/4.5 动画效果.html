@@ -1,0 +1,130 @@
+<!--
+	绘制时钟动画效果
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>动画效果</title>
+</head>
+<body>
+
+	<canvas id="myCanvas" width="600" height="600"></canvas>
+	<script type="text/javascript">
+		
+		function drawClock(){
+			var now = new Date();
+			var hour = now.getHours();
+			m = now.getMinutes();
+			s = now.getSeconds();
+			hour = hour >= 12 ? hour - 12 : hour;
+			var c = document.getElementById("myCanvas");
+			var cxt = c.getContext("2d");
+
+			//初始化save()方法
+			cxt.save();
+
+			//首先清除画布，否则会重叠绘制
+			cxt.clearRect(0, 0, 400, 400);
+
+			//重新映射画布上的（0，0）位置
+			cxt.translate(140, 140);
+
+			//选择画布角度
+			cxt.rotate(-Math.PI/2);
+
+			//设置路径颜色
+			cxt.strokeStyle = "green";
+
+			//设置线的宽度
+			cxt.lineWidth = 2;
+
+			//向线条的每个末端添加正方形线帽
+			cxt.lineCap = "square";
+
+			//保存当前状态
+			cxt.save();
+
+			//绘制小时刻度
+			cxt.beginPath();
+			for(var i= 0; i<12; i++){
+				cxt.rotate(30*Math.PI/180);
+				cxt.moveTo(110, 0);
+				cxt.lineTo(120, 0);
+			}
+			cxt.stroke();
+
+			//取出保存的画布状态进行融合
+			cxt.restore();
+
+			//保存当前画布的状态
+			cxt.save();
+
+			//画分钟时刻
+			cxt.beginPath();
+
+			for(var i = 0; i<60; i++){
+				cxt.rotate(6*Math.PI/180);
+				cxt.moveTo(117, 0);
+				cxt.lineTo(120, 0);
+			}
+			cxt.stroke();
+			cxt.restore();
+			cxt.save();
+
+			//画时针
+			cxt.beginPath();
+			cxt.rotate((30*Math.PI/180)*(hour+m/60+s/3600));
+			cxt.lineWidth = 5;
+			cxt.moveTo(0, 0);
+			cxt.lineTo(60, 0);
+			cxt.strokeStyle = "#0000000";
+			cxt.stroke();
+			cxt.restore();
+			cxt.save();
+
+			//画分针
+			cxt.beginPath();
+			cxt.rotate((6*Math.PI/180)*(m+s/60));
+			cxt.lineWidth = 3;
+			cxt.moveTo(0,0);
+			cxt.lineTo(75,0);
+			cxt.strokeStyle = "1ca112";
+			cxt.stroke();
+			cxt.restore();
+			cxt.save();
+
+			//画秒针
+			cxt.beginPath();
+			cxt.rotate(6*Math.PI/180*s);
+			cxt.lineWidth = 1;
+			cxt.moveTo(0,0);
+			cxt.lineTo(90,0);
+			cxt.strokeStyle = "#ff6b08";
+			cxt.stroke();
+			cxt.restore();
+			cxt.save();
+
+			//画外圈
+			cxt.beginPath();
+			cxt.lineWidth = 2;
+			cxt.strokeStyle = "fc4e19";
+			cxt.arc(0, 0, 125, 0, 2*Math.PI);
+			cxt.stroke();
+
+			//返回到初始化状态
+			cxt.restore();
+			cxt.restore();
+
+		}
+
+		//页面加载事件
+		window.onload = function(){
+			//每秒钟绘制一次时钟
+			setInterval(drawClock,1000)
+		};
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!--
+	drawImage 方法可以在画布上绘制图像。drawImage方法有三种用法
+	# drawImage（img，x，y）绘制定位的图像；
+	# drawImage（img，x，y，width，height）绘制定位的指定宽度、高度的图像
+	# drawImage（img，sx，sy，swidth，x，y，height，width）绘制定位剪切的指定宽度、高度的图像。
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>应用图像</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="300" height="150" style="border:1px soild #d3d3d3"></canvas>
+	<script>
+		var c = document.getElementById("myCanvas");
+		var cxt = c.getContext("2d");
+		var img = new Image();
+		img.onload = function(){
+			cxt.drawImage(img, 0, 0);
+		}
+		img.src = "F:\OPEN\CISCO\cisco.JPG";
+	</script>
+</body>
+</html>

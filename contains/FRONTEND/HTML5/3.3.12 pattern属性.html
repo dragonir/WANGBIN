@@ -1,0 +1,11 @@
+<!--
+	pattern属性用于给表单域设置一个正则表达式，以限制用户输入的内容。
+	该属性应用于text，search，url，tel，email，password类型的表单域。
+	下面的代码用于限制用户输入必须为数字。
+-->
+<meta charset="utf-8">
+<form>
+	<p>请输入<mark>纯数字</mark></p><br><br>
+	<input type="text" pattern="^[0-9]*$">
+	<input type="submit" value="提交">
+</form>

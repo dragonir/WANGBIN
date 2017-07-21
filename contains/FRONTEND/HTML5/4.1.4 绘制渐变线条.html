@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>绘制渐变线条</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="300" height="150" style="border:1px soild #d3d3d3">
+	</canvas>
+	<script>
+		var c = document.getElementById("myCanvas")
+		var cxt = c.getContext("2d");
+		var gradient = cxt.createLinearGradient(0,0,170,0);
+		gradient.addColorStop(0,"blue");
+		gradient.addColorStop(0.5,"green")
+		gradient.addColorStop(1,"red");
+		cxt.strokeStyle = gradient;
+		cxt.lineWidth = 5;
+		cxt.moveTo(20,80);
+		cxt.lineTo(260,80);
+		cxt.stroke();
+	</script>
+</body>
+</html>
+
+<!--s上述代码中使用cxt.creatLinearGradient()方法创建线性的渐变对象，然后使用addColorStop()方法设置渐变颜色，这里使用了蓝,绿,红三种颜色。然后把渐变对象gradent赋给strokeStyle，最后绘制渐变线条。-->

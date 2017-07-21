@@ -1,0 +1,10 @@
+<!-- formnovalidate 属性用于"submit"按钮，设置该属性后，单击按钮提交表单时会覆盖表单的novalidate属性-->
+
+<meta charset="utf-8">
+<form>
+	电子邮箱：<input type="email" name="txtemail">
+	<input type="submit" value="提交">
+	<input type="submit" formnovalidate value="不验证提交">
+</form>
+
+<!--打开网页，输入一个不完整的电子邮箱地址，单击提交按钮，则会提示地址不完整，单击"单击不验证提交"按钮时，则不会显示该信息-->

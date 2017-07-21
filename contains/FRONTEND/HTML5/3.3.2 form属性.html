@@ -1,0 +1,12 @@
+<!--form属性用于指定当前输入域所属的表单，通过设定该属性，可以指定某个输入域属于多个表单。属于多个表单时，不同form之间用空格分开。设定form后，该输入域可以不在表单标签的作用范围内，其语法格式如下-->
+
+<meta charset="utf-8">
+<form action="infoage.jsp" id="form1" method="post">
+	<p> 姓名：<input type="text" name="txtName"/></p>
+	<input type="submit" name="提交"/>
+</form>
+<p>
+	年龄：<input type="text" name="txtage" form="form1"/>
+</p>
+
+

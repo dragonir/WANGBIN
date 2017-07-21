@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		
+		body{
+			font-size:14px;
+			font-family: "Times New Roman", Times, serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		a{
+			color: #333;
+			text-decoration: none;
+		}
+
+		h4{
+			color: #666666;
+		}
+
+		/*头部相关*/
+		nav,header,footer,#mainContent{
+			clear:both;
+			width: 1000px;
+			margin: 0 auto;
+		}
+
+		header div img{
+			float: left;
+		}
+
+		#hdes{
+			float: left;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 30px;
+			color: black;
+			font-weight: bold;
+		}
+
+		#hlogin{
+			margin-top: 50px;
+			float: right;
+		}
+		#language{
+			margin-top: 70px;
+			float: right;
+		}
+
+		/*导航相关*/
+		nav{
+			clear:both;
+		}
+
+		nav ul{
+			list-style: none;
+			background-color: #666666;
+			height:30px;
+			padding-left: 0px;
+			color:#FFFFFF;
+			font-family: Helvetica; 
+		}
+
+		nav ul li{
+			width: 80px;
+			float: left;
+			line-height: 30px;
+			text-align: center;
+		}
+
+		/*制作移动效果*/
+		nav ul li:hover{
+			background: #333333;
+			cursor: pointer;
+		}
+
+		nav li a{
+			color:#FFF;
+			text-decoration: none;
+		}
+
+		/*左侧*/
+		#left{
+			width: 700px;
+			float: left;
+		}
+
+		#right{
+			width: 300px;
+			float: left;
+		}
+
+		#left section:nth-child(1)img{
+			width:680px;
+			height:300px;
+		}
+
+		#left p img{
+			box-shadow: 10px 10px 20px gray;
+		}
+
+		#line{
+			color: gray;
+		}
+
+		/*左侧下部*/
+		#bottom{
+		}
+		#bottom header{
+			padding: 10px;
+			font-size: 25px;
+		}
+		#bottom figure{
+			width:640px;
+			height: 200px;
+			font-family: Helvetica; 
+		}
+		#bottom figure img{
+			clear: both;
+			width:200px;
+			height: 200px;
+			float: left;
+			margin-left: -20px;
+			margin-right: 10px;
+		}
+		bottom figure figcaption{
+			width: 400px;
+			height: 150px;
+			float: left;
+		}
+
+		/*右侧*/
+		#right aside{
+			width: 270px;
+			height: 400px;
+			border: 2px solid #76EE00;
+			padding: 15px;
+			margin-top: 15px;
+		}
+		#right h1{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+		#right form p{
+			font-size: 12px;
+			margin-bottom: 20px;
+			width: 270px;
+			border-bottom: 1px solid #b7ddf2;
+			padding-bottom: 10px;
+		}
+		#right aside:nth-child(1){
+			height: 250px;
+		}
+
+		/*登录相关*/
+		#login label{
+			display: block;
+			width:60px;
+			text-align: right;
+			float: left;
+			margin-top: 10px;
+			height: 30px;
+			padding-top: 10px;
+			box-sizing: border-box;
+			font-size: 12px;
+		}
+		#login input{
+			width: 200px;
+			float: left;
+			font-size: 12px;
+			border:1px solid #aacfe4;
+			margin-top: 10px;
+			height: 30px;
+		}
+		#login input[type=button]{
+			margin-left: 60px;
+			width: 125px;
+			height: 31px;
+			background: #666666;
+			line-height: 31px;
+			color:#FFFFFF;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		#login input:active{
+			outline: thin solid #aaa;
+		}
+
+		/*热点新闻*/
+		#hotNews{
+			width: 300px;
+			height: 200px;
+		}
+		#hotNews ul li{
+			height: 60px;
+			padding-bottom:20px;
+			box-sizing: border-box;
+			margin-left: 15px;
+			font-size: 13px;
+			color: red;
+			font-family: Helvetica; 
+		}
+
+		#links{
+			width: 300px;
+			height:200px;
+		}
+		#links ul li{
+			height: 60px;
+			padding-bottom: 20px;
+			box-sizing: border-box;
+			margin-left: 15px;
+			font-size:13px;
+			color: red;
+			font-family: Helvetica; 
+		}
+
+		footer{
+			text-align:center;
+		}
+		footer p{
+			clear:left;
+			background: #999999;
+			height: 30px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<!--<img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\logo.jpg"> -->
+			<p id="hdes">TRY TO FOLLOW WENTWORTH MILLER</p>
+			<p id="hlogin">
+				<a href="index.html" target="_parent">登录</a>
+				<a href="register.html" target="_parent">注册</a>
+				<!--<a href="lanuage.html" target="_parent">语言转换</a> -->
+			</p>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html" target="_parent">Index</a></li>
+			<li><a href="wonderfullLife.html" target="_parent">Details</a></li>
+			<li><a href="articlePub.html" target="_parent">Reference</a></li>
+			<li><a href="articlePub.html" target="_parent">Links</a></li>
+		</ul>
+	</nav>
+	<div id="mainContent">
+		<div id="left">
+			<section>
+				<p>
+					<img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\miller.jpg">
+				</p>
+				<br>
+			</section>
+			<section id="line">
+				_______________________________________________________________________________________________
+			</section>
+			<section id="bottom">
+				<header>DETAILS</header>
+				<figure>
+					<a href="graffiWall.html"><img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\pic (2).jpg"></a>
+					<figcaption>
+						<h3><a href="graffiWall.html">Wentworth Miller</a></h3>
+						<p>Wentworth Earl Miller III (born June 2, 1972)[1] is an American actor, model, screenwriter and producer. He rose to prominence following his role as Michael Scofield in the Fox series Prison Break, for which he received a Golden Globe Award nomination for best actor in a leading role. He made his screenwriting debut with the 2013 thriller film Stoker. He is currently playing a recurring villain in The Flash as Leonard Snart / Captain Cold, and is playing the role as a series regular in the spin-off Legends of Tomorrow. Miller will reprise his role as Michael Scofield for the Prison Break series in 2017.</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<a href="graffiWall.html"><img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\pic (1).jpg"></a>
+					<figcaption>
+						<h3><a href="graffiWall.html">Early life</a></h3>
+						<p>Born in Chipping Norton, Oxfordshire, Miller is the son of Roxann, a special education teacher, and Wentworth E. Miller II, a lawyer and teacher.[1] His father, a Rhodes Scholar, was studying at Oxford at the time of Miller's birth.[2] Miller said in 2003 that his father is black and his mother is white.[3] His paternal grandparents had African-American, Jamaican, English, German, Jewish, and Cherokee ancestry. His mother is of Russian, French, Dutch, Syrian, and Lebanese ancestry.</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<a href="graffiWall.html"><img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\pic (3).jpg"></a>
+					<figcaption>
+						<h3><a href="graffiWall.html">Career</a></h3>
+						<p>In 1995, Miller relocated to Los Angeles to pursue an acting career.[10] He has stated that his rocky road to stardom "was a long time in the coming and there were a lot of upsets and a lot of failures and roadblocks, but I couldn’t walk away from it. I needed it like I needed air, it was just something I had to do."[11] Miller's first TV appearance was as student-turned-sea monster Gage Petronzi on Buffy the Vampire Slayer ("Go Fish", 1998).</p>
+					</figcaption>
+				</figure>
+				<figure>
+					<a href="graffiWall.html"><img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\pic (4).jpg"></a>
+					<figcaption>
+						<h3><a href="graffiWall.html">Personal life</a></h3>
+						<p>In 2007, Miller denied to InStyle magazine that he was gay.[27] However, he came out as gay in August 2013, when he posted a letter on GLAAD's website declining an invitation to attend the Saint Petersburg International Film Festival because he felt "deeply troubled" by the Russian government's treatment of its gay citizens (referring to Russian LGBT propaganda law enacted the previous June which banned "propaganda of nontraditional sexual </p>
+					</figcaption>
+				</figure>
+				<figure>
+					<a href="graffiWall.html"><img src="F:\OPEN\HTML5\HTML\20.0 实践1 HTML布局\pic (5).jpg"></a>
+					<figcaption>
+						<h3><a href="graffiWall.html">Filmography</a></h3>
+						<p>In 2007, Miller denied to InStyle magazine that he was gay.[27] However, he came out as gay in August 2013, when he posted a letter on GLAAD's website declining an invitation to attend the Saint Petersburg International Film Festival because he felt "deeply troubled" by the Russian government's treatment of its gay citizens (referring to Russian LGBT propaganda law enacted the previous June which banned "propaganda of nontraditional sexual </p>
+					</figcaption>
+				</figure>
+			</section>
+		</div>
+		<div id="right">
+			<form>
+				<aside>
+					<header>
+						<h1>登录</h1>
+						<p>请准确填写个人信息</p>
+					</header>
+					<div id="login">
+						<label>用户名：</label>
+						<input type="text" name="userName" id="userName">
+						<label>密码：</label>
+						<input type="password" name="password" id="password">
+						<input type="button" value="登录" onClick="Login()"/>
+					</div>
+				</aside>
+			</form>
+
+			<aside id="hotNews">
+				<header><h3>Reference</h3></header>
+				<ul>
+					<li><a href="#">1. Wentworth Miller Biography (1972-)". FilmReference.com.</a></li>
+					<li><a href="#">2. Prison Break' Star Secretly Writing Horror Scripts.</a></li>
+					<li><a href="#">3.  "Wentworth Miller Photo". tv.com.</a></li>
+					<li><a href="#">4.  "Wentworth Miller says he's not gay, just shy and concentrating on career @ Flylip.com</a></li>
+					<li><a href="#">5.  Wentworth Miller Script 'The Disappointments Room' Grabbed by Voltage Pictures and Killer Films</a></li>
+					<li><a href="#">6.  "Wentworth Miller On Love, His Celebrity Crush"</a></li>
+				</ul>
+			</aside>
+
+			<aside id="links">
+				<header><h3>External links</h3></header>
+				<ul>
+				<li><a href="#">Wentworth Miller at AllMovie</a></li>
+				<li><a href="#">Wentworth Miller at the Internet Movie Database</a></li>
+				<li><a href="#">Wentworth Miller at Rotten Tomatoes</a></li>
+				<li><a href="#">Wentworth Miller at the TCM Movie Database</a></li>
+				<li><a href="#">Wentworth Miller Interviews on theTVaddict.com</a></li>
+				</ul>
+			</aside>
+
+		</div>
+	</div>
+	<footer>
+		<p>©2016 wangbin allrights reserved </p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!--
+	formtarget属性作用于submit和image类型的表单域，用于指定表单提交时的目标窗口。
+	表单域的formtarget属性会覆盖表单的target属性。
+	代码如下：
+-->
+<meta charset="utf-8">
+<form action="F:\OPEN\HTML5\HTML\info.jsp" method="get">
+	<p>姓名：<input type="text" name="textname"/></p>
+	<p>密码：<input type="password" name="txtpwd"/></p>
+	<input type="submit" value="提交">
+	<input type="submit" formtarget="_blank" value="提交到新窗口">
+</form>

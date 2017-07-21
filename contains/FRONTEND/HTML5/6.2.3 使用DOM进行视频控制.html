@@ -1,0 +1,92 @@
+<!--DOM事件能够根据video元素的状态（如开始播放，已暂停，已停止等）调用video元素的方法，对视频进行加载，播放和暂停等控制-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dragon Player</title>
+</head>
+<body>
+<header><h1>Dragon Player - ( ゜- ゜)つロ 乾杯~ </h1></header>
+<br>
+<video id="myVideo" width="672" height="378" controls autoplay>
+	<source src="E:\MV\Crayon-G-Dragon(BigBang)-HD.mp4" type="video/mp4"  codecs="avc1.42E01E, mp4a.40.2"></video>
+</video>
+<div style="width:670px;text-align:right">播放时间：
+<span id="showTime"></span></div>
+<br>
+	<div id="buttonDiv">
+		<input type="button" value="播放/暂停" onClick="PlayorPause()"/>
+		<input type="button" value="增大音量" onClick="AddVolume()"/>
+		<input type="button" value="减小音量" onClick="MinVolume()"/>
+		<input type="button" value="加速播放" onClick="AddSpeed()"/>
+		<input type="button" value="减速播放" onClick="MinSpeed()"/>
+		<input type="button" value="设置静音" onClick="SetMuted()"/>
+	</div>
+	<canvas id="myCanvas"></canvas>
+	<script>
+		var video = document.getElementById("myVideo");
+		var showTime = document.getElementById("showTime");
+		if(video.canPlayType){
+			video.addEventListener("timeupdate",TimeUpdate,false);
+		}
+		//格式化播放时间
+		function TimeUpdate(){
+			var ct = video.currentTime;
+			var st = video.duration;
+			var ctStr = RunTime(parseInt(ct/60))+":"+RunTime(parseInt(ct%60));
+			var stStr = RunTime(parseInt(st/60))+":"+RunTime(parseInt(st%60));
+			showTime.innerHTML = ctStr+"|"+stStr;
+		}
+		function Runtime(num){
+			var len = num.toString().length;
+			while(len<2){
+				num="0"+ num;
+				len++;
+			}
+			return num;
+		}
+		//播放/暂停
+		function PlayorPause(){
+			if(video.paused){
+				video.play();
+			}
+			else{
+				video.pause();
+			}
+		}
+		//加音
+		function AddVolume(){
+			if(video.volume<1){
+				video.volume+=0.1;
+			}
+		}
+		//减音
+		function MinVolume(){
+			if(video.volume>0){
+				video.volume-=0.1;
+			}
+		}
+		//加速
+		function AddSpeed(){
+			video.playbackRate+=1;
+		}
+		//减速
+		function MinSpeed(){
+			if(video.playbackRate>1){
+				video.playbackRate-=1;
+			}
+		}
+		//设置静音
+		function SetMuted(){
+			if(!video.muted){
+				video.muted=true;
+				document.getElementById("SetMuted").value = "取消静音";
+			}
+			else{
+				video.muted=false;
+				document.getElementById("SetMuted").value = "设置静音";
+			}
+		}
+	</script>
+</body>
+</html>

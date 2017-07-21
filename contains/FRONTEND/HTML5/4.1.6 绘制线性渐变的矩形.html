@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>绘制矩形</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="300" height="150" style="border:1px soild #d3d3d3"></canvas>
+	<script>
+		var c = document.getElementById("myCanvas");
+		var cxt = c.getContext("2d");
+		var gradient = cxt.createLinearGradient(0, 0, 170, 50)
+		gradient.addColorStop(0 ,"#ff0000");
+		gradient.addColorStop(1, "#00ff00");
+		cxt.fillStyle = gradient
+		cxt.fillRect(30, 30, 100, 50); //四个参数分别代表：矩形左上角X坐标，左上角Y坐标，矩形宽度，举行高度
+	</script>
+</body>
+</html>

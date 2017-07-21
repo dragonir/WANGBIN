@@ -1,0 +1,32 @@
+<!-- 
+如果要在canvas中绘制阴影效果，需要用到以下4种属性：shadowOffsetX、shadowOffsetY、shadowBlur、shadowColor，基本用法如下:
+
+	context.shadowOffsetX=float;
+	context.shadowOffsetY=float;
+	context.shadowBlur=float;
+	context.shadowColor=color;
+
+其中，	shadowOffsetX为阴影水平偏移，
+		shadowOffsetY为阴影的垂直偏移，默认值都是0，正值表示向下向右延伸，负值表示向上向左延伸；
+		shadowBlur为阴影羽化的程度，默认值为0；
+		shadowColor为阴影的颜色。
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>阴影效果</title>
+</head>
+<body>
+	<canvas id="myCanvas" width="300" height="150" style="border:1px soild #d3d3d3"></canvas>
+	<script type="text/javascript">
+		var c = document.getElementById("myCanvas");
+		var cxt = c.getContext("2d");
+		cxt.shadowBlur = 30;
+		cxt.shadowColor = "black";
+		cxt.fillStyle = "yellow";
+		cxt.fillRect(20, 20, 100, 100);
+	</script>
+</body>
+</html>
