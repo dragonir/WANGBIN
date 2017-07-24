@@ -7,11 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
 	<script type="text/javascript" src="./assets/js/jquery-3.1.1.min.js"></script>
 </head>
-<body>
 
+<body onload="showTime()">
 <div id="nav">
+	<img src="./assets/images/myLogo.png" id="mylogo">
 	<ul>
-		<li><a href="./contains/RESUME/resume.html">个人简历</a></li>
+		<li style="background-color: #03c03c"><a href="./contains/RESUME/resume.html">个人简历</a></li>
 		<li>
 			<a href="#">前端学习</a>
 			<ul>
@@ -47,26 +48,46 @@
 			</ul>
 		</li>
 
-		<li><a href="#">随笔</a>
+		<li><a href="#">小工具</a>
 			<ul>
-				<li><a href="./contains/ARTICLE/nilin.html">逆鳞</a></li>
-				<li><a href="#">我可能不会爱你</a></li>
-				<li><a href="#">大一笔谈</a></li>
+				<li><a href="./contains/TOOLS/richEdit.html">富文本编辑器</a></li>
+				<li><a href="./contains/TOOLS/wordCount.html">字数统计工具</a></li>
+				<li><a href="./contains/TOOLS/COLOR/color.html">216 Web安全色</a></li>
 			</ul>
 		</li>
 
-		<li><a href="#">摄影集</a>
+		<li><a href="#">小游戏</a>
+			<ul>
+				<li><a href="#">打字游戏</a></li>
+				<li><a href="#">黑白棋</a></li>
+				<li><a href="#">贪吃蛇</a></li>
+			</ul>
+		</li>
+
+		<li><a href="#">其他</a>
+			<ul>
+				<li><a href="#">UI设计稿</a></li>
+				<li><a href="#">摄影集</a></li>
+				<li><a href="#">文章</a></li>
+				<!-- <li><a href="./contains/ARTICLE/nilin.html">逆鳞</a></li>
+				<li><a href="#">我可能不会爱你</a></li>
+				<li><a href="#">大一笔谈</a></li> -->
+			</ul>
+		</li>
+
+		<!-- <li><a href="#">摄影集</a>
 			<ul>
 				<li><a href="./contains/album/album1.html">中山大学</a></li>
 				<li><a href="#">香港游记</a></li>
 				<li><a href="#">广州景点</a></li>
 				<li><a href="#">人像摄影</a></li>
 			</ul>
-		</li>
+		</li> -->
 
 	</ul>
 </div>
 
+<!-- selfies -->
 <div id="selfies">
 </div>
 <div id="img">
@@ -78,6 +99,14 @@
 	</div>
 </div>
 
+<!-- timezone -->
+<div id="timezone">
+	<span id="clock"></span>
+	<span id="week"></span>
+	<span id="date"></span>
+</div>
+
+<!-- banner -->
 <div id="banner">
 	<p title="欢迎访问我的主页">WELCOME TO VISIT MY HOMEPAGE!</p>
 	<span id="triangle"></span>
