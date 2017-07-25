@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-	<title>字数统计 - 在线字数计算器</title>
+	<title>字数统计工具</title>
 	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../../assets/images/myLogo2.png">
+	<link rel="stylesheet" type="text/css" href="wordcount.css">
 	<script type="text/javascript">
 		// <![CDATA[
 		function bookmark(){
@@ -18,57 +20,57 @@
 		else if( document.all ) window.external.AddFavorite( url, title);
 	}
 	// ]]>
-	</script><style type="text/css">
-		body{margin:0; background: #fffc01;}
-		td{font-size:9pt;line-height:19px;}
-		h1{font-weight:700;font-size:16px;text-align:center; margin:30px auto 20px}
-		.content{font-size:14px;}
-		A:visited{font-size:9pt;color:#333;text-decoration:none;}
-		A:link{font-size:9pt;text-decoration:none;}
-		A:hover{font-size:9pt;color:#0E5EE2;text-decoration:underline;}
-		A:active{font-size:9pt;color:#00C;text-decoration:none;}
-		.white{color:#FFF;}
-		a.d:hover{font-size:13px;color:#CFF1FA;text-decoration:underline;font-weight:700;}
-		a.d:link{font-size:13px;color:#FFF;text-decoration:none;font-weight:700;}
-		a.d:visited{font-size:13px;color:#CFF1FA;font-weight:700;}
-		a.c:link{color:#666;text-decoration:underline;}
-		a.c:visited{color:#666;text-decoration:none;}
-		a.c:hover{font-weight:700;color:#666;text-decoration:underline;}
-		a.b:hover{font-size:10pt;color:#36F;text-decoration:none;}
-		a.e:hover{font-size:12px;color:#CFF1FA;text-decoration:underline;font-weight:700;}
-		a.e:link{font-size:12px;color:#FFF;text-decoration:none;font-weight:700;}
-		a.e:visited{font-size:12px;color:#CFF1FA;font-weight:700;}
-		.hongzi{color:red;}
-		a.f:hover{font-size:13px;border:solid 1px #69F;background-color:#FBFDFF;height:18px;width:26px;font-weight:700;color:#00F;}
-		.pageNumlink{font-size:13px;border:solid 1px #69F;background-color:#39F;height:18px;width:26px;color:#FFF;font-weight:700;}
-		TEXTAREA,SELECT{font-size:9pt;color:#000;font-family:Verdana, Arial, Helvetica, sans-serif, 宋体;background-color:#fff;border-color:silver;border-width:1px;}
-		a.b:link,a.b:visited{font-size:10pt;color:#0321C9;text-decoration:underline;}
-		a.f:link,a.f:visited{font-size:13px;border:solid 1px #69F;background-color:#FBFDFF;height:18px;width:26px;color:#00F;}
-		.num{ font-size:14px; font-weight:700; color:#F00}
-	</style>
+	</script>
 </head>
+
 <body>
-<h1>字数统计 - 在线字数计算器</h1>
-<table cellspacing="1" cellpadding="5" width="940" align="center" bgcolor="#ffffff" border="0">
-      <tr>
-        <td bgcolor="#e5f0fb" 
-  colspan="2"><div align="center">一种方便计算字数，以控制文字数量的小工具。（<a href="javascript:bookmark()">点此收藏</a>）</div></td>
-      </tr>
-      <tr>
-        <td bgcolor="#e5f0fb"><label>文章输入区</label></td>
-        <td bgcolor="#e5f0fb"><textarea id="content" name="content" rows="20" cols="120"></textarea></td>
-      </tr>
-      <tr>
-        <td bgcolor="#e5f0fb">字数统计</td>
-        <td style="LINE-HEIGHT: 200%" bgcolor="#e5f0fb"><p>中文：<span id="zhongwen" class="num">０</span>          　英文：<span id="yingwen" class="num">０</SPAN> 
-          　数字：<span id="shuzi" class="num">０ 　　</span>　　中文+标点：<span id="zbiaodian" class="num">０</span> 　中文+数字：<span id="zishu" class="num">０</span></p>
-          <p><strong>字符总数：共记<span id=numwords class="num">０</span>个字符 (汉字算两个字符，数字、空格、英文字母算做一个字符) </strong></p></td>
-      </tr>
-      <tr>
-        <td bgcolor="#e5f0fb">&nbsp;</td>
-        <td bgcolor="#e5f0fb">&nbsp;</td>
-      </tr>
+
+<div style="
+	height: 100px; 
+	width: 30px; 
+	z-index: 999; 
+	position: fixed;
+	right: 0;
+	top: 450px;
+	background-color: #03c03c;
+	text-align: center;
+	font-family: none;
+	font-weight: normal;
+	font-size: 18px;
+	border-radius: 5px 0 0 5px;
+	box-shadow: -1px 1px 3px #000;
+	text-shadow: 1px 1px 1px #000;
+	">
+	<a href="../../index.html" style="
+		text-decoration: none;
+		color: white;
+	">返回主页</a>
+</div>
+
+<div id="container">
+<h1>字数统计工具</h1>
+<table cellspacing="1" cellpadding="5">
+    <tr>
+        <td><label>文章输入区</label></td>
+        <td><textarea id="content" name="content" placeholder="Hey! 欢迎使用字数统计工具"></textarea></td>
+    </tr>
+    <tr>
+        <td><label>统计结果</label></td>
+        <td style="">
+        	<p>
+        		中文：<span id="zhongwen" class="num">０</span>          　
+        		英文：<span id="yingwen" class="num">０</span> 
+          　    数字：<span id="shuzi" class="num">０ 　　</span>　　
+          		中文+标点：<span id="zbiaodian" class="num">０</span> 　
+          		中文+数字：<span id="zishu" class="num">０</span>
+          	</p>
+          	<p>字符总数：共记<span id=numwords class="num">０</span>个字符 (汉字算两个字符，数字、空格、英文字母算做一个字符)
+          	</p>
+        </td>
+    </tr>
 </table>
+</div>
+
 <script language="javascript">
 	function $(id){
 		return document.getElementById(id);
@@ -87,11 +89,9 @@
 		   obj['on'+EventType] = Handler;
 		}
 	}
-	//alert($("chaptercontent").value);
 	if($("content")){
 		EventUtil.addEventHandler($('content'),'propertychange',CountChineseCharacters);
-		EventUtil.addEventHandler($('content'),'input',CountChineseCharacters);
-		//EventUtil.addEventHandler($('chaptercontent'),'keydown',CountChineseCharacters('chaptercontent'));
+		EventUtil.addEventHandler($('content'),'input',CountChineseCharacters);';8'
 	}
 	function showit(Word){
 		alert(Word);
@@ -135,7 +135,6 @@
 				inum++;
 			}
 		}
-		//alert(iTotal);
 		$('zhongwen').innerText=iTotal;
 		$('zishu').innerText=inum+iTotal;
 		$('zbiaodian').innerText=sTotal;
@@ -144,13 +143,5 @@
 		document.getElementById("numwords").innerHTML=iTotal*2+(sTotal-iTotal)*2+eTotal;
 	}
 </script>
-<div align="center">
-  <p><strong><a href="http://www.mingmu.net/" target="_blank">Wangbin</a></strong>
-    <script language="javascript" type="text/javascript" src="http://js.users.51.la/1512079.js"></script>
-  </p>
-  <noscript>
-  	<p><a href="http://www.51.la/?1512079" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/1512079.asp" style="border:none" /></a>  </p>
-  </noscript>
-</div>
 </body>
 </html>

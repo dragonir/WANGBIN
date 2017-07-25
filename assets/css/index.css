@@ -42,6 +42,7 @@ body{
 	height: 30px;
 	line-height: 30px;	
 	width: 100px;
+	text-shadow: 1px 1px #2f2f2f, 2px 2px #2f2f2f, 3px 3px #2f2f2f;
 
 }
 #nav ul li a{
@@ -65,23 +66,24 @@ body{
 }
 
 #timezone{
-	height: 70px;
+	height: 100px;
 	width: 100px;
 	color: #000;
 	position: absolute;
-	top: 40px;
-	box-shadow:  2px 2px 10px #2f2f2f;
+	top: 90px;
 	padding: 10px;
 	background-color: #2f2f2f;
-	opacity: 0.8;
+	opacity: 0.6;
 	color: #fff;
 	left: 10px;
-	border-radius: 10px;
+	border: 3px dashed #fff ;
+	box-sizing: border-box;
+	line-height: 1.5em;
 }
 #timezone span{
 	display: inline-block;
 	text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000;
-	font-size: 1.1em;
+	font-size: 0.9em;
 }
 
 #selfies{
@@ -124,7 +126,7 @@ body{
 	margin-left: -40px;
 }
 #img img:hover{
-	border-color: #fff;
+	border-color: rgba(3, 192, 60, 0.8);
 	box-shadow: 2px 2px 10px #2f2f2f, -2px -2px 10px #2f2f2f;
 	cursor: pointer;
 }
@@ -142,7 +144,12 @@ body{
 	display: none;
 	filter: drop-shadow(2px 2px 5px rgba(0,0,0,.5));
 	border: 2px solid #e5e5e5;
+	text-shadow: none;
 	box-sizing: border-box;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: left;
+	clear: both;
 }
 #tooltip p{
 	margin: 10px;
