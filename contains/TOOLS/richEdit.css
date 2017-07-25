@@ -1,0 +1,99 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #f5f5f5;
+}
+#container{
+	width: 75%;
+	margin: auto;
+	margin-top: 20px;
+	background-image: url('../../assets/images/bg5.jpg');
+	border-radius: 20px;
+	height: 700px;
+	margin-bottom: 25px;
+	border:  2px solid #aaaaaa;
+	box-shadow: 5px 5px 30px #2f2f2f inset;
+}
+
+#proface{
+	width: 95%;
+	margin: auto;
+	border-radius: 20px;
+	height: 600px;
+	background-color: #f5f5f5;
+	box-shadow: inset 1px 1px 10px #000;
+}
+h1{
+	width: 100%;
+	height: 70px;
+	margin: auto;
+	text-align: center;
+	line-height: 70px;
+	color: white;
+	font-weight: normal;
+	text-shadow: 1px 1px #000, 2px 2px #000;
+}
+
+/*toolbar*/
+#toolbar{
+	width: 100%;
+	height: 55px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid #f5f5f5;
+	border-radius:  20px 20px 0 0;
+	box-sizing: border-box;
+}
+.toolbox{
+	width: 20%;
+	background-color: #fff;
+}
+#toolbar .toolbox:first-child{
+	border-radius: 17px 0 0 0 ;
+}
+#toolbar .toolbox:last-child{
+	border-radius: 0 17px 0 0;
+}
+#toolbar .toolTitle span{
+	display: inline-block;
+	float: left;
+	height: 40%;
+	width: 40px;
+	padding: 2px;
+	padding-left: 10px;
+}
+#toolbar .toolCtrl{
+	height: 50%;
+	display: flex;
+	width: 100%;
+}
+
+.btn{
+	width: 100%;
+	display: inline-block;
+	height: 30px;
+	border: none;
+	background-color: #5f5f5f;
+	border: 1px solid #2f2f2f; 
+	border-radius: 10px;
+	font-size: 0.5em;
+	color: white;
+	opacity: 0.8;
+	box-shadow: 1px 1px 5px #2f2f2f ;
+	box-shadow: 2px 2px #2f2f2f;
+}
+.btn:hover{
+	filter: opacity(50%);
+}
+
+/*textzone*/
+#text{
+	width: 99%;
+	height: 450px;
+	margin: auto;
+	margin-top: 55px;
+	box-sizing: border-box;
+	background-color: #fff;
+	
+}

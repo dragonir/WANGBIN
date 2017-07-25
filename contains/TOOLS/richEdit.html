@@ -3,120 +3,176 @@
 <head>
 	<title>富文本编辑器</title>
 	<meta charset="utf-8">
-	<style type="text/css">
-		body{
-			padding: 0;
-			margin: 0;
-			background-color: #f5f5f5;
-		}
-		#container{
-			width: 75%;
-			margin: auto;
-			margin-top: 20px;
-			background-image: url('../../assets/images/bg5.jpg');
-			border-radius: 20px;
-			height: 700px;
-			margin-bottom: 25px;
-		}
-		h1{
-			width: 100%;
-			height: 70px;
-			margin: auto;
-			text-align: center;
-			/* background-color: #fffc00; */
-			line-height: 70px;
-			color: white;
-			font-weight: normal;
-			text-shadow: 1px 1px #000, 2px 2px #000;
-		}
-
-		/*toolbar*/
-		#toolbar{
-			width: 95%;
-			height: 55px;
-			margin: auto;
-			border:  1px solid red;
-			display: flex;
-			justify-content: space-between;
-			/* background-color: #fffc00; */
-		}
-		.toolbox{
-			border: 1px solid green;
-			width: 20%;
-			background-color: #fff;
-		}
-		#toolbar span{
-			display: inline-block;
-			float: left;
-			height: 90%;
-		}
-		#toolbar span img{
-			height: 90%;
-		}
-		.btn{
-			width: 100%;
-			display: inline-block;
-			height: 30px;
-			border: none;
-			background-color: #f5f5f5;
-			/* border: 1px solid gray; */
-		}
-		
-		/*textzone*/
-		#text{
-			width: 95%;
-			height: 500px;
-			/* border:  1px solid green; */
-			margin: auto;
-			background-color: #fff;
-			/* margin-bottom: 5px; */
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="richEdit.css">
+	<!-- <link rel="stylesheet" type="text/css" href="font-awesome.min.css"> -->
 </head>
 <body>
+
+<div style="
+	height: 100px; 
+	width: 30px; 
+	z-index: 999; 
+	position: fixed;
+	right: 0;
+	top: 450px;
+	background-color: #03c03c;
+	text-align: center;
+	font-family: none;
+	font-weight: normal;
+	font-size: 18px;
+	border-radius: 5px 0 0 5px;
+	box-shadow: -1px 1px 3px #000;
+	text-shadow: 1px 1px 1px #000;
+	">
+	<a href="../../index.html" style="
+		text-decoration: none;
+		color: white;
+	">返回主页</a>
+</div>
+
 <div id="container">
 <h1>富文本编辑器</h1>
 
+<div id="proface">
 <!-- 工具栏 -->
 <div id="toolbar">
-	<!-- <label><input type="button" name="italic" value="斜体" class="btn" onclick="italic()"><span><img src="#" alt="logo"></span></label> -->
-	<div class="toolbox"><button class="btn" onclick="italic()"><span><img src="../../assets/images/italic.png" alt="图标"></span>斜体</button></div>
-	<div class="toolbox"><button class="btn" onclick="color()"><span><img src="" alt="图标"></span>颜色</button></div>
-	<div class="toolbox"><button class="btn" onclick="fontsize()"><span><img src="" alt="图标"></span>字号</button></div>
-	<div class="toolbox"><button class="btn" onclick="image()"><span><img src="" alt="图标"></span>图像</button></div>
-	<div class="toolbox"><button class="btn" onclick="link()"><span><img src="" alt="图标"></span>链接</button></div>
-	<div class="toolbox"><button class="btn" onclick="cancle()"><span><img src="" alt="图标"></span>撤销</button></div>
-	<div class="toolbox"><button class="btn" onclick="code()"><span><img src="" alt="图标"></span>代码</button></div>
-	<!-- <label><span><img src="#" alt="logo"></span><input type="button" name="color" value="颜色" class="btn" onclick="color()"></label>
-	<label><span><img src="#" alt="logo"></span><input type="button" name="fontsize" value="字号" class="btn" onclick="fontsize()"></label>
-	<label><span><img src="#" alt="logo"></span><input type="button" name="image" value="图像" class="btn" onclick="image()"></label>
-	<label><span><img src="#" alt="logo"></span><input type="button" name="link" value="链接" class="btn" onclick="link()"></label>
-	<label><span><img src="#" alt="logo"></span><input type="button" name="cancle" value="撤销" class="btn" onclick="cancle()"></label>
-	<label><span><img src="#" alt="logo"></span><input type="button" name="code" value="代码" class="btn" onclick="code()"></label> -->
+	<!-- italic -->
+	<div class="toolbox">
+		<div class="toolTitle">
+			<span><i class="fa fa-italic" aria-hidden="true"></i></span>斜体
+		</div>
+		<div class="toolCtrl">
+			<button class="btn" onclick="italic()">italic</button>
+		</div>	
+	</div>
+
+	<!-- bold -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-bold" aria-hidden="true"></i></span>粗体
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="bold()">bold</button>
+  		</div>
+	</div>
+
+	<!-- color -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-tint" aria-hidden="true"></i></span>颜色
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="colorRed()" style="background-color: #FF5733"></button>
+  			<button class="btn" onclick="colorYellow()" style="background-color: #fffc00"></button>
+  			<button class="btn" onclick="colorGreen()" style="background-color: #6BFF33"></button>
+  			<button class="btn" onclick="colorBlue()" style="background-color: #33A8FF"></button>
+  		</div>
+	</div>
+
+	<!-- font -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-font" aria-hidden="true"></i></span>字号
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="fontsize1()">1em</button>
+  			<button class="btn" onclick="fontsize2()">2em</button>
+  			<button class="btn" onclick="fontsize3()">3em</button>
+  			<button class="btn" onclick="fontsize4()">4em</button>
+  		</div>
+	</div>
+
+	<!-- picture -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-file-image-o" aria-hidden="true"></i></span>图像
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="image()">images</button>
+  		</div>
+	</div>
+
+	<!-- link -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-link" aria-hidden="true"></i></span>链接
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="link()">links</button>
+  		</div>
+	</div>
+
+	<!-- undo -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-undo" aria-hidden="true"></i></span>撤销
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="cancle()">undo</button>
+  		</div>
+	</div>
+
+	<!-- code -->
+	<div class="toolbox">
+  		<div class="toolTitle">
+  			<span><i class="fa fa-code" aria-hidden="true"></i></span>代码
+  		</div>
+  		<div class="toolCtrl">
+  			<button class="btn" onclick="code()">code</button>
+  		</div>
+	</div>
 </div>
-<div id="text" name="edit" contenteditable="true">wangbin</div>
+
+<div id="text" name="edit" contenteditable="true" placeholder="欢迎使用文本编辑器">欢迎使用文本编辑器</div>
+</div>
 </div>
 <script type="text/javascript">
 	function italic(){
 		document.execCommand("italic",false,null);
 	}
-	function color(){
-		document.execCommand("forecolor",false,"red");
+
+	// color
+	function colorRed(){
+		document.execCommand("forecolor",false,"#FF5733");
 	}
-	function fontsize(){
-		document.execCommand("fontsize", false,"10");
+	function colorYellow(){
+		document.execCommand("forecolor",false,"#fffc00");
+	}
+	function colorGreen(){
+		document.execCommand("forecolor",false,"#6BFF33");
+	}
+	function colorBlue(){
+		document.execCommand("forecolor",false,"#33A8FF");
+	}
+
+	// font
+	function fontsize1(){
+		document.execCommand("fontsize", false,"16");
+	}
+	function fontsize2(){
+		document.execCommand("fontsize", false,"32");
+	}
+	function fontsize3(){
+		document.execCommand("fontsize", false,"48");
+	}
+	function fontsize4(){
+		document.execCommand("fontsize", false,"64");
 	}
 	function image(){
-		document.execCommand("insertimage",false,"images/home.gif");
+		document.execCommand("insertimage",false,"../../assets/images/myLogo.png");
 	}
 	function link(){
-		document.execCommand("createlink",false,"http://wangbin.com");
+		document.execCommand("createlink",false,"file:///F:/OPEN/GitHub/WANGBIN/index.html");
 	}
 	function cancle(){
 		document.execCommand("undo");
 	}
 	function code(){
 		alert(document.getElementById("text").innerHTML);
+	}
+	function bold(){
+		document.execCommand("bold",false,null);
 	}
 </script>
 </body>
