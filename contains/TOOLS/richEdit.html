@@ -77,10 +77,10 @@
   			<span><i class="fa fa-font" aria-hidden="true"></i></span>字号
   		</div>
   		<div class="toolCtrl">
-  			<button class="btn" onclick="fontsize1()">1em</button>
-  			<button class="btn" onclick="fontsize2()">2em</button>
-  			<button class="btn" onclick="fontsize3()">3em</button>
-  			<button class="btn" onclick="fontsize4()">4em</button>
+  			<button class="btn" onclick="fontsize1()">1%</button>
+  			<button class="btn" onclick="fontsize2()">2%</button>
+  			<button class="btn" onclick="fontsize3()">3%</button>
+  			<button class="btn" onclick="fontsize4()">4%</button>
   		</div>
 	</div>
 
@@ -149,16 +149,16 @@
 
 	// font
 	function fontsize1(){
-		document.execCommand("fontsize", false,"16");
+		document.execCommand("fontsize", false,"16px");
 	}
 	function fontsize2(){
-		document.execCommand("fontsize", false,"32");
+		document.execCommand("fontsize", false,"32px");
 	}
 	function fontsize3(){
-		document.execCommand("fontsize", false,"48");
+		document.execCommand("fontsize", false,"48px");
 	}
 	function fontsize4(){
-		document.execCommand("fontsize", false,"64");
+		document.execCommand("fontsize", false,"64px");
 	}
 	function image(){
 		document.execCommand("insertimage",false,"../../assets/images/myLogo.png");

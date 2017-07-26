@@ -7,8 +7,8 @@ function typegame(){
     this.score=0;
     this.stage=1;
     this.stage1=0;
-   this.startGame();
-   this.stopGame();
+    this.startGame();
+    this.stopGame();
 }
 typegame.prototype={
      creatGame:function(){
@@ -113,7 +113,7 @@ typegame.prototype={
          position:"absolute",top:"235px",right:0,left:"65px",margin:"auto",
           background:"url(xy.png)",
           zIndex:9999,
-          fontFamily:"幼圆",
+          // fontFamily:"幼圆",
           fontSize:"22px",
           width:100,height:40,margin:"0 auto",
           marginTop:"200",

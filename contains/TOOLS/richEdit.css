@@ -46,7 +46,8 @@ h1{
 	box-sizing: border-box;
 }
 .toolbox{
-	width: 20%;
+	width: 100%;
+	height: 100%;
 	background-color: #fff;
 }
 #toolbar .toolbox:first-child{
@@ -63,10 +64,24 @@ h1{
 	padding: 2px;
 	padding-left: 10px;
 }
-#toolbar .toolCtrl{
+
+#toolbar .toolbox:nth-child(4)  .toolCtrl button{
+	// background-color: #2ff;
+	// border: 1px solid #2ff;
+	font-size: 5px;
+}
+
+#toolbar .toolTitle{
+	width: 100%;
 	height: 50%;
 	display: flex;
+}
+
+#toolbar .toolCtrl{
+	display: flex;
 	width: 100%;
+	height: 50%;
+	// border: 1px solid red;
 }
 
 .btn{
