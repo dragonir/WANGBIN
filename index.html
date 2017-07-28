@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
 	<script type="text/javascript" src="./assets/js/jquery-3.1.1.min.js"></script>
 </head>
-
 <body onload="showTime()">
 <div id="nav">
 	<img src="./assets/images/myLogo.png" id="mylogo">
@@ -18,8 +17,8 @@
 			<a href="#">前端学习</a>
 			<ul>
 				<li><a href="./contains/FRONTEND/html5.html">HTML5</a></li>
-				<li><a href="./contains/FRONTEND/CSS3/">CSS3</a></li>
-				<li><a href="./contains/FRONTEND/JavaScript/">JavaScript</a></li>
+				<li><a href="./contains/FRONTEND/CSS3.html">CSS3</a></li>
+				<li><a href="./contains/FRONTEND/JavaScript.html">JavaScript</a></li>
 				<li><a href="./contains/FRONTEND/jQuery/">jQuery</a></li>
 				<li><a href="./contains/FRONTEND/Bootstrap.html">Bootstrap</a></li>
 				<li><a href="./contains/FRONTEND/">AngularJS</a></li>
@@ -111,9 +110,15 @@
 	<span id="date"></span>
 </div>
 
+<!-- 浮动小人 -->
+<div id="spig" class="spig">
+    <div id="message">欢迎访问我的小站</div>
+    <div id="mumu" class="mumu"></div>
+</div>
+
 <!-- banner -->
 <div id="banner">
-	<p title="欢迎访问我的主页">WELCOME TO VISIT MY HOMEPAGE!</p>
+	<!-- <p title="欢迎访问我的主页">WELCOME TO VISIT MY HOMEPAGE!</p> -->
 	<span id="triangle"></span>
 </div>
 <div id="container">
@@ -234,7 +239,22 @@
 		<div class="num">9</div>
 	</div>
 </div>
+
 <div id="footer">Powered By Wangbin &copy; 2017</div>
 <script type="text/javascript" src="./assets/js/index.js"></script>
+
+<!-- footer.php -->
+<script type="text/javascript" src="./assets/js/spig.js"></script>
+<script type="text/javascript">
+	<?php 
+		if(is_home()) echo 'var isindex=true;var title="";';
+		else echo 'var isindex=false;var title="',  get_the_title(),'";'; 
+	?>
+	<?php 
+		if((($display_name = wp_get_current_user()->display_name) != null)) echo 'var visitor="',$display_name,'";'; 
+		else if(isset($_COOKIE['comment_author_'.COOKIEHASH])) echo 'var visitor="',$_COOKIE['comment_author_'.COOKIEHASH],'";';
+		else echo 'var visitor="游客";';echo "n"; 
+	?>
+</script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>标签页插件</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery\jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap\js\bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap\css\bootstrap.min.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+<ul id="myTab" class="nav nav-tabs">
+	<li class="active">
+		<a href="#home" data-toggle="tab">WANG</a>
+	</li>
+	<li>
+		<a href="#ios" data-toggle="tab">IOS</a>
+	</li>
+	<li class="dropdown">
+		<a href="#" id="myTabDropdown1" class="dropdown-toggle" data-toggle="dropdown">JAVA<b class="caret"></b></a>
+	</li>
+	<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDropdown1">
+		<li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+		<li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+	</ul>
+</ul>
+<div id="myTabContent" class="tab-content">
+	<div class="tab-pane fade in active" id="home">
+		<p>wangbin ...</p>
+	</div>
+	<div class="tab-pane fade" id="ios">
+		<p>ios ...</p>
+	</div>
+	<div class="tab-pane fade" id="jmeter">
+		<p>jmeter ...</p>
+	</div>
+	<div class="tab-pane fade" id="ejb">
+		<p>ejb ...</p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!--
+元素 		Class
+按钮元素 	添加 .active class 来显示它是激活的。
+锚元素 		添加 .active class 到 <a> 按钮来显示它是激活的
+__________________________________________________________
+
+元素		Class
+按钮元素	添加 disabled 属性 到 <button> 按钮。
+锚元素		添加 disabled class 到 <a> 按钮。 注意：该 class 	
+			只会改变 <a> 的外观，不会改变它的功能。在这里，您需要使用自定义的 JavaScript 来禁用链接。
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bootstrap 按钮状态</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<p>
+	<button type="button" class="btn btn-default">默认按钮</button>
+</p>
+<p>
+	<button type="button" class="btn btn-default" disabled="disabled">禁用的默认按钮</button>
+</p>
+<p>
+	<button type="button" class="btn btn-primary">原始按钮</button>
+</p>
+<p>
+	<button type="button" class="btn btn-primary" disabled="disabled">禁用的原始按钮</button>
+</p>
+<p>
+	<a href="#" class="btn btn-default btn-lg" role="button">链接</a>
+</p>
+<p>
+	<a href="#" class="btn btn-default btn-lg" disabled="disabled" role="button">禁用的链接</a>
+</p>
+<p>
+	<a href="#" class="btn btn-primary btn-lg" role="button">原始链接</a>
+</p>
+<p>
+	<a href="#" class="btn btn-primary btn-lg" disabled="disabled" role="button">禁用的原始链接</a>
+</p>
+
+</body>
+</html>
