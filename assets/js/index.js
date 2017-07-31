@@ -1,3 +1,42 @@
+// 导航栏
+$(function(){
+	$("#dropdown1").on("click",function(){
+		$("#menu1").toggle('slow');
+	})
+	$("#dropdown2").on("click",function(){
+		$("#menu2").toggle('slow');
+	})
+	$("#dropdown3").on("click",function(){
+		$("#menu3").toggle('slow');
+	})
+	$("#dropdown4").on("click",function(){
+		$("#menu4").toggle('slow');
+	})
+	$("#dropdown5").on("click",function(){
+		$("#menu5").toggle('slow');
+	})
+});
+
+$(function(){
+	$(window).scroll(function(event) {
+		$("#nav").css({
+			background: '#fff',
+			boxShadow: '0px 1px 5px #000'
+		});
+		// $("#resume").css('borderRadius', '0 0 0 0');
+		// console.log($(window).scrollTop());
+		if($(window).scrollTop() == 0){
+			$("#nav").css({
+				background: '#fffc00',
+				boxShadow: 'none'
+			});
+			// $("#resume").css('borderRadius', '0 0 25 25');
+		}
+	});
+
+})
+
+//提示标签
 $(function(){
 	var img = $("#img");
 	var tooltip = $("#tooltip");

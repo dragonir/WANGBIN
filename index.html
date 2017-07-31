@@ -6,38 +6,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="./assets/images/myLogo2.png">
 	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-	<script type="text/javascript" src="./assets/js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./assets/jquery/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="./assets/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body onload="showTime()">
-<div id="nav">
-	<img src="./assets/images/myLogo.png" id="mylogo">
-	<ul>
-		<li style="background-color: #03c03c"><a href="./contains/RESUME/resume.html">个人简历</a></li>
-		<li>
-			<a href="#">前端学习</a>
-			<ul>
-				<li><a href="./contains/FRONTEND/html5.html">HTML5</a></li>
-				<li><a href="./contains/FRONTEND/CSS3.html">CSS3</a></li>
-				<li><a href="./contains/FRONTEND/JavaScript.html">JavaScript</a></li>
-				<li><a href="./contains/FRONTEND/jQuery/">jQuery</a></li>
-				<li><a href="./contains/FRONTEND/Bootstrap.html">Bootstrap</a></li>
-				<li><a href="./contains/FRONTEND/">AngularJS</a></li>
-				<li><a href="./contains/FRONTEND/">LESS</a></li>
-				<li><a href="./contains/FRONTEND/">SASS</a></li>
-				<li><a href="./contains/FRONTEND/">JSON</a></li>
-				<li><a href="./contains/FRONTEND/">JSP</a></li>
-				<li><a href="./contains/FRONTEND/">ASP.net</a></li>
-				<li><a href="./contains/FRONTEND/">VUE.js</a></li>
-				<li><a href="./contains/FRONTEND/">Color</a></li>
-				<li><a href="./contains/FRONTEND/">PHP</a></li>
-				<li><a href="./contains/FRONTEND/font-awesome.html">Font-Awesome</a></li>
-				<li><a href="./contains/FRONTEND/">ICONS</a></li>
-				<li><a href="">SVG</a></li>
+
+
+<div class="navbar navbar-default" id="navbar">
+	<div id="nav">
+	<ul class="nav navbar-nav">
+		<li id="mylogo"><span><img src="./assets/images/myLogo.png" class="img-responsive"></span></li>
+		<li id="resume"><a href="./contains/RESUME/resume.html">个人简历</a></li>
+		<li class="dropdown" id="dropdown1">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习<b class="caret"></b></span></a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="menu1">
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/html5.html">HTML5</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/CSS3.html">CSS3</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/JavaScript.html">JavaScript</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/jQuery/">jQuery</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/Bootstrap.html">Bootstrap</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">AngularJS</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">LESS</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">SASS</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">JSON</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">JSP</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">ASP.net</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">VUE.js</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">Color</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">PHP</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/font-awesome.html">Font-Awesome</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">ICONS</a></li>
+				<li role="presentation"><a role="menuitem" tabindex="-1" href="">SVG</a></li>
 			</ul>
 		</li>
 
-		<li><a href="#">前端收集</a>
-			<ul>
+		<li class="dropdown" id="dropdown2">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端收集<b class="caret"></b></a>
+			<ul class="dropdown-menu" id="menu2">
 				<li><a href="./contains/COLLECTIONS/maze/index.html">迷宫</a></li>
 				<li><a href="./contains/COLLECTIONS/card-dealer/index.html">扑克牌</a></li>
 				<li><a href="./contains/COLLECTIONS/dimple/index.html">分形</a></li>
@@ -57,24 +63,27 @@
 			</ul>
 		</li>
 
-		<li><a href="#">小工具</a>
-			<ul>
+		<li class="dropdown" id="dropdown3">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">小工具<b class="caret"></b></a>
+			<ul class="dropdown-menu" id="menu3">
 				<li><a href="./contains/TOOLS/richEdit.html">富文本编辑器</a></li>
 				<li><a href="./contains/TOOLS/wordCount.html">字数统计工具</a></li>
 				<li><a href="./contains/TOOLS/COLOR/color.html">Web安全色</a></li>
 			</ul>
 		</li>
 
-		<li><a href="#">小游戏</a>
-			<ul>
+		<li class="dropdown" id="dropdown4">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">小游戏<b class="caret"></b></a>
+			<ul class="dropdown-menu" id="menu4">
 				<li><a href="./contains/GAMES/TYPEWRITE/index.html">打字游戏</a></li>
 				<li><a href="#">黑白棋</a></li>
 				<li><a href="#">贪吃蛇</a></li>
 			</ul>
 		</li>
 
-		<li><a href="#">其他</a>
-			<ul>
+		<li class="dropdown" id="dropdown5">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">其他<b class="caret"></b></a>
+			<ul class="dropdown-menu" id="menu5">
 				<li><a href="#">UI设计稿</a></li>
 				<li><a href="#">摄影集</a></li>
 				<li><a href="#">文章</a></li>
@@ -94,23 +103,28 @@
 		</li> -->
 
 	</ul>
+	</div>
 </div>
 
 <!-- selfies -->
-<div id="selfies">
-</div>
-<div id="img">
-	<img src="./assets/images/me1.jpg">
-	<p>王斌<br>中山大学 | 计算机系</p>
-	<div id="tooltip">
-		<span id="tooltipbar"></span>
-		<p>王斌</p>
-		<p>中山大学 计算机系</p>
-		<p>求职意向： 前端实习生</p>
-		<p>详细信息请查看<span style="color: #03c03c">简历</span></a></p>
-
+<div id="selfies" class=" container row">
+	<div id="img">
+		<img src="./assets/images/me1.jpg">
+		<p>王斌<br>中山大学 | 计算机系</p>
+		<div id="tooltip">
+			<span id="tooltipbar"></span>
+			<p>中山大学 计算机系</p>
+			<p>求职意向： 前端实习生</p>
+			<p>详细信息请查看<span style="
+				color: #fffc00;
+				background-color: #000;
+				border-radius: 5px; 
+				padding: 3px;">简历</span></a>
+			</p>
+		</div>
 	</div>
 </div>
+
 
 <!-- timezone -->
 <div id="timezone">
