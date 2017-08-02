@@ -41,7 +41,7 @@ var visits;//以下设置COOKIES时间为1年,自己随便设置该时间..
 expdate.setTime(expdate.getTime()+(24*60*60*1000*365));
 if(!(visits=GetCookie("visits")))
 visits=0;visits++;SetCookie("visits",visits,expdate,"/",null,false);//以下信息显示可以使用标准的HTML语法,自己随便设置。
-document.write("您已访问本页"+"<FONT COLOR=red>"+visits+"</FONT>"+"次！");
+document.write("您已访问本页"+"<FONT COLOR=#fffc00>"+visits+"</FONT>"+"次！");
 
 // if(visits==1)//来访1次的信息显示
 // // document.write("<br>"+"欢迎光临本站，觉得本站内容如何？");

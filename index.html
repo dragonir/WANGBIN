@@ -12,105 +12,108 @@
 </head>
 <body onload="showTime()">
 
-
-<div class="navbar navbar-default" id="navbar">
-	<div id="nav">
-	<ul class="nav navbar-nav">
-		<li id="mylogo"><span><img src="./assets/images/myLogo.png" class="img-responsive"></span></li>
-		<li id="resume"><a href="./contains/RESUME/resume.html">个人简历</a></li>
-		<li class="dropdown" id="dropdown1">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习<b class="caret"></b></span></a>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="menu1">
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/html5.html">HTML5</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/CSS3.html">CSS3</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/JavaScript.html">JavaScript</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/jQuery/">jQuery</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/Bootstrap.html">Bootstrap</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">AngularJS</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">LESS</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">SASS</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">JSON</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">JSP</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">ASP.net</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">VUE.js</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">Color</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">PHP</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/font-awesome.html">Font-Awesome</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">ICONS</a></li>
-				<li role="presentation"><a role="menuitem" tabindex="-1" href="">SVG</a></li>
-			</ul>
-		</li>
-
-		<li class="dropdown" id="dropdown2">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端收集<b class="caret"></b></a>
-			<ul class="dropdown-menu" id="menu2">
-				<li><a href="./contains/COLLECTIONS/maze/index.html">迷宫</a></li>
-				<li><a href="./contains/COLLECTIONS/card-dealer/index.html">扑克牌</a></li>
-				<li><a href="./contains/COLLECTIONS/dimple/index.html">分形</a></li>
-				<li><a href="./contains/COLLECTIONS/emoji/index.html">emoji</a></li>
-				<li><a href="./contains/COLLECTIONS/bootstrapCrystalButtons/index.html">水晶按钮</a></li>
-				<li><a href="./contains/COLLECTIONS/css3MatchesLoading/index.html">火柴燃烧加载</a></li>
-				<li><a href="./contains/COLLECTIONS/jqueryVerticalAccordionMenu/index.html">手风琴导航</a></li>
-				<li><a href="./contains/COLLECTIONS/css3RibbonText/index.html">丝带效果</a></li>
-				<li><a href="./contains/COLLECTIONS/css3Pokemon/index.html">神奇宝贝</a></li>
-				<li><a href="./contains/COLLECTIONS/css3YinyangTaichi/index.html">阴阳太极</a></li>
-				<li><a href="./contains/COLLECTIONS/jqueryCss3StampImage/index.html">照片墙</a></li>
-				<li><a href="./contains/COLLECTIONS/css3ImageTextPlayer/index.html">图片轮播</a></li>
-				<li><a href="./contains/COLLECTIONS/jqueryCircleImagePlayer/index.html">圆弧轮播</a></li>
-				<li><a href="./contains/COLLECTIONS/jqueryAvatarCut/index.html">图片裁切</a></li>
-				<li><a href="./contains/COLLECTIONS/waterFall/demo.html">瀑布流</a></li>
-				<li><a href="./contains/COLLECTIONS/typeWriter/index.html">模拟打字机</a></li>
-			</ul>
-		</li>
-
-		<li class="dropdown" id="dropdown3">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">小工具<b class="caret"></b></a>
-			<ul class="dropdown-menu" id="menu3">
-				<li><a href="./contains/TOOLS/richEdit.html">富文本编辑器</a></li>
-				<li><a href="./contains/TOOLS/wordCount.html">字数统计工具</a></li>
-				<li><a href="./contains/TOOLS/COLOR/color.html">Web安全色</a></li>
-			</ul>
-		</li>
-
-		<li class="dropdown" id="dropdown4">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">小游戏<b class="caret"></b></a>
-			<ul class="dropdown-menu" id="menu4">
-				<li><a href="./contains/GAMES/TYPEWRITE/index.html">打字游戏</a></li>
-				<li><a href="#">黑白棋</a></li>
-				<li><a href="#">贪吃蛇</a></li>
-			</ul>
-		</li>
-
-		<li class="dropdown" id="dropdown5">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">其他<b class="caret"></b></a>
-			<ul class="dropdown-menu" id="menu5">
-				<li><a href="#">UI设计稿</a></li>
-				<li><a href="#">摄影集</a></li>
-				<li><a href="#">文章</a></li>
-				<!-- <li><a href="./contains/ARTICLE/nilin.html">逆鳞</a></li>
-				<li><a href="#">我可能不会爱你</a></li>
-				<li><a href="#">大一笔谈</a></li> -->
-			</ul>
-		</li>
-
-		<!-- <li><a href="#">摄影集</a>
-			<ul>
-				<li><a href="./contains/album/album1.html">中山大学</a></li>
-				<li><a href="#">香港游记</a></li>
-				<li><a href="#">广州景点</a></li>
-				<li><a href="#">人像摄影</a></li>
-			</ul>
-		</li> -->
-
-	</ul>
+<div id="navigator" class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
+		  	<span class="sr-only">Toggle menu navigation</span>
+		  	<span class="icon-bar"></span>
+		  	<span class="icon-bar"></span>
+		  	<span class="icon-bar"></span>
+		</button>
+		<a href="#" class="navbar-brand">菜单列表</a>
 	</div>
-</div>
+	<div class="collapse navbar-collapse bs-js-navbar-scrollspy" id="nav">
+		<ul class="nav navbar-nav" id="menu">
+		<!-- <div id="menu"> -->
+			<li id="mylogo" class="pull-right"><span><img src="./assets/images/myLogo.png" class="img-responsive"></span></li>
+			<!-- <li id="resume"><a href="./contains/RESUME/resume.html">个人简历</a></li> -->
+			<li class="dropdown" id="dropdown1">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习  <b class="caret"></b></span></a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="menu1">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/html5.html">HTML5</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/CSS3.html">CSS3</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/JavaScript.html">JavaScript</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/jQuery/">jQuery</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/Bootstrap.html">Bootstrap</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">AngularJS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">LESS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">SASS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">JSON</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">JSP</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">ASP.net</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">VUE.js</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">Color</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">PHP</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/font-awesome.html">Font-Awesome</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./contains/FRONTEND/">ICONS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="">SVG</a></li>
+				</ul>
+			</li>
 
-<!-- selfies -->
-<div id="selfies" class=" container row">
+			<li class="dropdown" id="dropdown2">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端收集 <b class="caret"></b></a>
+				<ul class="dropdown-menu" id="menu2">
+					<li><a href="./contains/COLLECTIONS/maze/index.html">迷宫</a></li>
+					<li><a href="./contains/COLLECTIONS/card-dealer/index.html">扑克牌</a></li>
+					<li><a href="./contains/COLLECTIONS/dimple/index.html">分形</a></li>
+					<li><a href="./contains/COLLECTIONS/emoji/index.html">emoji</a></li>
+					<li><a href="./contains/COLLECTIONS/bootstrapCrystalButtons/index.html">水晶按钮</a></li>
+					<li><a href="./contains/COLLECTIONS/css3MatchesLoading/index.html">火柴燃烧加载</a></li>
+					<li><a href="./contains/COLLECTIONS/jqueryVerticalAccordionMenu/index.html">手风琴导航</a></li>
+					<li><a href="./contains/COLLECTIONS/css3RibbonText/index.html">丝带效果</a></li>
+					<li><a href="./contains/COLLECTIONS/css3Pokemon/index.html">神奇宝贝</a></li>
+					<li><a href="./contains/COLLECTIONS/css3YinyangTaichi/index.html">阴阳太极</a></li>
+					<li><a href="./contains/COLLECTIONS/jqueryCss3StampImage/index.html">照片墙</a></li>
+					<li><a href="./contains/COLLECTIONS/css3ImageTextPlayer/index.html">图片轮播</a></li>
+					<li><a href="./contains/COLLECTIONS/jqueryCircleImagePlayer/index.html">圆弧轮播</a></li>
+					<li><a href="./contains/COLLECTIONS/jqueryAvatarCut/index.html">图片裁切</a></li>
+					<li><a href="./contains/COLLECTIONS/waterFall/demo.html">瀑布流</a></li>
+					<li><a href="./contains/COLLECTIONS/typeWriter/index.html">模拟打字机</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown" id="dropdown3">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">小工具 <b class="caret"></b></a>
+				<ul class="dropdown-menu" id="menu3">
+					<li><a href="./contains/TOOLS/richEdit.html">富文本编辑器</a></li>
+					<li><a href="./contains/TOOLS/wordCount.html">字数统计工具</a></li>
+					<li><a href="./contains/TOOLS/COLOR/color.html">Web安全色</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown" id="dropdown4">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">小游戏 <b class="caret"></b></a>
+				<ul class="dropdown-menu" id="menu4">
+					<li><a href="./contains/GAMES/TYPEWRITE/index.html">打字游戏</a></li>
+					<li><a href="#">黑白棋</a></li>
+					<li><a href="#">贪吃蛇</a></li>
+				</ul>
+			</li>
+
+			<li class="dropdown" id="dropdown5">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">其他 <b class="caret"></b></a>
+				<ul class="dropdown-menu" id="menu5">
+					<li><a href="#">UI设计稿</a></li>
+					<li><a href="#">摄影集</a></li>
+					<li><a href="#">文章</a></li>
+					<!-- <li><a href="./contains/ARTICLE/nilin.html">逆鳞</a></li>
+					<li><a href="#">我可能不会爱你</a></li>
+					<li><a href="#">大一笔谈</a></li> -->
+				</ul>
+			</li>
+			<li id="timezone" class="pull-right">
+					<span id="clock"></span>
+					<span id="week"></span>
+					<span id="date"></span>
+			</li>
+	</ul>
+</div>
+</div>
+<!-- banner -->
+<div id="banner" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<div id="img">
 		<img src="./assets/images/me1.jpg">
-		<p>王斌<br>中山大学 | 计算机系</p>
+		
 		<div id="tooltip">
 			<span id="tooltipbar"></span>
 			<p>中山大学 计算机系</p>
@@ -123,15 +126,15 @@
 			</p>
 		</div>
 	</div>
+	<div id="forInfo">
+		<p>WELCOME TO VISIT MY PAGE</p>
+	</div>
+	<div id="forButton">
+		<a href="./contains/RESUME/resume.html"><div id="button">LEARN MORE</div></a>
+	</div>
+	
 </div>
 
-
-<!-- timezone -->
-<div id="timezone">
-	<span id="clock"></span>
-	<span id="week"></span>
-	<span id="date"></span>
-</div>
 
 <!-- 浮动小人 -->
 <div id="spig" class="spig">
@@ -140,21 +143,25 @@
 </div>
 
 <!-- banner -->
-<div id="banner">
-	<!-- <p title="欢迎访问我的主页">WELCOME TO VISIT MY HOMEPAGE!</p> -->
+<!-- <div id="banner" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<p title="欢迎访问我的主页">WELCOME TO VISIT MY HOMEPAGE!</p>
 	<span id="triangle"></span>
-</div>
-<div id="container">
+</div> -->
+
+
+<div id="container" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<div id="boxes">
 	<a href="./contains/TRICELL/sourceCode/index.html">
 		<div class="box">
+			<div class="yinying"></div>
 			<div class="images">
 				<img src="./assets/images/pro1.JPG">
 			</div>
 			<div class="intro">
 				<h4>TRICELL COMPORATION WEBSITE</h4>
-				<p>TRICELL公司为CAPCOM游戏商开发的游戏“生化危机”中虚拟的公司。（音译：特雷西.特拉维斯）它是一个联合组织，由运输自然资源开发和制药等部门组成的多功能国际公司，在生化危机5正式登场。为了提高公司的知名度以及工作效率，现由我们小组为这家虚拟公司设计一个网站系统。</p>
+				<!-- <p>TRICELL公司为CAPCOM游戏商开发的游戏“生化危机”中虚拟的公司。（音译：特雷西.特拉维斯）它是一个联合组织，由运输自然资源开发和制药等部门组成的多功能国际公司，在生化危机5正式登场。为了提高公司的知名度以及工作效率，现由我们小组为这家虚拟公司设计一个网站系统。</p> -->
 			</div>
-			<div class="num">1</div>
+			<!-- <div class="num">1</div> -->
 		</div>
 	</a>
 
@@ -165,9 +172,9 @@
 			</div>
 			<div class="intro">
 				<h4>电子邮箱界面设计</h4>
-				<p>这是我设计的一个邮箱界面的demo</p>
+				<!-- <p>这是我设计的一个邮箱界面的demo</p> -->
 			</div>
-			<div class="num">2</div>
+			<!-- <div class="num">2</div> -->
 		</div>
 	</a>
 
@@ -179,9 +186,9 @@
 			</div>
 			<div class="intro">
 				<h4>博客</h4>
-				<p>这是我设计的一个博客界面</p>
+				<!-- <p>这是我设计的一个博客界面</p> -->
 			</div>
-			<div class="num">3</div>
+			<!-- <div class="num">3</div> -->
 		</div>
 	</a>
 	<!-- FLOW -->
@@ -192,9 +199,9 @@
 			</div>
 			<div class="intro">
 				<h4>FLOW</h4>
-				<p>这是用JS实现的一个动画效果</p>
+				<!-- <p>这是用JS实现的一个动画效果</p> -->
 			</div>
-			<div class="num">4</div>
+			<!-- <div class="num">4</div> -->
 		</div>
 	</a>
 
@@ -206,9 +213,9 @@
 			</div>
 			<div class="intro">
 				<h4>BALLPOOL</h4>
-				<p>这是我用JS实现的一个球池动画效果</p>
+				<!-- <p>这是我用JS实现的一个球池动画效果</p> -->
 			</div>
-			<div class="num">5</div>
+			<!-- <div class="num">5</div> -->
 		</div>
 	</a>
 
@@ -220,9 +227,9 @@
 			</div>
 			<div class="intro">
 				<h4>中山大学官网主页实现</h4>
-				<p>该项目是我对中山大学官网主页的实现</p>
+				<!-- <p>该项目是我对中山大学官网主页的实现</p> -->
 			</div>
-			<div class="num">6</div>
+			<!-- <div class="num">6</div> -->
 		</div>
 	</a>
 
@@ -234,9 +241,9 @@
 		</div>
 		<div class="intro">
 			<h4>字数统计工具</h4>
-			<p>JavaScript实现字数统计工具</p>
+			<!-- <p>JavaScript实现字数统计工具</p> -->
 		</div>
-		<div class="num">7</div>
+		<!-- <div class="num">7</div> -->
 	</div>
 	</a>
 
@@ -246,9 +253,9 @@
 		</div>
 		<div class="intro">
 			<h4>项目标题</h4>
-			<p>项目内容</p>
+			<!-- <p>项目内容</p> -->
 		</div>
-		<div class="num">8</div>
+		<!-- <div class="num">8</div> -->
 	</div>
 
 	<div class="box">
@@ -257,13 +264,30 @@
 		</div>
 		<div class="intro">
 			<h4>项目标题</h4>
-			<p>项目内容</p>
+			<!-- <p>项目内容</p> -->
 		</div>
-		<div class="num">9</div>
+		<!-- <div class="num">9</div> -->
+	</div>
+
 	</div>
 </div>
 
-<div id="footer">
+<div id="display">
+	<code>
+		&lt;!DOCTYPE html&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;html&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;WANGBIN&lt;/title&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;HELLO WORLD&lt;/h1&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/html&gt;<br>
+	</code>
+</div>
+
+<div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<p><script type="text/javascript" src="./assets/js/visitCount.js"></script></p>
 	<p>Powered By Wangbin &copy; 2017</p>
 </div>
