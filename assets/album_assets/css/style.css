@@ -1,0 +1,143 @@
+﻿/*相册*/
+#album{
+    // position: relative;
+    height: 750px;
+    width: 100%;
+    margin: auto;
+    // border: 1px solid green;
+    clear: both;
+    // background-color: #f5f5f5;
+    padding: 0;
+    // border-radius: 75px;
+}
+
+/*相册标题*/
+#album p{
+    // border: 1px solid red;
+    width: 80%;
+    margin: auto;
+    font-size: 2.5em;
+    color: #000;
+
+}
+/*容器样式，指定定位方式、宽度和圆角*/
+.photo_album {
+    position:relative;          /*相当定位方式*/
+    background-color:#f5f5f5;   /*背景色*/
+    width:100%;                 /*宽度*/
+    height: 100%;
+    overflow:hidden;            /*溢出处理*/
+    margin: auto;               /*居中显示设置*/
+    // border: 1px solid green;
+}
+
+/*相册显示样式*/
+#gallery {
+    background-color:#fffc00;   /*背景颜色*/
+    height: 100%;                /*相册高度*/
+    overflow:hidden;         /*溢出处理*/
+    position:relative;          /*相当定位方式*/
+    width:100%;                 /*相册宽度*/
+    padding: 10px;
+    padding-top: 20px;
+    border-radius:100px 100px 0 0;
+    -moz-border-radius:100px 100px 0 0;
+    -webkit-border-radius:100px 100px 0 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+
+/*分类按钮*/
+#gallery ul#sets {
+    display:table;
+    list-style:none outside none;
+    margin:30px auto;
+    overflow:hidden;
+    // border: 1px solid purple;
+    height: 55px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+#gallery ul#sets li {
+    float:left;
+    width: 180px;
+    border-radius: 25px;
+    text-align: center;
+}
+#gallery ul#sets li a {
+    cursor:pointer;
+    display:block;
+    font-weight:normal;
+    height:50px;
+    text-decoration:none;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #000;
+    font-size: 1.2em;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 3em;
+    margin: 2px;
+    font-family: "微软雅黑";
+}
+#gallery ul#sets li a:hover{
+    box-shadow: 1px 1px 10px #2f2f2f;
+}
+#gallery #loading {
+    text-align:center;
+    // border:1px solid blue;
+    display: none;
+}
+#sliderZone{
+    width: 80%;
+    height: 550px;
+    margin: auto;
+    margin-top: 25px;
+    border: 50px solid #000;
+    border-radius: 50px;
+    padding: -5px;
+}
+#slider {
+    width: 100%;
+    height:90%;
+    margin: auto;
+   
+}
+#gallery ul#thumbs {
+    width: 100%;
+    margin: 20px auto;
+    // left:150px;
+    list-style:none;
+    margin:0 auto;
+    overflow:hidden;
+    -moz-transition: bottom 0.5s ease-in-out;
+    -ms-transition: bottom 0.5s ease-in-out;
+    -o-transition: bottom 0.5s ease-in-out;
+    -webkit-transition: bottom 0.5s ease-in-out;
+    transition: bottom 0.5s ease-in-out;
+    // border: 1px solid green;
+    margin: auto;
+    margin-top: 25px;
+    background-color: #000;
+    z-index: 999;
+
+}
+#gallery ul#thumbs:hover {
+    opacity: 0.8;
+}
+#gallery ul#thumbs li {
+    // border:1px solid #888;
+    cursor:pointer;
+    float:left;
+    height:38px;
+    width:58px;
+    margin: auto;
+}
+#gallery ul#thumbs li:hover {
+    // border:1px solid #fff;
+}
+#gallery ul#thumbs li img {
+    width:auto;
+}
