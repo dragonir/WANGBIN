@@ -40,9 +40,9 @@
     width:100%;                 /*相册宽度*/
     padding: 10px;
     padding-top: 20px;
-    border-radius:100px 100px 0 0;
-    -moz-border-radius:100px 100px 0 0;
-    -webkit-border-radius:100px 100px 0 0;
+    border-radius:50px 50px 0 0;
+    -moz-border-radius:50px 50px 0 0;
+    -webkit-border-radius:50px 50px 0 0;
     margin: auto;
     box-sizing: border-box;
 }
