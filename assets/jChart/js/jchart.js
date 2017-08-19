@@ -1,6 +1,4 @@
 $(document).ready(function () {
-            
-
             $('#jqChart').jqChart({
                  borderLineColor: 'Blue',
                 title: { text: '前端技能 - 熟练程度' },
