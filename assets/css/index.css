@@ -18,13 +18,14 @@ body{
 }
 #nav{
 	width: 100%;
-	background-color: #fffc00;
+	background-color: #2EBE21;
 	margin: auto;
 	position: fixed;
 	top: 0;
 	z-index: 999;
 	border: none;
 	border-radius:  0;
+	// box-shadow: 2px 2px 5px #000;
 }
 #nav ul li{
 	padding: 0px 15px;
@@ -35,18 +36,19 @@ body{
 	text-decoration: none;
 	color: #000;
 	font-size: 1.2em;
+	font-weight: bold;
+	transition: all 0.75s ease-in-out;
 }
 #nav ul li ul li a{
 	color: #000 !important;
 	font-size: 1.1em;
 }
 #nav ul li ul{
-	// position: relative;
 	left: -10px;
 }
 #nav ul li:hover a{
-	color: gray;
-	background-color: #fffc00;
+	color: #fff;
+	background-color: #2EBE21;
 }
 #nav ul li:hover ul li a, #nav ul li:hover ul li{
 	color: #000 !important;
@@ -56,9 +58,7 @@ body{
 #nav ul li ul li:hover a{
 	text-shadow: 1px 1px 2px #5f5f5f;
 }
-#mylogo:hover{
-	background-color: #fffc00 !important;
-}
+
 
 
 /*时间显示*/
@@ -79,9 +79,12 @@ body{
 #mylogo{
 	width: 120px;
 	height: 120px;
-	margin-left: 280px;
+	// margin-left: 300px;
 	text-align: center;
 	float: right;
+	transition: all 0.75s ease-in-out;
+	position: absolute;
+	right: 0;
 }
 #mylogo img{
 	height: 25px;
@@ -89,80 +92,57 @@ body{
 	margin-top: 10px;
 	box-sizing: content-box;
 }
-#resume{
-	background-color: #000;
-	border-radius: 0 0 20px 20px;
+#mylogo:hover{
+	background-color: #2EBE21 !important;
+	transform: rotate(15deg);
 }
-#resume a{
-	color: #fffc00 !important;
-}
-#resume a:hover, #resume:hover a{
-	background-color: #000 !important;
-	color: gold !important;
-}
+
 
 
 /*banner stylesheet*/ 
 #banner{
 	width: 100%;
-	height: 550px;
+	// height: 600px;
 	padding: 0;
 	padding-top: 50px;
 	margin: auto;
 	margin-top:50px;
 	background-size: 15em;
-	background-color: #fffc00;
+	background-color: #2EBE21;
 	text-align: center;
-	// color: #fff;
 	position: relative;
-	// border: 1px solid red;
 }
-#img{
+#selfile{
 	height: 150px;
 	width: 150px;
-	margin-top: 50px;
-	margin-top: 50px;
-	// position: absolute;
-	// top: 20px;
-	// border: 1px solid red;
 	margin: auto;
+	margin-top: 75px;
 	position: relative;
+	z-index: 333;
 }
-#img img{
-	height: 85%;
-	width: 85%;
+#selfile img{
+	height: 100%;
+	width: 100%;
 	border-radius: 50%;
-	// border: 5px solid #000;
+	transition: all 0.75s ease-in-out;
 }
-
-#img img:hover{
+#selfile img:hover{
 	border-color: rgba(255, 252, 0, 0.8);
 	box-shadow: 2px 2px 10px #2f2f2f, -2px -2px 10px #2f2f2f;
 	cursor: pointer;
-	// transform: rotate(120deg);
-}
-
-#forInfo{
-	width: 100%;
-	height:75px;
-}
-#forInfo p{
-	font-size: 2em;
-	line-height: 2.5em;
-	color: #000;
-	font-family: Arial;
+	transform: rotate(360deg);
 }
 #forButton{
 	width: 100%;
 	margin: 0;
 	height: 75px;
-	margin-top: 45px;
+	margin-top: 75px;
 }
 #forButton a{
 	text-decoration: none;
 }
 #button{
-	width: 200px;
+	width: 180px;
 	height: 55px;
 	margin: auto;
 	padding: 10px;
@@ -170,12 +150,15 @@ body{
 	border-radius: 50px;
 	background-color: #fff;
 	color: #000 !important;
-	font-size: 1.2em;
+	font-size: 18px;
+	font-weight: bold;
 	line-height: 2em;
+	transition: all 0.7s ease-in-out;
 }
 #button:hover{
-	box-shadow: 1px 1px 10px gray;
+	box-shadow: 1px 1px 20px #000;
 	cursor: pointer;
+	color: #2EBE21 !important;
 }
 
 
@@ -221,166 +204,24 @@ body{
 	background-color: #000;
 	border-radius: 5px;
 }
-#img img:hover #tooltip{
-	display: block;
-	z-index: 999;
+/*scrollDown*/ 
+#scrollDown{
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	margin-left: -75px;
+}
+#scrollDown img{
+	height: 150px;
+	width: 150px;
+	
+}
+#scrollDown img:hover{
+	transtion: all 0.75s ease-in-out;
 }
 
 
-/*container*/
-#proContainer{
-	width: 100%;
-	background-color: #f5f5f5;
-	margin: auto;
-}
-#proContainer a{
-	text-decoration: none;
-	color: #000;
-}
-#boxes{
-	width: 85%;
-	margin: auto;
-	position: relative;
-	top: -130px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 0;
-}
-.box{
-	width: 300px;
-	height: 280px;
-	margin: 20px;
-	padding: 20px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	border-radius: 40px;
-	// box-shadow: 0px 0px 0px #2f2f2f, 0 0px 0.5px #2f2f2f, 0 0 0#2f2f2f;
-	// filter: drop-shadow(0px 0px 3px #f5f5f5);
-	background-color: #fff;
-	box-sizing: border-box;
-	position: relative;
-}
-.box:hover{
-	box-shadow: 1px 1px 20px #2f2f2f;
-	cursor: pointer;
-	background-color: #fff;
-
-}
-// .yinying{
-// 	height: 200px;
-// 	width: 100%;
-// 	// border: 1px solid red;
-// 	position: absolute;
-// 	left: -1px;
-// 	top: 80px;
-// 	// border: 0 2px 2px 2px solid #fff;
-// 	// border-right: 1px solid red;
-// 	// border-left: 1px solid red;
-// 	// border-bottom: 1px solid red;
-// 	// box-shadow: 0px 1px 10px #2f2f2f;
-// 	border-radius: 0 0 45px 45px;
-// }
-.box:hover .num{
-	background-color: gold;
-}
-
-.box .images{
-	height: 80%;
-	width: 100%;
-}
-
-.box .images img{
-	height: 100%;
-	width: 100%;
-	// margin: 5px;
-	margin-left: auto;
-	margin-right: auto;
-	// border: 2px solid #ececec;
-	// border-radius: 30px;
-	border-top-right-radius: 35px;
-	border-top-left-radius: 35px;
-	// box-shadow: 1px 1px 2px #d4d4d4;
-	box-sizing: content-box;
-}
-.box .intro{
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	text-align: center;
-	padding: 5px;
-}
-.intro h3{
-	padding-left: 10px;
-	width: 100%;
-	color: #2f2f2f;
-}
-.intro p{
-	text-indent: 2em;
-	padding: 10px;
-	font-size: 0.9em;
-	color: #2f2f2f;
-}
-.box .num{
-	margin: 0;
-	width:40px;
-	height: 40px;
-	font-size: 2.3em;
-	font-weight: bold;
-	background-color: #fffc00;
-	color: #fff;
-	// border-bottom-left-radius: 25px;
-	border-top-right-radius: 25px;
-	text-align: center;
-	line-height: 1.1em;
-}
-.box:nth-child(4){
-	box-shadow: 1px 1px 10px #2f2f2f;
-}
-/*proBtn*/
-#proBtn{
-	clear: both;
-	height: 100px;
-	width: 85%;
-	// border: 1px solid blue;
-	margin: auto;
-	margin-top: -130px;
-	text-align: center;
-}
-#proBtn button{
-	margin: 20px;
-	background-color: #fff;
-	border: 3px solid #000;
-	font-size: 1.2em;
-	padding: 13px;
-	padding-right: 30px;
-	padding-left: 30px;
-	border-radius: 50px;
-}
-#proBtn button:hover{
-	box-shadow: 1px 1px 5px #2f2f2f;
-}
-
-
-#display{
-	clear: both;
-	margin: auto;
-	height: 550px;
-	width: 100%;
-	background-color: #f5f5f5;
-	font-size: 1.2em;
-	// padding-top: 
-}
-#display code{
-
-	margin-top: 50px;
-	// padding-top: 20px;
-}
-
-
-
-
+/*页脚*/
 #footer{
 	clear: both;
 	height: 60px;
@@ -437,6 +278,55 @@ body{
 	background-size: 8.5em;
 }
 
+
+
+.mainItem{
+	padding: 30px 0;
+}
+
+
+/***********************************************************************/ 
+/*其他通用样式*/ 
+/***********************************************************************/ 
+
+/* h1标题 */
+h1.title{
+	clear: both;
+	font-size: 55px;
+	margin: 30px;
+	// margin-top: 50px;
+	padding: 10px 0;
+	color: #000;
+}
+
+.learnMore{
+	clear: both;
+	text-align: center;
+	margin: 50px auto;
+}
+.learnMoreBtn{
+	width: 150px;
+	height: 55px;
+	background-color: transparent;
+	color: #000;
+	outline: none;
+	border: none;
+	border: 3px solid #000;
+	border-radius: 30px;
+	padding: 10px 30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.learnMoreBtn:hover{
+	box-shadow: 2px 2px 10px #2f2f2f;
+}
+
+
+
+/***********************************************************************/ 
+/*媒体查询*/ 
+/***********************************************************************/ 
 @media screen and (max-width: 768px){  
     #navigator{  
     	background-color: #fff;
@@ -454,10 +344,6 @@ body{
 	}
 	/*iconBar*/
 	#iconBar{
-		// color: #000;
-		// height: 55px;
-		// width: 55px;
-		// border: 1px solid red;
 	}
 	#boxes{
 		width: 100%;
@@ -469,9 +355,6 @@ body{
 	#navigator{
 		// border: 1px solid red;
 	}
-	// #navigator ul li{
-	// 	border: 1px solid red;
-	// }
 	#mylogo, #timezone{
 		display: none;
 	}

@@ -1,0 +1,29 @@
+#toolsDisplay{
+	margin: auto;
+	clear: both;
+	background-color: #82cf55;
+}
+
+#toolsDisplay h1{
+	float: right;
+	margin-bottom: 0;
+	color: #fff;
+}
+
+#toolContainer{
+	clear: both;
+	margin-top: 0;
+}
+
+#myTabContent{
+	background-color: #fff;
+	height: 380px;
+	border-radius: 0 0 20px 20px;
+	border: none;
+	outline: none;
+	padding: 20px;
+}
+
+#myTabContent{
+	overflow-y: scroll;
+}

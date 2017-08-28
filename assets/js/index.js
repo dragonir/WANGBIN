@@ -1,52 +1,95 @@
-// 导航栏
-$(function(){
-	$("#dropdown1").on("click",function(){
-		$("#menu1").toggle('slow');
-	})
-	$("#dropdown2").on("click",function(){
-		$("#menu2").toggle('slow');
-	})
-	$("#dropdown3").on("click",function(){
-		$("#menu3").toggle('slow');
-	})
-	$("#dropdown4").on("click",function(){
-		$("#menu4").toggle('slow');
-	})
-	$("#dropdown5").on("click",function(){
-		$("#menu5").toggle('slow');
-	})
-});
 
-$(function(){
-	$(window).scroll(function(event) {
-		$("#nav").css({
-			background: '#fff',
-			boxShadow: '0px 1px 5px #000'
-		});
-		// $("#resume").css('borderRadius', '0 0 0 0');
-		// console.log($(window).scrollTop());
-		if($(window).scrollTop() == 0){
-			$("#nav").css({
-				background: '#fffc00',
-				boxShadow: 'none'
-			});
-			// $("#resume").css('borderRadius', '0 0 25 25');
-		}
+$(document).ready(function(){
+	
+	// 锚点平滑滚动
+	// Add smooth scrolling to all links
+  	$("a").on('click', function(event) {
+	    // Make sure this.hash has a value before overriding default behavior
+	    if (this.hash !== "") {
+	      	// Prevent default anchor click behavior
+	      	event.preventDefault();
+	      	// Store hash
+	      	var hash = this.hash;
+	      	// Using jQuery's animate() method to add smooth page scroll
+	      	// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      	$('html, body').animate({
+	        	scrollTop: $(hash).offset().top
+	      	}, 800, function(){
+	   
+	        	// Add hash (#) to URL when done scrolling (default click behavior)
+	        	window.location.hash = hash;
+	      	});
+	    } // End if
+  	});
+
+
+
+	// 导航栏
+	$(function(){
+		$("#dropdown1").on("click",function(){
+			$("#menu1").toggle('slow');
+		})
+		$("#dropdown2").on("click",function(){
+			$("#menu2").toggle('slow');
+		})
+		$("#dropdown3").on("click",function(){
+			$("#menu3").toggle('slow');
+		})
+		$("#dropdown4").on("click",function(){
+			$("#menu4").toggle('slow');
+		})
+		$("#dropdown5").on("click",function(){
+			$("#menu5").toggle('slow');
+		})
 	});
 
+
+	// 滚动时导航栏特效
+	$(function(){
+		$(window).scroll(function(event) {
+			$("#nav").css({
+				background: '#fff',
+				boxShadow: '0px 1px 5px #000'
+			});
+			// $("#resume").css('borderRadius', '0 0 0 0');
+			// console.log($(window).scrollTop());
+			if($(window).scrollTop() == 0){
+				$("#nav").css({
+					background: '#2EBE21',
+					boxShadow: 'none'
+				});
+				// $("#resume").css('borderRadius', '0 0 25 25');
+			}
+		});
+	})
+
+	
+	//提示标签
+	$(function(){
+		var img = $("#selfile");
+		var tooltip = $("#tooltip");
+		img.hover(function() {
+			/* Stuff to do when the mouse enters the element */
+			tooltip.fadeIn('slow');
+		}, function() {
+			/* Stuff to do when the mouse leaves the element */
+			tooltip.fadeOut('slow');
+		});
+	});
+
+
+	// 头像旋转360°
+
+	// banner height
+	$(function(){
+		var windowHeight = $(window).height() - 15;
+		$("#banner").height(windowHeight);
+	})
+	
 })
 
-//提示标签
-$(function(){
-	var img = $("#img");
-	var tooltip = $("#tooltip");
-	img.on("mouseenter",function(){
-		tooltip.fadeIn('slow');
-	});
-	img.on("mouseleave", function(){
-		tooltip.fadeOut('slow');
-	});
-});
+
+
 
 function showTime(){
 	var day = new Date();

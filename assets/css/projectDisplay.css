@@ -1,0 +1,97 @@
+/*container*/
+#projectDisplay{
+	clear: both;
+	width: 100%;
+	background-color: #f5f5f5;
+	margin: auto;
+}
+#projectDisplay a{
+	text-decoration: none;
+	color: #000;
+}
+#projectDisplay .projectBox{
+	width: 85%;
+	height: 180px;
+	margin: auto;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.box{
+	width: 23%;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+	border-radius:5px;
+	border: 10px solid #fff;
+	transition: all 1s ease-in-out;
+	position: relative;
+}
+.box:hover{
+	cursor: pointer;
+	background-color: #fff;
+	border: 10px solid #2EBE21;
+}
+
+
+
+.box .images{
+	height: 80%;
+	width: 100%;
+}
+
+.box .images img{
+	height: 100%;
+	width: 100%;
+	box-sizing: content-box;
+}
+
+.box .imagesClose{
+	position: absolute;
+	top: 0;
+	height: 80%;
+	width: 100%;
+	background-color: #fff;
+	color: #2f2f2f;
+	opacity: 0.8;
+	display: none;
+	transition: all 1s ease-in-out;
+}
+.box:hover .imagesClose{
+	display: block;
+}
+.box .imagesClose h5{
+	margin: 10 0 0 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+.box .imagesClose p{
+	text-indent: 2em;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.box .intro{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	padding: 5px;
+}
+.intro h3{
+	padding-left: 10px;
+	width: 100%;
+	color: #5f5f5f;
+	font-size: 10px;
+}
+.intro p{
+	text-indent: 2em;
+	padding: 10px;
+	font-size: 0.9em;
+	color: #5f5f5f;
+}
+
+#proBtn{
+	margin-top: 55px;
+}

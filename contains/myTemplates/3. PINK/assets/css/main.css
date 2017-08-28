@@ -1,0 +1,206 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+@font-face{
+	font-family: myFont;
+	src: 	url('../fonts/big_john.ttf'),
+    		url('../fonts/big_john.woff'); /* IE9 */
+}
+@font-face{
+	font-family: myFont2;
+	src:	url('../fonts/fontawesome-webfont.ttf'),
+			url('../fonts/FontAwesome.otf');
+}
+body{
+	background-color: #fef9fd;
+	font-family: myFont;
+	font-size: 16px;
+}
+
+nav{
+	height: 80px;
+	width: 100%;
+	margin: auto;
+	background-color: #ffd602;
+}
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	float: left;
+	padding: 0 20px;
+}
+nav ul li a{
+	text-decoration: none;
+	line-height: 80px;
+	color: #565656;
+	font-size: 1.2em;
+	font-weight: bold;
+	transition-property: color;
+	transition-duration: 0.8s;
+}
+nav ul li a:hover{
+	color: #fff;
+}
+
+/*banner*/ 
+#banner{
+	height: 600px;
+	width: 100%;
+	margin: auto;
+	background-color: #ffd602;
+	border: 1px solid red;
+}
+
+/*main*/ 
+#main{}
+#what{
+	height: 600px;
+	width: 100%;
+	margin: 55px auto;
+}
+#whatTop{
+	height: 35%;
+	width: 85%;
+	margin: auto;
+	// border: 1px solid red;
+	display: flex;
+	justify-content: space-between;
+}
+#whatTop .whatTopBox{
+	height: 100%;
+	width: 50%;
+	// border: 1px solid gray;
+}
+#whatTop .whatTopBox h1{
+	color: #565656;
+	font-size: 65px;
+}
+#whatTop .whatTopBox img{
+	width: 80%;
+	margin-top: 45px;
+}
+#whatTop .whatTopBox p{
+	color: #565656;
+	font-family: myFont2;
+	line-height: 25px;
+}
+#whatBottom{
+	height: 65%;
+	width: 85%;
+	margin: auto;
+	// border: 1px solid blue;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	color: #565656;
+}
+#whatBottom .whatBottomBox{
+	height: 100%;
+	width: 33.3333%;
+	// border: 1px solid yellow;
+}
+#whatBottom .whatBottomBox div{
+	width: 50%;
+	height: 28%;
+	margin: auto;
+	// border: 1px solid red;
+}
+#whatBottom .whatBottomBox div img{
+	height: 100px;
+	width: 130px;
+}
+#whatBottom .whatBottomBox h3{
+	margin: 20px auto;
+}
+#whatBottom .whatBottomBox p{
+	font-family: myFont2;
+	padding: 8px;
+	font-size: 1.05em;
+	line-height: 25px;
+}
+
+
+
+/*works*/ 
+
+#works{
+	height: 600px;
+}
+/*worksTop*/ 
+#worksTop{
+	height: 30%;
+	width: 85%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+#worksTop .worksTopBox{
+	height: 100%;
+	width: 50%;
+}
+#worksTop .worksTopBox h1{
+	font-size: 65px;
+	color: #565656;
+}
+#worksTop .worksTopBox img{
+	margin-top: 45px;
+	width: 80%;
+}
+
+/*worksMiddle*/ 
+#worksMiddle{
+	height: 55%;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+}
+#worksMiddle .worksMiddleBox{
+	height: 100%;
+	width: 25%;
+	// border: 1px solid red;
+}
+#worksMiddle .worksMiddleBox img{
+	height: 100%;
+	width: 100%;
+}
+
+#worksBottom{
+	height: 15%;
+}
+#worksBottom .worksBottomBox{
+	height: 100%;
+	width: 50%;
+	margin: auto;
+	// border: 1px solid red; 
+	// background-image: url('../images/separetor3.png');
+	// background-repeat: no-repeat;
+	// background-size: 20em;
+	padding: 20px;
+	position: relative;
+	box-sizing: border-box;
+}
+#worksBottom .worksBottomBox button{
+	outline: none;
+	border: 2px solid #000;
+	background-color: #fad663;
+	width: 150px;
+	height: 45px;
+	border-radius: 15px;
+	line-height: 30px;
+	font-size: 1.2em;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -75px;
+	z-index: 999;
+}
+#worksBottom .worksBottomBox img{
+	position: absolute;
+	top: 30px;
+	left: 20%;
+	// margin-left: -75px;
+}
