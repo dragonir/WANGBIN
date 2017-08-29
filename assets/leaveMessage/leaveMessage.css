@@ -1,0 +1,54 @@
+#leaveMessage{
+	clear: both;
+	height: 450px;
+	width: 100%;
+	margin: 0;
+	background-color: #f5f5f5;
+	overflow-y: scroll;
+	padding: 0;
+}
+
+
+#leaveMessage h1{
+	width: 85%;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #03c03c;
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+	text-shadow: 1px 1px #000, 2px 2px #000, 3px 3px #000, 4px 4px #000;
+}
+
+#leaveMessage .container{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#leaveMessage .container form{
+	width: 85%;
+	margin: 0;
+	padding: 0;
+	margin: auto;
+
+}
+#leaveMessage .container form label{
+	display: none;
+}
+#leaveMessage .container form input[type="text"]{
+	display: inline-block;
+	width: 100%;
+}
+#leaveMessage .container form input:nth-child(3),#leaveMessage .container form input:nth-child(4){
+	width: 45%;
+}
+#leaveMessage .container table{
+	// border: 1px solid red;
+	width: 85%;
+	margin: 0;
+	padding: 0;
+	margin: auto;
+}

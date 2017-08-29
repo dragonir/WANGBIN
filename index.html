@@ -10,7 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="./assets/css/skillDisplay.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/gamesDisplay.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/toolsDisplay.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/leaveMessage.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/processDisplay.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/footerAssets.css">
 	<!-- bootstrap -->
 	<script type="text/javascript" src="./assets/jquery/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./assets/bootstrap/css/bootstrap.min.css">
@@ -30,6 +31,11 @@
     <link rel="stylesheet" type="text/css" href="./assets/jChart/css/jquery.jqRangeSlider.css" />
     <link rel="stylesheet" type="text/css" href="./assets/jChart/themes/smoothness/jquery-ui-1.8.21.css" /> 
 
+    <!-- tools -->
+	<link rel="stylesheet" type="text/css" href="./assets/tools/tool1.css">
+
+	<!-- leaveMessage -->
+	<link rel="stylesheet" type="text/css" href="./assets/leaveMessage/leaveMessage.css">
 
     <!-- fullpage -->
 	<!-- <link rel="stylesheet" type="text/css" href="./assets/fullpage/javascript.fullPage.css" />
@@ -42,8 +48,6 @@
 		});
 	</script> -->
 
-	<!-- tools -->
-	<link rel="stylesheet" type="text/css" href="./assets/tools/tool1.css">
 
 </head>
 
@@ -72,8 +76,9 @@
 			<li><a href="#skillDisplay">掌握技能</a></li>
 			<li><a href="#gamesDisplay">小游戏</a></li>
 			<li><a href="#toolsDisplay">小工具</a></li>
-			<li><a href="#chartContainer">学习进阶</a></li>
+			<li><a href="#processDisplay">学习进阶</a></li>
 			<li><a href="#album">摄影作品</a></li>
+			<li><a href="#footer">关于</a></li>
 			
 			<li class="dropdown" id="dropdown1">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习  <b class="caret"></b></span></a>
@@ -469,18 +474,30 @@
 		</div>
 
 
-	<!-- jChart 技能概览 -->
-	<div class="container mainItem" id="chartContainer">
+
+	<!-- jChart 学习进阶 -->
+	<div class="container mainItem" id="processDisplay">
 		<h1 class="title">学习进阶</h1>
 		<div id="chartZone">
-		    <div id="jqChart" style="width: 500px; height: 300px;"></div>
+		    <div id="jqChart" class="chartItem"></div>
+		    <div class="chartItem">
+		    	<img src="./assets/images/chart2.JPG">
+		    </div>
+		    <div class="chartItem">
+		    	<img src="./assets/images/chart3.gif">
+		    </div>
+	    </div>
+	    <div class="learnMore">
+	    	<button class="learnMoreBtn">了解更多</button>
 	    </div>
 	</div>
 
+
+
 	<!-- 相册 -->
 	<div id="album" class="mainItem section">
+	   	<h1 class="title">摄影作品</h1>
 		<div class="photo_album">
-	    	<h1 class="title">摄影作品</h1>
 	        <div id="gallery">
 			    <div id="sliderZone">
 				<div id="slider"></div>
@@ -495,29 +512,142 @@
 	        </div>
 
 		</div>
-	     <div id="gamesLearnMore" class="learnMore" style="position: relative; top: -150px;">
+	     <div class="learnMore">
 			<button class="learnMoreBtn">了解更多</button>
-		</div>
-	    
-		<!-- 浮动清除部分		 -->
-	    <div style="bottom:0;position:fixed;">
-	        <hr style="clear:both;" />
-	    </div>
+		</div>	
 	</div>
 
-
-	<!-- grid  其他作品-->
-	<div id="leaveMessage" class="mainItem section">
-		<h1 class="title">留言板</h1>
-
-	</div>
 
 </div>
 
 
+
+<!-- ###################################################################################### -->
 <!-- 页脚 -->
-<div id="footer" class="container row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	<div id="linkZone"></div>
+<!-- ###################################################################################### -->
+
+<div id="footer">
+	
+	<!-- 留言板 -->
+	<div id="leaveMessage" class="mainItem section">
+		<h1>留言板</h1>
+		<div class="container">
+			<form rol="form">
+				<div class="form-group">
+					<label for="username">
+					</label>
+						<input id="username" v-model="username" placeholder="输入用户名" class="form-control" type="text">
+
+				</div>
+				<div class="form-group">
+					<label for="age">
+					</label>
+						<input id="age" v-model="age" placeholder="输入留言信息" class="form-control" type="text">
+
+				</div>
+				<div class="form-group">
+					<input type="button" value="添加" class="btn btn-primary" v-on:click="add()">
+					<input type="reset" value="重置" class="btn btn-danger">
+				</div>
+			</form>
+
+
+			<table class="table  table-hover">
+				<caption class="h5 text-info">留言信息</caption>
+				<tr class="text-success">
+					<th class="text-center">序号</th>
+					<th class="text-center">名字</th>
+					<th class="text-center">年龄</th>
+					<th class="text-center">操作</th>
+				</tr>
+				<tr class="text-center" v-for="item in myData">
+					<td>{{$index+1}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.age}}</td>
+					<td><input class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" type="button" value="删除" v-on:click="nowIndex=$index"></td>
+				</tr>
+				<tr class="text-right" v-show="myData.length != 0">
+					<td colspan="4">
+						<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#layer" v-on:click="nowIndex='-1'">删除全部</button>
+					</td>
+				</tr>
+				<tr v-show="myData.length==0">
+					<td colspan="4" class="text-center text-muted">
+						<p>暂无数据...</p>
+					</td>
+				</tr>
+			</table>
+
+			<!-- 模态框 弹出框 -->
+			<div role="dialog" class="modal fade" id="layer">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">
+								<span>&times;</span>
+							</button>
+							<h4 class="modal-title">确认删除吗？</h4>
+						</div>
+						<div class="modal-body text-right">
+							<button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
+							<button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="deleteMsg(nowIndex)">确认</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+
+
+	<!-- 链接图标 -->
+	<div id="linkZone">
+		<div class="linkItem">
+		</div>
+		<div class="linkItem" for="github">
+			<a href="https://github.com/dragonir">
+				<img src="./assets/images/github.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="codepen">
+			<a href="">
+				<img src="./assets/images/codepen.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="codeproject">
+			<a href="">
+				<img src="./assets/images/codeProject.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="dribbble">
+			<a href="">
+				<img src="./assets/images/dribbble.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="stackoverflow">
+			<a href="">
+				<img src="./assets/images/stackOverflow.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="cnblog">
+			<a href="">
+				<img src="./assets/images/cnblog.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="csdn">
+			<a href="">
+				<img src="./assets/images/csdn.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem" for="segmentfault">
+			<a href="">
+				<img src="./assets/images/segmentFault.png" alt="linkIcon">
+			</a>
+		</div>
+		<div class="linkItem"></div>
+	</div>
+	<!-- <hr> -->
 	<div id="copyRightZone">
 		<p><script type="text/javascript" src="./assets/js/visitCount.js"></script></p>
 		<p>Powered By Wangbin &copy; 2017</p>
@@ -526,9 +656,10 @@
 
 
 
+<!-- ###################################################################################### -->
+<!-- scripts -->
+<!-- ###################################################################################### -->
 
-
-<!--##########################################scripts#################################### -->
 <!-- index -->
 <script type="text/javascript" src="./assets/js/index.js"></script>
 <!-- footer.php -->
@@ -564,5 +695,11 @@
  <!-- tool1 -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
 <script src="./assets/tools/tool1.js"></script>
+
+<!-- leaveMessage -->
+<script type="text/javascript" src="./assets/leaveMessage/vue.js"></script>
+<script type="text/javascript" src="./assets/leaveMessage/leaveMessage.js"></script>
+
+
 </body>
 </html>

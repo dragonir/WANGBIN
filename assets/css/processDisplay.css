@@ -1,0 +1,48 @@
+#processDisplay{
+	clear: both;
+	width: 100%;
+	height: 750px;
+	margin: auto;
+	background-color: #fff;
+	position: relative;
+}
+#processDisplay h1.title{
+	clear: both;
+	float: left;
+	color: #000;
+	margin-bottom: 50px;
+}
+#chartZone{
+	clear: both;
+	height: 320px;
+	width: 100%;
+	margin: 30px auto;
+	display: block;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+#chartZone h1{
+	color: #000;
+}
+#jchart{
+	width: 85%;
+	height: 100%;
+}
+
+#chartZone .chartItem{
+	// border: 1px solid gray;
+	width: 30%;
+	text-align: center;
+}
+#chartZone .chartItem:nth-child(1){
+	width: 40%;
+}
+#chartZone .chartItem img{
+	margin: auto;
+	height: 90%;
+	width: 80%;
+}
