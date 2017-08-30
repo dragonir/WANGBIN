@@ -1,14 +1,11 @@
 
 $(document).ready(function(){
-	
 	// 锚点平滑滚动
-	// Add smooth scrolling to all links
   	$("a").on('click', function(event) {
-	    // Make sure this.hash has a value before overriding default behavior
 	    if (this.hash !== "") {
-	      	// Prevent default anchor click behavior
+	      	// 方式默认点击事件
 	      	event.preventDefault();
-	      	// Store hash
+	      	// 存储hash
 	      	var hash = this.hash;
 	      	// Using jQuery's animate() method to add smooth page scroll
 	      	// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
@@ -19,9 +16,8 @@ $(document).ready(function(){
 	        	// Add hash (#) to URL when done scrolling (default click behavior)
 	        	window.location.hash = hash;
 	      	});
-	    } // End if
+	    }
   	});
-
 
 
 	// 导航栏
@@ -47,18 +43,22 @@ $(document).ready(function(){
 	// 滚动时导航栏特效
 	$(function(){
 		$(window).scroll(function(event) {
+			
+			// 回顶部锚点在屏幕滚动时显示
+			$("#toTop").css('visibility', 'visible');
+			
+			// 导航栏特效
 			$("#nav").css({
 				background: '#fff',
 				boxShadow: '0px 1px 5px #000'
 			});
-			// $("#resume").css('borderRadius', '0 0 0 0');
-			// console.log($(window).scrollTop());
 			if($(window).scrollTop() == 0){
 				$("#nav").css({
 					background: '#2EBE21',
 					boxShadow: 'none'
 				});
-				// $("#resume").css('borderRadius', '0 0 25 25');
+				$("#toTop").css('visibility', 'hidden');
+
 			}
 		});
 	})
@@ -69,26 +69,20 @@ $(document).ready(function(){
 		var img = $("#selfile");
 		var tooltip = $("#tooltip");
 		img.hover(function() {
-			/* Stuff to do when the mouse enters the element */
 			tooltip.fadeIn('slow');
 		}, function() {
-			/* Stuff to do when the mouse leaves the element */
 			tooltip.fadeOut('slow');
 		});
 	});
 
 
-	// 头像旋转360°
-
-	// banner height
+	// banner 高度查询
 	$(function(){
 		var windowHeight = $(window).height() - 15;
 		$("#banner").height(windowHeight);
-	})
+	});
 	
 })
-
-
 
 
 function showTime(){
@@ -118,6 +112,7 @@ function showTime(){
 	
 }
 
+
 function timeFormat(i){
 	if(i<10){
 		i = '0' + i;
@@ -128,37 +123,40 @@ function timeFormat(i){
 
 // 访问次数
 function getCookieVal(offset){
-var endstr=document.cookie.indexOf(";",offset);
-if(endstr==-1)
-endstr=document.cookie.length;
-return unescape(document.cookie.substring(offset,endstr));
+	var endstr=document.cookie.indexOf(";",offset);
+	if(endstr==-1)
+	endstr=document.cookie.length;
+	return unescape(document.cookie.substring(offset,endstr));
 }
  
+
 function GetCookie(name){
-var arg=name+"=";
-var alen=arg.length;
-var clen=document.cookie.length;var i=0;
-while(i<clen){
-var j=i+alen;
-if(document.cookie.substring(i,j)==arg)
-return getCookieVal(j);
-i=document.cookie.indexOf(" ",i)+1;if(i==0)
-break;
+	var arg=name+"=";
+	var alen=arg.length;
+	var clen=document.cookie.length;var i=0;
+	while(i<clen){
+		var j=i+alen;
+		if(document.cookie.substring(i,j)==arg)
+		return getCookieVal(j);
+		i=document.cookie.indexOf(" ",i)+1;if(i==0)
+		break;
+	}
+	return null;
 }
-return null;
-}
+
  
 function SetCookie(name,value){
-var argv=SetCookie.arguments;
-var argc=SetCookie.arguments.length;
-var expires=(2<argc)?argv[2]:null;
-var path=(3<argc)?argv[3]:null;
-var domain=(4<argc)?argv[4]:null;
-var secure=(5<argc)?argv[5]:false;
-document.cookie=name+"="+escape(value)+((expires==null)?"":("; expires="+expires.toGMTString()))+((path==null)?"":("; path="+path))+((domain==null)?"":("; domain="+domain))+((secure==true)?"; secure":"");
+	var argv=SetCookie.arguments;
+	var argc=SetCookie.arguments.length;
+	var expires=(2<argc)?argv[2]:null;
+	var path=(3<argc)?argv[3]:null;
+	var domain=(4<argc)?argv[4]:null;
+	var secure=(5<argc)?argv[5]:false;
+	document.cookie=name+"="+escape(value)+((expires==null)?"":("; expires="+expires.toGMTString()))+((path==null)?"":("; path="+path))+((domain==null)?"":("; domain="+domain))+((secure==true)?"; secure":"");
 }
  
+
 function ResetCounts(name){
-visits=0;SetCookie("visits",visits,expdate,"/",null,false);
-location.reload();
+	visits=0;SetCookie("visits",visits,expdate,"/",null,false);
+	location.reload();
 }

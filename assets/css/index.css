@@ -4,17 +4,16 @@
 }
 body{
 	background-color: #f9f9f9;
-	// background-image: url('../images/bg3.jpg');
 	background-size: 18em;
 	background-attachment: fixed;
 	font-family: "微软雅黑";
-	// color: #000;
 }
 
 /*导航栏样式*/ 
 #navigator{
 	border: none;
 	font-family: "微软雅黑";
+	width: 100%;
 }
 #nav{
 	width: 100%;
@@ -25,7 +24,6 @@ body{
 	z-index: 999;
 	border: none;
 	border-radius:  0;
-	// box-shadow: 2px 2px 5px #000;
 }
 #nav ul li{
 	padding: 0px 15px;
@@ -37,7 +35,7 @@ body{
 	color: #000;
 	font-size: 1.2em;
 	font-weight: bold;
-	transition: all 0.75s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 #nav ul li ul li a{
 	color: #000 !important;
@@ -59,30 +57,23 @@ body{
 	text-shadow: 1px 1px 2px #5f5f5f;
 }
 
-
-
 /*时间显示*/
 #timezone{
-	// border: 1px solid red;
 	margin-top: 12px;
-	// margin-left: 50px;
 	right: 0;
 	font-weight: bold;
-	// padding-left: 100px;
 }
 #timezone span{
 	padding-left: 5px;
 }
 
-
 /*myLogo*/ 
 #mylogo{
 	width: 120px;
 	height: 120px;
-	// margin-left: 300px;
 	text-align: center;
 	float: right;
-	transition: all 0.75s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	position: absolute;
 	right: 0;
 }
@@ -96,8 +87,6 @@ body{
 	background-color: #2EBE21 !important;
 	transform: rotate(15deg);
 }
-
-
 
 /*banner stylesheet*/ 
 #banner{
@@ -161,7 +150,6 @@ body{
 	color: #2EBE21 !important;
 }
 
-
 /*tooptip 提示窗口*/
 #tooltip{
 	height: 120px;
@@ -204,6 +192,7 @@ body{
 	background-color: #000;
 	border-radius: 5px;
 }
+
 /*scrollDown*/ 
 #scrollDown{
 	position: absolute;
@@ -220,6 +209,20 @@ body{
 	transtion: all 0.75s ease-in-out;
 }
 
+/*回顶部锚点*/ 
+#toTop{
+	position: fixed;
+	bottom: 30px;
+	right: 10px;
+	width: 55px;
+	height: 55px;
+	visibility: hidden;
+	z-index: 999;
+}
+#toTop img{
+	height: 100%;
+	width: 100%;
+}
 
 /*页脚*/
 #footer{
@@ -272,26 +275,21 @@ body{
 }
 
 
-
-.mainItem{
-	padding: 30px 0;
-}
-
-
 /***********************************************************************/ 
 /*其他通用样式*/ 
 /***********************************************************************/ 
+.mainItem{
+	padding: 30px 0;
+}
 
 /* h1标题 */
 h1.title{
 	clear: both;
 	font-size: 55px;
 	margin: 30px;
-	// margin-top: 50px;
 	padding: 10px 0;
 	color: #000;
 }
-
 .learnMore{
 	clear: both;
 	text-align: center;
@@ -316,39 +314,351 @@ h1.title{
 }
 
 
-
 /***********************************************************************/ 
 /*媒体查询*/ 
 /***********************************************************************/ 
+
+
+
+// 手机
 @media screen and (max-width: 768px){  
-    #navigator{  
-    	background-color: #fff;
+
+	/*导航栏样式*/ 
+	#navigator{
+
+		border: 1px solid red;
+		font-family: "微软雅黑";
 	}
 	#nav{
-		margin-top: 50px;
+		border: 1px solid red;
+
+		width: 100%;
+		background-color: #2EBE21;
+		margin: auto;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+		border: none;
+		border-radius:  0;
 	}
 	#nav ul li{
+		padding: 0px 15px;
+		height: 100%;
+		text-align: center;
+	}
+	#nav ul li a{
+		text-decoration: none;
+		color: #000;
+		font-size: 1.2em;
+		font-weight: bold;
+		transition: all 0.5s ease-in-out;
+	}
+	#nav ul li ul li a{
+		color: #000 !important;
+		font-size: 1.1em;
+	}
+	#nav ul li ul{
+		left: -10px;
+	}
+	#nav ul li:hover a{
+		color: #fff;
+		background-color: #2EBE21;
+	}
+	#nav ul li:hover ul li a, #nav ul li:hover ul li{
+		color: #000 !important;
+		background-color: #fff;
+		border-radius: 0 0 0 0;
+	}
+	#nav ul li ul li:hover a{
+		text-shadow: 1px 1px 2px #5f5f5f;
+	}
+
+	/*时间显示*/
+	#timezone{
+		margin-top: 12px;
+		right: 0;
+		font-weight: bold;
+	}
+	#timezone span{
+		padding-left: 5px;
+	}
+
+	/*myLogo*/ 
+	#mylogo{
+		width: 120px;
+		height: 120px;
+		text-align: center;
+		float: right;
+		transition: all 0.5s ease-in-out;
+		position: absolute;
+		right: 0;
+	}
+	#mylogo img{
+		height: 25px;
+		width: 80px;
+		margin-top: 10px;
+		box-sizing: content-box;
+	}
+	#mylogo:hover{
+		background-color: #2EBE21 !important;
+		transform: rotate(15deg);
+	}
+
+	/*banner stylesheet*/ 
+	#banner{
 		width: 100%;
+		// height: 600px;
 		padding: 0;
-		margin: 0;
+		padding-top: 50px;
+		margin: auto;
+		margin-top:50px;
+		background-size: 15em;
+		background-color: #2EBE21;
+		text-align: center;
+		position: relative;
 	}
-	#mylogo, #timezone{
-		display: none;
+	#selfile{
+		height: 150px;
+		width: 150px;
+		margin: auto;
+		margin-top: 75px;
+		position: relative;
+		z-index: 333;
 	}
-	/*iconBar*/
-	#iconBar{
-	}
-	#boxes{
+	#selfile img{
+		height: 100%;
 		width: 100%;
+		border-radius: 50%;
+		transition: all 0.75s ease-in-out;
+	}
+	#selfile img:hover{
+		border-color: rgba(255, 252, 0, 0.8);
+		box-shadow: 2px 2px 10px #2f2f2f, -2px -2px 10px #2f2f2f;
+		cursor: pointer;
+		transform: rotate(360deg);
+	}
+	#forButton{
+		width: 100%;
+		margin: 0;
+		height: 75px;
+		margin-top: 75px;
+	}
+	#forButton a{
+		text-decoration: none;
+	}
+	#button{
+		width: 180px;
+		height: 55px;
+		margin: auto;
+		padding: 10px;
+		border: none;
+		border-radius: 50px;
+		background-color: #fff;
+		color: #000 !important;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 2em;
+		transition: all 0.7s ease-in-out;
+	}
+	#button:hover{
+		box-shadow: 1px 1px 20px #000;
+		cursor: pointer;
+		color: #2EBE21 !important;
+	}
+
+	/*tooptip 提示窗口*/
+	#tooltip{
+		height: 120px;
+		width: 180px;
+		position: absolute;
+		background-color: #fff;
+		border: 2px solid #000;
+		border-radius: 60px/75px;
+		left: 180px;
+		top: -5px;
+		display: none;
+		filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
+		border: 5px solid #2f2f2f;
+		text-shadow: none;
+		box-sizing: border-box;
+		font-weight: normal;
+		font-size: 18px;
+		text-align: left;
+		clear: both;
+		padding: 10px;
+		line-height: 1em;
+	}
+	#tooltip p{
+		margin: 10px;
+		color: #000;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	#tooltipbar{
+		display: inline-block;
+		position: absolute;
+		left: -20px;
+		top: 50%;
+		margin-top: -10px;
+		border: 10px solid;
+		border-color: transparent  #2f2f2f transparent transparent;
+	}
+	#tooltipbar span{
+		color: #fffc00;
+		background-color: #000;
+		border-radius: 5px;
+	}
+
+	/*scrollDown*/ 
+	#scrollDown{
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		margin-left: -75px;
+	}
+	#scrollDown img{
+		height: 150px;
+		width: 150px;
+		
+	}
+	#scrollDown img:hover{
+		transtion: all 0.75s ease-in-out;
+	}
+
+	/*回顶部锚点*/ 
+	#toTop{
+		position: fixed;
+		bottom: 30px;
+		right: 10px;
+		width: 55px;
+		height: 55px;
+		visibility: hidden;
+		z-index: 999;
+	}
+	#toTop img{
+		height: 100%;
+		width: 100%;
+	}
+
+	/*页脚*/
+	#footer{
+		clear: both;
+		background-color: #000;
+		position:relative;
+		top: 615px;
+		margin-bottom: 0;
+		padding-bottom: 10px;
+	}
+
+	/*spig*/
+	.spig {
+		display:block;
+		width:170px;
+		height:190px;
+		position:absolute;
+		top: 150px;
+		left:10px;
+		z-index:9999;
+	}
+	#message{
+		color :#fff;
+		border: 1px solid #c4c4c4;
+		background:#2f2f2f;
+		opacity: 0.6;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:10px;
+		min-height:1em;
+		padding:5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		top:-60px;
+		position:absolute;
+		text-align:center;
+		width:auto !important;
+		z-index:999;
+		border-color:#2f2f2f;
+		-moz-box-shadow:1px 1px 5px #2f2f2f;
+		-webkit-box-shadow:0 0 5px #2f2f2f;
+		box-shadow:1px 1px 5px #2f2f2f;
+		outline:none;
+	}
+
+	.mumu{
+		width:170px;height:190px;cursor: move;
+		background:url('../images/bart2.png') no-repeat;
+		background-size: 8.5em;
+	}
+
+
+	/***********************************************************************/ 
+	/*其他通用样式*/ 
+	/***********************************************************************/ 
+	.mainItem{
+		padding: 30px 0;
+	}
+
+	/* h1标题 */
+	h1.title{
+		clear: both;
+		font-size: 55px;
+		margin: 30px;
+		padding: 10px 0;
+		color: #000;
+	}
+	.learnMore{
+		clear: both;
+		text-align: center;
+		margin: 50px auto;
+	}
+	.learnMoreBtn{
+		width: 150px;
+		height: 55px;
+		background-color: transparent;
+		color: #000;
+		outline: none;
+		border: none;
+		border: 3px solid #000;
+		border-radius: 30px;
+		padding: 10px 30px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.learnMoreBtn:hover{
+		box-shadow: 2px 2px 10px #2f2f2f;
 	}
 
 }
 
-@media screen and(max-device-width: 1024px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-device-width: 1024px){
 	#navigator{
-		// border: 1px solid red;
 	}
 	#mylogo, #timezone{
+		display: none;
+	}
+	#nav{
+		// border: 1px solid red;
+	}
+	#nav ul li{
+		padding: 0px 5px;
+		height: 100%;
+		text-align: center;
+	}
+	#nav ul li:nth-child(9), #nav ul li:nth-child(10){
 		display: none;
 	}
 } 
@@ -359,10 +669,303 @@ and (max-device-width : 1024px)
 and (min-device-width: 1024px)
 and (max-device-width: 1366px)
 and (orientation : portrait){  
+
+
+	/*导航栏样式*/ 
 	#navigator{
-		// border: 2px solid red;
+
 	}
-	#mylogo, #timezone{
+	#nav{
+		border: 1px solid red;
+	}
+	#nav ul li{
+		padding: 0px 5px;
+		height: 100%;
+		text-align: center;
+	}
+	#nav ul li a{
+		text-decoration: none;
+		color: #000;
+		font-size: 1.2em;
+		font-weight: bold;
+		transition: all 0.5s ease-in-out;
+	}
+	#nav ul li ul li a{
+		color: #000 !important;
+		font-size: 1.1em;
+	}
+	#nav ul li ul{
+		left: -10px;
+	}
+	#nav ul li:hover a{
+		color: #fff;
+		background-color: #2EBE21;
+	}
+	#nav ul li:hover ul li a, #nav ul li:hover ul li{
+		color: #000 !important;
+		background-color: #fff;
+		border-radius: 0 0 0 0;
+	}
+	#nav ul li ul li:hover a{
+		text-shadow: 1px 1px 2px #5f5f5f;
+	}
+
+	/*时间显示*/
+	#timezone{
+		margin-top: 12px;
+		right: 0;
+		font-weight: bold;
+	}
+	#timezone span{
+		padding-left: 5px;
+	}
+
+	/*myLogo*/ 
+	#mylogo{
+		width: 120px;
+		height: 120px;
+		text-align: center;
+		float: right;
+		transition: all 0.5s ease-in-out;
+		position: absolute;
+		right: 0;
+	}
+	#mylogo img{
+		height: 25px;
+		width: 80px;
+		margin-top: 10px;
+		box-sizing: content-box;
+	}
+	#mylogo:hover{
+		background-color: #2EBE21 !important;
+		transform: rotate(15deg);
+	}
+
+	/*banner stylesheet*/ 
+	#banner{
+		width: 100%;
+		// height: 600px;
+		padding: 0;
+		padding-top: 50px;
+		margin: auto;
+		margin-top:50px;
+		background-size: 15em;
+		background-color: #2EBE21;
+		text-align: center;
+		position: relative;
+	}
+	#selfile{
+		height: 150px;
+		width: 150px;
+		margin: auto;
+		margin-top: 75px;
+		position: relative;
+		z-index: 333;
+	}
+	#selfile img{
+		height: 100%;
+		width: 100%;
+		border-radius: 50%;
+		transition: all 0.75s ease-in-out;
+	}
+	#selfile img:hover{
+		border-color: rgba(255, 252, 0, 0.8);
+		box-shadow: 2px 2px 10px #2f2f2f, -2px -2px 10px #2f2f2f;
+		cursor: pointer;
+		transform: rotate(360deg);
+	}
+	#forButton{
+		width: 100%;
+		margin: 0;
+		height: 75px;
+		margin-top: 75px;
+	}
+	#forButton a{
+		text-decoration: none;
+	}
+	#button{
+		width: 180px;
+		height: 55px;
+		margin: auto;
+		padding: 10px;
+		border: none;
+		border-radius: 50px;
+		background-color: #fff;
+		color: #000 !important;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 2em;
+		transition: all 0.7s ease-in-out;
+	}
+	#button:hover{
+		box-shadow: 1px 1px 20px #000;
+		cursor: pointer;
+		color: #2EBE21 !important;
+	}
+
+	/*tooptip 提示窗口*/
+	#tooltip{
+		height: 120px;
+		width: 180px;
+		position: absolute;
+		background-color: #fff;
+		border: 2px solid #000;
+		border-radius: 60px/75px;
+		left: 180px;
+		top: -5px;
 		display: none;
+		filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
+		border: 5px solid #2f2f2f;
+		text-shadow: none;
+		box-sizing: border-box;
+		font-weight: normal;
+		font-size: 18px;
+		text-align: left;
+		clear: both;
+		padding: 10px;
+		line-height: 1em;
 	}
+	#tooltip p{
+		margin: 10px;
+		color: #000;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	#tooltipbar{
+		display: inline-block;
+		position: absolute;
+		left: -20px;
+		top: 50%;
+		margin-top: -10px;
+		border: 10px solid;
+		border-color: transparent  #2f2f2f transparent transparent;
+	}
+	#tooltipbar span{
+		color: #fffc00;
+		background-color: #000;
+		border-radius: 5px;
+	}
+
+	/*scrollDown*/ 
+	#scrollDown{
+		position: absolute;
+		bottom: 100px;
+		left: 50%;
+		margin-left: -75px;
+	}
+	#scrollDown img{
+		height: 150px;
+		width: 150px;
+		
+	}
+	#scrollDown img:hover{
+		transtion: all 0.75s ease-in-out;
+	}
+
+	/*回顶部锚点*/ 
+	#toTop{
+		position: fixed;
+		bottom: 30px;
+		right: 10px;
+		width: 55px;
+		height: 55px;
+		visibility: hidden;
+		z-index: 999;
+	}
+	#toTop img{
+		height: 100%;
+		width: 100%;
+	}
+
+	/*页脚*/
+	#footer{
+		clear: both;
+		background-color: #000;
+		position:relative;
+		top: 615px;
+		margin-bottom: 0;
+		padding-bottom: 10px;
+	}
+
+	/*spig*/
+	.spig {
+		display:block;
+		width:170px;
+		height:190px;
+		position:absolute;
+		top: 150px;
+		left:10px;
+		z-index:9999;
+	}
+	#message{
+		color :#fff;
+		border: 1px solid #c4c4c4;
+		background:#2f2f2f;
+		opacity: 0.6;
+		-moz-border-radius:10px;
+		-webkit-border-radius:10px;
+		border-radius:10px;
+		min-height:1em;
+		padding:5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		top:-60px;
+		position:absolute;
+		text-align:center;
+		width:auto !important;
+		z-index:999;
+		border-color:#2f2f2f;
+		-moz-box-shadow:1px 1px 5px #2f2f2f;
+		-webkit-box-shadow:0 0 5px #2f2f2f;
+		box-shadow:1px 1px 5px #2f2f2f;
+		outline:none;
+	}
+
+	.mumu{
+		width:170px;height:190px;cursor: move;
+		background:url('../images/bart2.png') no-repeat;
+		background-size: 8.5em;
+	}
+
+
+	/***********************************************************************/ 
+	/*其他通用样式*/ 
+	/***********************************************************************/ 
+	.mainItem{
+		padding: 30px 0;
+	}
+
+	/* h1标题 */
+	h1.title{
+		clear: both;
+		font-size: 55px;
+		margin: 30px;
+		padding: 10px 0;
+		color: #000;
+	}
+	.learnMore{
+		clear: both;
+		text-align: center;
+		margin: 50px auto;
+	}
+	.learnMoreBtn{
+		width: 150px;
+		height: 55px;
+		background-color: transparent;
+		color: #000;
+		outline: none;
+		border: none;
+		border: 3px solid #000;
+		border-radius: 30px;
+		padding: 10px 30px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.learnMoreBtn:hover{
+		box-shadow: 2px 2px 10px #2f2f2f;
+	}
+
+
+	
 }  
