@@ -10,37 +10,42 @@ var demo = new Vue({
             {
                 "title": "HTML: 布局",
                 "url": "./contains/FRONTEND/html5.html",
-                "image": "./assets/images/html.ico"
+                "image": "./assets/images/html.png"
             },
             {
                 "title": "css",
                 "url": "./contains/FRONTEND/css.html",
-                "image": "./assets/images/css.ico"
+                "image": "./assets/images/css.png"
             },
             {
                 "title": "javaScript",
                 "url": "./contains/FRONTEND/javascript.html",
-                "image": "./assets/images/javascript.ico"
+                "image": "./assets/images/js.png"
             },
             {
-                "title": "Quick Tip: The Easiest Way To Make Responsive Headers",
+                "title": "Bootstrap",
                 "url": "http://tutorialzine.com/2016/02/quick-tip-easiest-way-to-make-responsive-headers/",
-                "image": "./assets/images/bootstrap.ico"
+                "image": "./assets/images/bootstrap.png"
             },
             {
-                "title": "Learn SQL In 20 Minutes",
+                "title": "PHP",
+                "url": "http://tutorialzine.com/2015/12/creating-your-first-desktop-app-with-html-js-and-electron/",
+                "image": "./assets/images/php.png"
+            },
+            {
+                "title": "ps",
                 "url": "http://tutorialzine.com/2016/01/learn-sql-in-20-minutes/",
-                "image": "./assets/images/jquery.ico"
+                "image": "./assets/images/ps.png"
             },
             {
-                "title": "Creating Your First Desktop App With HTML, JS and Electron",
+                "title": "Dribbble",
                 "url": "http://tutorialzine.com/2015/12/creating-your-first-desktop-app-with-html-js-and-electron/",
-                "image": "./assets/images/php.ico"
+                "image": "./assets/images/dribbble.png"
             },
             {
-                "title": "Creating Your First Desktop App With HTML, JS and Electron",
-                "url": "http://tutorialzine.com/2015/12/creating-your-first-desktop-app-with-html-js-and-electron/",
-                "image": "#"
+                "title": "jQuery",
+                "url": "http://tutorialzine.com/2016/01/learn-sql-in-20-minutes/",
+                "image": "./assets/images/jq.png"
             }
         ]
     },

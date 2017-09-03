@@ -26,12 +26,7 @@
     <link rel="canonical" href="//wangbin.ink/">
 	<link rel="shortcut icon" href="./assets/images/myLogo2.png">
 	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/projectDisplay.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/skillDisplay.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/gamesDisplay.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/toolsDisplay.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/processDisplay.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/footerAssets.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/display.css">
 	
 	<!-- bootstrap -->
 	<script type="text/javascript" src="./assets/jquery/jquery-3.1.1.min.js"></script>
@@ -52,14 +47,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/jChart/css/jquery.jqRangeSlider.css" />
     <link rel="stylesheet" type="text/css" href="./assets/jChart/themes/smoothness/jquery-ui-1.8.21.css" /> 
 
-    <!-- tools -->
-	<link rel="stylesheet" type="text/css" href="./assets/tools/tool1.css">
-
-	<!-- leaveMessage -->
-	<link rel="stylesheet" type="text/css" href="./assets/leaveMessage/leaveMessage.css">
 </head>
 
-<body onload="showTime()">
+<body>
 <!-- 导航栏 -->
 <div id="navigator" class="navbar navbar-default navbar-fixed-top row col-lg-12 col-md-12 col-sm-12 col-xs-12" role="navigation">
 	<div class="navbar-header">
@@ -178,16 +168,13 @@
 			<p>中山大学 计算机系</p>
 			<p>求职意向： 前端实习生</p>
 			<p>详细信息请查看<span style="
-				color: #fffc00;
+				color: #2ebe21;
 				background-color: #000;
 				border-radius: 5px; 
-				padding: 3px;">简历</span></a>
+				padding:1px 5px;">简历</span></a>
 			</p>
 		</div>
 	</div>
-	<!-- <div id="myName">
-		<p>王斌</p>
-	</div> -->
 	<div id="forButton">
 		<a href="./contains/RESUME/resume.html"><div id="button">查看简历</div></a>
 	</div>
@@ -206,7 +193,7 @@
 
 <!-- 回顶部锚点 -->
 <div id="toTop">
-	<a href="" target="_top">
+	<a href="#banner" target="_top">
 		<img src="./assets/images/toTop.png">
 	</a>
 </div>
@@ -369,7 +356,6 @@
 		            <p>{{article.title}}</p>
 		        </li>
 		    </ul>
-
 		</form>
 	</div>
 
@@ -405,10 +391,11 @@
 	<div id="toolsDisplay" class="mainItem section">
 		<h1 class="title">小工具</h1>
 		<div id="toolContainer">
+			
 			<!-- 标签式导航栏 -->
 			<ul id="myTab" class="nav nav-tabs">
 				<li class="active">
-					<a href="#tool_1" data-toggle="tab">小工具1</a>
+					<a href="#tool_1" data-toggle="tab">任务计划表</a>
 				</li>
 				<li>
 					<a href="#tool_2" data-toggle="tab">小工具2</a>
@@ -425,9 +412,6 @@
 			<div id="myTabContent" class="tab-content">
 				<div class="tab-pane fade in active" id="tool_1">
 					<div class='page-top'>
-						<div class="page-content">
-						    <h2>任务计划表</h2>
-						</div>
 						<div class="main">
 							<h3>添加任务:</h3>
 							<input type="text" placeholder='提示：+回车即可添加任务' class='task-input' v-model='todo' @keyup.enter='addTodo' />
@@ -480,7 +464,6 @@
 		<div class="learnMore">
 			<button class="learnMoreBtn">体验更多</button>
 		</div>
-	<!-- </div> -->
 
 	<!-- jChart 学习进阶 -->
 	<div class="container mainItem" id="processDisplay">
@@ -490,16 +473,14 @@
 		    <div class="chartItem">
 		    	<img src="./assets/images/chart2.JPG">
 		    </div>
-		    <div class="chartItem">
+		   <!--  <div class="chartItem">
 		    	<img src="./assets/images/chart3.gif">
-		    </div>
+		    </div> -->
 	    </div>
 	    <div class="learnMore">
 	    	<button class="learnMoreBtn">了解更多</button>
 	    </div>
 	</div>
-
-
 
 	<!-- 相册 -->
 	<div id="album" class="mainItem section">
@@ -531,9 +512,7 @@
 <!-- ###################################################################################### -->
 <!-- 页脚 -->
 <!-- ###################################################################################### -->
-
 <div id="footer">
-	
 	<!-- 留言板 -->
 	<div id="leaveMessage" class="mainItem section">
 		<iframe src="./contains/LEAVE_MESSAGE/index.html"></iframe>
@@ -585,7 +564,7 @@
 		</div>
 		<div class="linkItem"></div>
 	</div>
-	<!-- <hr> -->
+	<!-- copyright -->
 	<div id="copyRightZone">
 		<p><script type="text/javascript" src="./assets/js/visitCount.js"></script></p>
 		<p>Powered By Wangbin &copy; 2017</p>
@@ -597,7 +576,6 @@
 <!-- ###################################################################################### -->
 <!-- scripts -->
 <!-- ###################################################################################### -->
-
 <!-- index scripts-->
 <script type="text/javascript" src="./assets/js/index.js"></script>
 
@@ -628,7 +606,5 @@
 <!-- leaveMessage scripts-->
 <script type="text/javascript" src="./assets/leaveMessage/vue.js"></script>
 <script type="text/javascript" src="./assets/leaveMessage/leaveMessage.js"></script>
-
-
 </body>
 </html>
