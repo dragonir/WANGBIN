@@ -4,6 +4,26 @@
 	<title>王斌的小站</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="from" content="wangbin.ink">
+	<meta name="author" content="王斌, wangbin, WANGBIN, 王斌的小站">
+	<meta name="copyright" content="wangbin, 王斌, WANGBIN">
+	<meta name="designer" content="wangbin, WANGBIN, 王斌">
+	<meta name="editor" content="wangbin, WANGBIN, 王斌">
+	<meta name="front-end technicist" content="wangbin, WANGBIN, 王斌">
+	<meta name="keywords" content="王斌的小站,王斌,项目展示,学习进程,小游戏,小工具,摄影作品,个人简历,留言">
+	<meta name="description" content="王斌的个人网站，用于展示自己的作品和设计，同时也经常更新个人博客，欢迎访问">
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--[if lt IE 9]>
+    <script src="https://nie.res.netease.com/comm/html5/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 7]>
+    <div style="position:absolute;left:0;top:0;width:100%;height:50px;background:rgb(255,255,233);color:rgb(30,84,148);border-bottom:1px solid rgb(230,230,198);text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+    <![endif]-->
+
+    <link rel="canonical" href="//wangbin.ink/">
 	<link rel="shortcut icon" href="./assets/images/myLogo2.png">
 	<link rel="stylesheet" type="text/css" href="./assets/css/index.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/projectDisplay.css">
@@ -516,76 +536,9 @@
 	
 	<!-- 留言板 -->
 	<div id="leaveMessage" class="mainItem section">
-		<h1>留言板</h1>
-		<div class="container">
-			<form rol="form">
-				<div class="form-group">
-					<label for="username">
-					</label>
-						<input id="username" v-model="username" placeholder="输入用户名" class="form-control" type="text">
-				</div>
-				<div class="form-group">
-					<label for="age">
-					</label>
-						<input id="age" v-model="age" placeholder="输入留言信息" class="form-control" type="text">
-
-				</div>
-				<div class="form-group">
-					<input type="button" value="添加" class="btn btn-primary" v-on:click="add()">
-					<input type="reset" value="重置" class="btn btn-danger">
-				</div>
-			</form>
-
-
-			<table class="table  table-hover">
-				<caption class="h5 text-info">留言信息</caption>
-				<tr class="text-success">
-					<th class="text-center">序号</th>
-					<th class="text-center">名字</th>
-					<th class="text-center">年龄</th>
-					<th class="text-center">操作</th>
-				</tr>
-				<tr class="text-center" v-for="item in myData">
-					<td>{{$index+1}}</td>
-					<td>{{item.name}}</td>
-					<td>{{item.age}}</td>
-					<td><input class="btn btn-primary btn-sm" data-toggle="modal" data-target="#layer" type="button" value="删除" v-on:click="nowIndex=$index"></td>
-				</tr>
-				<tr class="text-right" v-show="myData.length != 0">
-					<td colspan="4">
-						<button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#layer" v-on:click="nowIndex='-1'">删除全部</button>
-					</td>
-				</tr>
-				<tr v-show="myData.length==0">
-					<td colspan="4" class="text-center text-muted">
-						<p>暂无数据...</p>
-					</td>
-				</tr>
-			</table>
-
-			<!-- 模态框 弹出框 -->
-			<div role="dialog" class="modal fade" id="layer">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">
-								<span>&times;</span>
-							</button>
-							<h4 class="modal-title">确认删除吗？</h4>
-						</div>
-						<div class="modal-body text-right">
-							<button class="btn btn-primary btn-sm" data-dismiss="modal">取消</button>
-							<button class="btn btn-danger btn-sm" data-dismiss="modal" v-on:click="deleteMsg(nowIndex)">确认</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
+		<iframe src="./contains/LEAVE_MESSAGE/index.html"></iframe>
 	</div>
 	
-
-
 	<!-- 链接图标 -->
 	<div id="linkZone">
 		<div class="linkItem">
@@ -650,17 +603,7 @@
 
 <!-- footer.php -->
 <script type="text/javascript" src="./assets/js/spig.js"></script>
-<script type="text/javascript">
-	<?php 
-		if(is_home()) echo 'var isindex=true;var title="";';
-		else echo 'var isindex=false;var title="',  get_the_title(),'";'; 
-	?>
-	<?php 
-		if((($display_name = wp_get_current_user()->display_name) != null)) echo 'var visitor="',$display_name,'";'; 
-		else if(isset($_COOKIE['comment_author_'.COOKIEHASH])) echo 'var visitor="',$_COOKIE['comment_author_'.COOKIEHASH],'";';
-		else echo 'var visitor="游客";';echo "n"; 
-	?>
-</script>
+<script type="text/javascript" src="./assets/js/spig.php.js"></script>
 
 <!-- skillDisplay scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
