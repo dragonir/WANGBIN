@@ -52,13 +52,14 @@ $(document).ready(function(){
 				background: '#fff',
 				boxShadow: '0px 1px 5px #000'
 			});
+			$("#nav li a").css('color', '#000');
 			if($(window).scrollTop() == 0){
 				$("#nav").css({
-					background: '#2EBE21',
-					boxShadow: 'none'
+					background: 'transparent',
+					boxShadow: 'none',
 				});
 				$("#toTop").css('visibility', 'hidden');
-
+				$("#nav li a").css('color', '#fff');
 			}
 		});
 	})
@@ -78,7 +79,7 @@ $(document).ready(function(){
 
 	// banner 高度查询
 	$(function(){
-		var windowHeight = $(window).height() - 15;
+		var windowHeight = $(window).height()+10;
 		$("#banner").height(windowHeight);
 	});
 	
@@ -111,7 +112,6 @@ function showTime(){
 	date.innerHTML = year +"-"+ month + "-" + today;
 	
 }
-
 
 function timeFormat(i){
 	if(i<10){

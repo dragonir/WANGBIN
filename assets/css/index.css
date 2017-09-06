@@ -14,10 +14,13 @@ body{
 	border: none;
 	font-family: "微软雅黑";
 	width: 100%;
+	background-color: transparent;
 }
 #nav{
 	width: 100%;
-	background-color: #2EBE21;
+	// background-color: #2EBE21;
+	background-color: transparent;
+
 	margin: auto;
 	position: fixed;
 	top: 0;
@@ -32,21 +35,21 @@ body{
 }
 #nav ul li a{
 	text-decoration: none;
-	color: #000;
-	font-size: 1.2em;
-	font-weight: bold;
+	color: #fff;
+	font-size: 1.3em;
+	font-weight: normal;
 	transition: all 0.5s ease-in-out;
+	text-shadow: 1px 1px 1px #2d2d2d;
 }
 #nav ul li ul li a{
-	color: #000 !important;
+	color: #fff !important;
 	font-size: 1.1em;
 }
 #nav ul li ul{
 	left: -10px;
 }
 #nav ul li:hover a{
-	color: #fff;
-	background-color: #2EBE21;
+	opacity: 0.6;
 }
 #nav ul li:hover ul li a, #nav ul li:hover ul li{
 	color: #000 !important;
@@ -84,7 +87,6 @@ body{
 	box-sizing: content-box;
 }
 #mylogo:hover{
-	background-color: #2EBE21 !important;
 	transform: rotate(15deg);
 }
 
@@ -95,17 +97,21 @@ body{
 	padding-top: 50px;
 	margin: auto;
 	margin-top:50px;
-	background-size: 15em;
-	background-color: #2EBE21;
-	background: linear-gradient( #2EBE21, #86ff26);
+	margin-top: -55px;
+	// background-size: 15em;
+	// background-color: #2EBE21;
+	// background: linear-gradient( #2EBE21, #86ff26);
+	background-image: url('../images/bannerImg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	text-align: center;
 	position: relative;
 }
 #selfile{
-	height: 150px;
-	width: 150px;
+	height: 130px;
+	width: 130px;
 	margin: auto;
-	margin-top: 75px;
+	margin-top: 200px;
 	position: relative;
 	z-index: 333;
 }
@@ -131,23 +137,25 @@ body{
 	text-decoration: none;
 }
 #button{
-	width: 180px;
+	width: 150px;
 	height: 55px;
 	margin: auto;
-	padding: 10px;
-	border: none;
+	border: 2px solid #fff;
 	border-radius: 50px;
-	background-color: #fff;
-	color: #000 !important;
+	background-color: inherit;
+	color: #fff !important;
 	font-size: 18px;
-	font-weight: bold;
-	line-height: 2em;
-	transition: all 0.7s ease-in-out;
+	line-height: 55px;
+	text-shadow: 1px 1px 2px #2d2d2d;
+	transition: all 0.5s ease-in-out;
+	box-shadow: 1px 1px 20px #000;
 }
 #button:hover{
 	box-shadow: 1px 1px 20px #000;
 	cursor: pointer;
-	color: #2EBE21 !important;
+	background-color: #fff;
+	opacity: 0.7;
+	text-shadow: 1px 1px #000, 2px 2px #000;
 }
 
 /*tooptip 提示窗口*/
@@ -200,23 +208,23 @@ body{
 	margin: auto;
 	margin-top: 20px;
 	border: 1px solid green inset;
-
 }
 
 /*scrollDown*/ 
 #scrollDown{
 	position: absolute;
-	bottom: 100px;
+	bottom: 10px;
 	left: 50%;
-	margin-left: -75px;
+	margin-left: -60px;
+	opacity: 0.5;
 }
 #scrollDown img{
-	height: 150px;
-	width: 150px;
+	height: 120px;
+	width: 120px;
 	transtion: all 1s ease-in-out;
 }
 #scrollDown img:hover{
-	opacity: 0.5;
+	opacity: 0.95;
 }
 
 /*回顶部锚点*/ 
@@ -309,10 +317,12 @@ body{
 	background-image: -webkit-gradient(linear,
 									   50% 0%,
 									   75% 84%,
-									   from(#2EBE21),
-									   to(#86ff26),
-									   color-stop(.5,#86ff26))
+									   from(#0095ff),
+									   to(#00e5ff),
+									   color-stop(.5,#aaeefe))
 }
+
+
 
 
 /***********************************************************************/ 

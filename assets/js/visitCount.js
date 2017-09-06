@@ -35,7 +35,6 @@ function ResetCounts(name){
 }
 
  
-
 var expdate=new Date();
 var visits;//以下设置COOKIES时间为1年,自己随便设置该时间..
 expdate.setTime(expdate.getTime()+(24*60*60*1000*365));
