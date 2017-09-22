@@ -3,9 +3,9 @@
 <head>
     <title>亦可赛艇消消消</title>      
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="">
+    <meta name="keywords" content="亦可赛艇消消消">
+    <meta name="description" content="亦可赛艇消消消">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
     <meta name="robots" content="index,follow"> 
@@ -20,6 +20,8 @@
         } 
         body{ 
             font: 12px/20px Palatino; 
+            width: 100%;
+            margin: auto;
         }
     </style>
     <script type="text/javascript">
@@ -35,24 +37,10 @@
 <script type="text/javascript" src="SeaTreasureMatch_files/game.min.js"></script>
 
 <script>
-    function dp_Ranking() {
-        document.location.href = "http://www.yxkfw.com/forum.php";
-    }
-</script>
-
-<div id="share" style="display: none">
-		<img width="100%" src="bitmap/share.png" style="position: fixed; z-index: 9999; top: 0; left: 0; display: " ontouchstart="document.getElementById(&#39;share&#39;).style.display=&#39;none&#39;;">
-</div>
-
-<script>
-    var mebtnopenurl = "http://mp.weixin.qq.com/s?__biz=MzA5MzU2MjU3Mw==&mid=218850712&idx=1&sn=53bfed8c43391843a6268706ccda8eb2&scene=1&key=1936e2bc22c2ceb5b8b45ee0ef26a5cc01639c3411c2cfd0bd74efb6f0a180003056abc9700e348732a0a5c963462d2f&ascene=1&uin=MjgxMTA4MTUwMQ%3D%3D&devicetype=Windows+7&version=61000721&pass_ticket=w4kQ%2FSFhaY2mmOE87ChVgbTRWP%2BctOhqXukbldnl%2FXb4%2BOxgCyIxSdzUjax%2FUmHK";
     var tit = "";
     var DFW = {
         appId: "",
-        TLImg: "http://www.51tingweikeji.com/youxi/icon/kaixinlian.jpg",
-        url: "http://www.51tingweikeji.com/youxi/games/kaixinlian/",
         title: "亦可赛艇消消消",
-        desc: "我消，我消，我消...！"
     };
     var onBridgeReady = function () {
         WeixinJSBridge.on('menu:share:appmessage', function (argv) {
@@ -93,7 +81,6 @@
         window.DFW.title = document.title;
     }
     function dp_submitScore(level,score) {
-        //alert("你获得" + score + "分");
         if (score > 5000) {
             if (confirm("你获得了" + score + " 要不要通知下小伙伴们呢？")) {
                 do_share(score);
@@ -101,9 +88,5 @@
         }
     }
 </script>
-
-<div style="display: none;">
-    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=36313548" charset="UTF-8"></script>
-</div>
 </body>
 </html>
