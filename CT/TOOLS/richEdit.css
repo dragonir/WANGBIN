@@ -9,13 +9,10 @@ body{
 	width: 100%;
 	margin: auto;
 	margin-top: 20px;
-	// background-image: url('../../assets/images/bg5.jpg');
 	background-color: #82cf55;
 	border-radius: 20px;
 	height: 700px;
 	margin-bottom: 25px;
-	// border:  2px solid #aaaaaa;
-	// box-shadow: 5px 5px 30px #2f2f2f inset;
 }
 
 #proface{
