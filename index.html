@@ -14,7 +14,8 @@
 	<meta name="description" content="王斌的个人网站，用于展示自己的作品和设计，同时也经常更新个人博客，欢迎访问">
 	<meta name="renderer" content="webkit|ie-comp|ie-stand">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+	
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="https://nie.res.netease.com/comm/html5/html5shiv.js"></script>
     <![endif]-->
@@ -38,14 +39,10 @@
   	<link rel="stylesheet" type="text/css" href="./assets/grid/css/grid.css">
 
   	<!-- album stylesheet-->
-    <link href="./assets/album_assets/lib/slider.min.css" rel="stylesheet" type="text/css" /> 
-    <link rel="stylesheet" type="text/css" href="./assets/album_assets/css/style.css" />	
+	<link href="./assets/bxslider/css/jquery.bxslider.css" rel="stylesheet">
+	<script type="text/javascript" src="./assets/bxslider/js/jquery.bxslider.js"></script>
+	
 
-  	<!-- jchart -->
-  	<link rel="stylesheet" type="text/css" href="./assets/jChart/css/jchart.css">
-  	<link rel="stylesheet" type="text/css" href="./assets/jChart/css/jquery.jqChart.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/jChart/css/jquery.jqRangeSlider.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/jChart/themes/smoothness/jquery-ui-1.8.21.css" /> 
 
 </head>
 
@@ -69,68 +66,68 @@
 			<li><a href="#skillDisplay">掌握技能</a></li>
 			<li><a href="#gamesDisplay">小游戏</a></li>
 			<li><a href="#toolsDisplay">小工具</a></li>
-			<li><a href="#processDisplay">学习进阶</a></li>
+			<li><a href="#processDisplay">前端收集</a></li>
 			<li><a href="#album">摄影作品</a></li>
 			<li><a href="#footer">关于</a></li>
 			
 			<li class="dropdown" id="dropdown1">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习  <b class="caret"></b></span></a>
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="menu1">
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/html5.html">HTML5</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/CSS3.html">CSS3</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/JavaScript.html">JavaScript</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/jQuery/">jQuery</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/Bootstrap.html">Bootstrap</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">AngularJS</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">LESS</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">SASS</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">JSON</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">JSP</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">ASP.net</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">VUE.js</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">Color</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">PHP</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/font-awesome.html">Font-Awesome</a></li>
-					<li role="presentation"><a role="menuitem" tabindex="-1" href="./CT/FRONTEND/">ICONS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/html5.html">HTML5</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/CSS3.html">CSS3</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/JavaScript.html">JavaScript</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/jQuery/">jQuery</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/Bootstrap.html">Bootstrap</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">AngularJS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">LESS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">SASS</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">JSON</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">JSP</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">ASP.net</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">VUE.js</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">Color</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">PHP</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/font-awesome.html">Font-Awesome</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="./src/FRONTEND/">ICONS</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="">SVG</a></li>
 				</ul>
 			</li>
 
-			<li class="dropdown" id="dropdown2">
+			<!-- <li class="dropdown" id="dropdown2">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">前端收集 <b class="caret"></b></a>
 				<ul class="dropdown-menu" id="menu2">
-					<li><a href="./CT/COLLECTIONS/maze/index.html">迷宫</a></li>
-					<li><a href="./CT/COLLECTIONS/card-dealer/index.html">扑克牌</a></li>
-					<li><a href="./CT/COLLECTIONS/dimple/index.html">分形</a></li>
-					<li><a href="./CT/COLLECTIONS/emoji/index.html">emoji</a></li>
-					<li><a href="./CT/COLLECTIONS/bootstrapCrystalButtons/index.html">水晶按钮</a></li>
-					<li><a href="./CT/COLLECTIONS/css3MatchesLoading/index.html">火柴燃烧加载</a></li>
-					<li><a href="./CT/COLLECTIONS/jqueryVerticalAccordionMenu/index.html">手风琴导航</a></li>
-					<li><a href="./CT/COLLECTIONS/css3RibbonText/index.html">丝带效果</a></li>
-					<li><a href="./CT/COLLECTIONS/css3Pokemon/index.html">神奇宝贝</a></li>
-					<li><a href="./CT/COLLECTIONS/css3YinyangTaichi/index.html">阴阳太极</a></li>
-					<li><a href="./CT/COLLECTIONS/jqueryCss3StampImage/index.html">照片墙</a></li>
-					<li><a href="./CT/COLLECTIONS/css3ImageTextPlayer/index.html">图片轮播</a></li>
-					<li><a href="./CT/COLLECTIONS/jqueryCircleImagePlayer/index.html">圆弧轮播</a></li>
-					<li><a href="./CT/COLLECTIONS/jqueryAvatarCut/index.html">图片裁切</a></li>
-					<li><a href="./CT/COLLECTIONS/waterFall/demo.html">瀑布流</a></li>
-					<li><a href="./CT/COLLECTIONS/typeWriter/index.html">模拟打字机</a></li>
+					<li><a href="./src/COLLECTIONS/maze/index.html">迷宫</a></li>
+					<li><a href="./src/COLLECTIONS/card-dealer/index.html">扑克牌</a></li>
+					<li><a href="./src/COLLECTIONS/dimple/index.html">分形</a></li>
+					<li><a href="./src/COLLECTIONS/emoji/index.html">emoji</a></li>
+					<li><a href="./src/COLLECTIONS/bootstrapCrystalButtons/index.html">水晶按钮</a></li>
+					<li><a href="./src/COLLECTIONS/css3MatchesLoading/index.html">火柴燃烧加载</a></li>
+					<li><a href="./src/COLLECTIONS/jqueryVerticalAccordionMenu/index.html">手风琴导航</a></li>
+					<li><a href="./src/COLLECTIONS/css3RibbonText/index.html">丝带效果</a></li>
+					<li><a href="./src/COLLECTIONS/css3Pokemon/index.html">神奇宝贝</a></li>
+					<li><a href="./src/COLLECTIONS/css3YinyangTaichi/index.html">阴阳太极</a></li>
+					<li><a href="./src/COLLECTIONS/jqueryCss3StampImage/index.html">照片墙</a></li>
+					<li><a href="./src/COLLECTIONS/css3ImageTextPlayer/index.html">图片轮播</a></li>
+					<li><a href="./src/COLLECTIONS/jqueryCircleImagePlayer/index.html">圆弧轮播</a></li>
+					<li><a href="./src/COLLECTIONS/jqueryAvatarCut/index.html">图片裁切</a></li>
+					<li><a href="./src/COLLECTIONS/waterFall/demo.html">瀑布流</a></li>
+					<li><a href="./src/COLLECTIONS/typeWriter/index.html">模拟打字机</a></li>
 				</ul>
-			</li>
+			</li> -->
 
 			<!-- <li class="dropdown" id="dropdown3">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">小工具 <b class="caret"></b></a>
 				<ul class="dropdown-menu" id="menu3">
-					<li><a href="./CT/TOOLS/richEdit.html">富文本编辑器</a></li>
-					<li><a href="./CT/TOOLS/wordCount.html">字数统计工具</a></li>
-					<li><a href="./CT/TOOLS/COLOR/color.html">Web安全色</a></li>
+					<li><a href="./src/TOOLS/richEdit.html">富文本编辑器</a></li>
+					<li><a href="./src/TOOLS/wordCount.html">字数统计工具</a></li>
+					<li><a href="./src/TOOLS/COLOR/color.html">Web安全色</a></li>
 				</ul>
 			</li> -->
 
 			<!-- <li class="dropdown" id="dropdown4">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">小游戏 <b class="caret"></b></a>
 				<ul class="dropdown-menu" id="menu4">
-					<li><a href="./CT/GAMES/TYPEWRITE/index.html">打字游戏</a></li>
+					<li><a href="./src/GAMES/TYPEWRITE/index.html">打字游戏</a></li>
 					<li><a href="#">黑白棋</a></li>
 					<li><a href="#">贪吃蛇</a></li>
 				</ul>
@@ -142,10 +139,10 @@
 					<li><a href="#">UI设计稿</a></li>
 					<li><a href="#">摄影集</a></li>
 					<li><a href="#">文章</a></li>
-					<li><a href="./CT/OTHERS/project1/index.html">project1</a></li>
-					<li><a href="./CT/myTemplates/1. Xpression/index.html">Xpression</a></li>
-					<li><a href="./CT/myTemplates/2. ANTI/index.html">ANTI</a></li>
-					<li><a href="./CT/myTemplates/3. PINK/index.html">PINK</a></li>
+					<li><a href="./src/OTHERS/project1/index.html">project1</a></li>
+					<li><a href="./src/myTemplates/1. Xpression/index.html">Xpression</a></li>
+					<li><a href="./src/myTemplates/2. ANTI/index.html">ANTI</a></li>
+					<li><a href="./src/myTemplates/3. PINK/index.html">PINK</a></li>
 
 				</ul>
 			</li> -->
@@ -162,7 +159,6 @@
 <!-- banner -->
 <div id="banner" class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 container">
 	<div id="selfile">
-		<!-- <img src="./assets/images/me1.jpg"> -->
 		<img src="./assets/images/me1.png">
 		<div id="tooltip">
 			<span id="tooltipbar"></span>
@@ -177,7 +173,7 @@
 		</div>
 	</div>
 	<div id="forButton">
-		<a href="./CT/RESUME/resume.html"><div id="button">查看简历</div></a>
+		<a href="./src/RESUME/resume.html"><div id="button">查看简历</div></a>
 	</div>
 	<div id="scrollDown">
 		<a href="#projectDisplay"><img src="./assets/images/scrollDown.gif" alt="scrollDown"></a>
@@ -209,7 +205,7 @@
 
 			<!-- box1 -->
 			<div class="box">
-				<a href="./CT/TRICELL/sourceCode/index.html">
+				<a href="./src/TRICELL/sourceCode/index.html">
 					<div class="images">
 						<img src="./assets/images/pro1.JPG">
 					</div>
@@ -222,8 +218,6 @@
 					<h4>TRICELL公司网站</h4>
 				</div>
 			</div>
-<!-- https://dragonir.github.io/FOX/ -->
-			<!-- box2 -->
 
 			<div class="box">
 				<a href="https://dragonir.github.io/FOX/">
@@ -244,7 +238,7 @@
 
 			<!-- box3 -->
 			<div class="box">
-				<a href="./CT/SYSU/sysu.html">
+				<a href="./src/SYSU/sysu.html">
 					<div class="images">
 						<img src="./assets/images/pro6.JPG" alt="待续">
 					</div>
@@ -281,7 +275,7 @@
 		<div class="projectBox">
 			<!-- box5 -->
 			<div class="box">
-				<a href="./CT/VOLCANO/index.html">
+				<a href="./src/VOLCANO/index.html">
 					<div class="images">
 						<img src="./assets/images/pro5.JPG">
 					</div>
@@ -298,7 +292,7 @@
 			<!-- box6 -->
 
 			<div class="box">
-				<a href="./CT/myTemplates/1. Xpression/index.html">
+				<a href="./src/myTemplates/1. Xpression/index.html">
 					<div class="images">
 						<img src="./assets/images/pro3.JPG">
 					</div>
@@ -312,24 +306,8 @@
 				</div>
 			</div>
 			
-
-			<!-- box7 -->
-			<!-- <div class="box">
-				<a href="./CT/TOOLS/richEdit.html">
-					<div class="images">
-						<img src="./assets/images/pro7.JPG" alt="待续">
-					</div>
-					<div class="imagesClose">
-						<h5>PROJECT TITLE</h5>
-						<p>DETAIL INFORMATION<br>点击访问该站点</p>
-					</div>
-				</a>
-				<div class="intro">
-					<h4>RICH EDIT</h4>
-				</div>
-			</div> -->
 			<div class="box">
-				<a href="./CT/myTemplates/2. ANTI/index.html">
+				<a href="./src/myTemplates/2. ANTI/index.html">
 					<div class="images">
 						<img src="./assets/images/pro2.JPG">
 					</div>
@@ -345,7 +323,7 @@
 
 			<!-- box8 -->
 			<div class="box">
-				<a href="./CT/SYSU/sysu.html">
+				<a href="./src/SYSU/sysu.html">
 					<div class="images">
 						<img src="./assets/images/pro8.JPG" alt="待续">
 					</div>
@@ -391,7 +369,7 @@
 		<h1 class="title">小游戏</h1>
 		<div id="gamesContainer">
 			<div class="gamesItem">
-				<a href="./CT/GAMES/EE/index.html"><img src="./assets/images/games1.gif"></a>
+				<a href="./src/GAMES/EE/index.html"><img src="./assets/images/games1.gif"></a>
 				<h3>亦可赛艇消消消</h3>
 			</div>
 			<div class="gamesItem">
@@ -474,7 +452,7 @@
 				</div>
 				<!-- 第二个小工具内容 -->
 				<div class="tab-pane fade" id="tool_2">
-					<iframe src="./CT/TOOLS/richEdit.html"></iframe>
+					<iframe src="./src/TOOLS/richEdit.html"></iframe>
 				</div>
 				<!-- 第三个小工具内容 -->
 				<div class="tab-pane fade" id="tool_3">
@@ -490,58 +468,98 @@
 		<div class="learnMore">
 			<button class="learnMoreBtn">体验更多</button>
 		</div>
+	</div>
 
-	<!-- jChart 学习进阶 -->
-	<div class="container mainItem" id="processDisplay">
-		<h1 class="title">学习进阶</h1>
-		<div id="chartZone">
-		    <div id="jqChart" class="chartItem"></div>
-		    <div class="chartItem">
-		    	<img src="./assets/images/chart2.JPG">
+	<!-- 前端收集 -->
+	<div id="processDisplay">
+		<h1 class="title">前端收集</h1>
+		<div id="collectZone">
+		    <div class="collectBox">
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+
 		    </div>
-		   <!--  <div class="chartItem">
-		    	<img src="./assets/images/chart3.gif">
-		    </div> -->
+		    <div class="collectBox">
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    	<div class="collectItem">
+		    		<img src="./assets/images/blog.JPG" alt="collectImg">
+		    		<h3>title</h3>
+		    	</div>
+		    </div>
 	    </div>
 	    <div class="learnMore">
 	    	<button class="learnMoreBtn">了解更多</button>
 	    </div>
 	</div>
 
-	<!-- 相册 -->
-	<div id="album" class="mainItem section">
-	   	<h1 class="title">摄影作品</h1>
-		<div class="photo_album">
-	        <div id="gallery">
-			    <div id="sliderZone">
-				<div id="slider"></div>
-				  <!--显示缩略图的部分-->				 
-	            <ul id="thumbs"></ul>
-	            </div>
-	             <!--相册分类显示区域-->
-	            <ul id="sets"></ul>
-			      <!--Ajax加载状态的显示信息-->
-	            <div id="loading"></div>
-				  <!--用于轮播相册的容器DIV-->	
-	        </div>
 
-		</div>
-	     <div class="learnMore">
+	
+	<!-- slider -->
+	<div id="album">
+	<div id="slider">
+		<ul class="bxslider">
+			<li><img src="./assets/images/pic1.jpg"></li>
+			<li><img src="./assets/images/pic2.jpg"></li>
+			<li><img src="./assets/images/pic3.jpg"></li>
+			<li><img src="./assets/images/pic4.jpg"></li>
+			<li><img src="./assets/images/pic5.jpg"></li>
+		</ul>
+		<div id="sliderText">
 			<button class="learnMoreBtn">了解更多</button>
-		</div>	
+		</div>
+	</div>
 	</div>
 
 </div>
-
 
 
 <!-- ###################################################################################### -->
 <!-- 页脚 -->
 <!-- ###################################################################################### -->
 <div id="footer">
-	<!-- 留言板 -->
 	<div id="leaveMessage" class="mainItem section">
-		<iframe src="./CT/LEAVE_MESSAGE/index.html"></iframe>
+		<iframe src="./src/LEAVE_MESSAGE/index.html"></iframe>
 	</div>
 	
 	<!-- 链接图标 -->
@@ -590,6 +608,7 @@
 		</div>
 		<div class="linkItem"></div>
 	</div>
+	
 	<!-- copyright -->
 	<div id="copyRightZone">
 		<p><script type="text/javascript" src="./assets/js/visitCount.js"></script></p>
@@ -619,9 +638,9 @@
 <script type="text/javascript" src="./assets/album_assets/js/main.js"></script>
 
 <!-- jchart -->
-<script src="./assets/jChart/js/jquery.jqChart.min.js" type="text/javascript"></script>
+<!-- <script src="./assets/jChart/js/jquery.jqChart.min.js" type="text/javascript"></script>
 <script src="./assets/jChart/js/jquery.jqRangeSlider.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="./assets/jChart/js/jchart.js"></script>
+<script type="text/javascript" src="./assets/jChart/js/jchart.js"></script> -->
 <!--[if IE]><script lang="javascript" type="text/javascript" src="js/excanvas.js"></script><![endif]-->
 
  <!-- tools scripts-->
